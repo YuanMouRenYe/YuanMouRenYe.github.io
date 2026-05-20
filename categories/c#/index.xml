@@ -7,13 +7,13 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>元某人也</copyright>
-        <lastBuildDate>Wed, 20 May 2026 15:53:26 +0800</lastBuildDate><atom:link href="https://Accommodate111.github.io/categories/c%23/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 20 May 2026 16:37:16 +0800</lastBuildDate><atom:link href="https://Accommodate111.github.io/categories/c%23/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>【C#】C# 进阶</title>
         <link>https://Accommodate111.github.io/p/csharp-advanced/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/csharp-advanced/</guid>
-        <description>&lt;img src="https://Accommodate111.github.io/img/covers/csharp.png" alt="Featured image of post 【C#】C# 进阶" /&gt;&lt;h2 id=&#34;委托&#34;&gt;委托
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/programming.png" alt="Featured image of post 【C#】C# 进阶" /&gt;&lt;h2 id=&#34;委托&#34;&gt;委托
 &lt;/h2&gt;&lt;h3 id=&#34;知识点一委托是什么&#34;&gt;知识点一、委托是什么
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;委托是函数的容器。可以理解为表达函数的变量类型，用来存储，传递函数方法，不同的函数必须对应和各自“格式一致的委托&lt;/p&gt;
@@ -1245,7 +1245,7 @@
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/csharp-overview/</guid>
-        <description>&lt;img src="https://Accommodate111.github.io/img/covers/csharp.png" alt="Featured image of post 【C#】C# 知识点概要" /&gt;&lt;h1 id=&#34;c-知识点概要&#34;&gt;C# 知识点概要
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/programming.png" alt="Featured image of post 【C#】C# 知识点概要" /&gt;&lt;h1 id=&#34;c-知识点概要&#34;&gt;C# 知识点概要
 &lt;/h1&gt;&lt;hr&gt;
 &lt;h2 id=&#34;1-方法重载和重写&#34;&gt;1. 方法重载和重写
 &lt;/h2&gt;&lt;table&gt;
