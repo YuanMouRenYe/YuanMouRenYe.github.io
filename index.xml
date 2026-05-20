@@ -11773,7 +11773,6 @@ $$&lt;h3 id=&#34;分数&#34;&gt;分数
         <guid>https://Accommodate111.github.io/categories-tags/</guid>
         <description>&lt;p&gt;按主题浏览文章：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://Accommodate111.github.io/series/&#34; &gt;系列索引&lt;/a&gt;&lt;/strong&gt;（按学习顺序，推荐）&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://Accommodate111.github.io/categories/&#34; &gt;全部分类&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://Accommodate111.github.io/tags/&#34; &gt;全部标签&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -11792,12 +11791,16 @@ $$&lt;h3 id=&#34;分数&#34;&gt;分数
 &lt;li&gt;Unity 多人联网（Mirror / NGO）&lt;/li&gt;
 &lt;li&gt;UGUI 与性能优化&lt;/li&gt;
 &lt;li&gt;操作系统、数据库、编译原理等计算机基础&lt;/li&gt;
+&lt;li&gt;Hugo + Stack 个人博客搭建与部署&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;常用工具&#34;&gt;常用工具
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;IDE&lt;/strong&gt;：Visual Studio / Rider / VS Code&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;笔记&lt;/strong&gt;：本地 Markdown（&lt;code&gt;e:\Documents\笔记&lt;/code&gt;）+ 同步脚本发布到博客&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;版本管理&lt;/strong&gt;：Git + GitHub Actions 自动部署&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;站点生成&lt;/strong&gt;：&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo&lt;/a&gt; + &lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;更多开发工具、Unity 资源与素材站见 &lt;a class=&#34;link&#34; href=&#34;https://Accommodate111.github.io/links/&#34; &gt;技术链接&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;博客说明&#34;&gt;博客说明
@@ -11829,15 +11832,6 @@ $$&lt;h3 id=&#34;分数&#34;&gt;分数
         
         <guid>https://Accommodate111.github.io/search/</guid>
         <description></description>
-        </item>
-        <item>
-        <title>系列索引</title>
-        <link>https://Accommodate111.github.io/series/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://Accommodate111.github.io/series/</guid>
-        <description>&lt;p&gt;按学习顺序整理的专题列表，适合连续阅读。单篇文章底部也有「上一篇 / 下一篇」与系列目录。&lt;/p&gt;
-</description>
         </item>
         
     </channel>
