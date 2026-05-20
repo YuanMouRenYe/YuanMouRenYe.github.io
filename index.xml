@@ -5,14 +5,14 @@
         <link>https://Accommodate111.github.io/</link>
         <description>Recent content on 元某人也</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
+        <language>en-us</language>
         <copyright>元某人也</copyright><atom:link href="https://Accommodate111.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>UI 系统</title>
+        <title>【Unity】UI 系统</title>
         <link>https://Accommodate111.github.io/p/ui-system/</link>
         <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/ui-system/</guid>
-        <description>&lt;h1 id=&#34;ui系统&#34;&gt;UI系统
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】UI 系统" /&gt;&lt;h1 id=&#34;ui系统&#34;&gt;UI系统
 &lt;/h1&gt;&lt;h2 id=&#34;什么是ui&#34;&gt;什么是UI
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;User Interface(用户界面)的简称
@@ -45,12 +45,12 @@ RectTransform：UI对象位置锚点控制组件，主要用于 控制位置和�
 </description>
         </item>
         <item>
-        <title>Unity YAML</title>
+        <title>【Unity】Unity YAML</title>
         <link>https://Accommodate111.github.io/p/unity-yaml/</link>
         <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/unity-yaml/</guid>
-        <description>&lt;h1 id=&#34;unity-yaml&#34;&gt;Unity YAML
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Unity YAML" /&gt;&lt;h1 id=&#34;unity-yaml&#34;&gt;Unity YAML
 &lt;/h1&gt;&lt;h2 id=&#34;1-yaml-文件结构&#34;&gt;1. YAML 文件结构
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/unity-yaml/img/csdn-129da38f81204a77890ac5f6bc23fbf9.png&#34;
 	width=&#34;239&#34;
@@ -390,12 +390,12 @@ RectTransform：UI对象位置锚点控制组件，主要用于 控制位置和�
 </description>
         </item>
         <item>
-        <title>C# 进阶</title>
+        <title>【C#】C# 进阶</title>
         <link>https://Accommodate111.github.io/p/csharp-advanced/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/csharp-advanced/</guid>
-        <description>&lt;h2 id=&#34;委托&#34;&gt;委托
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/csharp.png" alt="Featured image of post 【C#】C# 进阶" /&gt;&lt;h2 id=&#34;委托&#34;&gt;委托
 &lt;/h2&gt;&lt;h3 id=&#34;知识点一委托是什么&#34;&gt;知识点一、委托是什么
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;委托是函数的容器。可以理解为表达函数的变量类型，用来存储，传递函数方法，不同的函数必须对应和各自“格式一致的委托&lt;/p&gt;
@@ -1622,12 +1622,12 @@ RectTransform：UI对象位置锚点控制组件，主要用于 控制位置和�
 </description>
         </item>
         <item>
-        <title>C# 知识点概要</title>
+        <title>【C#】C# 知识点概要</title>
         <link>https://Accommodate111.github.io/p/csharp-overview/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/csharp-overview/</guid>
-        <description>&lt;h1 id=&#34;c-知识点概要&#34;&gt;C# 知识点概要
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/csharp.png" alt="Featured image of post 【C#】C# 知识点概要" /&gt;&lt;h1 id=&#34;c-知识点概要&#34;&gt;C# 知识点概要
 &lt;/h1&gt;&lt;hr&gt;
 &lt;h2 id=&#34;1-方法重载和重写&#34;&gt;1. 方法重载和重写
 &lt;/h2&gt;&lt;table&gt;
@@ -2515,12 +2515,12 @@ RectTransform：UI对象位置锚点控制组件，主要用于 控制位置和�
 </description>
         </item>
         <item>
-        <title>Mirror 联网笔记</title>
+        <title>【Unity】Mirror 联网笔记</title>
         <link>https://Accommodate111.github.io/p/mirror/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/mirror/</guid>
-        <description>&lt;h1 id=&#34;mirror-联网笔记&#34;&gt;Mirror 联网笔记
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Mirror 联网笔记" /&gt;&lt;h1 id=&#34;mirror-联网笔记&#34;&gt;Mirror 联网笔记
 &lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;社区 Unity 多人方案（UNET 分支）。模型：&lt;strong&gt;服务器权威 + 状态同步&lt;/strong&gt;。&lt;br&gt;
 与 NGO 对照见 → &lt;a class=&#34;link&#34; href=&#34;./Unity%e5%a4%9a%e4%ba%ba%e8%81%94%e7%bd%91-Mirror%e4%b8%8eNGO.md&#34; &gt;Unity多人联网-Mirror与NGO.md&lt;/a&gt;&lt;/p&gt;
@@ -3194,12 +3194,12 @@ RectTransform：UI对象位置锚点控制组件，主要用于 控制位置和�
 </description>
         </item>
         <item>
-        <title>Netcode for GameObjects 笔记</title>
+        <title>【Unity】Netcode for GameObjects 笔记</title>
         <link>https://Accommodate111.github.io/p/network-for-gameobjects/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/network-for-gameobjects/</guid>
-        <description>&lt;h1 id=&#34;netcode-for-gameobjects-笔记&#34;&gt;Netcode for GameObjects 笔记
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Netcode for GameObjects 笔记" /&gt;&lt;h1 id=&#34;netcode-for-gameobjects-笔记&#34;&gt;Netcode for GameObjects 笔记
 &lt;/h1&gt;&lt;h2 id=&#34;核心原则&#34;&gt;核心原则
 &lt;/h2&gt;&lt;table&gt;
   &lt;thead&gt;
@@ -4336,12 +4336,12 @@ RectTransform：UI对象位置锚点控制组件，主要用于 控制位置和�
 </description>
         </item>
         <item>
-        <title>Unity A* 寻路算法</title>
+        <title>【Unity】Unity A* 寻路算法</title>
         <link>https://Accommodate111.github.io/p/unity-a-star/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/unity-a-star/</guid>
-        <description>&lt;h1 id=&#34;unity-a-寻路算法&#34;&gt;Unity A* 寻路算法
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Unity A* 寻路算法" /&gt;&lt;h1 id=&#34;unity-a-寻路算法&#34;&gt;Unity A* 寻路算法
 &lt;/h1&gt;&lt;h2 id=&#34;1-节点&#34;&gt;1. 节点
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -4799,12 +4799,12 @@ RectTransform：UI对象位置锚点控制组件，主要用于 控制位置和�
 </description>
         </item>
         <item>
-        <title>Unity DOTS</title>
+        <title>【Unity】Unity DOTS</title>
         <link>https://Accommodate111.github.io/p/unity-dots/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/unity-dots/</guid>
-        <description>&lt;h1 id=&#34;unity-dots&#34;&gt;Unity DOTS
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Unity DOTS" /&gt;&lt;h1 id=&#34;unity-dots&#34;&gt;Unity DOTS
 &lt;/h1&gt;&lt;h2 id=&#34;1-基本概念&#34;&gt;1. 基本概念
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;DOTS&lt;/strong&gt;（Data-Oriented Technology Stack）是 Unity 基于 &lt;strong&gt;ECS 架构&lt;/strong&gt; 的一套&lt;strong&gt;面向数据&lt;/strong&gt;的技术栈，主要包括：&lt;/p&gt;
 &lt;table&gt;
@@ -5276,12 +5276,12 @@ RectTransform：UI对象位置锚点控制组件，主要用于 控制位置和�
 </description>
         </item>
         <item>
-        <title>Unity GUI 优化</title>
+        <title>【Unity】Unity GUI 优化</title>
         <link>https://Accommodate111.github.io/p/unity-gui-optimization/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/unity-gui-optimization/</guid>
-        <description>&lt;h1 id=&#34;unity-gui-优化&#34;&gt;Unity GUI 优化
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Unity GUI 优化" /&gt;&lt;h1 id=&#34;unity-gui-优化&#34;&gt;Unity GUI 优化
 &lt;/h1&gt;&lt;h2 id=&#34;1概念&#34;&gt;1.概念
 &lt;/h2&gt;&lt;p&gt;同一 &lt;strong&gt;Canvas&lt;/strong&gt; 下，满足合批规则的多个 UI 元素的网格数据合并到一个顶点缓冲区，仅用一个 &lt;strong&gt;DrawCall&lt;/strong&gt; 提交 GPU 渲染。&lt;/p&gt;
 &lt;hr&gt;
@@ -5389,12 +5389,12 @@ RectTransform：UI对象位置锚点控制组件，主要用于 控制位置和�
 </description>
         </item>
         <item>
-        <title>Unity 程序基础小框架</title>
+        <title>【Unity】Unity 程序基础小框架</title>
         <link>https://Accommodate111.github.io/p/unity-framework/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/unity-framework/</guid>
-        <description>&lt;h1 id=&#34;unity-程序基础小框架&#34;&gt;Unity 程序基础小框架
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Unity 程序基础小框架" /&gt;&lt;h1 id=&#34;unity-程序基础小框架&#34;&gt;Unity 程序基础小框架
 &lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;常用教学向模块化架构：&lt;strong&gt;单例 → 缓存池 / 事件中心 / Mono 桥接 / 资源加载&lt;/strong&gt;。&lt;br&gt;
 目标：降低耦合、复用对象、减少 GC、让非 &lt;code&gt;MonoBehaviour&lt;/code&gt; 类也能用 Update / 协程。&lt;/p&gt;
@@ -6464,12 +6464,12 @@ RectTransform：UI对象位置锚点控制组件，主要用于 控制位置和�
 </description>
         </item>
         <item>
-        <title>Unity 多人联网：Mirror 与 NGO</title>
+        <title>【Unity】Unity 多人联网：Mirror 与 NGO</title>
         <link>https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/</guid>
-        <description>&lt;h1 id=&#34;unity-多人联网mirror-与-netcode-for-gameobjectsngo&#34;&gt;Unity 多人联网：Mirror 与 Netcode for GameObjects（NGO）
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Unity 多人联网：Mirror 与 NGO" /&gt;&lt;h1 id=&#34;unity-多人联网mirror-与-netcode-for-gameobjectsngo&#34;&gt;Unity 多人联网：Mirror 与 Netcode for GameObjects（NGO）
 &lt;/h1&gt;&lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;核心模型相同&lt;/strong&gt;：服务器权威 + 状态同步，客户端发请求、服务器改真相再下发。&lt;/li&gt;
@@ -7338,12 +7338,596 @@ UI 只是本机表现；要让所有人看到名字/颜色，必须 &lt;strong&g
 </description>
         </item>
         <item>
-        <title>编译原理</title>
+        <title>【Unity】热更新</title>
+        <link>https://Accommodate111.github.io/p/hot-update/</link>
+        <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://Accommodate111.github.io/p/hot-update/</guid>
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】热更新" /&gt;&lt;h1 id=&#34;热更新&#34;&gt;热更新
+&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&#34;热更新是什么&#34;&gt;热更新是什么
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;类型&lt;/th&gt;
+          &lt;th&gt;更新内容&lt;/th&gt;
+          &lt;th&gt;典型技术&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;资源热更&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;贴图、模型、配置、UI 预制体等&lt;/td&gt;
+          &lt;td&gt;AssetBundle、Addressables&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;代码热更&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;C# 业务逻辑（不通过商店整包审核）&lt;/td&gt;
+          &lt;td&gt;HybridCLR、ILRuntime、xlua 等&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;目的&lt;/strong&gt;：修 Bug、发活动资源、降首包体积、分平台差异化内容。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;限制&lt;/strong&gt;：无法热更 Unity 引擎本身、原生插件（需走商店更新或单独下载 so/dll）。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;常见方案对比&#34;&gt;常见方案对比
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;方案&lt;/th&gt;
+          &lt;th&gt;资源&lt;/th&gt;
+          &lt;th&gt;代码&lt;/th&gt;
+          &lt;th&gt;特点&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;AssetBundle&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;❌（需配合热更框架）&lt;/td&gt;
+          &lt;td&gt;底层、可控，自建版本与 CDN&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Addressables&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;❌&lt;/td&gt;
+          &lt;td&gt;基于 AB，官方封装分组/远程/引用计数&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;HybridCLR&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;可配合 AB&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;原生解释执行 IL，性能较好，国内常用&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;ILRuntime&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;可配合 AB&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;解释执行 DLL，成熟&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;XLua / tolua&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;可配合 AB&lt;/td&gt;
+          &lt;td&gt;✅（Lua）&lt;/td&gt;
+          &lt;td&gt;脚本语言热更，与 C# 互调&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;pre class=&#34;mermaid&#34;&gt;
+  flowchart LR
+    A[首包安装] --&amp;gt; B{需要更新?}
+    B --&amp;gt;|资源| C[下载 AB / Addressables]
+    B --&amp;gt;|代码| D[下载 DLL / Lua]
+    C --&amp;gt; E[加载进内存]
+    D --&amp;gt; E
+    E --&amp;gt; F[运行新逻辑/新资源]
+&lt;/pre&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;assetbundlemanifest&#34;&gt;AssetBundleManifest
+&lt;/h2&gt;&lt;p&gt;当项目有多个 AB 包（如 &lt;code&gt;texture.ab&lt;/code&gt; 依赖 &lt;code&gt;material.ab&lt;/code&gt;）时，打主包会生成 &lt;strong&gt;AssetBundleManifest&lt;/strong&gt;（常随主包名，如 &lt;code&gt;platform&lt;/code&gt; 或自定义主包名），用于：&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;作用&lt;/th&gt;
+          &lt;th&gt;说明&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;包列表&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;所有 AB 名称、&lt;strong&gt;Hash&lt;/strong&gt;（版本对比、增量更新）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;依赖关系&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;加载某 AB 前自动加载其依赖包&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;灵活路径&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;AB 可放 StreamingAssets、持久化目录、CDN&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;压缩&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;减小包体，按需解压&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有依赖时必须先加载 &lt;strong&gt;Manifest 所在的主包&lt;/strong&gt;，再通过 &lt;code&gt;AssetBundleManifest&lt;/code&gt; API 查依赖。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;assetbundle-打包选项&#34;&gt;AssetBundle 打包选项
+&lt;/h2&gt;&lt;p&gt;（Unity &lt;strong&gt;AssetBundle Browser&lt;/strong&gt; 或自定义构建脚本中的常见项）&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;选项&lt;/th&gt;
+          &lt;th&gt;说明&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Build Target&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;目标平台；&lt;strong&gt;各平台需分别打包&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Output Path&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;输出目录&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Clear Folders&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;打包前是否清空输出文件夹&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Copy To StreamingAssets&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;是否复制到 &lt;code&gt;StreamingAssets&lt;/code&gt;（首包内置资源）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Compression&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;见下表&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;ETI（Exclude Type Information）&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;包内不含类型信息（更小，加载略受限）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;FR（Force Rebuild）&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;强制全量重建；与 Clear 不同：&lt;strong&gt;不删&lt;/strong&gt;已不存在的旧包文件&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;ITTC（Ignore Type Tree Changes）&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;增量构建时忽略 Type Tree 变化&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Append Hash&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;哈希附加到 AB 文件名（利于缓存与热更对比）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Strict Mode&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;出错则构建失败&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Dry Run Build&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;只模拟构建，不真正写文件&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;压缩方式&#34;&gt;压缩方式
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;方式&lt;/th&gt;
+          &lt;th&gt;特点&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;No Compression&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;不压缩，包大，加载快&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;LZMA&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;体积最小；&lt;strong&gt;整包解压&lt;/strong&gt;才好用单个资源，首包解压慢&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;LZ4&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;可按块解压，&lt;strong&gt;边用边解压&lt;/strong&gt;，内存友好；热更常用&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;打包产物说明&#34;&gt;打包产物说明
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;文件&lt;/th&gt;
+          &lt;th&gt;说明&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;主包&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;名称常与输出目录/平台主包一致；内含 &lt;strong&gt;AssetBundleManifest&lt;/strong&gt;，记录依赖与 Hash&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;各 AB 文件&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;实际资源数据（&lt;code&gt;.ab&lt;/code&gt; 或自定义后缀）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;&lt;code&gt;.manifest&lt;/code&gt; 文本&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;单个 AB 的元信息（依赖、Hash、类型等），调试用；运行时主要靠二进制 Manifest&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;示例结构：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Output/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── StandaloneWindows64          ← 主包（含 Manifest）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── ui_panel.ab
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── ui_panel.ab.manifest
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── textures.ab
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── textures.ab.manifest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;ab-加载流程与代码&#34;&gt;AB 加载流程与代码
+&lt;/h2&gt;&lt;h3 id=&#34;流程&#34;&gt;流程
+&lt;/h3&gt;&lt;pre class=&#34;mermaid&#34;&gt;
+  sequenceDiagram
+    participant App
+    participant MainAB as 主包/Manifest
+    participant Dep as 依赖AB
+    participant Res as 目标AB
+    App-&amp;gt;&amp;gt;MainAB: LoadFromFile(主包路径)
+    App-&amp;gt;&amp;gt;MainAB: GetManifest()
+    App-&amp;gt;&amp;gt;MainAB: GetAllDependencies(目标包名)
+    loop 每个依赖
+        App-&amp;gt;&amp;gt;Dep: LoadFromFile
+    end
+    App-&amp;gt;&amp;gt;Res: LoadFromFile / LoadAsset
+    App-&amp;gt;&amp;gt;App: Instantiate / 使用资源
+&lt;/pre&gt;
+
+&lt;h3 id=&#34;示例代码&#34;&gt;示例代码
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;49
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;System.IO&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;UnityEngine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ABLoader&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MonoBehaviour&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// 主包路径（热更后一般在 persistentDataPath）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;abRoot&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Combine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Application&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;persistentDataPath&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;AssetBundles&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mainAbName&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;StandaloneWindows64&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 与打包主包名一致&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;AssetBundle&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mainBundle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;AssetBundleManifest&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;manifest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LoadManifest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mainPath&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Combine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;abRoot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mainAbName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;mainBundle&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AssetBundle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LoadFromFile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mainPath&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;manifest&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mainBundle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LoadAsset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;AssetBundleManifest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;AssetBundleManifest&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GameObject&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LoadPrefab&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bundleName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;assetName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;manifest&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LoadManifest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;// 1. 先加载所有依赖&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;deps&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;manifest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GetAllDependencies&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bundleName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;foreach&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dep&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;deps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;depPath&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Combine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;abRoot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(!&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IsLoaded&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;AssetBundle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LoadFromFile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;depPath&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;// 2. 加载目标包&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bundlePath&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Combine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;abRoot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bundleName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;AssetBundle&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bundle&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AssetBundle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LoadFromFile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bundlePath&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;// 3. 加载资源&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;GameObject&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;prefab&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bundle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LoadAsset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GameObject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;assetName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Instantiate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;prefab&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;bool&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;IsLoaded&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bundleName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;cm&#34;&gt;/* 维护已加载字典 */&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;OnDestroy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;mainBundle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;?.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Unload&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;// 其他 bundle 按引用计数 Unload(false/true)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;异步加载推荐&#34;&gt;异步加载（推荐）
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;req&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AssetBundle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LoadFromFileAsync&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;yield&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;req&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;AssetBundle&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bundle&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;req&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;assetBundle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;assetReq&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bundle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LoadAssetAsync&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GameObject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;MyPrefab&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;yield&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;assetReq&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;GameObject&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;go&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Instantiate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;assetReq&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;asset&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GameObject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;unload-注意&#34;&gt;Unload 注意
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;调用&lt;/th&gt;
+          &lt;th&gt;效果&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;Unload(false)&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;卸载 AB 文件，&lt;strong&gt;已实例化对象仍可用&lt;/strong&gt;（材质可能丢引用）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;Unload(true)&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;连已加载出的资源一并卸载&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;有依赖时按&lt;strong&gt;加载逆序&lt;/strong&gt;卸载，或使用统一 AB 管理器做引用计数。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;版本与更新流程&#34;&gt;版本与更新流程
+&lt;/h2&gt;&lt;h3 id=&#34;典型热更流程&#34;&gt;典型热更流程
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;首包&lt;/strong&gt;：内置少量 AB 或 StreamingAssets + 版本号 &lt;code&gt;version.json&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;启动&lt;/strong&gt;：请求 CDN 上 &lt;code&gt;version.json&lt;/code&gt; / 资源清单（文件名 + Hash + 大小）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;对比&lt;/strong&gt;：本地 Hash vs 远程 Hash，得到需下载列表&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;下载&lt;/strong&gt;：差量或全量 AB 到 &lt;code&gt;persistentDataPath&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;加载&lt;/strong&gt;：从持久化路径 &lt;code&gt;LoadFromFile&lt;/code&gt;，不走 StreamingAssets&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;校验&lt;/strong&gt;：MD5/CRC 防篡改（可选）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;versionjson-示例&#34;&gt;version.json 示例
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;appVersion&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;1.0.0&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;resVersion&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;2026051901&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;bundles&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ui_panel.ab&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;#34;hash&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;a1b2c3...&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;#34;size&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1024000&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;目录&lt;/th&gt;
+          &lt;th&gt;用途&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;StreamingAssets&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;首包只读，安装后不可写&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;persistentDataPath&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;热更下载目录，可读写&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;addressables-简述&#34;&gt;Addressables 简述
+&lt;/h2&gt;&lt;p&gt;在 AssetBundle 之上的&lt;strong&gt;资源管理系统&lt;/strong&gt;：&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;概念&lt;/th&gt;
+          &lt;th&gt;说明&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Group&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;资源分组，决定打哪些 AB&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Address&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;用地址字符串加载，不必记 AB 名&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Remote / Local&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;内置与远程 CDN 路径&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Catalog&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;资源目录，类似 Manifest + 版本&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;UnityEngine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;UnityEngine.AddressableAssets&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;UnityEngine.ResourceManagement.AsyncOperations&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;async&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;AsyncOperationHandle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GameObject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;handle&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;Addressables&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LoadAssetAsync&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GameObject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;MyPrefab&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;await&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;handle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Task&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;Instantiate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;handle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;适合新项目；老项目大量 AB 可逐步迁移。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;常见坑与注意点&#34;&gt;常见坑与注意点
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;问题&lt;/th&gt;
+          &lt;th&gt;原因 / 处理&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;材质变粉&lt;/td&gt;
+          &lt;td&gt;AB 里 Shader 丢失；Shader 放 Always Included 或进 AB&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;重复加载依赖&lt;/td&gt;
+          &lt;td&gt;未先 &lt;code&gt;GetAllDependencies&lt;/code&gt; 或未缓存已加载 AB&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;内存涨&lt;/td&gt;
+          &lt;td&gt;未 &lt;code&gt;Unload&lt;/code&gt;；重复 &lt;code&gt;LoadFromFile&lt;/code&gt; 同一包&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;平台加载失败&lt;/td&gt;
+          &lt;td&gt;打错 Build Target；路径大小写&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;LZMA 卡顿&lt;/td&gt;
+          &lt;td&gt;首包解压慢；热更资源改 &lt;strong&gt;LZ4&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;要点速查&#34;&gt;要点速查
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;主题&lt;/th&gt;
+          &lt;th&gt;要点&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Manifest&lt;/td&gt;
+          &lt;td&gt;主包、依赖、Hash&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;压缩&lt;/td&gt;
+          &lt;td&gt;LZMA 小但整包解压；LZ4 热更常用&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;加载顺序&lt;/td&gt;
+          &lt;td&gt;主包 → Manifest → 依赖 AB → 目标 AB → LoadAsset&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;路径&lt;/td&gt;
+          &lt;td&gt;热更后用 &lt;code&gt;persistentDataPath&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;卸载&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;Unload(false/true)&lt;/code&gt; 区别&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;代码热更&lt;/td&gt;
+          &lt;td&gt;HybridCLR / ILRuntime / Lua；与 AB 配合&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        </item>
+        <item>
+        <title>【计算机基础】编译原理</title>
         <link>https://Accommodate111.github.io/p/compiler-principles/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/compiler-principles/</guid>
-        <description>&lt;h1 id=&#34;编译原理&#34;&gt;编译原理
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/cs.png" alt="Featured image of post 【计算机基础】编译原理" /&gt;&lt;h1 id=&#34;编译原理&#34;&gt;编译原理
 &lt;/h1&gt;&lt;h2 id=&#34;第一章导论&#34;&gt;第一章：导论
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;翻译程序&lt;/strong&gt;：把某种语言的程序转换为另一种语言的程序&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;编译程序&lt;/strong&gt;：把高级语言转换为汇编语言或者机器语言这样的“低级语言”的翻译程序，称为编译程序，编译器&lt;/p&gt;
@@ -7390,12 +7974,12 @@ UI 只是本机表现；要让所有人看到名字/颜色，必须 &lt;strong&g
 </description>
         </item>
         <item>
-        <title>操作系统</title>
+        <title>【计算机基础】操作系统</title>
         <link>https://Accommodate111.github.io/p/operating-system/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/operating-system/</guid>
-        <description>&lt;h1 id=&#34;操作系统&#34;&gt;操作系统
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/cs.png" alt="Featured image of post 【计算机基础】操作系统" /&gt;&lt;h1 id=&#34;操作系统&#34;&gt;操作系统
 &lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;考研/期末复习向笔记。重点：进程、调度、死锁、同步、存储管理、磁盘调度。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -8322,596 +8906,12 @@ OPT 中「置换次数」= 发生缺页且需换出的次数（内存已满后�
 </description>
         </item>
         <item>
-        <title>热更新</title>
-        <link>https://Accommodate111.github.io/p/hot-update/</link>
-        <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
-        
-        <guid>https://Accommodate111.github.io/p/hot-update/</guid>
-        <description>&lt;h1 id=&#34;热更新&#34;&gt;热更新
-&lt;/h1&gt;&lt;hr&gt;
-&lt;h2 id=&#34;热更新是什么&#34;&gt;热更新是什么
-&lt;/h2&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;类型&lt;/th&gt;
-          &lt;th&gt;更新内容&lt;/th&gt;
-          &lt;th&gt;典型技术&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;资源热更&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;贴图、模型、配置、UI 预制体等&lt;/td&gt;
-          &lt;td&gt;AssetBundle、Addressables&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;代码热更&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;C# 业务逻辑（不通过商店整包审核）&lt;/td&gt;
-          &lt;td&gt;HybridCLR、ILRuntime、xlua 等&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;目的&lt;/strong&gt;：修 Bug、发活动资源、降首包体积、分平台差异化内容。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;限制&lt;/strong&gt;：无法热更 Unity 引擎本身、原生插件（需走商店更新或单独下载 so/dll）。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;常见方案对比&#34;&gt;常见方案对比
-&lt;/h2&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;方案&lt;/th&gt;
-          &lt;th&gt;资源&lt;/th&gt;
-          &lt;th&gt;代码&lt;/th&gt;
-          &lt;th&gt;特点&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;AssetBundle&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;✅&lt;/td&gt;
-          &lt;td&gt;❌（需配合热更框架）&lt;/td&gt;
-          &lt;td&gt;底层、可控，自建版本与 CDN&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;Addressables&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;✅&lt;/td&gt;
-          &lt;td&gt;❌&lt;/td&gt;
-          &lt;td&gt;基于 AB，官方封装分组/远程/引用计数&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;HybridCLR&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;可配合 AB&lt;/td&gt;
-          &lt;td&gt;✅&lt;/td&gt;
-          &lt;td&gt;原生解释执行 IL，性能较好，国内常用&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;ILRuntime&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;可配合 AB&lt;/td&gt;
-          &lt;td&gt;✅&lt;/td&gt;
-          &lt;td&gt;解释执行 DLL，成熟&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;XLua / tolua&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;可配合 AB&lt;/td&gt;
-          &lt;td&gt;✅（Lua）&lt;/td&gt;
-          &lt;td&gt;脚本语言热更，与 C# 互调&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;pre class=&#34;mermaid&#34;&gt;
-  flowchart LR
-    A[首包安装] --&amp;gt; B{需要更新?}
-    B --&amp;gt;|资源| C[下载 AB / Addressables]
-    B --&amp;gt;|代码| D[下载 DLL / Lua]
-    C --&amp;gt; E[加载进内存]
-    D --&amp;gt; E
-    E --&amp;gt; F[运行新逻辑/新资源]
-&lt;/pre&gt;
-
-&lt;hr&gt;
-&lt;h2 id=&#34;assetbundlemanifest&#34;&gt;AssetBundleManifest
-&lt;/h2&gt;&lt;p&gt;当项目有多个 AB 包（如 &lt;code&gt;texture.ab&lt;/code&gt; 依赖 &lt;code&gt;material.ab&lt;/code&gt;）时，打主包会生成 &lt;strong&gt;AssetBundleManifest&lt;/strong&gt;（常随主包名，如 &lt;code&gt;platform&lt;/code&gt; 或自定义主包名），用于：&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;作用&lt;/th&gt;
-          &lt;th&gt;说明&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;包列表&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;所有 AB 名称、&lt;strong&gt;Hash&lt;/strong&gt;（版本对比、增量更新）&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;依赖关系&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;加载某 AB 前自动加载其依赖包&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;灵活路径&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;AB 可放 StreamingAssets、持久化目录、CDN&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;压缩&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;减小包体，按需解压&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;blockquote&gt;
-&lt;p&gt;有依赖时必须先加载 &lt;strong&gt;Manifest 所在的主包&lt;/strong&gt;，再通过 &lt;code&gt;AssetBundleManifest&lt;/code&gt; API 查依赖。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;assetbundle-打包选项&#34;&gt;AssetBundle 打包选项
-&lt;/h2&gt;&lt;p&gt;（Unity &lt;strong&gt;AssetBundle Browser&lt;/strong&gt; 或自定义构建脚本中的常见项）&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;选项&lt;/th&gt;
-          &lt;th&gt;说明&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;Build Target&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;目标平台；&lt;strong&gt;各平台需分别打包&lt;/strong&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;Output Path&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;输出目录&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;Clear Folders&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;打包前是否清空输出文件夹&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;Copy To StreamingAssets&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;是否复制到 &lt;code&gt;StreamingAssets&lt;/code&gt;（首包内置资源）&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;Compression&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;见下表&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;ETI（Exclude Type Information）&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;包内不含类型信息（更小，加载略受限）&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;FR（Force Rebuild）&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;强制全量重建；与 Clear 不同：&lt;strong&gt;不删&lt;/strong&gt;已不存在的旧包文件&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;ITTC（Ignore Type Tree Changes）&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;增量构建时忽略 Type Tree 变化&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;Append Hash&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;哈希附加到 AB 文件名（利于缓存与热更对比）&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;Strict Mode&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;出错则构建失败&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;Dry Run Build&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;只模拟构建，不真正写文件&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3 id=&#34;压缩方式&#34;&gt;压缩方式
-&lt;/h3&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;方式&lt;/th&gt;
-          &lt;th&gt;特点&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;No Compression&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;不压缩，包大，加载快&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;LZMA&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;体积最小；&lt;strong&gt;整包解压&lt;/strong&gt;才好用单个资源，首包解压慢&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;LZ4&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;可按块解压，&lt;strong&gt;边用边解压&lt;/strong&gt;，内存友好；热更常用&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;打包产物说明&#34;&gt;打包产物说明
-&lt;/h2&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;文件&lt;/th&gt;
-          &lt;th&gt;说明&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;主包&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;名称常与输出目录/平台主包一致；内含 &lt;strong&gt;AssetBundleManifest&lt;/strong&gt;，记录依赖与 Hash&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;各 AB 文件&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;实际资源数据（&lt;code&gt;.ab&lt;/code&gt; 或自定义后缀）&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;&lt;code&gt;.manifest&lt;/code&gt; 文本&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;单个 AB 的元信息（依赖、Hash、类型等），调试用；运行时主要靠二进制 Manifest&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;示例结构：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Output/
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── StandaloneWindows64          ← 主包（含 Manifest）
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── ui_panel.ab
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── ui_panel.ab.manifest
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── textures.ab
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── textures.ab.manifest
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;ab-加载流程与代码&#34;&gt;AB 加载流程与代码
-&lt;/h2&gt;&lt;h3 id=&#34;流程&#34;&gt;流程
-&lt;/h3&gt;&lt;pre class=&#34;mermaid&#34;&gt;
-  sequenceDiagram
-    participant App
-    participant MainAB as 主包/Manifest
-    participant Dep as 依赖AB
-    participant Res as 目标AB
-    App-&amp;gt;&amp;gt;MainAB: LoadFromFile(主包路径)
-    App-&amp;gt;&amp;gt;MainAB: GetManifest()
-    App-&amp;gt;&amp;gt;MainAB: GetAllDependencies(目标包名)
-    loop 每个依赖
-        App-&amp;gt;&amp;gt;Dep: LoadFromFile
-    end
-    App-&amp;gt;&amp;gt;Res: LoadFromFile / LoadAsset
-    App-&amp;gt;&amp;gt;App: Instantiate / 使用资源
-&lt;/pre&gt;
-
-&lt;h3 id=&#34;示例代码&#34;&gt;示例代码
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;48
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;49
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;System.IO&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;UnityEngine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ABLoader&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MonoBehaviour&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// 主包路径（热更后一般在 persistentDataPath）&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;abRoot&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Combine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Application&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;persistentDataPath&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;AssetBundles&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mainAbName&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;StandaloneWindows64&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 与打包主包名一致&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;AssetBundle&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mainBundle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;AssetBundleManifest&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;manifest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LoadManifest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mainPath&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Combine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;abRoot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mainAbName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;mainBundle&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AssetBundle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LoadFromFile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mainPath&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;manifest&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mainBundle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LoadAsset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;AssetBundleManifest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;AssetBundleManifest&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GameObject&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LoadPrefab&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bundleName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;assetName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;manifest&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LoadManifest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;// 1. 先加载所有依赖&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;deps&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;manifest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GetAllDependencies&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bundleName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;foreach&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dep&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;deps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;depPath&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Combine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;abRoot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(!&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IsLoaded&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;AssetBundle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LoadFromFile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;depPath&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;// 2. 加载目标包&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bundlePath&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Combine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;abRoot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bundleName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;AssetBundle&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bundle&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AssetBundle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LoadFromFile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bundlePath&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;// 3. 加载资源&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;GameObject&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;prefab&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bundle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LoadAsset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GameObject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;assetName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Instantiate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;prefab&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;bool&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;IsLoaded&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bundleName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;cm&#34;&gt;/* 维护已加载字典 */&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;OnDestroy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;mainBundle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;?.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Unload&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;// 其他 bundle 按引用计数 Unload(false/true)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;异步加载推荐&#34;&gt;异步加载（推荐）
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;req&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AssetBundle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LoadFromFileAsync&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;yield&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;req&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;AssetBundle&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bundle&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;req&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;assetBundle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;assetReq&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bundle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LoadAssetAsync&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GameObject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;MyPrefab&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;yield&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;assetReq&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;GameObject&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;go&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Instantiate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;assetReq&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;asset&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GameObject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;unload-注意&#34;&gt;Unload 注意
-&lt;/h3&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;调用&lt;/th&gt;
-          &lt;th&gt;效果&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;Unload(false)&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;卸载 AB 文件，&lt;strong&gt;已实例化对象仍可用&lt;/strong&gt;（材质可能丢引用）&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;Unload(true)&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;连已加载出的资源一并卸载&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;有依赖时按&lt;strong&gt;加载逆序&lt;/strong&gt;卸载，或使用统一 AB 管理器做引用计数。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;版本与更新流程&#34;&gt;版本与更新流程
-&lt;/h2&gt;&lt;h3 id=&#34;典型热更流程&#34;&gt;典型热更流程
-&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;首包&lt;/strong&gt;：内置少量 AB 或 StreamingAssets + 版本号 &lt;code&gt;version.json&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;启动&lt;/strong&gt;：请求 CDN 上 &lt;code&gt;version.json&lt;/code&gt; / 资源清单（文件名 + Hash + 大小）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;对比&lt;/strong&gt;：本地 Hash vs 远程 Hash，得到需下载列表&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;下载&lt;/strong&gt;：差量或全量 AB 到 &lt;code&gt;persistentDataPath&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;加载&lt;/strong&gt;：从持久化路径 &lt;code&gt;LoadFromFile&lt;/code&gt;，不走 StreamingAssets&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;校验&lt;/strong&gt;：MD5/CRC 防篡改（可选）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;versionjson-示例&#34;&gt;version.json 示例
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;appVersion&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;1.0.0&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;resVersion&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;2026051901&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;bundles&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ui_panel.ab&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;#34;hash&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;a1b2c3...&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;#34;size&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1024000&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;目录&lt;/th&gt;
-          &lt;th&gt;用途&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;StreamingAssets&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;首包只读，安装后不可写&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;persistentDataPath&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;热更下载目录，可读写&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;addressables-简述&#34;&gt;Addressables 简述
-&lt;/h2&gt;&lt;p&gt;在 AssetBundle 之上的&lt;strong&gt;资源管理系统&lt;/strong&gt;：&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;概念&lt;/th&gt;
-          &lt;th&gt;说明&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;Group&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;资源分组，决定打哪些 AB&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;Address&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;用地址字符串加载，不必记 AB 名&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;Remote / Local&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;内置与远程 CDN 路径&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;Catalog&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;资源目录，类似 Manifest + 版本&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;UnityEngine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;UnityEngine.AddressableAssets&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;UnityEngine.ResourceManagement.AsyncOperations&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;async&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;AsyncOperationHandle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GameObject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;handle&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;Addressables&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LoadAssetAsync&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GameObject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;MyPrefab&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;await&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;handle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Task&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;Instantiate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;handle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;适合新项目；老项目大量 AB 可逐步迁移。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;常见坑与注意点&#34;&gt;常见坑与注意点
-&lt;/h2&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;问题&lt;/th&gt;
-          &lt;th&gt;原因 / 处理&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;材质变粉&lt;/td&gt;
-          &lt;td&gt;AB 里 Shader 丢失；Shader 放 Always Included 或进 AB&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;重复加载依赖&lt;/td&gt;
-          &lt;td&gt;未先 &lt;code&gt;GetAllDependencies&lt;/code&gt; 或未缓存已加载 AB&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;内存涨&lt;/td&gt;
-          &lt;td&gt;未 &lt;code&gt;Unload&lt;/code&gt;；重复 &lt;code&gt;LoadFromFile&lt;/code&gt; 同一包&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;平台加载失败&lt;/td&gt;
-          &lt;td&gt;打错 Build Target；路径大小写&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;LZMA 卡顿&lt;/td&gt;
-          &lt;td&gt;首包解压慢；热更资源改 &lt;strong&gt;LZ4&lt;/strong&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;要点速查&#34;&gt;要点速查
-&lt;/h2&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;主题&lt;/th&gt;
-          &lt;th&gt;要点&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Manifest&lt;/td&gt;
-          &lt;td&gt;主包、依赖、Hash&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;压缩&lt;/td&gt;
-          &lt;td&gt;LZMA 小但整包解压；LZ4 热更常用&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;加载顺序&lt;/td&gt;
-          &lt;td&gt;主包 → Manifest → 依赖 AB → 目标 AB → LoadAsset&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;路径&lt;/td&gt;
-          &lt;td&gt;热更后用 &lt;code&gt;persistentDataPath&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;卸载&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;Unload(false/true)&lt;/code&gt; 区别&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;代码热更&lt;/td&gt;
-          &lt;td&gt;HybridCLR / ILRuntime / Lua；与 AB 配合&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-        </item>
-        <item>
-        <title>数据库原理及其应用</title>
+        <title>【计算机基础】数据库原理及其应用</title>
         <link>https://Accommodate111.github.io/p/database-principles/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/database-principles/</guid>
-        <description>&lt;h1 id=&#34;数据库原理及其应用&#34;&gt;数据库原理及其应用
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/cs.png" alt="Featured image of post 【计算机基础】数据库原理及其应用" /&gt;&lt;h1 id=&#34;数据库原理及其应用&#34;&gt;数据库原理及其应用
 &lt;/h1&gt;&lt;h1 id=&#34;一数据库系统概述&#34;&gt;一、数据库系统概述
 &lt;/h1&gt;&lt;h2 id=&#34;考点一数据库基本概念&#34;&gt;考点一：数据库基本概念
 &lt;/h2&gt;&lt;h3 id=&#34;数据库概念&#34;&gt;数据库概念：
@@ -10159,12 +10159,12 @@ OPT 中「置换次数」= 发生缺页且需换出的次数（内存已满后�
 </description>
         </item>
         <item>
-        <title>算法</title>
+        <title>【计算机基础】算法</title>
         <link>https://Accommodate111.github.io/p/%E7%AE%97%E6%B3%95/</link>
         <pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/%E7%AE%97%E6%B3%95/</guid>
-        <description>&lt;h2 id=&#34;字符串&#34;&gt;字符串
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/cs.png" alt="Featured image of post 【计算机基础】算法" /&gt;&lt;h2 id=&#34;字符串&#34;&gt;字符串
 &lt;/h2&gt;&lt;h3 id=&#34;4kmp算法理论篇&#34;&gt;4、KMP算法（理论篇）
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;主要解决在一个&lt;strong&gt;文本串&lt;/strong&gt;中是否出现过一个&lt;strong&gt;模式串&lt;/strong&gt;的问题&lt;/p&gt;
@@ -11485,12 +11485,12 @@ OPT 中「置换次数」= 发生缺页且需换出的次数（内存已满后�
 </description>
         </item>
         <item>
-        <title>Markdown语法详解</title>
-        <link>https://Accommodate111.github.io/p/markdown%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3/</link>
-        <pubDate>Thu, 01 Jan 2026 19:39:11 +0800</pubDate>
+        <title>【教程】Markdown 语法详解</title>
+        <link>https://Accommodate111.github.io/p/markdown-syntax/</link>
+        <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://Accommodate111.github.io/p/markdown%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3/</guid>
-        <description>&lt;img src="https://Accommodate111.github.io/p/markdown%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3/cover.png" alt="Featured image of post Markdown语法详解" /&gt;&lt;h1 id=&#34;markdown语法详解&#34;&gt;Markdown语法详解
+        <guid>https://Accommodate111.github.io/p/markdown-syntax/</guid>
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/tutorial.png" alt="Featured image of post 【教程】Markdown 语法详解" /&gt;&lt;h1 id=&#34;markdown语法详解&#34;&gt;Markdown语法详解
 &lt;/h1&gt;&lt;p&gt;一小时快速上手，程序员必备的Markdown语法，轻松编写规范文档。&lt;/p&gt;
 &lt;h2 id=&#34;什么是markdown&#34;&gt;什么是Markdown？
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Markdown 致力于使阅读和创作文档变得容易。&lt;/strong&gt;&lt;/p&gt;
@@ -11668,10 +11668,10 @@ Markdown 语法简单直观，易于学习和使用，逐渐成为了各种平�
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;方括号内写名字，小括号写链接。这个图片不能手动调整大小。部分软件可以再链接后面写上&amp;quot;&amp;quot;,中间加上文字表示鼠标悬浮时的备注。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/markdown%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3/YingYongTuPian.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/markdown-syntax/YingYongTuPian.png&#34;
 	width=&#34;770&#34;
 	height=&#34;101&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/markdown%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3/YingYongTuPian_hu_f15d14cb29f271a5.png 480w, https://Accommodate111.github.io/p/markdown%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3/YingYongTuPian_hu_6f357a438cae0a72.png 1024w&#34;
+	srcset=&#34;https://Accommodate111.github.io/p/markdown-syntax/YingYongTuPian_hu_f15d14cb29f271a5.png 480w, https://Accommodate111.github.io/p/markdown-syntax/YingYongTuPian_hu_6f357a438cae0a72.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图片2&#34;
@@ -11709,10 +11709,10 @@ Markdown 语法简单直观，易于学习和使用，逐渐成为了各种平�
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/markdown%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3/BiaoGe.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/markdown-syntax/BiaoGe.png&#34;
 	width=&#34;257&#34;
 	height=&#34;111&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/markdown%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3/BiaoGe_hu_25b5eebc09b90871.png 480w, https://Accommodate111.github.io/p/markdown%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3/BiaoGe_hu_40eab8ad37992ac6.png 1024w&#34;
+	srcset=&#34;https://Accommodate111.github.io/p/markdown-syntax/BiaoGe_hu_25b5eebc09b90871.png 480w, https://Accommodate111.github.io/p/markdown-syntax/BiaoGe_hu_40eab8ad37992ac6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图片2&#34;
@@ -11787,13 +11787,13 @@ $$&lt;h3 id=&#34;分数&#34;&gt;分数
         <description>&lt;p&gt;记录站点结构与内容的变更。&lt;/p&gt;
 &lt;h2 id=&#34;2026-05-20&#34;&gt;2026-05-20
 &lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;对标 &lt;a class=&#34;link&#34; href=&#34;https://tingdonghu.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;古月月仔的博客&lt;/a&gt; 优化：About/链接页、文章摘要与封面、系列标题前缀&lt;/li&gt;
+&lt;li&gt;补充站点头像、favicon、侧栏定位文案；关闭英文站，仅保留简体中文&lt;/li&gt;
+&lt;li&gt;CSDN 图床本地化；同步脚本保留 description/image 等元数据&lt;/li&gt;
 &lt;li&gt;对齐 &lt;a class=&#34;link&#34; href=&#34;https://letere-gzj.github.io/hugo-stack/p/hugo/custom-blog/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Hugo + Stack 部署教程&lt;/a&gt;，优化导航与 GitHub Actions 自动部署配置&lt;/li&gt;
-&lt;li&gt;新增「分类&amp;amp;标签」「更新日志」页面&lt;/li&gt;
-&lt;li&gt;修复搜索、归档页面结构，消除构建警告&lt;/li&gt;
-&lt;li&gt;启用阅读时长、标签云等小工具&lt;/li&gt;
-&lt;li&gt;引入 &lt;a class=&#34;link&#34; href=&#34;https://letere-gzj.github.io/hugo-stack/p/hugo/custom-background/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;particles.js 动态背景&lt;/a&gt;（点线漂浮效果）&lt;/li&gt;
+&lt;li&gt;新增「分类&amp;amp;标签」「更新日志」页面；引入 particles.js 动态背景（已调低粒子密度）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;2024&#34;&gt;2024
 &lt;/h2&gt;&lt;ul&gt;
@@ -11809,11 +11809,44 @@ $$&lt;h3 id=&#34;分数&#34;&gt;分数
         
         <guid>https://Accommodate111.github.io/%E5%85%B3%E4%BA%8E/</guid>
         <description>&lt;p&gt;你好，我是 &lt;strong&gt;元某人也&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;这里是我的个人博客，用 &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Hugo&lt;/a&gt; 和 &lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Stack&lt;/a&gt; 搭建，主要记录学习笔记与生活随想。&lt;/p&gt;
+&lt;p&gt;游戏客户端方向的学习者，主要记录 &lt;strong&gt;Unity / C#&lt;/strong&gt; 与计算机基础相关的学习笔记，偶尔写一些工具与博客维护心得。&lt;/p&gt;
+&lt;h2 id=&#34;正在学&#34;&gt;正在学
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Unity 多人联网（Mirror / NGO）&lt;/li&gt;
+&lt;li&gt;UGUI 与性能优化&lt;/li&gt;
+&lt;li&gt;操作系统、数据库、编译原理等计算机基础&lt;/li&gt;
+&lt;li&gt;Hugo + Stack 个人博客搭建与部署&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;常用工具&#34;&gt;常用工具
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;IDE&lt;/strong&gt;：Visual Studio / Rider / VS Code&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;笔记&lt;/strong&gt;：本地 Markdown（&lt;code&gt;e:\Documents\笔记&lt;/code&gt;）+ 同步脚本发布到博客&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;版本管理&lt;/strong&gt;：Git + GitHub Actions 自动部署&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;站点生成&lt;/strong&gt;：&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo&lt;/a&gt; + &lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;更多开发工具、Unity 资源与素材站见 &lt;a class=&#34;link&#34; href=&#34;https://Accommodate111.github.io/links/&#34; &gt;技术链接&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;博客说明&#34;&gt;博客说明
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;部署地址：&lt;a class=&#34;link&#34; href=&#34;https://Accommodate111.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://Accommodate111.github.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;源码仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/Accommodate111/hugo-main&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Accommodate111/hugo-main&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;RSS 订阅：&lt;a class=&#34;link&#34; href=&#34;https://Accommodate111.github.io/index.xml&#34; &gt;/index.xml&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;欢迎通过 &lt;a class=&#34;link&#34; href=&#34;https://github.com/Accommodate111&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;GitHub&lt;/a&gt; 找到我。&lt;/p&gt;
+    &gt;GitHub&lt;/a&gt; 交流。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>技术链接</title>
+        <link>https://Accommodate111.github.io/%E6%8A%80%E6%9C%AF%E9%93%BE%E6%8E%A5/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://Accommodate111.github.io/%E6%8A%80%E6%9C%AF%E9%93%BE%E6%8E%A5/</guid>
+        <description>&lt;p&gt;开发工具、Unity 资源、素材站与友链合集。欢迎交换友链，可通过 &lt;a class=&#34;link&#34; href=&#34;https://github.com/Accommodate111&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub&lt;/a&gt; 联系我。&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -11823,15 +11856,6 @@ $$&lt;h3 id=&#34;分数&#34;&gt;分数
         
         <guid>https://Accommodate111.github.io/search/</guid>
         <description></description>
-        </item>
-        <item>
-        <title>友情链接</title>
-        <link>https://Accommodate111.github.io/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://Accommodate111.github.io/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/</guid>
-        <description>&lt;p&gt;欢迎交换友链，可通过 GitHub 联系我。&lt;/p&gt;
-</description>
         </item>
         
     </channel>

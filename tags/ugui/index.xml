@@ -5,15 +5,15 @@
         <link>https://Accommodate111.github.io/tags/ugui/</link>
         <description>Recent content in UGUI on 元某人也</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
+        <language>en-us</language>
         <copyright>元某人也</copyright>
-        <lastBuildDate>Wed, 20 May 2026 15:28:20 +0800</lastBuildDate><atom:link href="https://Accommodate111.github.io/tags/ugui/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>UI 系统</title>
+        <lastBuildDate>Wed, 20 May 2026 15:53:26 +0800</lastBuildDate><atom:link href="https://Accommodate111.github.io/tags/ugui/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>【Unity】UI 系统</title>
         <link>https://Accommodate111.github.io/p/ui-system/</link>
         <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/ui-system/</guid>
-        <description>&lt;h1 id=&#34;ui系统&#34;&gt;UI系统
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】UI 系统" /&gt;&lt;h1 id=&#34;ui系统&#34;&gt;UI系统
 &lt;/h1&gt;&lt;h2 id=&#34;什么是ui&#34;&gt;什么是UI
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;User Interface(用户界面)的简称
@@ -46,12 +46,12 @@ RectTransform：UI对象位置锚点控制组件，主要用于 控制位置和�
 </description>
         </item>
         <item>
-        <title>Unity GUI 优化</title>
+        <title>【Unity】Unity GUI 优化</title>
         <link>https://Accommodate111.github.io/p/unity-gui-optimization/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/unity-gui-optimization/</guid>
-        <description>&lt;h1 id=&#34;unity-gui-优化&#34;&gt;Unity GUI 优化
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Unity GUI 优化" /&gt;&lt;h1 id=&#34;unity-gui-优化&#34;&gt;Unity GUI 优化
 &lt;/h1&gt;&lt;h2 id=&#34;1概念&#34;&gt;1.概念
 &lt;/h2&gt;&lt;p&gt;同一 &lt;strong&gt;Canvas&lt;/strong&gt; 下，满足合批规则的多个 UI 元素的网格数据合并到一个顶点缓冲区，仅用一个 &lt;strong&gt;DrawCall&lt;/strong&gt; 提交 GPU 渲染。&lt;/p&gt;
 &lt;hr&gt;

@@ -5,15 +5,15 @@
         <link>https://Accommodate111.github.io/categories/%E6%95%99%E7%A8%8B/</link>
         <description>Recent content in 教程 on 元某人也</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
+        <language>en-us</language>
         <copyright>元某人也</copyright>
-        <lastBuildDate>Thu, 01 Jan 2026 19:39:11 +0800</lastBuildDate><atom:link href="https://Accommodate111.github.io/categories/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Markdown语法详解</title>
-        <link>https://Accommodate111.github.io/p/markdown%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3/</link>
-        <pubDate>Thu, 01 Jan 2026 19:39:11 +0800</pubDate>
+        <lastBuildDate>Thu, 01 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://Accommodate111.github.io/categories/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>【教程】Markdown 语法详解</title>
+        <link>https://Accommodate111.github.io/p/markdown-syntax/</link>
+        <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://Accommodate111.github.io/p/markdown%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3/</guid>
-        <description>&lt;img src="https://Accommodate111.github.io/p/markdown%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3/cover.png" alt="Featured image of post Markdown语法详解" /&gt;&lt;h1 id=&#34;markdown语法详解&#34;&gt;Markdown语法详解
+        <guid>https://Accommodate111.github.io/p/markdown-syntax/</guid>
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/tutorial.png" alt="Featured image of post 【教程】Markdown 语法详解" /&gt;&lt;h1 id=&#34;markdown语法详解&#34;&gt;Markdown语法详解
 &lt;/h1&gt;&lt;p&gt;一小时快速上手，程序员必备的Markdown语法，轻松编写规范文档。&lt;/p&gt;
 &lt;h2 id=&#34;什么是markdown&#34;&gt;什么是Markdown？
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Markdown 致力于使阅读和创作文档变得容易。&lt;/strong&gt;&lt;/p&gt;
@@ -191,10 +191,10 @@ Markdown 语法简单直观，易于学习和使用，逐渐成为了各种平�
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;方括号内写名字，小括号写链接。这个图片不能手动调整大小。部分软件可以再链接后面写上&amp;quot;&amp;quot;,中间加上文字表示鼠标悬浮时的备注。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/markdown%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3/YingYongTuPian.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/markdown-syntax/YingYongTuPian.png&#34;
 	width=&#34;770&#34;
 	height=&#34;101&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/markdown%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3/YingYongTuPian_hu_f15d14cb29f271a5.png 480w, https://Accommodate111.github.io/p/markdown%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3/YingYongTuPian_hu_6f357a438cae0a72.png 1024w&#34;
+	srcset=&#34;https://Accommodate111.github.io/p/markdown-syntax/YingYongTuPian_hu_f15d14cb29f271a5.png 480w, https://Accommodate111.github.io/p/markdown-syntax/YingYongTuPian_hu_6f357a438cae0a72.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图片2&#34;
@@ -232,10 +232,10 @@ Markdown 语法简单直观，易于学习和使用，逐渐成为了各种平�
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/markdown%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3/BiaoGe.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/markdown-syntax/BiaoGe.png&#34;
 	width=&#34;257&#34;
 	height=&#34;111&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/markdown%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3/BiaoGe_hu_25b5eebc09b90871.png 480w, https://Accommodate111.github.io/p/markdown%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3/BiaoGe_hu_40eab8ad37992ac6.png 1024w&#34;
+	srcset=&#34;https://Accommodate111.github.io/p/markdown-syntax/BiaoGe_hu_25b5eebc09b90871.png 480w, https://Accommodate111.github.io/p/markdown-syntax/BiaoGe_hu_40eab8ad37992ac6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图片2&#34;

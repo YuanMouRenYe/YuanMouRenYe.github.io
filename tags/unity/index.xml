@@ -5,15 +5,15 @@
         <link>https://Accommodate111.github.io/tags/unity/</link>
         <description>Recent content in Unity on 元某人也</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
+        <language>en-us</language>
         <copyright>元某人也</copyright>
-        <lastBuildDate>Wed, 20 May 2026 15:34:48 +0800</lastBuildDate><atom:link href="https://Accommodate111.github.io/tags/unity/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>UI 系统</title>
+        <lastBuildDate>Wed, 20 May 2026 15:53:26 +0800</lastBuildDate><atom:link href="https://Accommodate111.github.io/tags/unity/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>【Unity】UI 系统</title>
         <link>https://Accommodate111.github.io/p/ui-system/</link>
         <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/ui-system/</guid>
-        <description>&lt;h1 id=&#34;ui系统&#34;&gt;UI系统
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】UI 系统" /&gt;&lt;h1 id=&#34;ui系统&#34;&gt;UI系统
 &lt;/h1&gt;&lt;h2 id=&#34;什么是ui&#34;&gt;什么是UI
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;User Interface(用户界面)的简称
@@ -46,12 +46,12 @@ RectTransform：UI对象位置锚点控制组件，主要用于 控制位置和�
 </description>
         </item>
         <item>
-        <title>Unity YAML</title>
+        <title>【Unity】Unity YAML</title>
         <link>https://Accommodate111.github.io/p/unity-yaml/</link>
         <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/unity-yaml/</guid>
-        <description>&lt;h1 id=&#34;unity-yaml&#34;&gt;Unity YAML
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Unity YAML" /&gt;&lt;h1 id=&#34;unity-yaml&#34;&gt;Unity YAML
 &lt;/h1&gt;&lt;h2 id=&#34;1-yaml-文件结构&#34;&gt;1. YAML 文件结构
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/unity-yaml/img/csdn-129da38f81204a77890ac5f6bc23fbf9.png&#34;
 	width=&#34;239&#34;
@@ -391,12 +391,12 @@ RectTransform：UI对象位置锚点控制组件，主要用于 控制位置和�
 </description>
         </item>
         <item>
-        <title>Mirror 联网笔记</title>
+        <title>【Unity】Mirror 联网笔记</title>
         <link>https://Accommodate111.github.io/p/mirror/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/mirror/</guid>
-        <description>&lt;h1 id=&#34;mirror-联网笔记&#34;&gt;Mirror 联网笔记
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Mirror 联网笔记" /&gt;&lt;h1 id=&#34;mirror-联网笔记&#34;&gt;Mirror 联网笔记
 &lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;社区 Unity 多人方案（UNET 分支）。模型：&lt;strong&gt;服务器权威 + 状态同步&lt;/strong&gt;。&lt;br&gt;
 与 NGO 对照见 → &lt;a class=&#34;link&#34; href=&#34;./Unity%e5%a4%9a%e4%ba%ba%e8%81%94%e7%bd%91-Mirror%e4%b8%8eNGO.md&#34; &gt;Unity多人联网-Mirror与NGO.md&lt;/a&gt;&lt;/p&gt;
@@ -1070,12 +1070,12 @@ RectTransform：UI对象位置锚点控制组件，主要用于 控制位置和�
 </description>
         </item>
         <item>
-        <title>Netcode for GameObjects 笔记</title>
+        <title>【Unity】Netcode for GameObjects 笔记</title>
         <link>https://Accommodate111.github.io/p/network-for-gameobjects/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/network-for-gameobjects/</guid>
-        <description>&lt;h1 id=&#34;netcode-for-gameobjects-笔记&#34;&gt;Netcode for GameObjects 笔记
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Netcode for GameObjects 笔记" /&gt;&lt;h1 id=&#34;netcode-for-gameobjects-笔记&#34;&gt;Netcode for GameObjects 笔记
 &lt;/h1&gt;&lt;h2 id=&#34;核心原则&#34;&gt;核心原则
 &lt;/h2&gt;&lt;table&gt;
   &lt;thead&gt;
@@ -2212,12 +2212,12 @@ RectTransform：UI对象位置锚点控制组件，主要用于 控制位置和�
 </description>
         </item>
         <item>
-        <title>Unity A* 寻路算法</title>
+        <title>【Unity】Unity A* 寻路算法</title>
         <link>https://Accommodate111.github.io/p/unity-a-star/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/unity-a-star/</guid>
-        <description>&lt;h1 id=&#34;unity-a-寻路算法&#34;&gt;Unity A* 寻路算法
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Unity A* 寻路算法" /&gt;&lt;h1 id=&#34;unity-a-寻路算法&#34;&gt;Unity A* 寻路算法
 &lt;/h1&gt;&lt;h2 id=&#34;1-节点&#34;&gt;1. 节点
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -2675,12 +2675,12 @@ RectTransform：UI对象位置锚点控制组件，主要用于 控制位置和�
 </description>
         </item>
         <item>
-        <title>Unity DOTS</title>
+        <title>【Unity】Unity DOTS</title>
         <link>https://Accommodate111.github.io/p/unity-dots/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/unity-dots/</guid>
-        <description>&lt;h1 id=&#34;unity-dots&#34;&gt;Unity DOTS
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Unity DOTS" /&gt;&lt;h1 id=&#34;unity-dots&#34;&gt;Unity DOTS
 &lt;/h1&gt;&lt;h2 id=&#34;1-基本概念&#34;&gt;1. 基本概念
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;DOTS&lt;/strong&gt;（Data-Oriented Technology Stack）是 Unity 基于 &lt;strong&gt;ECS 架构&lt;/strong&gt; 的一套&lt;strong&gt;面向数据&lt;/strong&gt;的技术栈，主要包括：&lt;/p&gt;
 &lt;table&gt;
@@ -3152,12 +3152,12 @@ RectTransform：UI对象位置锚点控制组件，主要用于 控制位置和�
 </description>
         </item>
         <item>
-        <title>Unity GUI 优化</title>
+        <title>【Unity】Unity GUI 优化</title>
         <link>https://Accommodate111.github.io/p/unity-gui-optimization/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/unity-gui-optimization/</guid>
-        <description>&lt;h1 id=&#34;unity-gui-优化&#34;&gt;Unity GUI 优化
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Unity GUI 优化" /&gt;&lt;h1 id=&#34;unity-gui-优化&#34;&gt;Unity GUI 优化
 &lt;/h1&gt;&lt;h2 id=&#34;1概念&#34;&gt;1.概念
 &lt;/h2&gt;&lt;p&gt;同一 &lt;strong&gt;Canvas&lt;/strong&gt; 下，满足合批规则的多个 UI 元素的网格数据合并到一个顶点缓冲区，仅用一个 &lt;strong&gt;DrawCall&lt;/strong&gt; 提交 GPU 渲染。&lt;/p&gt;
 &lt;hr&gt;
@@ -3265,12 +3265,12 @@ RectTransform：UI对象位置锚点控制组件，主要用于 控制位置和�
 </description>
         </item>
         <item>
-        <title>Unity 程序基础小框架</title>
+        <title>【Unity】Unity 程序基础小框架</title>
         <link>https://Accommodate111.github.io/p/unity-framework/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/unity-framework/</guid>
-        <description>&lt;h1 id=&#34;unity-程序基础小框架&#34;&gt;Unity 程序基础小框架
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Unity 程序基础小框架" /&gt;&lt;h1 id=&#34;unity-程序基础小框架&#34;&gt;Unity 程序基础小框架
 &lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;常用教学向模块化架构：&lt;strong&gt;单例 → 缓存池 / 事件中心 / Mono 桥接 / 资源加载&lt;/strong&gt;。&lt;br&gt;
 目标：降低耦合、复用对象、减少 GC、让非 &lt;code&gt;MonoBehaviour&lt;/code&gt; 类也能用 Update / 协程。&lt;/p&gt;
@@ -4340,12 +4340,12 @@ RectTransform：UI对象位置锚点控制组件，主要用于 控制位置和�
 </description>
         </item>
         <item>
-        <title>热更新</title>
+        <title>【Unity】热更新</title>
         <link>https://Accommodate111.github.io/p/hot-update/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/hot-update/</guid>
-        <description>&lt;h1 id=&#34;热更新&#34;&gt;热更新
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】热更新" /&gt;&lt;h1 id=&#34;热更新&#34;&gt;热更新
 &lt;/h1&gt;&lt;hr&gt;
 &lt;h2 id=&#34;热更新是什么&#34;&gt;热更新是什么
 &lt;/h2&gt;&lt;table&gt;

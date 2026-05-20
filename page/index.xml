@@ -5,9 +5,9 @@
         <link>https://Accommodate111.github.io/page/</link>
         <description>Recent content in Pages on 元某人也</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
+        <language>en-us</language>
         <copyright>元某人也</copyright>
-        <lastBuildDate>Wed, 20 May 2026 15:22:05 +0800</lastBuildDate><atom:link href="https://Accommodate111.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 20 May 2026 15:53:26 +0800</lastBuildDate><atom:link href="https://Accommodate111.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>归档</title>
         <link>https://Accommodate111.github.io/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
@@ -37,13 +37,13 @@
         <description>&lt;p&gt;记录站点结构与内容的变更。&lt;/p&gt;
 &lt;h2 id=&#34;2026-05-20&#34;&gt;2026-05-20
 &lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;对标 &lt;a class=&#34;link&#34; href=&#34;https://tingdonghu.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;古月月仔的博客&lt;/a&gt; 优化：About/链接页、文章摘要与封面、系列标题前缀&lt;/li&gt;
+&lt;li&gt;补充站点头像、favicon、侧栏定位文案；关闭英文站，仅保留简体中文&lt;/li&gt;
+&lt;li&gt;CSDN 图床本地化；同步脚本保留 description/image 等元数据&lt;/li&gt;
 &lt;li&gt;对齐 &lt;a class=&#34;link&#34; href=&#34;https://letere-gzj.github.io/hugo-stack/p/hugo/custom-blog/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Hugo + Stack 部署教程&lt;/a&gt;，优化导航与 GitHub Actions 自动部署配置&lt;/li&gt;
-&lt;li&gt;新增「分类&amp;amp;标签」「更新日志」页面&lt;/li&gt;
-&lt;li&gt;修复搜索、归档页面结构，消除构建警告&lt;/li&gt;
-&lt;li&gt;启用阅读时长、标签云等小工具&lt;/li&gt;
-&lt;li&gt;引入 &lt;a class=&#34;link&#34; href=&#34;https://letere-gzj.github.io/hugo-stack/p/hugo/custom-background/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;particles.js 动态背景&lt;/a&gt;（点线漂浮效果）&lt;/li&gt;
+&lt;li&gt;新增「分类&amp;amp;标签」「更新日志」页面；引入 particles.js 动态背景（已调低粒子密度）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;2024&#34;&gt;2024
 &lt;/h2&gt;&lt;ul&gt;
@@ -59,11 +59,44 @@
         
         <guid>https://Accommodate111.github.io/%E5%85%B3%E4%BA%8E/</guid>
         <description>&lt;p&gt;你好，我是 &lt;strong&gt;元某人也&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;这里是我的个人博客，用 &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Hugo&lt;/a&gt; 和 &lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Stack&lt;/a&gt; 搭建，主要记录学习笔记与生活随想。&lt;/p&gt;
+&lt;p&gt;游戏客户端方向的学习者，主要记录 &lt;strong&gt;Unity / C#&lt;/strong&gt; 与计算机基础相关的学习笔记，偶尔写一些工具与博客维护心得。&lt;/p&gt;
+&lt;h2 id=&#34;正在学&#34;&gt;正在学
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Unity 多人联网（Mirror / NGO）&lt;/li&gt;
+&lt;li&gt;UGUI 与性能优化&lt;/li&gt;
+&lt;li&gt;操作系统、数据库、编译原理等计算机基础&lt;/li&gt;
+&lt;li&gt;Hugo + Stack 个人博客搭建与部署&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;常用工具&#34;&gt;常用工具
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;IDE&lt;/strong&gt;：Visual Studio / Rider / VS Code&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;笔记&lt;/strong&gt;：本地 Markdown（&lt;code&gt;e:\Documents\笔记&lt;/code&gt;）+ 同步脚本发布到博客&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;版本管理&lt;/strong&gt;：Git + GitHub Actions 自动部署&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;站点生成&lt;/strong&gt;：&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo&lt;/a&gt; + &lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;更多开发工具、Unity 资源与素材站见 &lt;a class=&#34;link&#34; href=&#34;https://Accommodate111.github.io/links/&#34; &gt;技术链接&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;博客说明&#34;&gt;博客说明
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;部署地址：&lt;a class=&#34;link&#34; href=&#34;https://Accommodate111.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://Accommodate111.github.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;源码仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/Accommodate111/hugo-main&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Accommodate111/hugo-main&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;RSS 订阅：&lt;a class=&#34;link&#34; href=&#34;https://Accommodate111.github.io/index.xml&#34; &gt;/index.xml&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;欢迎通过 &lt;a class=&#34;link&#34; href=&#34;https://github.com/Accommodate111&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;GitHub&lt;/a&gt; 找到我。&lt;/p&gt;
+    &gt;GitHub&lt;/a&gt; 交流。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>技术链接</title>
+        <link>https://Accommodate111.github.io/%E6%8A%80%E6%9C%AF%E9%93%BE%E6%8E%A5/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://Accommodate111.github.io/%E6%8A%80%E6%9C%AF%E9%93%BE%E6%8E%A5/</guid>
+        <description>&lt;p&gt;开发工具、Unity 资源、素材站与友链合集。欢迎交换友链，可通过 &lt;a class=&#34;link&#34; href=&#34;https://github.com/Accommodate111&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub&lt;/a&gt; 联系我。&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -73,15 +106,6 @@
         
         <guid>https://Accommodate111.github.io/search/</guid>
         <description></description>
-        </item>
-        <item>
-        <title>友情链接</title>
-        <link>https://Accommodate111.github.io/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://Accommodate111.github.io/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/</guid>
-        <description>&lt;p&gt;欢迎交换友链，可通过 GitHub 联系我。&lt;/p&gt;
-</description>
         </item>
         
     </channel>

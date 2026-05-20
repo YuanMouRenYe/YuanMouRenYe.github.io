@@ -5,15 +5,15 @@
         <link>https://Accommodate111.github.io/tags/%E5%AF%BB%E8%B7%AF/</link>
         <description>Recent content in 寻路 on 元某人也</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
+        <language>en-us</language>
         <copyright>元某人也</copyright>
-        <lastBuildDate>Wed, 20 May 2026 15:34:48 +0800</lastBuildDate><atom:link href="https://Accommodate111.github.io/tags/%E5%AF%BB%E8%B7%AF/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Unity A* 寻路算法</title>
+        <lastBuildDate>Wed, 20 May 2026 15:53:26 +0800</lastBuildDate><atom:link href="https://Accommodate111.github.io/tags/%E5%AF%BB%E8%B7%AF/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>【Unity】Unity A* 寻路算法</title>
         <link>https://Accommodate111.github.io/p/unity-a-star/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Accommodate111.github.io/p/unity-a-star/</guid>
-        <description>&lt;h1 id=&#34;unity-a-寻路算法&#34;&gt;Unity A* 寻路算法
+        <description>&lt;img src="https://Accommodate111.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Unity A* 寻路算法" /&gt;&lt;h1 id=&#34;unity-a-寻路算法&#34;&gt;Unity A* 寻路算法
 &lt;/h1&gt;&lt;h2 id=&#34;1-节点&#34;&gt;1. 节点
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
