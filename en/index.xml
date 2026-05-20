@@ -6,6 +6,56 @@
         <description>Recent content on YuanSomeone</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <copyright>元某人也</copyright><atom:link href="https://Accommodate111.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>元某人也</copyright>
+        <lastBuildDate>Wed, 20 May 2026 15:22:05 +0800</lastBuildDate><atom:link href="https://Accommodate111.github.io/en/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Archives</title>
+        <link>https://Accommodate111.github.io/en/archives/</link>
+        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://Accommodate111.github.io/en/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Categories &amp; Tags</title>
+        <link>https://Accommodate111.github.io/en/categories-tags/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://Accommodate111.github.io/en/categories-tags/</guid>
+        <description>&lt;p&gt;Browse posts by topic:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://Accommodate111.github.io/en/categories/&#34; &gt;All categories&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://Accommodate111.github.io/en/tags/&#34; &gt;All tags&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>Changelog</title>
+        <link>https://Accommodate111.github.io/en/logs/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://Accommodate111.github.io/en/logs/</guid>
+        <description>&lt;p&gt;Site structure and content updates.&lt;/p&gt;
+&lt;h2 id=&#34;2026-05-20&#34;&gt;2026-05-20
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Navigation and GitHub Actions deploy aligned with the Hugo + Stack guide&lt;/li&gt;
+&lt;li&gt;Added categories/tags hub and changelog pages&lt;/li&gt;
+&lt;li&gt;Fixed search and archives page layout warnings&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2024&#34;&gt;2024
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Initial Hugo + Stack setup&lt;/li&gt;
+&lt;li&gt;GitHub Pages auto deploy enabled&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>Search</title>
+        <link>https://Accommodate111.github.io/en/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://Accommodate111.github.io/en/search/</guid>
+        <description></description>
+        </item>
+        
     </channel>
 </rss>
