@@ -396,27 +396,35 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;第一季的一级范式的关系模式通过模式分解可以转换为若干个高一级范式的关系模式的集合，这种过程就叫做规范化&lt;/p&gt;
 &lt;p&gt;模式分解：将一个 仅符合1NF的关系模式转换为两个符合2NF的关系&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/img/image-20251215140148928.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215140148928.png&#34;
+	width=&#34;1846&#34;
+	height=&#34;519&#34;
+	srcset=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215140148928_hu_5567f05f1f0e51ef.png 480w, https://Accommodate111.github.io/p/database-principles/img/image-20251215140148928_hu_6536ddc27206859b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251215140148928&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;355&#34;
+		data-flex-basis=&#34;853px&#34;
+	
 &gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;1nf&#34;&gt;1NF
 &lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/img/image-20251215195627256.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215195627256.png&#34;
+	width=&#34;1710&#34;
+	height=&#34;670&#34;
+	srcset=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215195627256_hu_dd07599b0bd078f4.png 480w, https://Accommodate111.github.io/p/database-principles/img/image-20251215195627256_hu_31534dd0074201a4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251215195627256&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;255&#34;
+		data-flex-basis=&#34;612px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;关系模式的R的所有属性都是不可分的基本数据项（不满足第一范式的数据库模式不能称为关系数据库）&lt;/p&gt;
@@ -424,38 +432,50 @@
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;2nf&#34;&gt;2NF
 &lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/img/image-20251215195555727.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215195555727.png&#34;
+	width=&#34;1829&#34;
+	height=&#34;90&#34;
+	srcset=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215195555727_hu_7bfccf8b5f1ebe1f.png 480w, https://Accommodate111.github.io/p/database-principles/img/image-20251215195555727_hu_832ea275502fa19.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251215195555727&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;2032&#34;
+		data-flex-basis=&#34;4877px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;每一个非主属性都完全函数依赖与任何一个候选码&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;候选码和非主属性为完全函数依赖关系&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;关系模式R不属于2NF会产生以下问题&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/img/image-20251215135908357.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215135908357.png&#34;
+	width=&#34;1845&#34;
+	height=&#34;579&#34;
+	srcset=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215135908357_hu_4c2c9cc94cb7a9f4.png 480w, https://Accommodate111.github.io/p/database-principles/img/image-20251215135908357_hu_9fec74643c0f8305.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251215135908357&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;318&#34;
+		data-flex-basis=&#34;764px&#34;
+	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/img/image-20251215135836230.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215135836230.png&#34;
+	width=&#34;1538&#34;
+	height=&#34;807&#34;
+	srcset=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215135836230_hu_e751e36480e9bdcc.png 480w, https://Accommodate111.github.io/p/database-principles/img/image-20251215135836230_hu_4e6a0e3fb26f6c1b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251215135836230&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;190&#34;
+		data-flex-basis=&#34;457px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;ol&gt;
@@ -466,28 +486,36 @@
 &lt;/ol&gt;
 &lt;h3 id=&#34;3nf&#34;&gt;3NF
 &lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/img/image-20251215195524836.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215195524836.png&#34;
+	width=&#34;1825&#34;
+	height=&#34;192&#34;
+	srcset=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215195524836_hu_207a5e3a2eff1910.png 480w, https://Accommodate111.github.io/p/database-principles/img/image-20251215195524836_hu_ace5e06bc2ff9c87.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251215195524836&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;950&#34;
+		data-flex-basis=&#34;2281px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;就是在原有的2NF关系模式中上每一个非主属性与候选码之间不存在传递依赖关系，将关系分解消除2NF的传递依赖即可&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;bcnf&#34;&gt;BCNF
 &lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/img/image-20251215195444007.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215195444007.png&#34;
+	width=&#34;1813&#34;
+	height=&#34;673&#34;
+	srcset=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215195444007_hu_8178154466c83cf4.png 480w, https://Accommodate111.github.io/p/database-principles/img/image-20251215195444007_hu_cb2a03570eeec491.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251215195444007&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;269&#34;
+		data-flex-basis=&#34;646px&#34;
 	
 &gt;意思就是X→Y中X包含所有候选码,少一个候选码或多一个非候选码都不是BCNF&lt;/p&gt;
 &lt;p&gt;每一个决定因素都必须包含码&lt;/p&gt;
@@ -496,14 +524,18 @@
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;尽量消除插入、删除异常，修改复杂，数据冗余。&lt;/p&gt;
 &lt;p&gt;关系模式的规范化过程是通过对关系模式的分解来实现的,即把低一级的关系模式分解为若干个高一级的关系模式。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/img/image-20251215200437417.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215200437417.png&#34;
+	width=&#34;1441&#34;
+	height=&#34;611&#34;
+	srcset=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215200437417_hu_d75fbaa92b385fd5.png 480w, https://Accommodate111.github.io/p/database-principles/img/image-20251215200437417_hu_309e2e3302d643ed.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251215200437417&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;235&#34;
+		data-flex-basis=&#34;566px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;/blockquote&gt;
