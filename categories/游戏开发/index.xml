@@ -3326,14 +3326,18 @@
 &lt;li&gt;避免脚本互相 &lt;code&gt;GetComponent&lt;/code&gt; 强引用&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;观察者模式&lt;/strong&gt;：发布 / 订阅分离，降低耦合&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/img/image-20260214195321045.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/unity-framework/img/image-20260214195321045.png&#34;
+	width=&#34;2331&#34;
+	height=&#34;922&#34;
+	srcset=&#34;https://Accommodate111.github.io/p/unity-framework/img/image-20260214195321045_hu_b8c300f7977e2b55.png 480w, https://Accommodate111.github.io/p/unity-framework/img/image-20260214195321045_hu_885fc9500b2f11e4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;事件中心结构&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;252&#34;
+		data-flex-basis=&#34;606px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -4670,37 +4674,49 @@ UI 只是本机表现；要让所有人看到名字/颜色，必须 &lt;strong&g
 &lt;/h2&gt;&lt;h3 id=&#34;1-配置-networkmanager&#34;&gt;1. 配置 NetworkManager
 &lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;添加 &lt;code&gt;NetworkManager&lt;/code&gt;（全场景仅一个）&lt;br&gt;
-&lt;img src=&#34;https://Accommodate111.github.io/img/image-20260408210526625.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210526625.png&#34;
+	width=&#34;706&#34;
+	height=&#34;1027&#34;
+	srcset=&#34;https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210526625_hu_49adc33414edff37.png 480w, https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210526625_hu_50812c587480195e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260408210526625&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;68&#34;
+		data-flex-basis=&#34;164px&#34;
+	
 &gt;&lt;/li&gt;
 &lt;li&gt;Transport：&lt;strong&gt;Unity Transport&lt;/strong&gt;&lt;br&gt;
-&lt;img src=&#34;https://Accommodate111.github.io/img/image-20260408210601297.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210601297.png&#34;
+	width=&#34;674&#34;
+	height=&#34;477&#34;
+	srcset=&#34;https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210601297_hu_e0bf58212a604a38.png 480w, https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210601297_hu_3cae8d464491b007.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260408210601297&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;141&#34;
+		data-flex-basis=&#34;339px&#34;
+	
 &gt;&lt;/li&gt;
 &lt;li&gt;指定 &lt;strong&gt;Player Prefab&lt;/strong&gt;（含 &lt;code&gt;NetworkObject&lt;/code&gt;）&lt;/li&gt;
 &lt;li&gt;Inspector &lt;strong&gt;Start Host&lt;/strong&gt; 本机调试&lt;br&gt;
-&lt;img src=&#34;https://Accommodate111.github.io/img/image-20260408211025268.png&#34;
-	
-	
-	
+&lt;img src=&#34;https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408211025268.png&#34;
+	width=&#34;674&#34;
+	height=&#34;219&#34;
+	srcset=&#34;https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408211025268_hu_fc35afc7b7421a06.png 480w, https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408211025268_hu_bee8b71614c72ac7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260408211025268&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;307&#34;
+		data-flex-basis=&#34;738px&#34;
 	
 &gt;&lt;/li&gt;
 &lt;/ol&gt;
