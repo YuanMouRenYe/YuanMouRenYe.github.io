@@ -492,13 +492,13 @@
             <main class="main full-width"><header>
         <h3 class="section-title">
             
-                Categories
+                分类
             
         </h3>
 
         <div class="section-card"><div class="section-details">
                 <h3 class="section-count">10 个页面</h3>
-                <h1 class="section-term">分类</h1>
+                <h1 class="section-term">游戏开发</h1>
                 
             </div>
         </div>
@@ -633,19 +633,6 @@
         document.head.appendChild(customFont);
     }());
 </script>
-<div id="particles-js" aria-hidden="true"></div>
-
-<script src="https://Accommodate111.github.io/background/particles.min.js"></script>
-<script>
-  particlesJS.load(
-    "particles-js",
-    "\"https://Accommodate111.github.io/background/particlesjs-config.json\"",
-    function () {
-      console.log("particles.js loaded");
-    }
-  );
-</script>
-
 <style>
    
   body::before {
@@ -661,7 +648,10 @@
     background: linear-gradient(145deg, #303030 0%, #252a33 50%, #1e242c 100%);
   }
 
-   
+  body {
+    background: transparent !important;
+  }
+
   #particles-js {
     position: fixed;
     top: 0;
@@ -672,13 +662,19 @@
     pointer-events: none;
   }
 
-  body {
-    background: transparent !important;
-  }
-
   html[data-scheme="dark"] #particles-js canvas {
     filter: brightness(0.85) saturate(0.9);
   }
-</style>
+</style><div id="particles-js" aria-hidden="true"></div>
+<script src="https://Accommodate111.github.io/background/particles.min.js"></script>
+<script>
+  particlesJS.load(
+    "particles-js",
+    "\"https://Accommodate111.github.io/background/particlesjs-config.json\"",
+    function () {
+      console.log("particles.js loaded");
+    }
+  );
+</script>
     </body>
 </html>
