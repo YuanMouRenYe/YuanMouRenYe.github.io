@@ -7,7 +7,45 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>元某人也</copyright>
-        <lastBuildDate>Wed, 20 May 2026 15:22:05 +0800</lastBuildDate><atom:link href="https://Accommodate111.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 20 May 2026 15:28:20 +0800</lastBuildDate><atom:link href="https://Accommodate111.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>UI 系统</title>
+        <link>https://Accommodate111.github.io/p/ui-system/</link>
+        <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://Accommodate111.github.io/p/ui-system/</guid>
+        <description>&lt;h1 id=&#34;ui系统&#34;&gt;UI系统
+&lt;/h1&gt;&lt;h2 id=&#34;什么是ui&#34;&gt;什么是UI
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;User Interface(用户界面)的简称
+用户界面就是游戏中登陆注册背包等等功能&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;ui系统主要学习内容&#34;&gt;UI系统主要学习内容
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;UI控件的使用&lt;/p&gt;
+&lt;p&gt;UI的事件响应&lt;/p&gt;
+&lt;p&gt;UI的分辨率自适应&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;uguiuielements常用于unityeditor的开发ugui不能进行unityeditor的开发&#34;&gt;UGUI（UIElements,常用于UnityEditor的开发，UGUI不能进行UnityEditor的开发）
+&lt;/h2&gt;&lt;h3 id=&#34;六大基础控件&#34;&gt;六大基础控件
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;Canvas对象上依附的：&lt;/p&gt;
+&lt;p&gt;Canvas：画布组件，主要用于渲染UI控件的
+Canvas Scaler：画布分辨率只是要组件，主要用于分辨率自适应
+Graphic Ray caster：射线时间交互组件，主要用于控制射线相应相关
+RectTransform：UI对象位置锚点控制组件，主要用于 控制位置和对齐方式&lt;/p&gt;
+&lt;p&gt;EventSystem对象上面依附的&lt;/p&gt;
+&lt;p&gt;Event System和Stand aloneInput  Modle：玩家输入事件响应系统和独立输入模块组件，主要用于监听玩家操作&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;canvas组件&#34;&gt;Canvas组件
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;主要用来负责渲染自己的多有UI子对象&lt;/p&gt;
+&lt;p&gt;关于Canvas的覆盖模式和摄像机模式：&lt;/p&gt;
+&lt;p&gt;摄像机模式下 Plane Distance 来控制摄像机和画布之间的距离，Sorting Layer来控制摄像机模式下的摄像机层级问题，相对比覆盖模式，摄像机模式可以将3D物体放到UI之前，&lt;/p&gt;
+&lt;p&gt;实现类似人物展示界面：摄像机模式用来渲染整个界面（包括3D物体）需要注意的是摄像机模式需要新开一个摄像机不可以用主摄像机，将摄象机模式的相机改为Depth Only保证只渲染UI层面，主摄像机剔除掉UI层面，可保证主摄象机中的3D物体在最后面，因为摄像机模式的相机是Depth Only其他没有物品的地方为透明的，3D物品直接在UI上面渲染&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
         <title>Unity YAML</title>
         <link>https://Accommodate111.github.io/p/unity-yaml/</link>
         <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
@@ -250,22 +288,20 @@
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;关系速查&#34;&gt;关系速查
-&lt;/h2&gt;&lt;pre class=&#34;mermaid&#34;&gt;
-  flowchart TB
-    subgraph 单文件内
-        GO[GameObject&amp;lt;br/&amp;gt;FILE ID]
-        TR[Transform&amp;lt;br/&amp;gt;m_GameObject: fileID]
-        GO --&amp;gt; TR
-    end
-    subgraph 跨文件
-        A[资产 A.prefab&amp;lt;br/&amp;gt;YAML]
-        M[资产 A.prefab.meta&amp;lt;br/&amp;gt;GUID]
-        B[脚本 B.cs.meta&amp;lt;br/&amp;gt;GUID]
-        A --- M
-        A --&amp;gt;|m_Script guid| B
-    end
-&lt;/pre&gt;
-
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/unity-yaml/img/image-20260520092814044.png&#34;
+	width=&#34;1367&#34;
+	height=&#34;329&#34;
+	srcset=&#34;https://Accommodate111.github.io/p/unity-yaml/img/image-20260520092814044_hu_58ae0fb591e9a0c5.png 480w, https://Accommodate111.github.io/p/unity-yaml/img/image-20260520092814044_hu_d3d663662c5582b9.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260520092814044&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;415&#34;
+		data-flex-basis=&#34;997px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -339,7 +375,7 @@
         <description>&lt;h1 id=&#34;mirror-联网笔记&#34;&gt;Mirror 联网笔记
 &lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;社区 Unity 多人方案（UNET 分支）。模型：&lt;strong&gt;服务器权威 + 状态同步&lt;/strong&gt;。&lt;br&gt;
-与 NGO 对照见 → &lt;a class=&#34;link&#34; href=&#34;https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/&#34; &gt;Unity 多人联网：Mirror 与 NGO&lt;/a&gt;&lt;/p&gt;
+与 NGO 对照见 → &lt;a class=&#34;link&#34; href=&#34;./Unity%e5%a4%9a%e4%ba%ba%e8%81%94%e7%bd%91-Mirror%e4%b8%8eNGO.md&#34; &gt;Unity多人联网-Mirror与NGO.md&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;目录&#34;&gt;目录
 &lt;/h2&gt;&lt;ul&gt;
@@ -2558,22 +2594,20 @@
 &lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;流程速查&#34;&gt;流程速查
-&lt;/h2&gt;&lt;pre class=&#34;mermaid&#34;&gt;
-  flowchart TD
-    A[openList 加入起点] --&amp;gt; B{openList 为空?}
-    B --&amp;gt;|是| Z[无解]
-    B --&amp;gt;|否| C[取 FCost 最小节点为 current]
-    C --&amp;gt; D[current 移入 closeList]
-    D --&amp;gt; E{current == 终点?}
-    E --&amp;gt;|是| F[沿 parent 回溯路径]
-    E --&amp;gt;|否| G[遍历邻居]
-    G --&amp;gt; H{可行走且不在 close?}
-    H --&amp;gt;|否| G
-    H --&amp;gt;|是| I[更新 gCost/hCost/parent]
-    I --&amp;gt; J[加入 openList]
-    J --&amp;gt; B
-&lt;/pre&gt;
-
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/unity-a-star/img/image-20260520094242121.png&#34;
+	width=&#34;1637&#34;
+	height=&#34;539&#34;
+	srcset=&#34;https://Accommodate111.github.io/p/unity-a-star/img/image-20260520094242121_hu_85458bb86da4b1c1.png 480w, https://Accommodate111.github.io/p/unity-a-star/img/image-20260520094242121_hu_c4609fec264d25d1.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260520094242121&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;303&#34;
+		data-flex-basis=&#34;728px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;要点速查&#34;&gt;要点速查
 &lt;/h2&gt;&lt;table&gt;
@@ -2639,14 +2673,20 @@
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;pre class=&#34;mermaid&#34;&gt;
-  flowchart LR
-    DOTS[DOTS]
-    DOTS --&amp;gt; Burst[Burst Compiler]
-    DOTS --&amp;gt; Jobs[Job System]
-    DOTS --&amp;gt; ECS[ECS 架构]
-&lt;/pre&gt;
-
+&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/unity-dots/img/image-20260520092833888.png&#34;
+	width=&#34;684&#34;
+	height=&#34;326&#34;
+	srcset=&#34;https://Accommodate111.github.io/p/unity-dots/img/image-20260520092833888_hu_23dd0abcdf6defa3.png 480w, https://Accommodate111.github.io/p/unity-dots/img/image-20260520092833888_hu_c1e8d718cc83eb50.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260520092833888&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;209&#34;
+		data-flex-basis=&#34;503px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;2-burst-compiler&#34;&gt;2. Burst Compiler
 &lt;/h2&gt;&lt;table&gt;
@@ -3216,25 +3256,20 @@
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;框架总览&#34;&gt;框架总览
-&lt;/h2&gt;&lt;pre class=&#34;mermaid&#34;&gt;
-  flowchart TB
-    subgraph 基础
-        S[单例 BaseManager / SingletonMono]
-    end
-    subgraph 运行时
-        P[PoolMgr 对象池]
-        E[EventCenter 事件]
-        M[MonoMgr Update/协程]
-        R[ResMgr 资源加载]
-    end
-    S --&amp;gt; P
-    S --&amp;gt; E
-    S --&amp;gt; M
-    S --&amp;gt; R
-    E -.解耦.-&amp;gt; P
-    R --&amp;gt; P
-&lt;/pre&gt;
-
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/unity-framework/img/image-20260520092711147.png&#34;
+	width=&#34;1097&#34;
+	height=&#34;456&#34;
+	srcset=&#34;https://Accommodate111.github.io/p/unity-framework/img/image-20260520092711147_hu_9b266d8658145c4.png 480w, https://Accommodate111.github.io/p/unity-framework/img/image-20260520092711147_hu_a97099b3085972e2.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260520092711147&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;240&#34;
+		data-flex-basis=&#34;577px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -4270,35 +4305,6 @@
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;api-命名统一建议&#34;&gt;API 命名统一建议
-&lt;/h3&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;原笔记&lt;/th&gt;
-          &lt;th&gt;建议&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;GetInstance()&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;Instance&lt;/code&gt;（与 &lt;code&gt;BaseManager&lt;/code&gt; 一致）&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;EventTigger&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;EventTrigger&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;PlayerWiteMonserDeadDo&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;按语义重命名&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;参考&#34;&gt;参考
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;联网模块见 &lt;a class=&#34;link&#34; href=&#34;https://Accommodate111.github.io/p/mirror/&#34; &gt;Mirror&lt;/a&gt;、&lt;a class=&#34;link&#34; href=&#34;https://Accommodate111.github.io/p/network-for-gameobjects/&#34; &gt;NGO&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;C# 委托 / 泛型见 &lt;a class=&#34;link&#34; href=&#34;https://Accommodate111.github.io/p/csharp-overview/&#34; &gt;C# 知识点概要&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
         </item>
         <item>
@@ -4472,17 +4478,20 @@
 &lt;hr&gt;
 &lt;h2 id=&#34;连接是如何建立的&#34;&gt;连接是如何建立的
 &lt;/h2&gt;&lt;h3 id=&#34;通用流程二者逻辑一致&#34;&gt;通用流程（二者逻辑一致）
-&lt;/h3&gt;&lt;pre class=&#34;mermaid&#34;&gt;
-  sequenceDiagram
-    participant S as Server / Host
-    participant C as Client
-    S-&amp;gt;&amp;gt;S: 绑定 IP:Port，进入监听
-    C-&amp;gt;&amp;gt;S: 发起连接（地址+端口）
-    Note over C,S: 传输层握手（TCP/UDP 视 Transport 而定）
-    S-&amp;gt;&amp;gt;C: 应用层验证（版本/密码/ConnectionApproval）
-    S-&amp;gt;&amp;gt;C: 同步初始状态，Spawn Player
-&lt;/pre&gt;
-
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092635825.png&#34;
+	width=&#34;932&#34;
+	height=&#34;538&#34;
+	srcset=&#34;https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092635825_hu_8eff0fbffe979e6c.png 480w, https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092635825_hu_cf72c74aaa38b98a.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260520092635825&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;173&#34;
+		data-flex-basis=&#34;415px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h3 id=&#34;mirror传输与握手你的笔记要点&#34;&gt;Mirror：传输与握手（你的笔记要点）
 &lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;传输层&lt;/strong&gt;：Mirror 通过 Transport 抽象使用 TCP / UDP（默认封装，一般不直接写 Socket）。
@@ -4723,17 +4732,20 @@
 &lt;p&gt;&lt;strong&gt;为什么本地直接改 UI 不会同步给别人？&lt;/strong&gt;&lt;br&gt;
 UI 只是本机表现；要让所有人看到名字/颜色，必须 &lt;strong&gt;Command/RPC → 服务器改 SyncVar/NetworkVariable → 自动同步到所有客户端 → hook/OnValueChanged 更新 UI&lt;/strong&gt;。&lt;/p&gt;
 &lt;h3 id=&#34;名字与颜色同步通用流程&#34;&gt;名字与颜色同步（通用流程）
-&lt;/h3&gt;&lt;pre class=&#34;mermaid&#34;&gt;
-  sequenceDiagram
-    participant O as Owner Client
-    participant S as Server
-    participant A as All Clients
-    O-&amp;gt;&amp;gt;S: Command / Server RPC（提交名字、颜色）
-    S-&amp;gt;&amp;gt;S: 校验并写入 SyncVar / NetworkVariable
-    S--&amp;gt;&amp;gt;A: 状态同步
-    A-&amp;gt;&amp;gt;A: hook / OnValueChanged 更新 UI
-&lt;/pre&gt;
-
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092652946.png&#34;
+	width=&#34;1125&#34;
+	height=&#34;511&#34;
+	srcset=&#34;https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092652946_hu_a57e8b8e6ea9f7ba.png 480w, https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092652946_hu_9cd4dc66db84d1e8.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260520092652946&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;220&#34;
+		data-flex-basis=&#34;528px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Mirror 示例&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;

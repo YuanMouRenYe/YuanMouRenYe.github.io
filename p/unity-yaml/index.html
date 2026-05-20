@@ -10,7 +10,7 @@
 <meta property='og:description' content="YAML 序列化结构、FILE ID / GUID / Class ID 与 .meta；同文件及跨 YAML 引用速查。">
 <meta property='og:url' content='https://Accommodate111.github.io/p/unity-yaml/'>
 <meta property='og:site_name' content='元某人也'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='YAML' /><meta property='article:tag' content='Unity' /><meta property='article:tag' content='序列化' /><meta property='article:published_time' content='2026-05-20T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-05-20T15:22:05&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='YAML' /><meta property='article:tag' content='Unity' /><meta property='article:tag' content='序列化' /><meta property='article:published_time' content='2026-05-20T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-05-20T15:28:20&#43;08:00'/>
 <meta name="twitter:title" content="Unity YAML">
 <meta name="twitter:description" content="YAML 序列化结构、FILE ID / GUID / Class ID 与 .meta；同文件及跨 YAML 引用速查。">
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -662,22 +662,20 @@
 </ul>
 <hr>
 <h2 id="关系速查">关系速查
-</h2><pre class="mermaid">
-  flowchart TB
-    subgraph 单文件内
-        GO[GameObject&lt;br/&gt;FILE ID]
-        TR[Transform&lt;br/&gt;m_GameObject: fileID]
-        GO --&gt; TR
-    end
-    subgraph 跨文件
-        A[资产 A.prefab&lt;br/&gt;YAML]
-        M[资产 A.prefab.meta&lt;br/&gt;GUID]
-        B[脚本 B.cs.meta&lt;br/&gt;GUID]
-        A --- M
-        A --&gt;|m_Script guid| B
-    end
-</pre>
-
+</h2><p><img src="/p/unity-yaml/img/image-20260520092814044.png"
+	width="1367"
+	height="329"
+	srcset="/p/unity-yaml/img/image-20260520092814044_hu_58ae0fb591e9a0c5.png 480w, /p/unity-yaml/img/image-20260520092814044_hu_d3d663662c5582b9.png 1024w"
+	loading="lazy"
+	
+		alt="image-20260520092814044"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="415"
+		data-flex-basis="997px"
+	
+></p>
 <div class="table-wrapper"><table>
   <thead>
       <tr>
@@ -779,7 +777,7 @@
 
 
         <span>
-            最后更新于 May 20, 2026 15:22 &#43;0800
+            最后更新于 May 20, 2026 15:28 &#43;0800
         </span>
     </section></footer>
 
@@ -795,6 +793,19 @@
     <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/ui-system/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">UI 系统</h2>
+        </div>
+    </a>
+</article>
+
             
                 
 <article class="">
@@ -843,19 +854,6 @@
 
         <div class="article-details">
             <h2 class="article-title">Unity DOTS</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/unity-gui-optimization/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Unity GUI 优化</h2>
         </div>
     </a>
 </article>

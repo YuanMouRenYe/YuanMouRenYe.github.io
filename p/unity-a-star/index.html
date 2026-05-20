@@ -10,7 +10,7 @@
 <meta property='og:description' content="Unity A* 寻路算法 1. 节点 1 2 3 4 5 6 7 8 9 10 11 12 // 是否可以行走 public bool isWalkable; // 节点的位置（网格坐标） public Vector2Int gridPos; // 起点 -&gt; 当前节点（准确值） public float gCost; // 当前节点 -&gt; 终点（预测值） public float hCost; // 总代价 public float FCost =&gt; gCost + hCost; // 上一个节点（用于回溯路径） public Node parent; 字段 含义 gCost 从起点到当前节点的实际代价 hCost 从当前节点到终点的启发式估计代价 FCost gCost + hCost，A* 排序依据 parent 最短路径上的前驱节点 2. 网格管理 2.1 生成网格地图 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 public void CreateMap() { Map = new Node[mapX, mapY]; for (int x = 0; x &lt; mapX; x++) { for (int y = 0; y &lt; mapY; y++) { // 确定地图原点（第一象限） Vector2Int pos = new Vector2Int(mapOrigin.x + x, mapOrigin.y + y); GameObject obj = Instantiate(nodePrefab, new Vector3(pos.x, pos.y, 0), Quaternion.identity, mapRoot); Node node = obj.GetComponent&lt;Node&gt;(); node.gridPos = new Vector2Int(x, y); // 世界坐标 -&gt; 网格虚拟坐标 node.isWalkable = true; Map[x, y] = node; } } } ">
 <meta property='og:url' content='https://Accommodate111.github.io/p/unity-a-star/'>
 <meta property='og:site_name' content='元某人也'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='A*' /><meta property='article:tag' content='寻路' /><meta property='article:tag' content='Unity' /><meta property='article:published_time' content='2026-05-19T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-05-19T21:41:51&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='A*' /><meta property='article:tag' content='寻路' /><meta property='article:tag' content='Unity' /><meta property='article:published_time' content='2026-05-19T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-05-20T15:28:20&#43;08:00'/>
 <meta name="twitter:title" content="Unity A* 寻路算法">
 <meta name="twitter:description" content="Unity A* 寻路算法 1. 节点 1 2 3 4 5 6 7 8 9 10 11 12 // 是否可以行走 public bool isWalkable; // 节点的位置（网格坐标） public Vector2Int gridPos; // 起点 -&gt; 当前节点（准确值） public float gCost; // 当前节点 -&gt; 终点（预测值） public float hCost; // 总代价 public float FCost =&gt; gCost + hCost; // 上一个节点（用于回溯路径） public Node parent; 字段 含义 gCost 从起点到当前节点的实际代价 hCost 从当前节点到终点的启发式估计代价 FCost gCost + hCost，A* 排序依据 parent 最短路径上的前驱节点 2. 网格管理 2.1 生成网格地图 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 public void CreateMap() { Map = new Node[mapX, mapY]; for (int x = 0; x &lt; mapX; x++) { for (int y = 0; y &lt; mapY; y++) { // 确定地图原点（第一象限） Vector2Int pos = new Vector2Int(mapOrigin.x + x, mapOrigin.y + y); GameObject obj = Instantiate(nodePrefab, new Vector3(pos.x, pos.y, 0), Quaternion.identity, mapRoot); Node node = obj.GetComponent&lt;Node&gt;(); node.gridPos = new Vector2Int(x, y); // 世界坐标 -&gt; 网格虚拟坐标 node.isWalkable = true; Map[x, y] = node; } } } ">
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -823,22 +823,20 @@
 </blockquote>
 <hr>
 <h2 id="流程速查">流程速查
-</h2><pre class="mermaid">
-  flowchart TD
-    A[openList 加入起点] --&gt; B{openList 为空?}
-    B --&gt;|是| Z[无解]
-    B --&gt;|否| C[取 FCost 最小节点为 current]
-    C --&gt; D[current 移入 closeList]
-    D --&gt; E{current == 终点?}
-    E --&gt;|是| F[沿 parent 回溯路径]
-    E --&gt;|否| G[遍历邻居]
-    G --&gt; H{可行走且不在 close?}
-    H --&gt;|否| G
-    H --&gt;|是| I[更新 gCost/hCost/parent]
-    I --&gt; J[加入 openList]
-    J --&gt; B
-</pre>
-
+</h2><p><img src="/p/unity-a-star/img/image-20260520094242121.png"
+	width="1637"
+	height="539"
+	srcset="/p/unity-a-star/img/image-20260520094242121_hu_85458bb86da4b1c1.png 480w, /p/unity-a-star/img/image-20260520094242121_hu_c4609fec264d25d1.png 1024w"
+	loading="lazy"
+	
+		alt="image-20260520094242121"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="303"
+		data-flex-basis="728px"
+	
+></p>
 <hr>
 <h2 id="要点速查">要点速查
 </h2><div class="table-wrapper"><table>
@@ -910,7 +908,7 @@
 
 
         <span>
-            最后更新于 May 19, 2026 21:41 &#43;0800
+            最后更新于 May 20, 2026 15:28 &#43;0800
         </span>
     </section></footer>
 
@@ -926,6 +924,19 @@
     <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/ui-system/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">UI 系统</h2>
+        </div>
+    </a>
+</article>
+
             
                 
 <article class="">
@@ -974,19 +985,6 @@
 
         <div class="article-details">
             <h2 class="article-title">Unity DOTS</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/unity-gui-optimization/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Unity GUI 优化</h2>
         </div>
     </a>
 </article>

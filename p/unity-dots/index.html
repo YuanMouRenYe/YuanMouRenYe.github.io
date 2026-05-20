@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Unity DOTS 1. 基本概念 DOTS（Data-Oriented Technology Stack）是 Unity 基于 ECS 架构 的一套面向数据的技术栈，主要包括：\n组成部分 作用 Burst Compiler 将 IL/.NET 字节码编译为高度优化的本地代码 Job System 将计算拆成多任务并行执行 ECS Entity / Component / System 数据驱动架构 flowchart LR DOTS[DOTS] DOTS --&gt; Burst[Burst Compiler] DOTS --&gt; Jobs[Job System] DOTS --&gt; ECS[ECS 架构] 2. Burst Compiler 项 说明 优势 将 IL / .NET 字节码 转为高度优化的本地代码，接近 C++ 性能；可利用 CPU 特性做性能关键代码微调 用法 在 Job 结构体上添加 [BurstCompile] 1 2 3 4 5 [BurstCompile] struct MathfJob : IJobParallelFor { // ... } 3. Job System 优势 Unity 传统逻辑多在主线程单线程执行；Job System 把计算拆成多个并行任务，充分利用多核 CPU。\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Unity DOTS 1. 基本概念 DOTS（Data-Oriented Technology Stack）是 Unity 基于 ECS 架构 的一套面向数据的技术栈，主要包括：\n组成部分 作用 Burst Compiler 将 IL/.NET 字节码编译为高度优化的本地代码 Job System 将计算拆成多任务并行执行 ECS Entity / Component / System 数据驱动架构 ">
 <title>Unity DOTS</title>
 
 <link rel='canonical' href='https://Accommodate111.github.io/p/unity-dots/'>
 
 <link rel="stylesheet" href="/scss/style.min.833d6eed45de56f48306bf57268d5b8cdfc8a60e8e7bdc99810464fcd033f7c6.css"><meta property='og:title' content="Unity DOTS">
-<meta property='og:description' content="Unity DOTS 1. 基本概念 DOTS（Data-Oriented Technology Stack）是 Unity 基于 ECS 架构 的一套面向数据的技术栈，主要包括：\n组成部分 作用 Burst Compiler 将 IL/.NET 字节码编译为高度优化的本地代码 Job System 将计算拆成多任务并行执行 ECS Entity / Component / System 数据驱动架构 flowchart LR DOTS[DOTS] DOTS --&gt; Burst[Burst Compiler] DOTS --&gt; Jobs[Job System] DOTS --&gt; ECS[ECS 架构] 2. Burst Compiler 项 说明 优势 将 IL / .NET 字节码 转为高度优化的本地代码，接近 C++ 性能；可利用 CPU 特性做性能关键代码微调 用法 在 Job 结构体上添加 [BurstCompile] 1 2 3 4 5 [BurstCompile] struct MathfJob : IJobParallelFor { // ... } 3. Job System 优势 Unity 传统逻辑多在主线程单线程执行；Job System 把计算拆成多个并行任务，充分利用多核 CPU。\n">
+<meta property='og:description' content="Unity DOTS 1. 基本概念 DOTS（Data-Oriented Technology Stack）是 Unity 基于 ECS 架构 的一套面向数据的技术栈，主要包括：\n组成部分 作用 Burst Compiler 将 IL/.NET 字节码编译为高度优化的本地代码 Job System 将计算拆成多任务并行执行 ECS Entity / Component / System 数据驱动架构 ">
 <meta property='og:url' content='https://Accommodate111.github.io/p/unity-dots/'>
 <meta property='og:site_name' content='元某人也'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='DOTS' /><meta property='article:tag' content='ECS' /><meta property='article:tag' content='Unity' /><meta property='article:published_time' content='2026-05-19T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-05-19T21:41:51&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='DOTS' /><meta property='article:tag' content='ECS' /><meta property='article:tag' content='Unity' /><meta property='article:published_time' content='2026-05-19T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-05-20T15:28:20&#43;08:00'/>
 <meta name="twitter:title" content="Unity DOTS">
-<meta name="twitter:description" content="Unity DOTS 1. 基本概念 DOTS（Data-Oriented Technology Stack）是 Unity 基于 ECS 架构 的一套面向数据的技术栈，主要包括：\n组成部分 作用 Burst Compiler 将 IL/.NET 字节码编译为高度优化的本地代码 Job System 将计算拆成多任务并行执行 ECS Entity / Component / System 数据驱动架构 flowchart LR DOTS[DOTS] DOTS --&gt; Burst[Burst Compiler] DOTS --&gt; Jobs[Job System] DOTS --&gt; ECS[ECS 架构] 2. Burst Compiler 项 说明 优势 将 IL / .NET 字节码 转为高度优化的本地代码，接近 C++ 性能；可利用 CPU 特性做性能关键代码微调 用法 在 Job 结构体上添加 [BurstCompile] 1 2 3 4 5 [BurstCompile] struct MathfJob : IJobParallelFor { // ... } 3. Job System 优势 Unity 传统逻辑多在主线程单线程执行；Job System 把计算拆成多个并行任务，充分利用多核 CPU。\n">
+<meta name="twitter:description" content="Unity DOTS 1. 基本概念 DOTS（Data-Oriented Technology Stack）是 Unity 基于 ECS 架构 的一套面向数据的技术栈，主要包括：\n组成部分 作用 Burst Compiler 将 IL/.NET 字节码编译为高度优化的本地代码 Job System 将计算拆成多任务并行执行 ECS Entity / Component / System 数据驱动架构 ">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -439,14 +439,20 @@
       </tr>
   </tbody>
 </table></div>
-<pre class="mermaid">
-  flowchart LR
-    DOTS[DOTS]
-    DOTS --&gt; Burst[Burst Compiler]
-    DOTS --&gt; Jobs[Job System]
-    DOTS --&gt; ECS[ECS 架构]
-</pre>
-
+<p><img src="/p/unity-dots/img/image-20260520092833888.png"
+	width="684"
+	height="326"
+	srcset="/p/unity-dots/img/image-20260520092833888_hu_23dd0abcdf6defa3.png 480w, /p/unity-dots/img/image-20260520092833888_hu_c1e8d718cc83eb50.png 1024w"
+	loading="lazy"
+	
+		alt="image-20260520092833888"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="209"
+		data-flex-basis="503px"
+	
+></p>
 <hr>
 <h2 id="2-burst-compiler">2. Burst Compiler
 </h2><div class="table-wrapper"><table>
@@ -916,7 +922,7 @@
 
 
         <span>
-            最后更新于 May 19, 2026 21:41 &#43;0800
+            最后更新于 May 20, 2026 15:28 &#43;0800
         </span>
     </section></footer>
 
@@ -932,6 +938,19 @@
     <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/ui-system/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">UI 系统</h2>
+        </div>
+    </a>
+</article>
+
             
                 
 <article class="">
@@ -980,19 +999,6 @@
 
         <div class="article-details">
             <h2 class="article-title">Unity A* 寻路算法</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/unity-gui-optimization/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Unity GUI 优化</h2>
         </div>
     </a>
 </article>

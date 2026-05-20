@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>元某人也</copyright>
-        <lastBuildDate>Wed, 20 May 2026 15:22:05 +0800</lastBuildDate><atom:link href="https://Accommodate111.github.io/tags/ngo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 20 May 2026 15:28:20 +0800</lastBuildDate><atom:link href="https://Accommodate111.github.io/tags/ngo/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Netcode for GameObjects 笔记</title>
         <link>https://Accommodate111.github.io/p/network-for-gameobjects/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
@@ -1320,17 +1320,20 @@
 &lt;hr&gt;
 &lt;h2 id=&#34;连接是如何建立的&#34;&gt;连接是如何建立的
 &lt;/h2&gt;&lt;h3 id=&#34;通用流程二者逻辑一致&#34;&gt;通用流程（二者逻辑一致）
-&lt;/h3&gt;&lt;pre class=&#34;mermaid&#34;&gt;
-  sequenceDiagram
-    participant S as Server / Host
-    participant C as Client
-    S-&amp;gt;&amp;gt;S: 绑定 IP:Port，进入监听
-    C-&amp;gt;&amp;gt;S: 发起连接（地址+端口）
-    Note over C,S: 传输层握手（TCP/UDP 视 Transport 而定）
-    S-&amp;gt;&amp;gt;C: 应用层验证（版本/密码/ConnectionApproval）
-    S-&amp;gt;&amp;gt;C: 同步初始状态，Spawn Player
-&lt;/pre&gt;
-
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092635825.png&#34;
+	width=&#34;932&#34;
+	height=&#34;538&#34;
+	srcset=&#34;https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092635825_hu_8eff0fbffe979e6c.png 480w, https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092635825_hu_cf72c74aaa38b98a.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260520092635825&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;173&#34;
+		data-flex-basis=&#34;415px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h3 id=&#34;mirror传输与握手你的笔记要点&#34;&gt;Mirror：传输与握手（你的笔记要点）
 &lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;传输层&lt;/strong&gt;：Mirror 通过 Transport 抽象使用 TCP / UDP（默认封装，一般不直接写 Socket）。
@@ -1571,17 +1574,20 @@
 &lt;p&gt;&lt;strong&gt;为什么本地直接改 UI 不会同步给别人？&lt;/strong&gt;&lt;br&gt;
 UI 只是本机表现；要让所有人看到名字/颜色，必须 &lt;strong&gt;Command/RPC → 服务器改 SyncVar/NetworkVariable → 自动同步到所有客户端 → hook/OnValueChanged 更新 UI&lt;/strong&gt;。&lt;/p&gt;
 &lt;h3 id=&#34;名字与颜色同步通用流程&#34;&gt;名字与颜色同步（通用流程）
-&lt;/h3&gt;&lt;pre class=&#34;mermaid&#34;&gt;
-  sequenceDiagram
-    participant O as Owner Client
-    participant S as Server
-    participant A as All Clients
-    O-&amp;gt;&amp;gt;S: Command / Server RPC（提交名字、颜色）
-    S-&amp;gt;&amp;gt;S: 校验并写入 SyncVar / NetworkVariable
-    S--&amp;gt;&amp;gt;A: 状态同步
-    A-&amp;gt;&amp;gt;A: hook / OnValueChanged 更新 UI
-&lt;/pre&gt;
-
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092652946.png&#34;
+	width=&#34;1125&#34;
+	height=&#34;511&#34;
+	srcset=&#34;https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092652946_hu_a57e8b8e6ea9f7ba.png 480w, https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092652946_hu_9cd4dc66db84d1e8.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260520092652946&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;220&#34;
+		data-flex-basis=&#34;528px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Mirror 示例&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Mirror 联网笔记 社区 Unity 多人方案（UNET 分支）。模型：服务器权威 + 状态同步。\n与 NGO 对照见 → Unity 多人联网：Mirror 与 NGO\n目录 核心原则 客户端 / 服务器 / Host 连接建立流程 NetworkManager RPC 与特性标签 SyncVar 与 UI 同步 场景管理 VR 工程脚本 调试与部署 常见坑 附录 核心原则 原则 说明 客户端 渲染、输入、发 Command；不做权威玩法判定 服务器 校验、改 SyncVar / Transform，再同步给所有客户端 权威 谁改服务器上的“真相”，所有人看到一致结果 单例 Manager 每场景仅一个激活的 NetworkManager flowchart LR\rC[Client] --&gt;|Command| S[Server]\rS --&gt;|SyncVar / ClientRpc / NetworkTransform| C\rS --&gt; C2[其他 Client] 客户端 / 服务器 / Host Mirror 没有固定的“客户端 exe / 服务器 exe”两套工程，靠打包方式 + 启动 API 区分角色。\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Mirror 联网笔记 社区 Unity 多人方案（UNET 分支）。模型：服务器权威 + 状态同步。\n与 NGO 对照见 → Unity多人联网-Mirror与NGO.md\n">
 <title>Mirror 联网笔记</title>
 
 <link rel='canonical' href='https://Accommodate111.github.io/p/mirror/'>
 
 <link rel="stylesheet" href="/scss/style.min.833d6eed45de56f48306bf57268d5b8cdfc8a60e8e7bdc99810464fcd033f7c6.css"><meta property='og:title' content="Mirror 联网笔记">
-<meta property='og:description' content="Mirror 联网笔记 社区 Unity 多人方案（UNET 分支）。模型：服务器权威 + 状态同步。\n与 NGO 对照见 → Unity 多人联网：Mirror 与 NGO\n目录 核心原则 客户端 / 服务器 / Host 连接建立流程 NetworkManager RPC 与特性标签 SyncVar 与 UI 同步 场景管理 VR 工程脚本 调试与部署 常见坑 附录 核心原则 原则 说明 客户端 渲染、输入、发 Command；不做权威玩法判定 服务器 校验、改 SyncVar / Transform，再同步给所有客户端 权威 谁改服务器上的“真相”，所有人看到一致结果 单例 Manager 每场景仅一个激活的 NetworkManager flowchart LR\rC[Client] --&gt;|Command| S[Server]\rS --&gt;|SyncVar / ClientRpc / NetworkTransform| C\rS --&gt; C2[其他 Client] 客户端 / 服务器 / Host Mirror 没有固定的“客户端 exe / 服务器 exe”两套工程，靠打包方式 + 启动 API 区分角色。\n">
+<meta property='og:description' content="Mirror 联网笔记 社区 Unity 多人方案（UNET 分支）。模型：服务器权威 + 状态同步。\n与 NGO 对照见 → Unity多人联网-Mirror与NGO.md\n">
 <meta property='og:url' content='https://Accommodate111.github.io/p/mirror/'>
 <meta property='og:site_name' content='元某人也'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Mirror' /><meta property='article:tag' content='联网' /><meta property='article:tag' content='Unity' /><meta property='article:published_time' content='2026-05-19T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-05-19T21:41:51&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Mirror' /><meta property='article:tag' content='联网' /><meta property='article:tag' content='Unity' /><meta property='article:published_time' content='2026-05-19T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-05-20T15:28:20&#43;08:00'/>
 <meta name="twitter:title" content="Mirror 联网笔记">
-<meta name="twitter:description" content="Mirror 联网笔记 社区 Unity 多人方案（UNET 分支）。模型：服务器权威 + 状态同步。\n与 NGO 对照见 → Unity 多人联网：Mirror 与 NGO\n目录 核心原则 客户端 / 服务器 / Host 连接建立流程 NetworkManager RPC 与特性标签 SyncVar 与 UI 同步 场景管理 VR 工程脚本 调试与部署 常见坑 附录 核心原则 原则 说明 客户端 渲染、输入、发 Command；不做权威玩法判定 服务器 校验、改 SyncVar / Transform，再同步给所有客户端 权威 谁改服务器上的“真相”，所有人看到一致结果 单例 Manager 每场景仅一个激活的 NetworkManager flowchart LR\rC[Client] --&gt;|Command| S[Server]\rS --&gt;|SyncVar / ClientRpc / NetworkTransform| C\rS --&gt; C2[其他 Client] 客户端 / 服务器 / Host Mirror 没有固定的“客户端 exe / 服务器 exe”两套工程，靠打包方式 + 启动 API 区分角色。\n">
+<meta name="twitter:description" content="Mirror 联网笔记 社区 Unity 多人方案（UNET 分支）。模型：服务器权威 + 状态同步。\n与 NGO 对照见 → Unity多人联网-Mirror与NGO.md\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -451,7 +451,7 @@
     <h1 id="mirror-联网笔记">Mirror 联网笔记
 </h1><blockquote>
 <p>社区 Unity 多人方案（UNET 分支）。模型：<strong>服务器权威 + 状态同步</strong>。<br>
-与 NGO 对照见 → <a class="link" href="/p/unity-multiplayer-mirror-ngo/" >Unity 多人联网：Mirror 与 NGO</a></p>
+与 NGO 对照见 → <a class="link" href="./Unity%e5%a4%9a%e4%ba%ba%e8%81%94%e7%bd%91-Mirror%e4%b8%8eNGO.md" >Unity多人联网-Mirror与NGO.md</a></p>
 </blockquote>
 <h2 id="目录">目录
 </h2><ul>
@@ -1158,7 +1158,7 @@
 
 
         <span>
-            最后更新于 May 19, 2026 21:41 &#43;0800
+            最后更新于 May 20, 2026 15:28 &#43;0800
         </span>
     </section></footer>
 
@@ -1203,6 +1203,19 @@
             
                 
 <article class="">
+    <a href="/p/ui-system/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">UI 系统</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
     <a href="/p/unity-yaml/">
         
         
@@ -1222,19 +1235,6 @@
 
         <div class="article-details">
             <h2 class="article-title">Unity A* 寻路算法</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/unity-dots/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Unity DOTS</h2>
         </div>
     </a>
 </article>

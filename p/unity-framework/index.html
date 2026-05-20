@@ -10,7 +10,7 @@
 <meta property='og:description' content="Unity 程序基础小框架 常用教学向模块化架构：单例 → 缓存池 / 事件中心 / Mono 桥接 / 资源加载。\n目标：降低耦合、复用对象、减少 GC、让非 MonoBehaviour 类也能用 Update / 协程。\n">
 <meta property='og:url' content='https://Accommodate111.github.io/p/unity-framework/'>
 <meta property='og:site_name' content='元某人也'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='框架' /><meta property='article:tag' content='Unity' /><meta property='article:tag' content='C#' /><meta property='article:published_time' content='2026-05-19T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-05-19T21:41:51&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='框架' /><meta property='article:tag' content='Unity' /><meta property='article:tag' content='C#' /><meta property='article:published_time' content='2026-05-19T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-05-20T15:28:20&#43;08:00'/>
 <meta name="twitter:title" content="Unity 程序基础小框架">
 <meta name="twitter:description" content="Unity 程序基础小框架 常用教学向模块化架构：单例 → 缓存池 / 事件中心 / Mono 桥接 / 资源加载。\n目标：降低耦合、复用对象、减少 GC、让非 MonoBehaviour 类也能用 Update / 协程。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -360,10 +360,8 @@
         <li><a href="#推荐初始化顺序">推荐初始化顺序</a></li>
         <li><a href="#常见问题">常见问题</a></li>
         <li><a href="#可扩展方向">可扩展方向</a></li>
-        <li><a href="#api-命名统一建议">API 命名统一建议</a></li>
       </ol>
     </li>
-    <li><a href="#参考">参考</a></li>
   </ol>
 </nav>
         </div>
@@ -432,7 +430,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 7 分钟
+                    阅读时长: 6 分钟
                 </time>
             </div>
         
@@ -465,25 +463,20 @@
 </ul>
 <hr>
 <h2 id="框架总览">框架总览
-</h2><pre class="mermaid">
-  flowchart TB
-    subgraph 基础
-        S[单例 BaseManager / SingletonMono]
-    end
-    subgraph 运行时
-        P[PoolMgr 对象池]
-        E[EventCenter 事件]
-        M[MonoMgr Update/协程]
-        R[ResMgr 资源加载]
-    end
-    S --&gt; P
-    S --&gt; E
-    S --&gt; M
-    S --&gt; R
-    E -.解耦.-&gt; P
-    R --&gt; P
-</pre>
-
+</h2><p><img src="/p/unity-framework/img/image-20260520092711147.png"
+	width="1097"
+	height="456"
+	srcset="/p/unity-framework/img/image-20260520092711147_hu_9b266d8658145c4.png 480w, /p/unity-framework/img/image-20260520092711147_hu_a97099b3085972e2.png 1024w"
+	loading="lazy"
+	
+		alt="image-20260520092711147"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="240"
+		data-flex-basis="577px"
+	
+></p>
 <div class="table-wrapper"><table>
   <thead>
       <tr>
@@ -1519,35 +1512,6 @@
       </tr>
   </tbody>
 </table></div>
-<h3 id="api-命名统一建议">API 命名统一建议
-</h3><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>原笔记</th>
-          <th>建议</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>GetInstance()</code></td>
-          <td><code>Instance</code>（与 <code>BaseManager</code> 一致）</td>
-      </tr>
-      <tr>
-          <td><code>EventTigger</code></td>
-          <td><code>EventTrigger</code></td>
-      </tr>
-      <tr>
-          <td><code>PlayerWiteMonserDeadDo</code></td>
-          <td>按语义重命名</td>
-      </tr>
-  </tbody>
-</table></div>
-<hr>
-<h2 id="参考">参考
-</h2><ul>
-<li>联网模块见 <a class="link" href="/p/mirror/" >Mirror</a>、<a class="link" href="/p/network-for-gameobjects/" >NGO</a></li>
-<li>C# 委托 / 泛型见 <a class="link" href="/p/csharp-overview/" >C# 知识点概要</a></li>
-</ul>
 
 </section>
 
@@ -1587,7 +1551,7 @@
 
 
         <span>
-            最后更新于 May 19, 2026 21:41 &#43;0800
+            最后更新于 May 20, 2026 15:28 &#43;0800
         </span>
     </section></footer>
 
@@ -1603,6 +1567,19 @@
     <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/ui-system/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">UI 系统</h2>
+        </div>
+    </a>
+</article>
+
             
                 
 <article class="">
@@ -1651,19 +1628,6 @@
 
         <div class="article-details">
             <h2 class="article-title">Unity A* 寻路算法</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/unity-dots/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Unity DOTS</h2>
         </div>
     </a>
 </article>

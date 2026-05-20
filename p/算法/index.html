@@ -10,7 +10,7 @@
 <meta property='og:description' content="字符串 4、KMP算法（理论篇） 主要解决在一个文本串中是否出现过一个模式串的问题\n（暴力解法思路：两个for循环遍历文本串和模式串，匹配不到就把匹配的位数向后移动一位直到匹配上为止，\n">
 <meta property='og:url' content='https://Accommodate111.github.io/p/%E7%AE%97%E6%B3%95/'>
 <meta property='og:site_name' content='元某人也'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='KMP' /><meta property='article:tag' content='数据结构' /><meta property='article:tag' content='学习笔记' /><meta property='article:published_time' content='2026-03-21T20:30:40&#43;08:00'/><meta property='article:modified_time' content='2026-03-21T20:30:40&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='KMP' /><meta property='article:tag' content='数据结构' /><meta property='article:tag' content='学习笔记' /><meta property='article:published_time' content='2026-03-21T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-03-21T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="算法">
 <meta name="twitter:description" content="字符串 4、KMP算法（理论篇） 主要解决在一个文本串中是否出现过一个模式串的问题\n（暴力解法思路：两个for循环遍历文本串和模式串，匹配不到就把匹配的位数向后移动一位直到匹配上为止，\n">
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -390,7 +390,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published" datetime='2026-03-21T20:30:40&#43;08:00'>2026-03-21</time>
+                <time class="article-time--published" datetime='2026-03-21T00:00:00Z'>2026-03-21</time>
             </div>
         
 
@@ -939,99 +939,99 @@
 </span></span><span class="line"><span class="cl"><span class="cs">/// &lt;/summary&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">StackByTwoQueues</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl"> <span class="c1">// 主队列，用于存储栈的元素</span>
-</span></span><span class="line"><span class="cl"> <span class="kd">private</span> <span class="n">Queue</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="n">_queue1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"> <span class="c1">// 辅助队列，用于出栈/取栈顶时临时存储元素</span>
-</span></span><span class="line"><span class="cl"> <span class="kd">private</span> <span class="n">Queue</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="n">_queue2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 主队列，用于存储栈的元素</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">Queue</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="n">_queue1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 辅助队列，用于出栈/取栈顶时临时存储元素</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">Queue</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="n">_queue2</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;summary&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// 构造函数，初始化两个空队列</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;/summary&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="n">StackByTwoQueues</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">     <span class="n">_queue1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Queue</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;();</span>
-</span></span><span class="line"><span class="cl">     <span class="n">_queue2</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Queue</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;();</span>
-</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;summary&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// 构造函数，初始化两个空队列</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;/summary&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">StackByTwoQueues</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">_queue1</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Queue</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">_queue2</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Queue</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;summary&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// 入栈操作</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;/summary&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;param name=&#34;item&#34;&gt;要入栈的元素&lt;/param&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="k">void</span> <span class="n">Push</span><span class="p">(</span><span class="n">T</span> <span class="n">item</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">     <span class="c1">// 入栈直接加入主队列</span>
-</span></span><span class="line"><span class="cl">     <span class="n">_queue1</span><span class="p">.</span><span class="n">Enqueue</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;summary&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// 入栈操作</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;/summary&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;param name=&#34;item&#34;&gt;要入栈的元素&lt;/param&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="k">void</span> <span class="n">Push</span><span class="p">(</span><span class="n">T</span> <span class="n">item</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 入栈直接加入主队列</span>
+</span></span><span class="line"><span class="cl">        <span class="n">_queue1</span><span class="p">.</span><span class="n">Enqueue</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;summary&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// 出栈操作（移除并返回栈顶元素）</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;/summary&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;returns&gt;栈顶元素&lt;/returns&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;exception cref=&#34;InvalidOperationException&#34;&gt;栈为空时抛出异常&lt;/exception&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="n">T</span> <span class="n">Pop</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">     <span class="k">if</span> <span class="p">(</span><span class="n">IsEmpty</span><span class="p">())</span>
-</span></span><span class="line"><span class="cl">     <span class="p">{</span>
-</span></span><span class="line"><span class="cl">         <span class="k">throw</span> <span class="k">new</span> <span class="n">InvalidOperationException</span><span class="p">(</span><span class="s">&#34;栈为空，无法执行出栈操作&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">     <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;summary&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// 出栈操作（移除并返回栈顶元素）</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;/summary&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;returns&gt;栈顶元素&lt;/returns&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;exception cref=&#34;InvalidOperationException&#34;&gt;栈为空时抛出异常&lt;/exception&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">T</span> <span class="n">Pop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">IsEmpty</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">throw</span> <span class="k">new</span> <span class="n">InvalidOperationException</span><span class="p">(</span><span class="s">&#34;栈为空，无法执行出栈操作&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">     <span class="c1">// 将queue1中除最后一个元素外的所有元素移到queue2</span>
-</span></span><span class="line"><span class="cl">     <span class="k">while</span> <span class="p">(</span><span class="n">_queue1</span><span class="p">.</span><span class="n">Count</span> <span class="p">&gt;</span> <span class="m">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">     <span class="p">{</span>
-</span></span><span class="line"><span class="cl">         <span class="n">_queue2</span><span class="p">.</span><span class="n">Enqueue</span><span class="p">(</span><span class="n">_queue1</span><span class="p">.</span><span class="n">Dequeue</span><span class="p">());</span>
-</span></span><span class="line"><span class="cl">     <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 将queue1中除最后一个元素外的所有元素移到queue2</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="p">(</span><span class="n">_queue1</span><span class="p">.</span><span class="n">Count</span> <span class="p">&gt;</span> <span class="m">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">_queue2</span><span class="p">.</span><span class="n">Enqueue</span><span class="p">(</span><span class="n">_queue1</span><span class="p">.</span><span class="n">Dequeue</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">     <span class="c1">// 取出queue1中最后一个元素（栈顶）</span>
-</span></span><span class="line"><span class="cl">     <span class="n">T</span> <span class="n">topItem</span> <span class="p">=</span> <span class="n">_queue1</span><span class="p">.</span><span class="n">Dequeue</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 取出queue1中最后一个元素（栈顶）</span>
+</span></span><span class="line"><span class="cl">        <span class="n">T</span> <span class="n">topItem</span> <span class="p">=</span> <span class="n">_queue1</span><span class="p">.</span><span class="n">Dequeue</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">     <span class="c1">// 交换两个队列的角色，让queue1始终作为主队列</span>
-</span></span><span class="line"><span class="cl">     <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">_queue1</span><span class="p">)</span> <span class="p">=</span> <span class="p">(</span><span class="n">_queue1</span><span class="p">,</span> <span class="n">_queue2</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">     <span class="n">_queue2</span><span class="p">.</span><span class="n">Clear</span><span class="p">();</span> <span class="c1">// 清空辅助队列，避免残留</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 交换两个队列的角色，让queue1始终作为主队列</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">_queue1</span><span class="p">)</span> <span class="p">=</span> <span class="p">(</span><span class="n">_queue1</span><span class="p">,</span> <span class="n">_queue2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">_queue2</span><span class="p">.</span><span class="n">Clear</span><span class="p">();</span> <span class="c1">// 清空辅助队列，避免残留</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">     <span class="k">return</span> <span class="n">topItem</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">topItem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;summary&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// 获取栈顶元素（不移除）</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;/summary&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;returns&gt;栈顶元素&lt;/returns&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;exception cref=&#34;InvalidOperationException&#34;&gt;栈为空时抛出异常&lt;/exception&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="n">T</span> <span class="n">Peek</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">     <span class="k">if</span> <span class="p">(</span><span class="n">IsEmpty</span><span class="p">())</span>
-</span></span><span class="line"><span class="cl">     <span class="p">{</span>
-</span></span><span class="line"><span class="cl">         <span class="k">throw</span> <span class="k">new</span> <span class="n">InvalidOperationException</span><span class="p">(</span><span class="s">&#34;栈为空，无法获取栈顶元素&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">     <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;summary&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// 获取栈顶元素（不移除）</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;/summary&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;returns&gt;栈顶元素&lt;/returns&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;exception cref=&#34;InvalidOperationException&#34;&gt;栈为空时抛出异常&lt;/exception&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">T</span> <span class="n">Peek</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">IsEmpty</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">throw</span> <span class="k">new</span> <span class="n">InvalidOperationException</span><span class="p">(</span><span class="s">&#34;栈为空，无法获取栈顶元素&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">     <span class="c1">// 逻辑与Pop一致，但最后一个元素也要移到queue2</span>
-</span></span><span class="line"><span class="cl">     <span class="k">while</span> <span class="p">(</span><span class="n">_queue1</span><span class="p">.</span><span class="n">Count</span> <span class="p">&gt;</span> <span class="m">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">     <span class="p">{</span>
-</span></span><span class="line"><span class="cl">         <span class="n">_queue2</span><span class="p">.</span><span class="n">Enqueue</span><span class="p">(</span><span class="n">_queue1</span><span class="p">.</span><span class="n">Dequeue</span><span class="p">());</span>
-</span></span><span class="line"><span class="cl">     <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 逻辑与Pop一致，但最后一个元素也要移到queue2</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="p">(</span><span class="n">_queue1</span><span class="p">.</span><span class="n">Count</span> <span class="p">&gt;</span> <span class="m">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">_queue2</span><span class="p">.</span><span class="n">Enqueue</span><span class="p">(</span><span class="n">_queue1</span><span class="p">.</span><span class="n">Dequeue</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">     <span class="n">T</span> <span class="n">topItem</span> <span class="p">=</span> <span class="n">_queue1</span><span class="p">.</span><span class="n">Dequeue</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">     <span class="n">_queue2</span><span class="p">.</span><span class="n">Enqueue</span><span class="p">(</span><span class="n">topItem</span><span class="p">);</span> <span class="c1">// 把栈顶元素也加入辅助队列</span>
+</span></span><span class="line"><span class="cl">        <span class="n">T</span> <span class="n">topItem</span> <span class="p">=</span> <span class="n">_queue1</span><span class="p">.</span><span class="n">Dequeue</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">_queue2</span><span class="p">.</span><span class="n">Enqueue</span><span class="p">(</span><span class="n">topItem</span><span class="p">);</span> <span class="c1">// 把栈顶元素也加入辅助队列</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">     <span class="c1">// 交换队列角色</span>
-</span></span><span class="line"><span class="cl">     <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">_queue1</span><span class="p">)</span> <span class="p">=</span> <span class="p">(</span><span class="n">_queue1</span><span class="p">,</span> <span class="n">_queue2</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">     <span class="n">_queue2</span><span class="p">.</span><span class="n">Clear</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 交换队列角色</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">_queue1</span><span class="p">)</span> <span class="p">=</span> <span class="p">(</span><span class="n">_queue1</span><span class="p">,</span> <span class="n">_queue2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">_queue2</span><span class="p">.</span><span class="n">Clear</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">     <span class="k">return</span> <span class="n">topItem</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">topItem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;summary&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// 判断栈是否为空</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;/summary&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;returns&gt;空返回true，否则返回false&lt;/returns&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">bool</span> <span class="n">IsEmpty</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">     <span class="k">return</span> <span class="n">_queue1</span><span class="p">.</span><span class="n">Count</span> <span class="p">==</span> <span class="m">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;summary&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// 判断栈是否为空</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;/summary&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;returns&gt;空返回true，否则返回false&lt;/returns&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">bool</span> <span class="n">IsEmpty</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">_queue1</span><span class="p">.</span><span class="n">Count</span> <span class="p">==</span> <span class="m">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;summary&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// 获取栈的元素个数</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;/summary&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">int</span> <span class="n">Count</span> <span class="p">=&gt;</span> <span class="n">_queue1</span><span class="p">.</span><span class="n">Count</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;summary&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// 获取栈的元素个数</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;/summary&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">int</span> <span class="n">Count</span> <span class="p">=&gt;</span> <span class="n">_queue1</span><span class="p">.</span><span class="n">Count</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
@@ -1161,104 +1161,104 @@
 </span></span><span class="line"><span class="cl"><span class="cs">/// &lt;typeparam name=&#34;T&#34;&gt;栈存储的元素类型&lt;/typeparam&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">StackBySingleQueue</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl"> <span class="c1">// 唯一的队列，用于模拟栈</span>
-</span></span><span class="line"><span class="cl"> <span class="kd">private</span> <span class="n">Queue</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="n">_queue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 唯一的队列，用于模拟栈</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">Queue</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="n">_queue</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;summary&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// 构造函数，初始化空队列</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;/summary&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="n">StackBySingleQueue</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">     <span class="n">_queue</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Queue</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;();</span>
-</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;summary&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// 构造函数，初始化空队列</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;/summary&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">StackBySingleQueue</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">_queue</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Queue</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;summary&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// 入栈操作（核心逻辑：调整队列元素顺序）</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;/summary&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;param name=&#34;item&#34;&gt;要入栈的元素&lt;/param&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="k">void</span> <span class="n">Push</span><span class="p">(</span><span class="n">T</span> <span class="n">item</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">     <span class="c1">// 1. 先把新元素加入队列尾部</span>
-</span></span><span class="line"><span class="cl">     <span class="n">_queue</span><span class="p">.</span><span class="n">Enqueue</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">     <span class="c1">// 2. 记录当前队列中旧元素的个数（总个数-1，因为刚加了一个新元素）</span>
-</span></span><span class="line"><span class="cl">     <span class="kt">int</span> <span class="n">oldElementCount</span> <span class="p">=</span> <span class="n">_queue</span><span class="p">.</span><span class="n">Count</span> <span class="p">-</span> <span class="m">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">     <span class="c1">// 3. 把旧元素依次出队再入队，让新元素移到队列头部</span>
-</span></span><span class="line"><span class="cl">     <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">oldElementCount</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
-</span></span><span class="line"><span class="cl">     <span class="p">{</span>
-</span></span><span class="line"><span class="cl">         <span class="n">T</span> <span class="n">temp</span> <span class="p">=</span> <span class="n">_queue</span><span class="p">.</span><span class="n">Dequeue</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">         <span class="n">_queue</span><span class="p">.</span><span class="n">Enqueue</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">     <span class="p">}</span>
-</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;summary&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// 入栈操作（核心逻辑：调整队列元素顺序）</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;/summary&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;param name=&#34;item&#34;&gt;要入栈的元素&lt;/param&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="k">void</span> <span class="n">Push</span><span class="p">(</span><span class="n">T</span> <span class="n">item</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 1. 先把新元素加入队列尾部</span>
+</span></span><span class="line"><span class="cl">        <span class="n">_queue</span><span class="p">.</span><span class="n">Enqueue</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 2. 记录当前队列中旧元素的个数（总个数-1，因为刚加了一个新元素）</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">oldElementCount</span> <span class="p">=</span> <span class="n">_queue</span><span class="p">.</span><span class="n">Count</span> <span class="p">-</span> <span class="m">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 3. 把旧元素依次出队再入队，让新元素移到队列头部</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">oldElementCount</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">T</span> <span class="n">temp</span> <span class="p">=</span> <span class="n">_queue</span><span class="p">.</span><span class="n">Dequeue</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="n">_queue</span><span class="p">.</span><span class="n">Enqueue</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;summary&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// 出栈操作：移除并返回栈顶元素</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;/summary&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;returns&gt;栈顶元素&lt;/returns&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;exception cref=&#34;InvalidOperationException&#34;&gt;栈为空时抛出异常&lt;/exception&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="n">T</span> <span class="n">Pop</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">     <span class="c1">// 直接弹出队列头部（就是栈顶）</span>
-</span></span><span class="line"><span class="cl">     <span class="k">return</span> <span class="n">_queue</span><span class="p">.</span><span class="n">Dequeue</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;summary&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// 出栈操作：移除并返回栈顶元素</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;/summary&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;returns&gt;栈顶元素&lt;/returns&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;exception cref=&#34;InvalidOperationException&#34;&gt;栈为空时抛出异常&lt;/exception&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">T</span> <span class="n">Pop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 直接弹出队列头部（就是栈顶）</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">_queue</span><span class="p">.</span><span class="n">Dequeue</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;summary&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// 获取栈顶元素（不移除）</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;/summary&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;returns&gt;栈顶元素&lt;/returns&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;exception cref=&#34;InvalidOperationException&#34;&gt;栈为空时抛出异常&lt;/exception&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="n">T</span> <span class="n">Peek</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">     <span class="k">if</span> <span class="p">(</span><span class="n">IsEmpty</span><span class="p">())</span>
-</span></span><span class="line"><span class="cl">     <span class="p">{</span>
-</span></span><span class="line"><span class="cl">         <span class="k">throw</span> <span class="k">new</span> <span class="n">InvalidOperationException</span><span class="p">(</span><span class="s">&#34;栈为空，无法获取栈顶元素&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">     <span class="p">}</span>
-</span></span><span class="line"><span class="cl">     <span class="c1">// 直接取队列头部（就是栈顶）</span>
-</span></span><span class="line"><span class="cl">     <span class="k">return</span> <span class="n">_queue</span><span class="p">.</span><span class="n">Peek</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;summary&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// 获取栈顶元素（不移除）</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;/summary&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;returns&gt;栈顶元素&lt;/returns&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;exception cref=&#34;InvalidOperationException&#34;&gt;栈为空时抛出异常&lt;/exception&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">T</span> <span class="n">Peek</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">IsEmpty</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">throw</span> <span class="k">new</span> <span class="n">InvalidOperationException</span><span class="p">(</span><span class="s">&#34;栈为空，无法获取栈顶元素&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 直接取队列头部（就是栈顶）</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">_queue</span><span class="p">.</span><span class="n">Peek</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;summary&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// 判断栈是否为空</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;/summary&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;returns&gt;空返回true，否则返回false&lt;/returns&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">bool</span> <span class="n">IsEmpty</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">     <span class="k">return</span> <span class="n">_queue</span><span class="p">.</span><span class="n">Count</span> <span class="p">==</span> <span class="m">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;summary&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// 判断栈是否为空</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;/summary&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;returns&gt;空返回true，否则返回false&lt;/returns&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">bool</span> <span class="n">IsEmpty</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">_queue</span><span class="p">.</span><span class="n">Count</span> <span class="p">==</span> <span class="m">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;summary&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// 获取栈的元素个数</span>
-</span></span><span class="line"><span class="cl"> <span class="cs">/// &lt;/summary&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">int</span> <span class="n">Count</span> <span class="p">=&gt;</span> <span class="n">_queue</span><span class="p">.</span><span class="n">Count</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;summary&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// 获取栈的元素个数</span>
+</span></span><span class="line"><span class="cl">    <span class="cs">/// &lt;/summary&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">int</span> <span class="n">Count</span> <span class="p">=&gt;</span> <span class="n">_queue</span><span class="p">.</span><span class="n">Count</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// 测试代码</span>
 </span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">Program</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kd">static</span> <span class="k">void</span> <span class="n">Main</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">     <span class="n">StackBySingleQueue</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">stack</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StackBySingleQueue</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;();</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="k">void</span> <span class="n">Main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">StackBySingleQueue</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">stack</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StackBySingleQueue</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;();</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">     <span class="c1">// 入栈：1 → 2 → 3</span>
-</span></span><span class="line"><span class="cl">     <span class="n">stack</span><span class="p">.</span><span class="n">Push</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">     <span class="n">stack</span><span class="p">.</span><span class="n">Push</span><span class="p">(</span><span class="m">2</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">     <span class="n">stack</span><span class="p">.</span><span class="n">Push</span><span class="p">(</span><span class="m">3</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 入栈：1 → 2 → 3</span>
+</span></span><span class="line"><span class="cl">        <span class="n">stack</span><span class="p">.</span><span class="n">Push</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">stack</span><span class="p">.</span><span class="n">Push</span><span class="p">(</span><span class="m">2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">stack</span><span class="p">.</span><span class="n">Push</span><span class="p">(</span><span class="m">3</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;栈顶元素：&#34;</span> <span class="p">+</span> <span class="n">stack</span><span class="p">.</span><span class="n">Peek</span><span class="p">());</span> <span class="c1">// 输出：3</span>
-</span></span><span class="line"><span class="cl">     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;栈元素个数：&#34;</span> <span class="p">+</span> <span class="n">stack</span><span class="p">.</span><span class="n">Count</span><span class="p">);</span> <span class="c1">// 输出：3</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;栈顶元素：&#34;</span> <span class="p">+</span> <span class="n">stack</span><span class="p">.</span><span class="n">Peek</span><span class="p">());</span> <span class="c1">// 输出：3</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;栈元素个数：&#34;</span> <span class="p">+</span> <span class="n">stack</span><span class="p">.</span><span class="n">Count</span><span class="p">);</span> <span class="c1">// 输出：3</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">     <span class="c1">// 出栈</span>
-</span></span><span class="line"><span class="cl">     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;出栈元素：&#34;</span> <span class="p">+</span> <span class="n">stack</span><span class="p">.</span><span class="n">Pop</span><span class="p">());</span> <span class="c1">// 输出：3</span>
-</span></span><span class="line"><span class="cl">     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;出栈后栈顶：&#34;</span> <span class="p">+</span> <span class="n">stack</span><span class="p">.</span><span class="n">Peek</span><span class="p">());</span> <span class="c1">// 输出：2</span>
-</span></span><span class="line"><span class="cl">     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;出栈后元素个数：&#34;</span> <span class="p">+</span> <span class="n">stack</span><span class="p">.</span><span class="n">Count</span><span class="p">);</span> <span class="c1">// 输出：2</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 出栈</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;出栈元素：&#34;</span> <span class="p">+</span> <span class="n">stack</span><span class="p">.</span><span class="n">Pop</span><span class="p">());</span> <span class="c1">// 输出：3</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;出栈后栈顶：&#34;</span> <span class="p">+</span> <span class="n">stack</span><span class="p">.</span><span class="n">Peek</span><span class="p">());</span> <span class="c1">// 输出：2</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;出栈后元素个数：&#34;</span> <span class="p">+</span> <span class="n">stack</span><span class="p">.</span><span class="n">Count</span><span class="p">);</span> <span class="c1">// 输出：2</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">     <span class="c1">// 继续出栈</span>
-</span></span><span class="line"><span class="cl">     <span class="n">stack</span><span class="p">.</span><span class="n">Pop</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">     <span class="n">stack</span><span class="p">.</span><span class="n">Pop</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;全部出栈后是否为空：&#34;</span> <span class="p">+</span> <span class="n">stack</span><span class="p">.</span><span class="n">IsEmpty</span><span class="p">());</span> <span class="c1">// 输出：True</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 继续出栈</span>
+</span></span><span class="line"><span class="cl">        <span class="n">stack</span><span class="p">.</span><span class="n">Pop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">stack</span><span class="p">.</span><span class="n">Pop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;全部出栈后是否为空：&#34;</span> <span class="p">+</span> <span class="n">stack</span><span class="p">.</span><span class="n">IsEmpty</span><span class="p">());</span> <span class="c1">// 输出：True</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">     <span class="c1">// 测试空栈出栈（会抛异常，可注释掉验证）</span>
-</span></span><span class="line"><span class="cl">     <span class="c1">// stack.Pop();</span>
-</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 测试空栈出栈（会抛异常，可注释掉验证）</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// stack.Pop();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
@@ -1511,14 +1511,14 @@
 </span></span><span class="line"><span class="cl">		<span class="kt">string</span><span class="p">[]</span> <span class="n">testCases</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">string</span><span class="p">[]</span>
 </span></span><span class="line"><span class="cl">		<span class="p">{</span>
 </span></span><span class="line"><span class="cl">			<span class="s">&#34;abbaca&#34;</span><span class="p">,</span>    <span class="c1">// 常规场景：消除后为 &#34;ca&#34;</span>
-</span></span><span class="line"><span class="cl">         <span class="s">&#34;aaaa&#34;</span><span class="p">,</span>      <span class="c1">// 连续重复：消除后为空</span>
-</span></span><span class="line"><span class="cl">         <span class="s">&#34;a&#34;</span><span class="p">,</span>         <span class="c1">// 单字符：无重复，返回自身</span>
-</span></span><span class="line"><span class="cl">         <span class="s">&#34;&#34;</span><span class="p">,</span>          <span class="c1">// 空字符串：返回空</span>
-</span></span><span class="line"><span class="cl">         <span class="kc">null</span><span class="p">,</span>        <span class="c1">// 空值：返回空</span>
-</span></span><span class="line"><span class="cl">         <span class="s">&#34;abba&#34;</span><span class="p">,</span>      <span class="c1">// 嵌套重复：消除后为空</span>
-</span></span><span class="line"><span class="cl">         <span class="s">&#34;abcde&#34;</span><span class="p">,</span>     <span class="c1">// 无重复：返回自身</span>
-</span></span><span class="line"><span class="cl">         <span class="s">&#34;aabbccddee&#34;</span> <span class="c1">// 成对重复：消除后为空</span>
-</span></span><span class="line"><span class="cl">     <span class="p">};</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;aaaa&#34;</span><span class="p">,</span>      <span class="c1">// 连续重复：消除后为空</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;a&#34;</span><span class="p">,</span>         <span class="c1">// 单字符：无重复，返回自身</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;&#34;</span><span class="p">,</span>          <span class="c1">// 空字符串：返回空</span>
+</span></span><span class="line"><span class="cl">            <span class="kc">null</span><span class="p">,</span>        <span class="c1">// 空值：返回空</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;abba&#34;</span><span class="p">,</span>      <span class="c1">// 嵌套重复：消除后为空</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;abcde&#34;</span><span class="p">,</span>     <span class="c1">// 无重复：返回自身</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;aabbccddee&#34;</span> <span class="c1">// 成对重复：消除后为空</span>
+</span></span><span class="line"><span class="cl">        <span class="p">};</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">		<span class="c1">// 遍历执行测试并输出结果</span>
 </span></span><span class="line"><span class="cl">		<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;===== 相邻重复项消除测试结果 =====&#34;</span><span class="p">);</span>
@@ -1691,46 +1691,46 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">myDequeue</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">     <span class="kd">private</span> <span class="n">LinkedList</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">linkedList</span> <span class="p">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;();</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">private</span> <span class="n">LinkedList</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">linkedList</span> <span class="p">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;();</span>
 </span></span><span class="line"><span class="cl">		<span class="c1">//压入队列，压入的规则是按照输入的顺序来，如果前面有比当前位置小的，则移除前面较小的元素，有比较大的则直接保留</span>
-</span></span><span class="line"><span class="cl">     <span class="kd">public</span> <span class="k">void</span> <span class="n">Enqueue</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">         <span class="k">while</span><span class="p">(</span><span class="n">linkedList</span><span class="p">.</span><span class="n">Count</span> <span class="p">&gt;</span> <span class="m">0</span> <span class="p">&amp;&amp;</span> <span class="n">linkedList</span><span class="p">.</span><span class="n">Last</span><span class="p">.</span><span class="n">Value</span> <span class="p">&lt;</span> <span class="n">n</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">             <span class="n">linkedList</span><span class="p">.</span><span class="n">RemoveLast</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">         <span class="p">}</span>
-</span></span><span class="line"><span class="cl">         <span class="n">linkedList</span><span class="p">.</span><span class="n">AddLast</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">     <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="k">void</span> <span class="n">Enqueue</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">while</span><span class="p">(</span><span class="n">linkedList</span><span class="p">.</span><span class="n">Count</span> <span class="p">&gt;</span> <span class="m">0</span> <span class="p">&amp;&amp;</span> <span class="n">linkedList</span><span class="p">.</span><span class="n">Last</span><span class="p">.</span><span class="n">Value</span> <span class="p">&lt;</span> <span class="n">n</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">                <span class="n">linkedList</span><span class="p">.</span><span class="n">RemoveLast</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="n">linkedList</span><span class="p">.</span><span class="n">AddLast</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">     <span class="kd">public</span> <span class="kt">int</span> <span class="n">Max</span><span class="p">(){</span>
-</span></span><span class="line"><span class="cl">         <span class="k">return</span> <span class="n">linkedList</span><span class="p">.</span><span class="n">First</span><span class="p">.</span><span class="n">Value</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">     <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="kt">int</span> <span class="n">Max</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">linkedList</span><span class="p">.</span><span class="n">First</span><span class="p">.</span><span class="n">Value</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">     <span class="kd">public</span> <span class="k">void</span> <span class="n">Dequeue</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">         <span class="c1">//因为我们只留下了最大的数，之后是从大到小单调递减的所以只有当最大值和移除元素相等的时候才需要移除，不相等的时候不采取任何措施，因为我们根被没有将他们加进来</span>
-</span></span><span class="line"><span class="cl">         <span class="k">if</span><span class="p">(</span><span class="n">linkedList</span><span class="p">.</span><span class="n">First</span><span class="p">.</span><span class="n">Value</span> <span class="p">==</span> <span class="n">n</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">             <span class="n">linkedList</span><span class="p">.</span><span class="n">RemoveFirst</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">         <span class="p">}</span>   
-</span></span><span class="line"><span class="cl">     <span class="p">}</span>
-</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="k">void</span> <span class="n">Dequeue</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">//因为我们只留下了最大的数，之后是从大到小单调递减的所以只有当最大值和移除元素相等的时候才需要移除，不相等的时候不采取任何措施，因为我们根被没有将他们加进来</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span><span class="p">(</span><span class="n">linkedList</span><span class="p">.</span><span class="n">First</span><span class="p">.</span><span class="n">Value</span> <span class="p">==</span> <span class="n">n</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">                <span class="n">linkedList</span><span class="p">.</span><span class="n">RemoveFirst</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>   
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> <span class="n">myDequeue</span> <span class="n">window</span> <span class="p">=</span> <span class="k">new</span> <span class="n">myDequeue</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"> <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">res</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">myDequeue</span> <span class="n">window</span> <span class="p">=</span> <span class="k">new</span> <span class="n">myDequeue</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">res</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;();</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">int</span><span class="p">[]</span> <span class="n">MaxSlidingWindow</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">     <span class="c1">//先确定滑动窗口起始的位置</span>
-</span></span><span class="line"><span class="cl">     <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">k</span><span class="p">;</span> <span class="n">i</span><span class="p">++){</span>
-</span></span><span class="line"><span class="cl">         <span class="n">window</span><span class="p">.</span><span class="n">Enqueue</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-</span></span><span class="line"><span class="cl">     <span class="p">}</span>
-</span></span><span class="line"><span class="cl">     <span class="c1">//记录最大值</span>
-</span></span><span class="line"><span class="cl">     <span class="n">res</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">window</span><span class="p">.</span><span class="n">Max</span><span class="p">());</span>
-</span></span><span class="line"><span class="cl">     <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="n">k</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">nums</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span> <span class="n">i</span><span class="p">++){</span>
-</span></span><span class="line"><span class="cl">         <span class="c1">//移除滑动窗口不包含位置的元素</span>
-</span></span><span class="line"><span class="cl">         <span class="n">window</span><span class="p">.</span><span class="n">Dequeue</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">-</span><span class="n">k</span><span class="p">]);</span>
-</span></span><span class="line"><span class="cl">         <span class="n">window</span><span class="p">.</span><span class="n">Enqueue</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-</span></span><span class="line"><span class="cl">         <span class="n">res</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">window</span><span class="p">.</span><span class="n">Max</span><span class="p">());</span>
-</span></span><span class="line"><span class="cl">     <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">int</span><span class="p">[]</span> <span class="n">MaxSlidingWindow</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//先确定滑动窗口起始的位置</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">k</span><span class="p">;</span> <span class="n">i</span><span class="p">++){</span>
+</span></span><span class="line"><span class="cl">            <span class="n">window</span><span class="p">.</span><span class="n">Enqueue</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//记录最大值</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">window</span><span class="p">.</span><span class="n">Max</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="n">k</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">nums</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span> <span class="n">i</span><span class="p">++){</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">//移除滑动窗口不包含位置的元素</span>
+</span></span><span class="line"><span class="cl">            <span class="n">window</span><span class="p">.</span><span class="n">Dequeue</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">-</span><span class="n">k</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">window</span><span class="p">.</span><span class="n">Enqueue</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">window</span><span class="p">.</span><span class="n">Max</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">     <span class="k">return</span> <span class="n">res</span><span class="p">.</span><span class="n">ToArray</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span><span class="p">.</span><span class="n">ToArray</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div></blockquote>
