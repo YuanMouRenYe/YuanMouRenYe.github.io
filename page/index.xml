@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>元某人也</copyright>
-        <lastBuildDate>Wed, 20 May 2026 18:49:18 +0800</lastBuildDate><atom:link href="https://Accommodate111.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 20 May 2026 18:57:03 +0800</lastBuildDate><atom:link href="https://Accommodate111.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>归档</title>
         <link>https://Accommodate111.github.io/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
@@ -22,11 +22,44 @@
         
         <guid>https://Accommodate111.github.io/categories-tags/</guid>
         <description>&lt;p&gt;按主题浏览文章：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://Accommodate111.github.io/series/&#34; &gt;系列索引&lt;/a&gt;（按学习顺序）&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://Accommodate111.github.io/categories/&#34; &gt;全部分类&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://Accommodate111.github.io/tags/&#34; &gt;全部标签&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;a href=&#34;https://Accommodate111.github.io/series/&#34; class=&#34;icon-nav-link&#34;&gt;
+    &lt;span class=&#34;icon-nav-link__icon&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; class=&#34;icon icon-tabler icon-tabler-link&#34; width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+  &lt;path stroke=&#34;none&#34; d=&#34;M0 0h24v24H0z&#34;/&gt;
+  &lt;path d=&#34;M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5&#34; /&gt;
+  &lt;path d=&#34;M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5&#34; /&gt;
+&lt;/svg&gt;
+
+
+&lt;/span&gt;
+    &lt;span class=&#34;icon-nav-link__text&#34;&gt;系列索引（按学习顺序）&lt;/span&gt;
+&lt;/a&gt;
+
+&lt;a href=&#34;https://Accommodate111.github.io/categories/&#34; class=&#34;icon-nav-link&#34;&gt;
+    &lt;span class=&#34;icon-nav-link__icon&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; class=&#34;icon icon-tabler icon-tabler-hash&#34; width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+  &lt;path stroke=&#34;none&#34; d=&#34;M0 0h24v24H0z&#34;/&gt;
+  &lt;line x1=&#34;5&#34; y1=&#34;9&#34; x2=&#34;19&#34; y2=&#34;9&#34; /&gt;
+  &lt;line x1=&#34;5&#34; y1=&#34;15&#34; x2=&#34;19&#34; y2=&#34;15&#34; /&gt;
+  &lt;line x1=&#34;11&#34; y1=&#34;4&#34; x2=&#34;7&#34; y2=&#34;20&#34; /&gt;
+  &lt;line x1=&#34;17&#34; y1=&#34;4&#34; x2=&#34;13&#34; y2=&#34;20&#34; /&gt;
+&lt;/svg&gt;
+
+
+&lt;/span&gt;
+    &lt;span class=&#34;icon-nav-link__text&#34;&gt;全部分类&lt;/span&gt;
+&lt;/a&gt;
+
+&lt;a href=&#34;https://Accommodate111.github.io/tags/&#34; class=&#34;icon-nav-link&#34;&gt;
+    &lt;span class=&#34;icon-nav-link__icon&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; class=&#34;icon icon-tabler icon-tabler-tag&#34; width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+  &lt;path stroke=&#34;none&#34; d=&#34;M0 0h24v24H0z&#34;/&gt;
+  &lt;path d=&#34;M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4&#34; /&gt;
+  &lt;circle cx=&#34;9&#34; cy=&#34;9&#34; r=&#34;2&#34; /&gt;
+&lt;/svg&gt;
+
+
+&lt;/span&gt;
+    &lt;span class=&#34;icon-nav-link__text&#34;&gt;全部标签&lt;/span&gt;
+&lt;/a&gt;
+
 </description>
         </item>
         <item>
