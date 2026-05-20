@@ -11779,30 +11779,6 @@ $$&lt;h3 id=&#34;分数&#34;&gt;分数
 </description>
         </item>
         <item>
-        <title>更新日志</title>
-        <link>https://Accommodate111.github.io/logs/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://Accommodate111.github.io/logs/</guid>
-        <description>&lt;p&gt;记录站点结构与内容的变更。&lt;/p&gt;
-&lt;h2 id=&#34;2026-05-20&#34;&gt;2026-05-20
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;对标 &lt;a class=&#34;link&#34; href=&#34;https://tingdonghu.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;古月月仔的博客&lt;/a&gt; 优化：About/链接页、文章摘要与封面、系列标题前缀&lt;/li&gt;
-&lt;li&gt;补充站点头像、favicon、侧栏定位文案；关闭英文站，仅保留简体中文&lt;/li&gt;
-&lt;li&gt;CSDN 图床本地化；同步脚本保留 description/image 等元数据&lt;/li&gt;
-&lt;li&gt;对齐 &lt;a class=&#34;link&#34; href=&#34;https://letere-gzj.github.io/hugo-stack/p/hugo/custom-blog/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Hugo + Stack 部署教程&lt;/a&gt;，优化导航与 GitHub Actions 自动部署配置&lt;/li&gt;
-&lt;li&gt;新增「分类&amp;amp;标签」「更新日志」页面；引入 particles.js 动态背景（已调低粒子密度）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;2024&#34;&gt;2024
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;使用 Hugo + Stack 主题搭建博客&lt;/li&gt;
-&lt;li&gt;配置 GitHub Pages 自动部署（&lt;code&gt;hugo-main&lt;/code&gt; → &lt;code&gt;Accommodate111.github.io&lt;/code&gt;）&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        </item>
-        <item>
         <title>关于</title>
         <link>https://Accommodate111.github.io/%E5%85%B3%E4%BA%8E/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
