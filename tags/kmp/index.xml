@@ -13,7 +13,7 @@
         <pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate>
         
         <guid>https://yuanmourenye.github.io/p/%E7%AE%97%E6%B3%95/</guid>
-        <description>&lt;img src="https://yuanmourenye.github.io/img/covers/cs.png" alt="Featured image of post 【计算机基础】算法" /&gt;&lt;h2 id=&#34;字符串&#34;&gt;字符串
+        <description>&lt;h2 id=&#34;字符串&#34;&gt;字符串
 &lt;/h2&gt;&lt;h3 id=&#34;4kmp算法理论篇&#34;&gt;4、KMP算法（理论篇）
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;主要解决在一个&lt;strong&gt;文本串&lt;/strong&gt;中是否出现过一个&lt;strong&gt;模式串&lt;/strong&gt;的问题&lt;/p&gt;

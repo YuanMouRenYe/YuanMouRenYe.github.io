@@ -7,13 +7,13 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>元某人也</copyright>
-        <lastBuildDate>Wed, 20 May 2026 15:53:26 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/a/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 10 Jun 2026 15:04:11 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/a/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>【Unity】Unity A* 寻路算法</title>
         <link>https://yuanmourenye.github.io/p/unity-a-star/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://yuanmourenye.github.io/p/unity-a-star/</guid>
-        <description>&lt;img src="https://yuanmourenye.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Unity A* 寻路算法" /&gt;&lt;h1 id=&#34;unity-a-寻路算法&#34;&gt;Unity A* 寻路算法
+        <description>&lt;h1 id=&#34;unity-a-寻路算法&#34;&gt;Unity A* 寻路算法
 &lt;/h1&gt;&lt;h2 id=&#34;1-节点&#34;&gt;1. 节点
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;

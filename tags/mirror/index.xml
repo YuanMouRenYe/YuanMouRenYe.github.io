@@ -7,13 +7,13 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>元某人也</copyright>
-        <lastBuildDate>Wed, 20 May 2026 15:53:26 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/mirror/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 10 Jun 2026 15:04:11 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/mirror/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>【Unity】Mirror 联网笔记</title>
         <link>https://yuanmourenye.github.io/p/mirror/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://yuanmourenye.github.io/p/mirror/</guid>
-        <description>&lt;img src="https://yuanmourenye.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Mirror 联网笔记" /&gt;&lt;h1 id=&#34;mirror-联网笔记&#34;&gt;Mirror 联网笔记
+        <description>&lt;h1 id=&#34;mirror-联网笔记&#34;&gt;Mirror 联网笔记
 &lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;社区 Unity 多人方案（UNET 分支）。模型：&lt;strong&gt;服务器权威 + 状态同步&lt;/strong&gt;。&lt;br&gt;
 与 NGO 对照见 → &lt;a class=&#34;link&#34; href=&#34;./Unity%e5%a4%9a%e4%ba%ba%e8%81%94%e7%bd%91-Mirror%e4%b8%8eNGO.md&#34; &gt;Unity多人联网-Mirror与NGO.md&lt;/a&gt;&lt;/p&gt;
@@ -692,7 +692,7 @@
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/</guid>
-        <description>&lt;img src="https://yuanmourenye.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Unity 多人联网：Mirror 与 NGO" /&gt;&lt;h1 id=&#34;unity-多人联网mirror-与-netcode-for-gameobjectsngo&#34;&gt;Unity 多人联网：Mirror 与 Netcode for GameObjects（NGO）
+        <description>&lt;h1 id=&#34;unity-多人联网mirror-与-netcode-for-gameobjectsngo&#34;&gt;Unity 多人联网：Mirror 与 Netcode for GameObjects（NGO）
 &lt;/h1&gt;&lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;核心模型相同&lt;/strong&gt;：服务器权威 + 状态同步，客户端发请求、服务器改真相再下发。&lt;/li&gt;

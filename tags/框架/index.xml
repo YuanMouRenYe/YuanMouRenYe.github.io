@@ -7,13 +7,13 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>元某人也</copyright>
-        <lastBuildDate>Wed, 20 May 2026 15:53:26 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/%E6%A1%86%E6%9E%B6/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 10 Jun 2026 15:04:11 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/%E6%A1%86%E6%9E%B6/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>【Unity】Unity 程序基础小框架</title>
         <link>https://yuanmourenye.github.io/p/unity-framework/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://yuanmourenye.github.io/p/unity-framework/</guid>
-        <description>&lt;img src="https://yuanmourenye.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Unity 程序基础小框架" /&gt;&lt;h1 id=&#34;unity-程序基础小框架&#34;&gt;Unity 程序基础小框架
+        <description>&lt;h1 id=&#34;unity-程序基础小框架&#34;&gt;Unity 程序基础小框架
 &lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;常用教学向模块化架构：&lt;strong&gt;单例 → 缓存池 / 事件中心 / Mono 桥接 / 资源加载&lt;/strong&gt;。&lt;br&gt;
 目标：降低耦合、复用对象、减少 GC、让非 &lt;code&gt;MonoBehaviour&lt;/code&gt; 类也能用 Update / 协程。&lt;/p&gt;
