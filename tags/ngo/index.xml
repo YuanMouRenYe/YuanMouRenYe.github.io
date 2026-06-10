@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>NGO on 元某人也</title>
-        <link>https://Accommodate111.github.io/tags/ngo/</link>
+        <link>https://yuanmourenye.github.io/tags/ngo/</link>
         <description>Recent content in NGO on 元某人也</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>元某人也</copyright>
-        <lastBuildDate>Wed, 20 May 2026 15:53:26 +0800</lastBuildDate><atom:link href="https://Accommodate111.github.io/tags/ngo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 20 May 2026 15:53:26 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/ngo/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>【Unity】Netcode for GameObjects 笔记</title>
-        <link>https://Accommodate111.github.io/p/network-for-gameobjects/</link>
+        <link>https://yuanmourenye.github.io/p/network-for-gameobjects/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://Accommodate111.github.io/p/network-for-gameobjects/</guid>
-        <description>&lt;img src="https://Accommodate111.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Netcode for GameObjects 笔记" /&gt;&lt;h1 id=&#34;netcode-for-gameobjects-笔记&#34;&gt;Netcode for GameObjects 笔记
+        <guid>https://yuanmourenye.github.io/p/network-for-gameobjects/</guid>
+        <description>&lt;img src="https://yuanmourenye.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Netcode for GameObjects 笔记" /&gt;&lt;h1 id=&#34;netcode-for-gameobjects-笔记&#34;&gt;Netcode for GameObjects 笔记
 &lt;/h1&gt;&lt;h2 id=&#34;核心原则&#34;&gt;核心原则
 &lt;/h2&gt;&lt;table&gt;
   &lt;thead&gt;
@@ -366,10 +366,10 @@
 &lt;/h2&gt;&lt;h3 id=&#34;1-配置-networkmanager&#34;&gt;1. 配置 NetworkManager
 &lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;添加 &lt;code&gt;NetworkManager&lt;/code&gt;（全场景仅一个）&lt;br&gt;
-&lt;img src=&#34;https://Accommodate111.github.io/p/network-for-gameobjects/img/image-20260408210526625.png&#34;
+&lt;img src=&#34;https://yuanmourenye.github.io/p/network-for-gameobjects/img/image-20260408210526625.png&#34;
 	width=&#34;706&#34;
 	height=&#34;1027&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/network-for-gameobjects/img/image-20260408210526625_hu_49adc33414edff37.png 480w, https://Accommodate111.github.io/p/network-for-gameobjects/img/image-20260408210526625_hu_50812c587480195e.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/network-for-gameobjects/img/image-20260408210526625_hu_49adc33414edff37.png 480w, https://yuanmourenye.github.io/p/network-for-gameobjects/img/image-20260408210526625_hu_50812c587480195e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260408210526625&#34;
@@ -381,10 +381,10 @@
 	
 &gt;&lt;/li&gt;
 &lt;li&gt;Transport 选 &lt;strong&gt;Unity Transport&lt;/strong&gt;&lt;br&gt;
-&lt;img src=&#34;https://Accommodate111.github.io/p/network-for-gameobjects/img/image-20260408210601297.png&#34;
+&lt;img src=&#34;https://yuanmourenye.github.io/p/network-for-gameobjects/img/image-20260408210601297.png&#34;
 	width=&#34;674&#34;
 	height=&#34;477&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/network-for-gameobjects/img/image-20260408210601297_hu_e0bf58212a604a38.png 480w, https://Accommodate111.github.io/p/network-for-gameobjects/img/image-20260408210601297_hu_3cae8d464491b007.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/network-for-gameobjects/img/image-20260408210601297_hu_e0bf58212a604a38.png 480w, https://yuanmourenye.github.io/p/network-for-gameobjects/img/image-20260408210601297_hu_3cae8d464491b007.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260408210601297&#34;
@@ -397,10 +397,10 @@
 &gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Network Config&lt;/strong&gt; 中指定 &lt;strong&gt;Player Prefab&lt;/strong&gt;（带 &lt;code&gt;NetworkObject&lt;/code&gt;）&lt;/li&gt;
 &lt;li&gt;Inspector 点 &lt;strong&gt;Start Host&lt;/strong&gt; 做本机联调&lt;br&gt;
-&lt;img src=&#34;https://Accommodate111.github.io/p/network-for-gameobjects/img/image-20260408211025268.png&#34;
+&lt;img src=&#34;https://yuanmourenye.github.io/p/network-for-gameobjects/img/image-20260408211025268.png&#34;
 	width=&#34;674&#34;
 	height=&#34;219&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/network-for-gameobjects/img/image-20260408211025268_hu_fc35afc7b7421a06.png 480w, https://Accommodate111.github.io/p/network-for-gameobjects/img/image-20260408211025268_hu_bee8b71614c72ac7.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/network-for-gameobjects/img/image-20260408211025268_hu_fc35afc7b7421a06.png 480w, https://yuanmourenye.github.io/p/network-for-gameobjects/img/image-20260408211025268_hu_bee8b71614c72ac7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260408211025268&#34;
@@ -1151,11 +1151,11 @@
         </item>
         <item>
         <title>【Unity】Unity 多人联网：Mirror 与 NGO</title>
-        <link>https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/</link>
+        <link>https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/</guid>
-        <description>&lt;img src="https://Accommodate111.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Unity 多人联网：Mirror 与 NGO" /&gt;&lt;h1 id=&#34;unity-多人联网mirror-与-netcode-for-gameobjectsngo&#34;&gt;Unity 多人联网：Mirror 与 Netcode for GameObjects（NGO）
+        <guid>https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/</guid>
+        <description>&lt;img src="https://yuanmourenye.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Unity 多人联网：Mirror 与 NGO" /&gt;&lt;h1 id=&#34;unity-多人联网mirror-与-netcode-for-gameobjectsngo&#34;&gt;Unity 多人联网：Mirror 与 Netcode for GameObjects（NGO）
 &lt;/h1&gt;&lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;核心模型相同&lt;/strong&gt;：服务器权威 + 状态同步，客户端发请求、服务器改真相再下发。&lt;/li&gt;
@@ -1320,10 +1320,10 @@
 &lt;hr&gt;
 &lt;h2 id=&#34;连接是如何建立的&#34;&gt;连接是如何建立的
 &lt;/h2&gt;&lt;h3 id=&#34;通用流程二者逻辑一致&#34;&gt;通用流程（二者逻辑一致）
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092635825.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092635825.png&#34;
 	width=&#34;932&#34;
 	height=&#34;538&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092635825_hu_8eff0fbffe979e6c.png 480w, https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092635825_hu_cf72c74aaa38b98a.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092635825_hu_8eff0fbffe979e6c.png 480w, https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092635825_hu_cf72c74aaa38b98a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260520092635825&#34;
@@ -1574,10 +1574,10 @@
 &lt;p&gt;&lt;strong&gt;为什么本地直接改 UI 不会同步给别人？&lt;/strong&gt;&lt;br&gt;
 UI 只是本机表现；要让所有人看到名字/颜色，必须 &lt;strong&gt;Command/RPC → 服务器改 SyncVar/NetworkVariable → 自动同步到所有客户端 → hook/OnValueChanged 更新 UI&lt;/strong&gt;。&lt;/p&gt;
 &lt;h3 id=&#34;名字与颜色同步通用流程&#34;&gt;名字与颜色同步（通用流程）
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092652946.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092652946.png&#34;
 	width=&#34;1125&#34;
 	height=&#34;511&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092652946_hu_a57e8b8e6ea9f7ba.png 480w, https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092652946_hu_9cd4dc66db84d1e8.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092652946_hu_a57e8b8e6ea9f7ba.png 480w, https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092652946_hu_9cd4dc66db84d1e8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260520092652946&#34;
@@ -1851,10 +1851,10 @@ UI 只是本机表现；要让所有人看到名字/颜色，必须 &lt;strong&g
 &lt;/h2&gt;&lt;h3 id=&#34;1-配置-networkmanager&#34;&gt;1. 配置 NetworkManager
 &lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;添加 &lt;code&gt;NetworkManager&lt;/code&gt;（全场景仅一个）&lt;br&gt;
-&lt;img src=&#34;https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210526625.png&#34;
+&lt;img src=&#34;https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210526625.png&#34;
 	width=&#34;706&#34;
 	height=&#34;1027&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210526625_hu_49adc33414edff37.png 480w, https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210526625_hu_50812c587480195e.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210526625_hu_49adc33414edff37.png 480w, https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210526625_hu_50812c587480195e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260408210526625&#34;
@@ -1866,10 +1866,10 @@ UI 只是本机表现；要让所有人看到名字/颜色，必须 &lt;strong&g
 	
 &gt;&lt;/li&gt;
 &lt;li&gt;Transport：&lt;strong&gt;Unity Transport&lt;/strong&gt;&lt;br&gt;
-&lt;img src=&#34;https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210601297.png&#34;
+&lt;img src=&#34;https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210601297.png&#34;
 	width=&#34;674&#34;
 	height=&#34;477&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210601297_hu_e0bf58212a604a38.png 480w, https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210601297_hu_3cae8d464491b007.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210601297_hu_e0bf58212a604a38.png 480w, https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210601297_hu_3cae8d464491b007.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260408210601297&#34;
@@ -1882,10 +1882,10 @@ UI 只是本机表现；要让所有人看到名字/颜色，必须 &lt;strong&g
 &gt;&lt;/li&gt;
 &lt;li&gt;指定 &lt;strong&gt;Player Prefab&lt;/strong&gt;（含 &lt;code&gt;NetworkObject&lt;/code&gt;）&lt;/li&gt;
 &lt;li&gt;Inspector &lt;strong&gt;Start Host&lt;/strong&gt; 本机调试&lt;br&gt;
-&lt;img src=&#34;https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408211025268.png&#34;
+&lt;img src=&#34;https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408211025268.png&#34;
 	width=&#34;674&#34;
 	height=&#34;219&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408211025268_hu_fc35afc7b7421a06.png 480w, https://Accommodate111.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408211025268_hu_bee8b71614c72ac7.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408211025268_hu_fc35afc7b7421a06.png 480w, https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408211025268_hu_bee8b71614c72ac7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260408211025268&#34;

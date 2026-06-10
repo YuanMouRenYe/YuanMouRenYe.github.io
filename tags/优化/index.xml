@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>优化 on 元某人也</title>
-        <link>https://Accommodate111.github.io/tags/%E4%BC%98%E5%8C%96/</link>
+        <link>https://yuanmourenye.github.io/tags/%E4%BC%98%E5%8C%96/</link>
         <description>Recent content in 优化 on 元某人也</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>元某人也</copyright>
-        <lastBuildDate>Wed, 20 May 2026 15:53:26 +0800</lastBuildDate><atom:link href="https://Accommodate111.github.io/tags/%E4%BC%98%E5%8C%96/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 20 May 2026 15:53:26 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/%E4%BC%98%E5%8C%96/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>【Unity】Unity GUI 优化</title>
-        <link>https://Accommodate111.github.io/p/unity-gui-optimization/</link>
+        <link>https://yuanmourenye.github.io/p/unity-gui-optimization/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://Accommodate111.github.io/p/unity-gui-optimization/</guid>
-        <description>&lt;img src="https://Accommodate111.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Unity GUI 优化" /&gt;&lt;h1 id=&#34;unity-gui-优化&#34;&gt;Unity GUI 优化
+        <guid>https://yuanmourenye.github.io/p/unity-gui-optimization/</guid>
+        <description>&lt;img src="https://yuanmourenye.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Unity GUI 优化" /&gt;&lt;h1 id=&#34;unity-gui-优化&#34;&gt;Unity GUI 优化
 &lt;/h1&gt;&lt;h2 id=&#34;1概念&#34;&gt;1.概念
 &lt;/h2&gt;&lt;p&gt;同一 &lt;strong&gt;Canvas&lt;/strong&gt; 下，满足合批规则的多个 UI 元素的网格数据合并到一个顶点缓冲区，仅用一个 &lt;strong&gt;DrawCall&lt;/strong&gt; 提交 GPU 渲染。&lt;/p&gt;
 &lt;hr&gt;

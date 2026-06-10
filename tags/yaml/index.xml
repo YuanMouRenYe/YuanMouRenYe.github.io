@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>YAML on 元某人也</title>
-        <link>https://Accommodate111.github.io/tags/yaml/</link>
+        <link>https://yuanmourenye.github.io/tags/yaml/</link>
         <description>Recent content in YAML on 元某人也</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>元某人也</copyright>
-        <lastBuildDate>Wed, 20 May 2026 15:53:26 +0800</lastBuildDate><atom:link href="https://Accommodate111.github.io/tags/yaml/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 20 May 2026 15:53:26 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/yaml/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>【Unity】Unity YAML</title>
-        <link>https://Accommodate111.github.io/p/unity-yaml/</link>
+        <link>https://yuanmourenye.github.io/p/unity-yaml/</link>
         <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://Accommodate111.github.io/p/unity-yaml/</guid>
-        <description>&lt;img src="https://Accommodate111.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Unity YAML" /&gt;&lt;h1 id=&#34;unity-yaml&#34;&gt;Unity YAML
+        <guid>https://yuanmourenye.github.io/p/unity-yaml/</guid>
+        <description>&lt;img src="https://yuanmourenye.github.io/img/covers/unity.png" alt="Featured image of post 【Unity】Unity YAML" /&gt;&lt;h1 id=&#34;unity-yaml&#34;&gt;Unity YAML
 &lt;/h1&gt;&lt;h2 id=&#34;1-yaml-文件结构&#34;&gt;1. YAML 文件结构
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/unity-yaml/img/csdn-129da38f81204a77890ac5f6bc23fbf9.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/unity-yaml/img/csdn-129da38f81204a77890ac5f6bc23fbf9.png&#34;
 	width=&#34;239&#34;
 	height=&#34;43&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/unity-yaml/img/csdn-129da38f81204a77890ac5f6bc23fbf9_hu_9289304cf104a473.png 480w, https://Accommodate111.github.io/p/unity-yaml/img/csdn-129da38f81204a77890ac5f6bc23fbf9_hu_f88a60961cb4e2a0.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/unity-yaml/img/csdn-129da38f81204a77890ac5f6bc23fbf9_hu_9289304cf104a473.png 480w, https://yuanmourenye.github.io/p/unity-yaml/img/csdn-129da38f81204a77890ac5f6bc23fbf9_hu_f88a60961cb4e2a0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;YAML 文件整体结构&#34;
@@ -61,10 +61,10 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;12-对象定义块&#34;&gt;1.2 对象定义块
 &lt;/h3&gt;&lt;h4 id=&#34;1标头格式&#34;&gt;（1）标头格式
-&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/unity-yaml/img/csdn-cf8ae99a6b7d4778b8dc2b8dc09f3193.png&#34;
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/unity-yaml/img/csdn-cf8ae99a6b7d4778b8dc2b8dc09f3193.png&#34;
 	width=&#34;255&#34;
 	height=&#34;21&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/unity-yaml/img/csdn-cf8ae99a6b7d4778b8dc2b8dc09f3193_hu_3a15dc65e55665c6.png 480w, https://Accommodate111.github.io/p/unity-yaml/img/csdn-cf8ae99a6b7d4778b8dc2b8dc09f3193_hu_ba49a484eb97de04.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/unity-yaml/img/csdn-cf8ae99a6b7d4778b8dc2b8dc09f3193_hu_3a15dc65e55665c6.png 480w, https://yuanmourenye.github.io/p/unity-yaml/img/csdn-cf8ae99a6b7d4778b8dc2b8dc09f3193_hu_ba49a484eb97de04.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;对象标头格式&#34;
@@ -109,10 +109,10 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h4 id=&#34;2标头下方&#34;&gt;（2）标头下方
 &lt;/h4&gt;&lt;p&gt;&lt;strong&gt;对象类型名称 + 全量序列化属性&lt;/strong&gt;（字段名以 &lt;code&gt;m_&lt;/code&gt; 开头居多）。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/unity-yaml/img/csdn-ba539039311c43b69b81855cc23de624.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/unity-yaml/img/csdn-ba539039311c43b69b81855cc23de624.png&#34;
 	width=&#34;356&#34;
 	height=&#34;341&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/unity-yaml/img/csdn-ba539039311c43b69b81855cc23de624_hu_45b98dfc6f79c9e5.png 480w, https://Accommodate111.github.io/p/unity-yaml/img/csdn-ba539039311c43b69b81855cc23de624_hu_98a95fcae548d718.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/unity-yaml/img/csdn-ba539039311c43b69b81855cc23de624_hu_45b98dfc6f79c9e5.png 480w, https://yuanmourenye.github.io/p/unity-yaml/img/csdn-ba539039311c43b69b81855cc23de624_hu_98a95fcae548d718.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;GameObject 序列化示例&#34;
@@ -126,10 +126,10 @@
 &lt;hr&gt;
 &lt;h2 id=&#34;2-同一-yaml-文件内引用&#34;&gt;2. 同一 YAML 文件内引用
 &lt;/h2&gt;&lt;p&gt;通过 &lt;code&gt;{fileID: &amp;lt;FILE ID&amp;gt;}&lt;/code&gt; 格式实现。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/unity-yaml/img/csdn-d6463b211cba467c8afef6af1c01761b.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/unity-yaml/img/csdn-d6463b211cba467c8afef6af1c01761b.png&#34;
 	width=&#34;351&#34;
 	height=&#34;359&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/unity-yaml/img/csdn-d6463b211cba467c8afef6af1c01761b_hu_d0ab6ab207cb3559.png 480w, https://Accommodate111.github.io/p/unity-yaml/img/csdn-d6463b211cba467c8afef6af1c01761b_hu_370257890ae03b92.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/unity-yaml/img/csdn-d6463b211cba467c8afef6af1c01761b_hu_d0ab6ab207cb3559.png 480w, https://yuanmourenye.github.io/p/unity-yaml/img/csdn-d6463b211cba467c8afef6af1c01761b_hu_370257890ae03b92.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;同文件引用示例 1&#34;
@@ -140,10 +140,10 @@
 		data-flex-basis=&#34;234px&#34;
 	
 &gt;
-&lt;img src=&#34;https://Accommodate111.github.io/p/unity-yaml/img/csdn-ec442480bc6e44a3819f6747082baf71.png&#34;
+&lt;img src=&#34;https://yuanmourenye.github.io/p/unity-yaml/img/csdn-ec442480bc6e44a3819f6747082baf71.png&#34;
 	width=&#34;368&#34;
 	height=&#34;303&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/unity-yaml/img/csdn-ec442480bc6e44a3819f6747082baf71_hu_abb76227e42072c9.png 480w, https://Accommodate111.github.io/p/unity-yaml/img/csdn-ec442480bc6e44a3819f6747082baf71_hu_b79db0d7297b25cd.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/unity-yaml/img/csdn-ec442480bc6e44a3819f6747082baf71_hu_abb76227e42072c9.png 480w, https://yuanmourenye.github.io/p/unity-yaml/img/csdn-ec442480bc6e44a3819f6747082baf71_hu_b79db0d7297b25cd.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;同文件引用示例 2&#34;
@@ -173,10 +173,10 @@
 &lt;h3 id=&#34;32-meta-文件&#34;&gt;3.2 &lt;code&gt;.meta&lt;/code&gt; 文件
 &lt;/h3&gt;&lt;p&gt;存储 &lt;strong&gt;GUID&lt;/strong&gt;、资产导入设置、Asset Bundle 配置等核心元数据。&lt;/p&gt;
 &lt;h3 id=&#34;33-yaml-中的-type-字段&#34;&gt;3.3 YAML 中的 &lt;code&gt;type&lt;/code&gt; 字段
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/unity-yaml/img/csdn-9b413ca92bb241609208ec260c25a6ad.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/unity-yaml/img/csdn-9b413ca92bb241609208ec260c25a6ad.png&#34;
 	width=&#34;555&#34;
 	height=&#34;43&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/unity-yaml/img/csdn-9b413ca92bb241609208ec260c25a6ad_hu_f49455397edb119d.png 480w, https://Accommodate111.github.io/p/unity-yaml/img/csdn-9b413ca92bb241609208ec260c25a6ad_hu_fb516d4849c82a38.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/unity-yaml/img/csdn-9b413ca92bb241609208ec260c25a6ad_hu_f49455397edb119d.png 480w, https://yuanmourenye.github.io/p/unity-yaml/img/csdn-9b413ca92bb241609208ec260c25a6ad_hu_fb516d4849c82a38.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;type 字段示例&#34;
@@ -274,10 +274,10 @@
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;关系速查&#34;&gt;关系速查
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/unity-yaml/img/image-20260520092814044.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/unity-yaml/img/image-20260520092814044.png&#34;
 	width=&#34;1367&#34;
 	height=&#34;329&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/unity-yaml/img/image-20260520092814044_hu_58ae0fb591e9a0c5.png 480w, https://Accommodate111.github.io/p/unity-yaml/img/image-20260520092814044_hu_d3d663662c5582b9.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/unity-yaml/img/image-20260520092814044_hu_58ae0fb591e9a0c5.png 480w, https://yuanmourenye.github.io/p/unity-yaml/img/image-20260520092814044_hu_d3d663662c5582b9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260520092814044&#34;

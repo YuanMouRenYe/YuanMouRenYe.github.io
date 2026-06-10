@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>SQL on 元某人也</title>
-        <link>https://Accommodate111.github.io/tags/sql/</link>
+        <link>https://yuanmourenye.github.io/tags/sql/</link>
         <description>Recent content in SQL on 元某人也</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>元某人也</copyright>
-        <lastBuildDate>Wed, 20 May 2026 15:53:26 +0800</lastBuildDate><atom:link href="https://Accommodate111.github.io/tags/sql/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 20 May 2026 15:53:26 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/sql/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>【计算机基础】数据库原理及其应用</title>
-        <link>https://Accommodate111.github.io/p/database-principles/</link>
+        <link>https://yuanmourenye.github.io/p/database-principles/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://Accommodate111.github.io/p/database-principles/</guid>
-        <description>&lt;img src="https://Accommodate111.github.io/img/covers/cs.png" alt="Featured image of post 【计算机基础】数据库原理及其应用" /&gt;&lt;h1 id=&#34;数据库原理及其应用&#34;&gt;数据库原理及其应用
+        <guid>https://yuanmourenye.github.io/p/database-principles/</guid>
+        <description>&lt;img src="https://yuanmourenye.github.io/img/covers/cs.png" alt="Featured image of post 【计算机基础】数据库原理及其应用" /&gt;&lt;h1 id=&#34;数据库原理及其应用&#34;&gt;数据库原理及其应用
 &lt;/h1&gt;&lt;h1 id=&#34;一数据库系统概述&#34;&gt;一、数据库系统概述
 &lt;/h1&gt;&lt;h2 id=&#34;考点一数据库基本概念&#34;&gt;考点一：数据库基本概念
 &lt;/h2&gt;&lt;h3 id=&#34;数据库概念&#34;&gt;数据库概念：
@@ -39,10 +39,10 @@
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;是指在计算机系统中引入数据库后的系统，是由数据库，数据库管理系统（及应用开发工具），应用程序和数据库管理员组成的管理，处理和维护数据的系统。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251212135507563.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251212135507563.png&#34;
 	width=&#34;1100&#34;
 	height=&#34;547&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251212135507563_hu_fec5e00b39a9b80a.png 480w, https://Accommodate111.github.io/p/database-principles/img/image-20251212135507563_hu_9250a19175867b09.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251212135507563_hu_fec5e00b39a9b80a.png 480w, https://yuanmourenye.github.io/p/database-principles/img/image-20251212135507563_hu_9250a19175867b09.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -83,10 +83,10 @@
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;从数据库管理系统角度看，数据库系统通常采用三级模式结果，分别包括：外模式，模式，内模式。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251212164951465.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251212164951465.png&#34;
 	width=&#34;1540&#34;
 	height=&#34;878&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251212164951465_hu_470fe34a20886de8.png 480w, https://Accommodate111.github.io/p/database-principles/img/image-20251212164951465_hu_4cc87b184ae40cbf.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251212164951465_hu_470fe34a20886de8.png 480w, https://yuanmourenye.github.io/p/database-principles/img/image-20251212164951465_hu_4cc87b184ae40cbf.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251212164951465&#34;
@@ -251,10 +251,10 @@
 &lt;/h2&gt;&lt;h3 id=&#34;关系代数&#34;&gt;关系代数
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;关系代数是对关系进行集合代数运算，是基于关系代数的而数据操作语言成为关系代数语言，简称关系代数。（元组进行的运算）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251214101537793.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251214101537793.png&#34;
 	width=&#34;1661&#34;
 	height=&#34;355&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251214101537793_hu_640348c855213f2f.png 480w, https://Accommodate111.github.io/p/database-principles/img/image-20251214101537793_hu_a93847be5a0a868c.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251214101537793_hu_640348c855213f2f.png 480w, https://yuanmourenye.github.io/p/database-principles/img/image-20251214101537793_hu_a93847be5a0a868c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251214101537793&#34;
@@ -272,10 +272,10 @@
 &lt;p&gt;选择/限制：（σ）——查找结果是行&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;可以选择列名或者列数来进行查询。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251214103502802.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251214103502802.png&#34;
 	width=&#34;1265&#34;
 	height=&#34;510&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251214103502802_hu_803c99920e7ac5e5.png 480w, https://Accommodate111.github.io/p/database-principles/img/image-20251214103502802_hu_d39e02bbee71bfa6.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251214103502802_hu_803c99920e7ac5e5.png 480w, https://yuanmourenye.github.io/p/database-principles/img/image-20251214103502802_hu_d39e02bbee71bfa6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251214103502802&#34;
@@ -291,10 +291,10 @@
 &lt;li&gt;
 &lt;p&gt;投影(II)——查找结果是列&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251214103739302.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251214103739302.png&#34;
 	width=&#34;1775&#34;
 	height=&#34;741&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251214103739302_hu_4f02d90e156d326a.png 480w, https://Accommodate111.github.io/p/database-principles/img/image-20251214103739302_hu_e5861bfaf2d11d25.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251214103739302_hu_4f02d90e156d326a.png 480w, https://yuanmourenye.github.io/p/database-principles/img/image-20251214103739302_hu_e5861bfaf2d11d25.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251214103739302&#34;
@@ -310,10 +310,10 @@
 &lt;li&gt;
 &lt;p&gt;连接——分为一般链接，等值连接和自然连接&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251214104243475.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251214104243475.png&#34;
 	width=&#34;1826&#34;
 	height=&#34;812&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251214104243475_hu_47498e8f1e84c2d6.png 480w, https://Accommodate111.github.io/p/database-principles/img/image-20251214104243475_hu_23e751b8644a2a55.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251214104243475_hu_47498e8f1e84c2d6.png 480w, https://yuanmourenye.github.io/p/database-principles/img/image-20251214104243475_hu_23e751b8644a2a55.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251214104243475&#34;
@@ -331,10 +331,10 @@
 &lt;blockquote&gt;
 &lt;p&gt;简单说，只要  S  有属性能和  R  匹配、且能通过象集+投影的逻辑计算，就满足除运算前提，这俩关系完全可以除 。&lt;/p&gt;
 &lt;p&gt;这里是指只有A1的象集包含了S在（B，C）上所有投影，并不是只包含一个就可以的&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251214105031462.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251214105031462.png&#34;
 	width=&#34;1537&#34;
 	height=&#34;842&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251214105031462_hu_929471be826b1c90.png 480w, https://Accommodate111.github.io/p/database-principles/img/image-20251214105031462_hu_ba8ac9cdf8c6e650.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251214105031462_hu_929471be826b1c90.png 480w, https://yuanmourenye.github.io/p/database-principles/img/image-20251214105031462_hu_ba8ac9cdf8c6e650.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251214105031462&#34;
@@ -360,10 +360,10 @@
 &lt;p&gt;函数依赖：设R（U）是属性集U上的关系模式，XY是U的子集。若对于R（U）的任意一个关系r，r中不可能存在两个元组在X上的属性相等，而在Y上面的属性值不相等，则称X函数确定Y或者Y函数依赖于X，记作-&amp;gt;Y。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;平凡与不平凡函数依赖：X-&amp;gt;Y，但是Y不属于X&lt;/li&gt;
-&lt;li&gt;完全函数依赖与部分函数依赖：X的真子集可以完全映射Y为部分依赖，不能则为完全依赖&lt;img src=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215134918715.png&#34;
+&lt;li&gt;完全函数依赖与部分函数依赖：X的真子集可以完全映射Y为部分依赖，不能则为完全依赖&lt;img src=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251215134918715.png&#34;
 	width=&#34;1814&#34;
 	height=&#34;486&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215134918715_hu_c0121edbd9a74cd1.png 480w, https://Accommodate111.github.io/p/database-principles/img/image-20251215134918715_hu_f0d455eaab0cc2a8.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251215134918715_hu_c0121edbd9a74cd1.png 480w, https://yuanmourenye.github.io/p/database-principles/img/image-20251215134918715_hu_f0d455eaab0cc2a8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251215134918715&#34;
@@ -380,10 +380,10 @@
 &lt;/ol&gt;
 &lt;h2 id=&#34;考点二关系模式的规范化&#34;&gt;考点二：关系模式的规范化
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215082206415.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251215082206415.png&#34;
 	width=&#34;1788&#34;
 	height=&#34;361&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215082206415_hu_a50bd180de2148a3.png 480w, https://Accommodate111.github.io/p/database-principles/img/image-20251215082206415_hu_4260880f9b234ff2.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251215082206415_hu_a50bd180de2148a3.png 480w, https://yuanmourenye.github.io/p/database-principles/img/image-20251215082206415_hu_4260880f9b234ff2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251215082206415&#34;
@@ -396,10 +396,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;第一季的一级范式的关系模式通过模式分解可以转换为若干个高一级范式的关系模式的集合，这种过程就叫做规范化&lt;/p&gt;
 &lt;p&gt;模式分解：将一个 仅符合1NF的关系模式转换为两个符合2NF的关系&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215140148928.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251215140148928.png&#34;
 	width=&#34;1846&#34;
 	height=&#34;519&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215140148928_hu_5567f05f1f0e51ef.png 480w, https://Accommodate111.github.io/p/database-principles/img/image-20251215140148928_hu_6536ddc27206859b.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251215140148928_hu_5567f05f1f0e51ef.png 480w, https://yuanmourenye.github.io/p/database-principles/img/image-20251215140148928_hu_6536ddc27206859b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251215140148928&#34;
@@ -413,10 +413,10 @@
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;1nf&#34;&gt;1NF
 &lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215195627256.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251215195627256.png&#34;
 	width=&#34;1710&#34;
 	height=&#34;670&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215195627256_hu_dd07599b0bd078f4.png 480w, https://Accommodate111.github.io/p/database-principles/img/image-20251215195627256_hu_31534dd0074201a4.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251215195627256_hu_dd07599b0bd078f4.png 480w, https://yuanmourenye.github.io/p/database-principles/img/image-20251215195627256_hu_31534dd0074201a4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251215195627256&#34;
@@ -432,10 +432,10 @@
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;2nf&#34;&gt;2NF
 &lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215195555727.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251215195555727.png&#34;
 	width=&#34;1829&#34;
 	height=&#34;90&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215195555727_hu_7bfccf8b5f1ebe1f.png 480w, https://Accommodate111.github.io/p/database-principles/img/image-20251215195555727_hu_832ea275502fa19.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251215195555727_hu_7bfccf8b5f1ebe1f.png 480w, https://yuanmourenye.github.io/p/database-principles/img/image-20251215195555727_hu_832ea275502fa19.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251215195555727&#34;
@@ -450,10 +450,10 @@
 &lt;p&gt;&lt;strong&gt;候选码和非主属性为完全函数依赖关系&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;关系模式R不属于2NF会产生以下问题&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215135908357.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251215135908357.png&#34;
 	width=&#34;1845&#34;
 	height=&#34;579&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215135908357_hu_4c2c9cc94cb7a9f4.png 480w, https://Accommodate111.github.io/p/database-principles/img/image-20251215135908357_hu_9fec74643c0f8305.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251215135908357_hu_4c2c9cc94cb7a9f4.png 480w, https://yuanmourenye.github.io/p/database-principles/img/image-20251215135908357_hu_9fec74643c0f8305.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251215135908357&#34;
@@ -464,10 +464,10 @@
 		data-flex-basis=&#34;764px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215135836230.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251215135836230.png&#34;
 	width=&#34;1538&#34;
 	height=&#34;807&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215135836230_hu_e751e36480e9bdcc.png 480w, https://Accommodate111.github.io/p/database-principles/img/image-20251215135836230_hu_4e6a0e3fb26f6c1b.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251215135836230_hu_e751e36480e9bdcc.png 480w, https://yuanmourenye.github.io/p/database-principles/img/image-20251215135836230_hu_4e6a0e3fb26f6c1b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251215135836230&#34;
@@ -486,10 +486,10 @@
 &lt;/ol&gt;
 &lt;h3 id=&#34;3nf&#34;&gt;3NF
 &lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215195524836.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251215195524836.png&#34;
 	width=&#34;1825&#34;
 	height=&#34;192&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215195524836_hu_207a5e3a2eff1910.png 480w, https://Accommodate111.github.io/p/database-principles/img/image-20251215195524836_hu_ace5e06bc2ff9c87.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251215195524836_hu_207a5e3a2eff1910.png 480w, https://yuanmourenye.github.io/p/database-principles/img/image-20251215195524836_hu_ace5e06bc2ff9c87.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251215195524836&#34;
@@ -504,10 +504,10 @@
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;bcnf&#34;&gt;BCNF
 &lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215195444007.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251215195444007.png&#34;
 	width=&#34;1813&#34;
 	height=&#34;673&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215195444007_hu_8178154466c83cf4.png 480w, https://Accommodate111.github.io/p/database-principles/img/image-20251215195444007_hu_cb2a03570eeec491.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251215195444007_hu_8178154466c83cf4.png 480w, https://yuanmourenye.github.io/p/database-principles/img/image-20251215195444007_hu_cb2a03570eeec491.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251215195444007&#34;
@@ -524,10 +524,10 @@
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;尽量消除插入、删除异常，修改复杂，数据冗余。&lt;/p&gt;
 &lt;p&gt;关系模式的规范化过程是通过对关系模式的分解来实现的,即把低一级的关系模式分解为若干个高一级的关系模式。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215200437417.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251215200437417.png&#34;
 	width=&#34;1441&#34;
 	height=&#34;611&#34;
-	srcset=&#34;https://Accommodate111.github.io/p/database-principles/img/image-20251215200437417_hu_d75fbaa92b385fd5.png 480w, https://Accommodate111.github.io/p/database-principles/img/image-20251215200437417_hu_309e2e3302d643ed.png 1024w&#34;
+	srcset=&#34;https://yuanmourenye.github.io/p/database-principles/img/image-20251215200437417_hu_d75fbaa92b385fd5.png 480w, https://yuanmourenye.github.io/p/database-principles/img/image-20251215200437417_hu_309e2e3302d643ed.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251215200437417&#34;
