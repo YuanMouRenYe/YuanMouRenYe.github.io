@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://yuanmourenye.github.io/p/unity-a-star/</loc>
+    <lastmod>2026-06-16T13:23:08+08:00</lastmod>
+  </url><url>
+    <loc>https://yuanmourenye.github.io/post/</loc>
+    <lastmod>2026-06-16T13:23:08+08:00</lastmod>
+  </url><url>
     <loc>https://yuanmourenye.github.io/p/ui-system/</loc>
     <lastmod>2026-06-10T15:04:11+08:00</lastmod>
   </url><url>
@@ -9,9 +15,6 @@
     <lastmod>2026-06-10T15:04:11+08:00</lastmod>
   </url><url>
     <loc>https://yuanmourenye.github.io/categories/</loc>
-    <lastmod>2026-06-10T15:04:11+08:00</lastmod>
-  </url><url>
-    <loc>https://yuanmourenye.github.io/post/</loc>
     <lastmod>2026-06-10T15:04:11+08:00</lastmod>
   </url><url>
     <loc>https://yuanmourenye.github.io/tags/</loc>
