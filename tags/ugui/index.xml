@@ -7,42 +7,308 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>元某人也</copyright>
-        <lastBuildDate>Wed, 10 Jun 2026 15:04:11 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/ugui/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 16 Jun 2026 13:38:23 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/ugui/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>【Unity】UI 系统</title>
         <link>https://yuanmourenye.github.io/p/ui-system/</link>
         <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
         
         <guid>https://yuanmourenye.github.io/p/ui-system/</guid>
-        <description>&lt;h1 id=&#34;ui系统&#34;&gt;UI系统
-&lt;/h1&gt;&lt;h2 id=&#34;什么是ui&#34;&gt;什么是UI
-&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;User Interface(用户界面)的简称
-用户界面就是游戏中登陆注册背包等等功能&lt;/p&gt;
+        <description>&lt;h1 id=&#34;ugui&#34;&gt;UGUI
+&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&#34;一什么是-ui&#34;&gt;一、什么是 UI
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;UI&lt;/strong&gt; 是 &lt;strong&gt;User Interface（用户界面）&lt;/strong&gt; 的简称。&lt;/p&gt;
+&lt;p&gt;在游戏开发中，UI 就是玩家能直接看到并交互的界面，例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;登录 / 注册界面&lt;/li&gt;
+&lt;li&gt;主菜单、设置界面&lt;/li&gt;
+&lt;li&gt;背包、商店、任务面板&lt;/li&gt;
+&lt;li&gt;血条、小地图、提示弹窗&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;二ui-系统主要学习内容&#34;&gt;二、UI 系统主要学习内容
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;模块&lt;/th&gt;
+          &lt;th&gt;说明&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;UI 控件的使用&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;六大基础控件及常用组件&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;UI 的事件响应&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;点击、拖拽、输入等交互&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;UI 的分辨率自适应&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;不同屏幕尺寸下的布局适配&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;补充说明：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;UGUI&lt;/strong&gt;：Unity 运行时 UI 系统，用于游戏界面开发。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;UIElements&lt;/strong&gt;：常用于 Unity Editor 扩展开发；&lt;strong&gt;UGUI 不能用于 Unity Editor 窗口开发&lt;/strong&gt;，Editor 开发应使用 UIElements / IMGUI。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;ui系统主要学习内容&#34;&gt;UI系统主要学习内容
-&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;UI控件的使用&lt;/p&gt;
-&lt;p&gt;UI的事件响应&lt;/p&gt;
-&lt;p&gt;UI的分辨率自适应&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;三ui-场景中的两大核心对象&#34;&gt;三、UI 场景中的两大核心对象
+&lt;/h2&gt;&lt;h3 id=&#34;1-canvas画布对象&#34;&gt;1. Canvas（画布）对象
+&lt;/h3&gt;&lt;p&gt;Canvas 对象上通常依附以下组件：&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;组件&lt;/th&gt;
+          &lt;th&gt;作用&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Canvas&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;画布组件，负责渲染所有 UI 子对象&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Canvas Scaler&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;画布缩放组件，负责分辨率自适应&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Graphic Raycaster&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;图形射线检测组件，负责 UI 点击/交互检测&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;RectTransform&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;UI 专用 Transform，控制位置、大小、锚点、对齐&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;2-eventsystem事件系统对象&#34;&gt;2. EventSystem（事件系统）对象
+&lt;/h3&gt;&lt;p&gt;EventSystem 对象上通常依附：&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;组件&lt;/th&gt;
+          &lt;th&gt;作用&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Event System&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;事件系统，统一管理 UI 输入事件&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Standalone Input Module&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;独立输入模块，监听鼠标、触摸、键盘等玩家操作&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;场景中 &lt;strong&gt;只需一个 EventSystem&lt;/strong&gt;，多个 Canvas 可共用。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;uguiuielements常用于unityeditor的开发ugui不能进行unityeditor的开发&#34;&gt;UGUI（UIElements,常用于UnityEditor的开发，UGUI不能进行UnityEditor的开发）
-&lt;/h2&gt;&lt;h3 id=&#34;六大基础控件&#34;&gt;六大基础控件
-&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;Canvas对象上依附的：&lt;/p&gt;
-&lt;p&gt;Canvas：画布组件，主要用于渲染UI控件的
-Canvas Scaler：画布分辨率只是要组件，主要用于分辨率自适应
-Graphic Ray caster：射线时间交互组件，主要用于控制射线相应相关
-RectTransform：UI对象位置锚点控制组件，主要用于 控制位置和对齐方式&lt;/p&gt;
-&lt;p&gt;EventSystem对象上面依附的&lt;/p&gt;
-&lt;p&gt;Event System和Stand aloneInput  Modle：玩家输入事件响应系统和独立输入模块组件，主要用于监听玩家操作&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;canvas组件&#34;&gt;Canvas组件
-&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;主要用来负责渲染自己的多有UI子对象&lt;/p&gt;
-&lt;p&gt;关于Canvas的覆盖模式和摄像机模式：&lt;/p&gt;
-&lt;p&gt;摄像机模式下 Plane Distance 来控制摄像机和画布之间的距离，Sorting Layer来控制摄像机模式下的摄像机层级问题，相对比覆盖模式，摄像机模式可以将3D物体放到UI之前，&lt;/p&gt;
-&lt;p&gt;实现类似人物展示界面：摄像机模式用来渲染整个界面（包括3D物体）需要注意的是摄像机模式需要新开一个摄像机不可以用主摄像机，将摄象机模式的相机改为Depth Only保证只渲染UI层面，主摄像机剔除掉UI层面，可保证主摄象机中的3D物体在最后面，因为摄像机模式的相机是Depth Only其他没有物品的地方为透明的，3D物品直接在UI上面渲染&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;四canvas画布组件详解&#34;&gt;四、Canvas（画布）组件详解
+&lt;/h2&gt;&lt;h3 id=&#34;41-基本作用&#34;&gt;4.1 基本作用
+&lt;/h3&gt;&lt;p&gt;Canvas 负责渲染其下所有 UI 子对象。没有 Canvas，UI 元素无法正常显示。&lt;/p&gt;
+&lt;h3 id=&#34;42-三种渲染模式-render-mode渲染模式&#34;&gt;4.2 三种渲染模式 Render Mode（渲染模式）
+&lt;/h3&gt;&lt;h4 id=&#34;1screen-space---overlay屏幕空间---覆盖模式最常用&#34;&gt;（1）Screen Space - Overlay（屏幕空间 - 覆盖模式）【最常用】
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;UI 直接绘制在屏幕最上层，&lt;strong&gt;不依赖摄像机&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;性能较好，适合 HUD、弹窗、普通界面&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;缺点：&lt;/strong&gt; 无法自然地把 3D 物体插入 UI 层级之间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2screen-space---camera屏幕空间---摄像机模式&#34;&gt;（2）Screen Space - Camera（屏幕空间 - 摄像机模式）
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;UI 由指定 &lt;strong&gt;Render Camera&lt;/strong&gt; 渲染到屏幕上&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Plane Distance&lt;/strong&gt;：控制 Canvas 平面与摄像机的距离&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sorting Layer / Order in Layer&lt;/strong&gt;：控制 UI 与 3D 物体的渲染层级&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;适用场景：&lt;/strong&gt; 人物展示界面、3D 模型与 UI 同屏显示&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;典型实现方案（人物展示界面）：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1. 新建专用 UI 摄像机（不要用主摄像机）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2. Canvas 设为 Screen Space - Camera，Render Camera 指向该 UI 摄像机
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3. UI 摄像机 Clear Flags 设为 Depth Only（只清深度，背景透明）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;4. UI 摄像机只渲染 UI 层（Culling Mask 勾选 UI）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;5. 主摄像机剔除 UI 层，只渲染 3D 场景
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;6. 3D 角色放在 UI 摄像机与 Canvas 之间，或单独 Layer，由 UI 摄像机一并渲染
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;效果：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;UI 摄像机 &lt;code&gt;Depth Only&lt;/code&gt; 时，无物体区域透明&lt;/li&gt;
+&lt;li&gt;3D 角色可渲染在 UI 元素之上或之下（通过 Sorting Layer、Z 轴、Render Queue 控制）&lt;/li&gt;
+&lt;li&gt;主摄像机负责背景 3D 场景，UI 摄像机负责 UI + 展示模型，实现「背景场景 + 前景 UI + 中间 3D 人物」的分层效果&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;3world-space世界空间&#34;&gt;（3）World Space（世界空间）
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Canvas 作为 3D 世界中的物体存在（如血条、3D 菜单牌）&lt;/li&gt;
+&lt;li&gt;可随物体移动、旋转、缩放&lt;/li&gt;
+&lt;li&gt;常用于 VR、AR 或 3D 世界内 UI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;五recttransform矩形变换要点&#34;&gt;五、RectTransform（矩形变换）要点
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;替代普通 Transform，专用于 UI&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Anchors（锚点）&lt;/strong&gt;：相对父节点定位&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pivot（轴心）&lt;/strong&gt;：自身旋转/缩放中心&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stretch（拉伸）&lt;/strong&gt;：四边锚点分离时可做自适应布局&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;常用锚点预设：左上、居中、拉伸全屏等。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;六ugui-六大基础控件&#34;&gt;六、UGUI 六大基础控件
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;控件&lt;/th&gt;
+          &lt;th&gt;主要用途&lt;/th&gt;
+          &lt;th&gt;常用组件&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Text（TextMeshPro 推荐）&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;显示文字&lt;/td&gt;
+          &lt;td&gt;Text / TextMeshProUGUI&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Image&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;显示图片、图标、背景&lt;/td&gt;
+          &lt;td&gt;Image&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Button&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;可点击按钮&lt;/td&gt;
+          &lt;td&gt;Button + Image + Text&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Toggle&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;开关、单选组选项&lt;/td&gt;
+          &lt;td&gt;Toggle + Image&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Slider&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;滑动条（音量、进度）&lt;/td&gt;
+          &lt;td&gt;Slider + Image&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Input Field&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;文本输入框&lt;/td&gt;
+          &lt;td&gt;InputField / TMP_InputField&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;61-text文本-textmeshpro高级文本&#34;&gt;6.1 Text（文本）/ TextMeshPro（高级文本）
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;显示静态或动态文字&lt;/li&gt;
+&lt;li&gt;新项目建议用 &lt;strong&gt;TextMeshPro（TMP）&lt;/strong&gt;，效果更好、功能更强&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;62-image图片&#34;&gt;6.2 Image（图片）
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Source Image&lt;/strong&gt;：图片资源&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Image Type&lt;/strong&gt;：Simple / Sliced（九宫格）/ Tiled / Filled（进度条填充）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;63-button按钮&#34;&gt;6.3 Button（按钮）
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;通过 &lt;strong&gt;OnClick()&lt;/strong&gt; 事件绑定方法&lt;/li&gt;
+&lt;li&gt;可配合 &lt;strong&gt;Transition&lt;/strong&gt;（Color / Sprite / Animation）做按下反馈&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;64-toggle开关&#34;&gt;6.4 Toggle（开关）
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;isOn&lt;/code&gt; 表示开关状态&lt;/li&gt;
+&lt;li&gt;多个 Toggle 可加入 &lt;strong&gt;Toggle Group&lt;/strong&gt; 实现单选&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;65-slider滑动条&#34;&gt;6.5 Slider（滑动条）
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;minValue&lt;/code&gt; / &lt;code&gt;maxValue&lt;/code&gt; / &lt;code&gt;value&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;监听 &lt;strong&gt;OnValueChanged&lt;/strong&gt; 做音量、血量等联动&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;66-input-field输入框&#34;&gt;6.6 Input Field（输入框）
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;接收玩家文字输入&lt;/li&gt;
+&lt;li&gt;可设置字符限制、密码模式、占位符等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;七ui-事件响应&#34;&gt;七、UI 事件响应
+&lt;/h2&gt;&lt;h3 id=&#34;71-事件接口常用&#34;&gt;7.1 事件接口（常用）
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;接口&lt;/th&gt;
+          &lt;th&gt;触发时机&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;IPointerClickHandler&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;点击&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;IPointerDownHandler&lt;/code&gt; / &lt;code&gt;IPointerUpHandler&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;按下 / 抬起&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;IDragHandler&lt;/code&gt; / &lt;code&gt;IBeginDragHandler&lt;/code&gt; / &lt;code&gt;IEndDragHandler&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;拖拽&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;IPointerEnterHandler&lt;/code&gt; / &lt;code&gt;IPointerExitHandler&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;鼠标进入 / 离开&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;72-事件流程简述&#34;&gt;7.2 事件流程简述
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;玩家输入 → Standalone Input Module → EventSystem → Graphic Raycaster 射线检测 → 目标 UI 响应事件
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;八分辨率自适应-canvas-scaler画布缩放器&#34;&gt;八、分辨率自适应 Canvas Scaler（画布缩放器）
+&lt;/h2&gt;&lt;h3 id=&#34;常用-ui-scale-modeui-缩放模式&#34;&gt;常用 UI Scale Mode（UI 缩放模式）
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;模式&lt;/th&gt;
+          &lt;th&gt;说明&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Constant Pixel Size&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;UI 像素大小不变，屏幕越大显示越小&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Scale With Screen Size&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;按参考分辨率缩放【最常用】&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Constant Physical Size&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;按物理尺寸（DPI）缩放&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;scale-with-screen-size按屏幕尺寸缩放关键参数&#34;&gt;Scale With Screen Size（按屏幕尺寸缩放）关键参数
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Reference Resolution&lt;/strong&gt;：设计参考分辨率（如 1920×1080）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Screen Match Mode&lt;/strong&gt;：Match Width Or Height / Expand / Shrink&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Match&lt;/strong&gt;：宽高匹配权重（0 偏宽，1 偏高，0.5 折中）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;配合 &lt;strong&gt;RectTransform 锚点&lt;/strong&gt; 做不同屏幕下的布局适配。&lt;/p&gt;
 </description>
         </item>
         <item>
