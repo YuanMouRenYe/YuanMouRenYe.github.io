@@ -1,270 +1,9 @@
-<!DOCTYPE html>
-<html lang="zh-cn" dir="ltr">
-    <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Unity 热更新方案与资源更新流程笔记。">
-<title>热更新</title>
-
-<link rel='canonical' href='https://yuanmourenye.github.io/p/hot-update/'>
-
-<link rel="stylesheet" href="/scss/style.min.032e1461b15b0fe2ac4d61e9446dd007723a39b7208df42d35fb1858c41db04e.css"><meta property='og:title' content="热更新">
-<meta property='og:description' content="Unity 热更新方案与资源更新流程笔记。">
-<meta property='og:url' content='https://yuanmourenye.github.io/p/hot-update/'>
-<meta property='og:site_name' content='元某人也'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='热更新' /><meta property='article:tag' content='AssetBundle' /><meta property='article:tag' content='Unity' /><meta property='article:published_time' content='2026-05-19T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-10-20T00:36:44&#43;08:00'/><meta property='og:image' content='https://yuanmourenye.github.io/img/covers/default.png' />
-<meta name="twitter:title" content="热更新">
-<meta name="twitter:description" content="Unity 热更新方案与资源更新流程笔记。"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://yuanmourenye.github.io/img/covers/default.png' />
-    <link rel="shortcut icon" href="/favicon.ico" />
-<meta name="google" content="notranslate">
-
-    </head>
-    <body class="
-    article-page
-    ">
-    <script>
-        (function() {
-            const colorSchemeKey = 'StackColorScheme';
-            if(!localStorage.getItem(colorSchemeKey)){
-                localStorage.setItem(colorSchemeKey, "auto");
-            }
-        })();
-    </script><script>
-    (function() {
-        const colorSchemeKey = 'StackColorScheme';
-        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
-        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
-
-        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
-            
-
-            document.documentElement.dataset.scheme = 'dark';
-        } else {
-            document.documentElement.dataset.scheme = 'light';
-        }
-    })();
-</script>
-
-        <header class="topnav">
-    <div class="topnav__inner">
-        
-        <a class="topnav__brand topnav__identity" href="/"><img class="topnav__avatar" src="/img/avatar_hu_4da7ae45a10b2932.png" width="32" height="32" alt="元某人也"><span class="topnav__title">元某人也</span>
-        </a>
-
-        <nav class="topnav__links" aria-label="主导航"><a href="/">主页</a><a href="/series/">系列</a><a href="/archives/">归档</a><a href="/projects/">项目</a><a href="/about/">关于</a><a class="topnav__search" href="/search/" aria-label="搜索"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="10" cy="10" r="7" />
-  <line x1="21" y1="21" x2="15" y2="15" />
-</svg>
-
-
-</a>
-        </nav>
-
-        
-        <button id="dark-mode-toggle" class="topnav__theme" type="button" aria-label="切换深浅色">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="8" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="16" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-        </button>
-    </div>
-</header>
-
-
-        <div class="page-wrap">
-            <main class="main">
-    
-<article class="main-article">
-    <header class="article-header">
-
-    <div class="article-details">
-    
-    <header class="article-category">
-        
-            <a href="/categories/unity/" >
-                Unity
-            </a>
-        
-            <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/" >
-                游戏开发
-            </a>
-        
-    </header>
-    
-
-    <div class="article-title-wrapper">
-        <h2 class="article-title">
-            <a href="/p/hot-update/">热更新</a>
-        </h2>
-    
-        
-        <h3 class="article-subtitle">
-            Unity 热更新方案与资源更新流程笔记。
-        </h3>
-        
-    </div>
-
-    
-    
-    
-    
-    <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published" datetime='2026-05-19T00:00:00Z'>2026-05-19</time>
-            </div>
-        
-
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    阅读时长: 4 分钟
-                </time>
-            </div>
-        
-    </footer>
-    
-
-    
-</div>
-
-</header>
-
-<details class="article-toc">
-                <summary class="article-toc__summary">本文目录</summary>
-                <div class="article-toc__body"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#热更新是什么">热更新是什么</a></li>
-    <li><a href="#常见方案对比">常见方案对比</a></li>
-    <li><a href="#assetbundlemanifest">AssetBundleManifest</a></li>
-    <li><a href="#assetbundle-打包选项">AssetBundle 打包选项</a>
-      <ul>
-        <li><a href="#压缩方式">压缩方式</a></li>
-      </ul>
-    </li>
-    <li><a href="#打包产物说明">打包产物说明</a></li>
-    <li><a href="#ab-加载流程与代码">AB 加载流程与代码</a>
-      <ul>
-        <li><a href="#流程">流程</a></li>
-        <li><a href="#示例代码">示例代码</a></li>
-        <li><a href="#异步加载推荐">异步加载（推荐）</a></li>
-        <li><a href="#unload-注意">Unload 注意</a></li>
-      </ul>
-    </li>
-    <li><a href="#版本与更新流程">版本与更新流程</a>
-      <ul>
-        <li><a href="#典型热更流程">典型热更流程</a></li>
-        <li><a href="#versionjson-示例">version.json 示例</a></li>
-      </ul>
-    </li>
-    <li><a href="#addressables-简述">Addressables 简述</a></li>
-    <li><a href="#常见坑与注意点">常见坑与注意点</a></li>
-    <li><a href="#要点速查">要点速查</a></li>
-  </ul>
-</nav></div>
-            </details><section class="article-content">
-    
-    
-    <h1 id="热更新">热更新
-</h1><hr>
-<h2 id="热更新是什么">热更新是什么
-</h2><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>类型</th>
-          <th>更新内容</th>
-          <th>典型技术</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>资源热更</strong></td>
-          <td>贴图、模型、配置、UI 预制体等</td>
-          <td>AssetBundle、Addressables</td>
-      </tr>
-      <tr>
-          <td><strong>代码热更</strong></td>
-          <td>C# 业务逻辑（不通过商店整包审核）</td>
-          <td>HybridCLR、ILRuntime、xlua 等</td>
-      </tr>
-  </tbody>
-</table></div>
-<p><strong>目的</strong>：修 Bug、发活动资源、降首包体积、分平台差异化内容。</p>
-<p><strong>限制</strong>：无法热更 Unity 引擎本身、原生插件（需走商店更新或单独下载 so/dll）。</p>
-<hr>
-<h2 id="常见方案对比">常见方案对比
-</h2><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>方案</th>
-          <th>资源</th>
-          <th>代码</th>
-          <th>特点</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>AssetBundle</strong></td>
-          <td>✅</td>
-          <td>❌（需配合热更框架）</td>
-          <td>底层、可控，自建版本与 CDN</td>
-      </tr>
-      <tr>
-          <td><strong>Addressables</strong></td>
-          <td>✅</td>
-          <td>❌</td>
-          <td>基于 AB，官方封装分组/远程/引用计数</td>
-      </tr>
-      <tr>
-          <td><strong>HybridCLR</strong></td>
-          <td>可配合 AB</td>
-          <td>✅</td>
-          <td>原生解释执行 IL，性能较好，国内常用</td>
-      </tr>
-      <tr>
-          <td><strong>ILRuntime</strong></td>
-          <td>可配合 AB</td>
-          <td>✅</td>
-          <td>解释执行 DLL，成熟</td>
-      </tr>
-      <tr>
-          <td><strong>XLua / tolua</strong></td>
-          <td>可配合 AB</td>
-          <td>✅（Lua）</td>
-          <td>脚本语言热更，与 C# 互调</td>
-      </tr>
-  </tbody>
-</table></div>
-<pre class="mermaid">
+<!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="Unity 热更新方案与资源更新流程笔记。"><title>热更新</title><link rel=canonical href=https://yuanmourenye.github.io/p/hot-update/><link rel=stylesheet href=/scss/style.min.032e1461b15b0fe2ac4d61e9446dd007723a39b7208df42d35fb1858c41db04e.css><meta property='og:title' content="热更新"><meta property='og:description' content="Unity 热更新方案与资源更新流程笔记。"><meta property='og:url' content='https://yuanmourenye.github.io/p/hot-update/'><meta property='og:site_name' content='元某人也'><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='热更新'><meta property='article:tag' content='AssetBundle'><meta property='article:tag' content='Unity'><meta property='article:published_time' content='2026-05-19T00:00:00+00:00'><meta property='article:modified_time' content='2026-10-20T00:36:44+08:00'><meta property='og:image' content='https://yuanmourenye.github.io/img/covers/default.png'><meta name=twitter:title content="热更新"><meta name=twitter:description content="Unity 热更新方案与资源更新流程笔记。"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content='https://yuanmourenye.github.io/img/covers/default.png'><link rel="shortcut icon" href=/favicon.ico><meta name=google content="notranslate"></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><header class=topnav><div class=topnav__inner><a class="topnav__brand topnav__identity" href=/><img class=topnav__avatar src=/img/avatar_hu_4da7ae45a10b2932.png width=32 height=32 alt=元某人也><span class=topnav__title>元某人也</span></a><nav class=topnav__links aria-label=主导航><a href=/>主页</a><a href=/series/>系列</a><a href=/archives/>归档</a><a href=/projects/>项目</a><a href=/about/>关于</a><a class=topnav__search href=/search/ aria-label=搜索><svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg></a></nav><button id=dark-mode-toggle class=topnav__theme type=button aria-label=切换深浅色>
+<svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg></button></div></header><div class=page-wrap><main class=main><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/unity/>Unity
+</a><a href=/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/>游戏开发</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/hot-update/>热更新</a></h2><h3 class=article-subtitle>Unity 热更新方案与资源更新流程笔记。</h3></div><footer class=article-time><div><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published datetime=2026-05-19T00:00:00Z>2026-05-19</time></div><div><svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>阅读时长: 4 分钟</time></div></footer></div></header><details class=article-toc><summary class=article-toc__summary>本文目录</summary><div class=article-toc__body><nav id=TableOfContents><ul><li><a href=#热更新是什么>热更新是什么</a></li><li><a href=#常见方案对比>常见方案对比</a></li><li><a href=#assetbundlemanifest>AssetBundleManifest</a></li><li><a href=#assetbundle-打包选项>AssetBundle 打包选项</a><ul><li><a href=#压缩方式>压缩方式</a></li></ul></li><li><a href=#打包产物说明>打包产物说明</a></li><li><a href=#ab-加载流程与代码>AB 加载流程与代码</a><ul><li><a href=#流程>流程</a></li><li><a href=#示例代码>示例代码</a></li><li><a href=#异步加载推荐>异步加载（推荐）</a></li><li><a href=#unload-注意>Unload 注意</a></li></ul></li><li><a href=#版本与更新流程>版本与更新流程</a><ul><li><a href=#典型热更流程>典型热更流程</a></li><li><a href=#versionjson-示例>version.json 示例</a></li></ul></li><li><a href=#addressables-简述>Addressables 简述</a></li><li><a href=#常见坑与注意点>常见坑与注意点</a></li><li><a href=#要点速查>要点速查</a></li></ul></nav></div></details><section class=article-content><h1 id=热更新>热更新</h1><hr><h2 id=热更新是什么>热更新是什么</h2><div class=table-wrapper><table><thead><tr><th>类型</th><th>更新内容</th><th>典型技术</th></tr></thead><tbody><tr><td><strong>资源热更</strong></td><td>贴图、模型、配置、UI 预制体等</td><td>AssetBundle、Addressables</td></tr><tr><td><strong>代码热更</strong></td><td>C# 业务逻辑（不通过商店整包审核）</td><td>HybridCLR、ILRuntime、xlua 等</td></tr></tbody></table></div><p><strong>目的</strong>：修 Bug、发活动资源、降首包体积、分平台差异化内容。</p><p><strong>限制</strong>：无法热更 Unity 引擎本身、原生插件（需走商店更新或单独下载 so/dll）。</p><hr><h2 id=常见方案对比>常见方案对比</h2><div class=table-wrapper><table><thead><tr><th>方案</th><th>资源</th><th>代码</th><th>特点</th></tr></thead><tbody><tr><td><strong>AssetBundle</strong></td><td>✅</td><td>❌（需配合热更框架）</td><td>底层、可控，自建版本与 CDN</td></tr><tr><td><strong>Addressables</strong></td><td>✅</td><td>❌</td><td>基于 AB，官方封装分组/远程/引用计数</td></tr><tr><td><strong>HybridCLR</strong></td><td>可配合 AB</td><td>✅</td><td>原生解释执行 IL，性能较好，国内常用</td></tr><tr><td><strong>ILRuntime</strong></td><td>可配合 AB</td><td>✅</td><td>解释执行 DLL，成熟</td></tr><tr><td><strong>XLua / tolua</strong></td><td>可配合 AB</td><td>✅（Lua）</td><td>脚本语言热更，与 C# 互调</td></tr></tbody></table></div><pre class=mermaid>
   flowchart LR
     A[首包安装] --&gt; B{需要更新?}
     B --&gt;|资源| C[下载 AB / Addressables]
@@ -272,167 +11,19 @@
     C --&gt; E[加载进内存]
     D --&gt; E
     E --&gt; F[运行新逻辑/新资源]
-</pre>
-
-<hr>
-<h2 id="assetbundlemanifest">AssetBundleManifest
-</h2><p>当项目有多个 AB 包（如 <code>texture.ab</code> 依赖 <code>material.ab</code>）时，打主包会生成 <strong>AssetBundleManifest</strong>（常随主包名，如 <code>platform</code> 或自定义主包名），用于：</p>
-<div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>作用</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>包列表</strong></td>
-          <td>所有 AB 名称、<strong>Hash</strong>（版本对比、增量更新）</td>
-      </tr>
-      <tr>
-          <td><strong>依赖关系</strong></td>
-          <td>加载某 AB 前自动加载其依赖包</td>
-      </tr>
-      <tr>
-          <td><strong>灵活路径</strong></td>
-          <td>AB 可放 StreamingAssets、持久化目录、CDN</td>
-      </tr>
-      <tr>
-          <td><strong>压缩</strong></td>
-          <td>减小包体，按需解压</td>
-      </tr>
-  </tbody>
-</table></div>
-<blockquote>
-<p>有依赖时必须先加载 <strong>Manifest 所在的主包</strong>，再通过 <code>AssetBundleManifest</code> API 查依赖。</p>
-</blockquote>
-<hr>
-<h2 id="assetbundle-打包选项">AssetBundle 打包选项
-</h2><p>（Unity <strong>AssetBundle Browser</strong> 或自定义构建脚本中的常见项）</p>
-<div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>选项</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>Build Target</strong></td>
-          <td>目标平台；<strong>各平台需分别打包</strong></td>
-      </tr>
-      <tr>
-          <td><strong>Output Path</strong></td>
-          <td>输出目录</td>
-      </tr>
-      <tr>
-          <td><strong>Clear Folders</strong></td>
-          <td>打包前是否清空输出文件夹</td>
-      </tr>
-      <tr>
-          <td><strong>Copy To StreamingAssets</strong></td>
-          <td>是否复制到 <code>StreamingAssets</code>（首包内置资源）</td>
-      </tr>
-      <tr>
-          <td><strong>Compression</strong></td>
-          <td>见下表</td>
-      </tr>
-      <tr>
-          <td><strong>ETI（Exclude Type Information）</strong></td>
-          <td>包内不含类型信息（更小，加载略受限）</td>
-      </tr>
-      <tr>
-          <td><strong>FR（Force Rebuild）</strong></td>
-          <td>强制全量重建；与 Clear 不同：<strong>不删</strong>已不存在的旧包文件</td>
-      </tr>
-      <tr>
-          <td><strong>ITTC（Ignore Type Tree Changes）</strong></td>
-          <td>增量构建时忽略 Type Tree 变化</td>
-      </tr>
-      <tr>
-          <td><strong>Append Hash</strong></td>
-          <td>哈希附加到 AB 文件名（利于缓存与热更对比）</td>
-      </tr>
-      <tr>
-          <td><strong>Strict Mode</strong></td>
-          <td>出错则构建失败</td>
-      </tr>
-      <tr>
-          <td><strong>Dry Run Build</strong></td>
-          <td>只模拟构建，不真正写文件</td>
-      </tr>
-  </tbody>
-</table></div>
-<h3 id="压缩方式">压缩方式
-</h3><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>方式</th>
-          <th>特点</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>No Compression</strong></td>
-          <td>不压缩，包大，加载快</td>
-      </tr>
-      <tr>
-          <td><strong>LZMA</strong></td>
-          <td>体积最小；<strong>整包解压</strong>才好用单个资源，首包解压慢</td>
-      </tr>
-      <tr>
-          <td><strong>LZ4</strong></td>
-          <td>可按块解压，<strong>边用边解压</strong>，内存友好；热更常用</td>
-      </tr>
-  </tbody>
-</table></div>
-<hr>
-<h2 id="打包产物说明">打包产物说明
-</h2><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>文件</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>主包</strong></td>
-          <td>名称常与输出目录/平台主包一致；内含 <strong>AssetBundleManifest</strong>，记录依赖与 Hash</td>
-      </tr>
-      <tr>
-          <td><strong>各 AB 文件</strong></td>
-          <td>实际资源数据（<code>.ab</code> 或自定义后缀）</td>
-      </tr>
-      <tr>
-          <td><strong><code>.manifest</code> 文本</strong></td>
-          <td>单个 AB 的元信息（依赖、Hash、类型等），调试用；运行时主要靠二进制 Manifest</td>
-      </tr>
-  </tbody>
-</table></div>
-<p>示例结构：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Output/
-</span></span><span class="line"><span class="cl">├── StandaloneWindows64          ← 主包（含 Manifest）
-</span></span><span class="line"><span class="cl">├── ui_panel.ab
-</span></span><span class="line"><span class="cl">├── ui_panel.ab.manifest
-</span></span><span class="line"><span class="cl">├── textures.ab
-</span></span><span class="line"><span class="cl">└── textures.ab.manifest
-</span></span></code></pre></td></tr></table>
-</div>
-</div><hr>
-<h2 id="ab-加载流程与代码">AB 加载流程与代码
-</h2><h3 id="流程">流程
-</h3><pre class="mermaid">
+</pre><hr><h2 id=assetbundlemanifest>AssetBundleManifest</h2><p>当项目有多个 AB 包（如 <code>texture.ab</code> 依赖 <code>material.ab</code>）时，打主包会生成 <strong>AssetBundleManifest</strong>（常随主包名，如 <code>platform</code> 或自定义主包名），用于：</p><div class=table-wrapper><table><thead><tr><th>作用</th><th>说明</th></tr></thead><tbody><tr><td><strong>包列表</strong></td><td>所有 AB 名称、<strong>Hash</strong>（版本对比、增量更新）</td></tr><tr><td><strong>依赖关系</strong></td><td>加载某 AB 前自动加载其依赖包</td></tr><tr><td><strong>灵活路径</strong></td><td>AB 可放 StreamingAssets、持久化目录、CDN</td></tr><tr><td><strong>压缩</strong></td><td>减小包体，按需解压</td></tr></tbody></table></div><blockquote><p>有依赖时必须先加载 <strong>Manifest 所在的主包</strong>，再通过 <code>AssetBundleManifest</code> API 查依赖。</p></blockquote><hr><h2 id=assetbundle-打包选项>AssetBundle 打包选项</h2><p>（Unity <strong>AssetBundle Browser</strong> 或自定义构建脚本中的常见项）</p><div class=table-wrapper><table><thead><tr><th>选项</th><th>说明</th></tr></thead><tbody><tr><td><strong>Build Target</strong></td><td>目标平台；<strong>各平台需分别打包</strong></td></tr><tr><td><strong>Output Path</strong></td><td>输出目录</td></tr><tr><td><strong>Clear Folders</strong></td><td>打包前是否清空输出文件夹</td></tr><tr><td><strong>Copy To StreamingAssets</strong></td><td>是否复制到 <code>StreamingAssets</code>（首包内置资源）</td></tr><tr><td><strong>Compression</strong></td><td>见下表</td></tr><tr><td><strong>ETI（Exclude Type Information）</strong></td><td>包内不含类型信息（更小，加载略受限）</td></tr><tr><td><strong>FR（Force Rebuild）</strong></td><td>强制全量重建；与 Clear 不同：<strong>不删</strong>已不存在的旧包文件</td></tr><tr><td><strong>ITTC（Ignore Type Tree Changes）</strong></td><td>增量构建时忽略 Type Tree 变化</td></tr><tr><td><strong>Append Hash</strong></td><td>哈希附加到 AB 文件名（利于缓存与热更对比）</td></tr><tr><td><strong>Strict Mode</strong></td><td>出错则构建失败</td></tr><tr><td><strong>Dry Run Build</strong></td><td>只模拟构建，不真正写文件</td></tr></tbody></table></div><h3 id=压缩方式>压缩方式</h3><div class=table-wrapper><table><thead><tr><th>方式</th><th>特点</th></tr></thead><tbody><tr><td><strong>No Compression</strong></td><td>不压缩，包大，加载快</td></tr><tr><td><strong>LZMA</strong></td><td>体积最小；<strong>整包解压</strong>才好用单个资源，首包解压慢</td></tr><tr><td><strong>LZ4</strong></td><td>可按块解压，<strong>边用边解压</strong>，内存友好；热更常用</td></tr></tbody></table></div><hr><h2 id=打包产物说明>打包产物说明</h2><div class=table-wrapper><table><thead><tr><th>文件</th><th>说明</th></tr></thead><tbody><tr><td><strong>主包</strong></td><td>名称常与输出目录/平台主包一致；内含 <strong>AssetBundleManifest</strong>，记录依赖与 Hash</td></tr><tr><td><strong>各 AB 文件</strong></td><td>实际资源数据（<code>.ab</code> 或自定义后缀）</td></tr><tr><td><strong><code>.manifest</code> 文本</strong></td><td>单个 AB 的元信息（依赖、Hash、类型等），调试用；运行时主要靠二进制 Manifest</td></tr></tbody></table></div><p>示例结构：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>Output/
+</span></span><span class=line><span class=cl>├── StandaloneWindows64          ← 主包（含 Manifest）
+</span></span><span class=line><span class=cl>├── ui_panel.ab
+</span></span><span class=line><span class=cl>├── ui_panel.ab.manifest
+</span></span><span class=line><span class=cl>├── textures.ab
+</span></span><span class=line><span class=cl>└── textures.ab.manifest
+</span></span></code></pre></td></tr></table></div></div><hr><h2 id=ab-加载流程与代码>AB 加载流程与代码</h2><h3 id=流程>流程</h3><pre class=mermaid>
   sequenceDiagram
     participant App
     participant MainAB as 主包/Manifest
@@ -446,580 +37,164 @@
     end
     App-&gt;&gt;Res: LoadFromFile / LoadAsset
     App-&gt;&gt;App: Instantiate / 使用资源
-</pre>
-
-<h3 id="示例代码">示例代码
-</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
-</span><span class="lnt">49
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">System.IO</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">UnityEngine</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">ABLoader</span> <span class="p">:</span> <span class="n">MonoBehaviour</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// 主包路径（热更后一般在 persistentDataPath）</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">string</span> <span class="n">abRoot</span> <span class="p">=</span> <span class="n">Path</span><span class="p">.</span><span class="n">Combine</span><span class="p">(</span><span class="n">Application</span><span class="p">.</span><span class="n">persistentDataPath</span><span class="p">,</span> <span class="s">&#34;AssetBundles&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">string</span> <span class="n">mainAbName</span> <span class="p">=</span> <span class="s">&#34;StandaloneWindows64&#34;</span><span class="p">;</span> <span class="c1">// 与打包主包名一致</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">AssetBundle</span> <span class="n">mainBundle</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">AssetBundleManifest</span> <span class="n">manifest</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">void</span> <span class="n">LoadManifest</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">string</span> <span class="n">mainPath</span> <span class="p">=</span> <span class="n">Path</span><span class="p">.</span><span class="n">Combine</span><span class="p">(</span><span class="n">abRoot</span><span class="p">,</span> <span class="n">mainAbName</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="n">mainBundle</span> <span class="p">=</span> <span class="n">AssetBundle</span><span class="p">.</span><span class="n">LoadFromFile</span><span class="p">(</span><span class="n">mainPath</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="n">manifest</span> <span class="p">=</span> <span class="n">mainBundle</span><span class="p">.</span><span class="n">LoadAsset</span><span class="p">&lt;</span><span class="n">AssetBundleManifest</span><span class="p">&gt;(</span><span class="s">&#34;AssetBundleManifest&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">GameObject</span> <span class="n">LoadPrefab</span><span class="p">(</span><span class="kt">string</span> <span class="n">bundleName</span><span class="p">,</span> <span class="kt">string</span> <span class="n">assetName</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">manifest</span> <span class="p">==</span> <span class="kc">null</span><span class="p">)</span> <span class="n">LoadManifest</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="c1">// 1. 先加载所有依赖</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">string</span><span class="p">[]</span> <span class="n">deps</span> <span class="p">=</span> <span class="n">manifest</span><span class="p">.</span><span class="n">GetAllDependencies</span><span class="p">(</span><span class="n">bundleName</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">dep</span> <span class="k">in</span> <span class="n">deps</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="kt">string</span> <span class="n">depPath</span> <span class="p">=</span> <span class="n">Path</span><span class="p">.</span><span class="n">Combine</span><span class="p">(</span><span class="n">abRoot</span><span class="p">,</span> <span class="n">dep</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(!</span><span class="n">IsLoaded</span><span class="p">(</span><span class="n">dep</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">                <span class="n">AssetBundle</span><span class="p">.</span><span class="n">LoadFromFile</span><span class="p">(</span><span class="n">depPath</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="c1">// 2. 加载目标包</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">string</span> <span class="n">bundlePath</span> <span class="p">=</span> <span class="n">Path</span><span class="p">.</span><span class="n">Combine</span><span class="p">(</span><span class="n">abRoot</span><span class="p">,</span> <span class="n">bundleName</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="n">AssetBundle</span> <span class="n">bundle</span> <span class="p">=</span> <span class="n">AssetBundle</span><span class="p">.</span><span class="n">LoadFromFile</span><span class="p">(</span><span class="n">bundlePath</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="c1">// 3. 加载资源</span>
-</span></span><span class="line"><span class="cl">        <span class="n">GameObject</span> <span class="n">prefab</span> <span class="p">=</span> <span class="n">bundle</span><span class="p">.</span><span class="n">LoadAsset</span><span class="p">&lt;</span><span class="n">GameObject</span><span class="p">&gt;(</span><span class="n">assetName</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">Instantiate</span><span class="p">(</span><span class="n">prefab</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kt">bool</span> <span class="n">IsLoaded</span><span class="p">(</span><span class="kt">string</span> <span class="n">bundleName</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* 维护已加载字典 */</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span> <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">void</span> <span class="n">OnDestroy</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">mainBundle</span><span class="p">?.</span><span class="n">Unload</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">// 其他 bundle 按引用计数 Unload(false/true)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="异步加载推荐">异步加载（推荐）
-</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">req</span> <span class="p">=</span> <span class="n">AssetBundle</span><span class="p">.</span><span class="n">LoadFromFileAsync</span><span class="p">(</span><span class="n">path</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="k">yield</span> <span class="k">return</span> <span class="n">req</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">AssetBundle</span> <span class="n">bundle</span> <span class="p">=</span> <span class="n">req</span><span class="p">.</span><span class="n">assetBundle</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">assetReq</span> <span class="p">=</span> <span class="n">bundle</span><span class="p">.</span><span class="n">LoadAssetAsync</span><span class="p">&lt;</span><span class="n">GameObject</span><span class="p">&gt;(</span><span class="s">&#34;MyPrefab&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="k">yield</span> <span class="k">return</span> <span class="n">assetReq</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">GameObject</span> <span class="n">go</span> <span class="p">=</span> <span class="n">Instantiate</span><span class="p">(</span><span class="n">assetReq</span><span class="p">.</span><span class="n">asset</span> <span class="k">as</span> <span class="n">GameObject</span><span class="p">);</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="unload-注意">Unload 注意
-</h3><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>调用</th>
-          <th>效果</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>Unload(false)</code></td>
-          <td>卸载 AB 文件，<strong>已实例化对象仍可用</strong>（材质可能丢引用）</td>
-      </tr>
-      <tr>
-          <td><code>Unload(true)</code></td>
-          <td>连已加载出的资源一并卸载</td>
-      </tr>
-  </tbody>
-</table></div>
-<p>有依赖时按<strong>加载逆序</strong>卸载，或使用统一 AB 管理器做引用计数。</p>
-<hr>
-<h2 id="版本与更新流程">版本与更新流程
-</h2><h3 id="典型热更流程">典型热更流程
-</h3><ol>
-<li><strong>首包</strong>：内置少量 AB 或 StreamingAssets + 版本号 <code>version.json</code></li>
-<li><strong>启动</strong>：请求 CDN 上 <code>version.json</code> / 资源清单（文件名 + Hash + 大小）</li>
-<li><strong>对比</strong>：本地 Hash vs 远程 Hash，得到需下载列表</li>
-<li><strong>下载</strong>：差量或全量 AB 到 <code>persistentDataPath</code></li>
-<li><strong>加载</strong>：从持久化路径 <code>LoadFromFile</code>，不走 StreamingAssets</li>
-<li><strong>校验</strong>：MD5/CRC 防篡改（可选）</li>
-</ol>
-<h3 id="versionjson-示例">version.json 示例
-</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;appVersion&#34;</span><span class="p">:</span> <span class="s2">&#34;1.0.0&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;resVersion&#34;</span><span class="p">:</span> <span class="s2">&#34;2026051901&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;bundles&#34;</span><span class="p">:</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span> <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;ui_panel.ab&#34;</span><span class="p">,</span> <span class="nt">&#34;hash&#34;</span><span class="p">:</span> <span class="s2">&#34;a1b2c3...&#34;</span><span class="p">,</span> <span class="nt">&#34;size&#34;</span><span class="p">:</span> <span class="mi">1024000</span> <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>目录</th>
-          <th>用途</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>StreamingAssets</code></td>
-          <td>首包只读，安装后不可写</td>
-      </tr>
-      <tr>
-          <td><code>persistentDataPath</code></td>
-          <td>热更下载目录，可读写</td>
-      </tr>
-  </tbody>
-</table></div>
-<hr>
-<h2 id="addressables-简述">Addressables 简述
-</h2><p>在 AssetBundle 之上的<strong>资源管理系统</strong>：</p>
-<div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>概念</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>Group</strong></td>
-          <td>资源分组，决定打哪些 AB</td>
-      </tr>
-      <tr>
-          <td><strong>Address</strong></td>
-          <td>用地址字符串加载，不必记 AB 名</td>
-      </tr>
-      <tr>
-          <td><strong>Remote / Local</strong></td>
-          <td>内置与远程 CDN 路径</td>
-      </tr>
-      <tr>
-          <td><strong>Catalog</strong></td>
-          <td>资源目录，类似 Manifest + 版本</td>
-      </tr>
-  </tbody>
-</table></div>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">UnityEngine</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">UnityEngine.AddressableAssets</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">UnityEngine.ResourceManagement.AsyncOperations</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">async</span> <span class="k">void</span> <span class="n">Load</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="n">AsyncOperationHandle</span><span class="p">&lt;</span><span class="n">GameObject</span><span class="p">&gt;</span> <span class="n">handle</span> <span class="p">=</span>
-</span></span><span class="line"><span class="cl">        <span class="n">Addressables</span><span class="p">.</span><span class="n">LoadAssetAsync</span><span class="p">&lt;</span><span class="n">GameObject</span><span class="p">&gt;(</span><span class="s">&#34;MyPrefab&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="k">await</span> <span class="n">handle</span><span class="p">.</span><span class="n">Task</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">Instantiate</span><span class="p">(</span><span class="n">handle</span><span class="p">.</span><span class="n">Result</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>适合新项目；老项目大量 AB 可逐步迁移。</p>
-<hr>
-<h2 id="常见坑与注意点">常见坑与注意点
-</h2><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>问题</th>
-          <th>原因 / 处理</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>材质变粉</td>
-          <td>AB 里 Shader 丢失；Shader 放 Always Included 或进 AB</td>
-      </tr>
-      <tr>
-          <td>重复加载依赖</td>
-          <td>未先 <code>GetAllDependencies</code> 或未缓存已加载 AB</td>
-      </tr>
-      <tr>
-          <td>内存涨</td>
-          <td>未 <code>Unload</code>；重复 <code>LoadFromFile</code> 同一包</td>
-      </tr>
-      <tr>
-          <td>平台加载失败</td>
-          <td>打错 Build Target；路径大小写</td>
-      </tr>
-      <tr>
-          <td>LZMA 卡顿</td>
-          <td>首包解压慢；热更资源改 <strong>LZ4</strong></td>
-      </tr>
-  </tbody>
-</table></div>
-<hr>
-<h2 id="要点速查">要点速查
-</h2><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>主题</th>
-          <th>要点</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Manifest</td>
-          <td>主包、依赖、Hash</td>
-      </tr>
-      <tr>
-          <td>压缩</td>
-          <td>LZMA 小但整包解压；LZ4 热更常用</td>
-      </tr>
-      <tr>
-          <td>加载顺序</td>
-          <td>主包 → Manifest → 依赖 AB → 目标 AB → LoadAsset</td>
-      </tr>
-      <tr>
-          <td>路径</td>
-          <td>热更后用 <code>persistentDataPath</code></td>
-      </tr>
-      <tr>
-          <td>卸载</td>
-          <td><code>Unload(false/true)</code> 区别</td>
-      </tr>
-      <tr>
-          <td>代码热更</td>
-          <td>HybridCLR / ILRuntime / Lua；与 AB 配合</td>
-      </tr>
-  </tbody>
-</table></div>
-
-</section>
-
-
-    <footer class="article-footer">
-    
-    <section class="article-tags">
-        
-            <a href="/tags/%E7%83%AD%E6%9B%B4%E6%96%B0/">热更新</a>
-        
-            <a href="/tags/assetbundle/">AssetBundle</a>
-        
-            <a href="/tags/unity/">Unity</a>
-        
-    </section>
-
-
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>仅用于交流学习，记录学习心得</span>
-    </section>
-    <section class="article-lastmod">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-        <span>
-            最后更新于 Oct 20, 2026 00:36 &#43;0800
-        </span>
-    </section></footer>
-
-
-    
-</article>
-
-
-    <nav class="series-nav" aria-label="系列导航">
-      <div class="series-nav__head">
-        <span class="series-nav__label">系列</span>
-        <a class="series-nav__series-title" href="/series/#unity-network">Unity 多人联网</a><p class="series-nav__desc">Mirror、NGO 与热更新</p><a class="series-nav__index" href="/series/#unity-network">在系列索引中查看全部 →</a>
-      </div>
-      <ol class="series-nav__outline"><li class="">
-              <a href="/p/mirror/">Mirror 联网笔记</a>
-            </li><li class="">
-              <a href="/p/network-for-gameobjects/">Netcode for GameObjects 笔记</a>
-            </li><li class="">
-              <a href="/p/unity-multiplayer-mirror-ngo/">Unity 多人联网：Mirror 与 NGO</a>
-            </li><li class="is-current">
-              <a href="/p/hot-update/">热更新</a>
-            </li></ol><div class="series-nav__pager"><a class="series-nav__prev" href="/p/unity-multiplayer-mirror-ngo/"><span>← 上一篇</span>Unity 多人联网：Mirror 与 NGO</a></div></nav>
-
-    
-
-    
-
-<aside class="related-content--wrapper">
-    <h2 class="section-title">相关文章</h2>
-    <div class="related-content">
-        <div class="flex article-list--tile">
-            
-                
-<article class="">
-    <a href="/p/unity-a-star/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Unity A* 寻路算法</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/ui-system/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">UI 系统</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/unity-yaml/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Unity YAML</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/mirror/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Mirror 联网笔记</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/network-for-gameobjects/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Netcode for GameObjects 笔记</h2>
-        </div>
-    </a>
-</article>
-
-            
-        </div>
-    </div>
-</aside>
-
-     
-    
-        
-    
-
-    
-<footer class="site-footer">
-    <section class="copyright">
-        &copy;
-            2024 -
-        2026 元某人也
-    </section>
-</footer>
-
-
-    
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    
-    <div class="pswp__bg"></div>
-
-    
-    <div class="pswp__scroll-wrap">
-
-        
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                
-                
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div><script 
-                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
-                defer
-                >
-            </script><script 
-                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
-                defer
-                >
-            </script><link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
-            ><link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
-            >
-    
-
-            </main>
-        </div>
-
-        <script 
-                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
-                
-                >
-            </script><script type="text/javascript" src="/ts/main.c922af694cc257bf1ecc41c0dd7b0430f9114ec280ccf67cd2c6ad55f5316c4e.js" defer></script><script type="text/javascript" src="/ts/custom.35a00062ea1ed0a833f7d9144cf4eb5b3b889f58d2486b3b50c37a6e98e47606.js" defer></script>
-
-
-<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
-
-
-
-
-
-    </body>
-</html>
+</pre><h3 id=示例代码>示例代码</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl><span class=k>using</span> <span class=nn>System.IO</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>using</span> <span class=nn>UnityEngine</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>public</span> <span class=k>class</span> <span class=nc>ABLoader</span> <span class=p>:</span> <span class=n>MonoBehaviour</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 主包路径（热更后一般在 persistentDataPath）</span>
+</span></span><span class=line><span class=cl>    <span class=kt>string</span> <span class=n>abRoot</span> <span class=p>=</span> <span class=n>Path</span><span class=p>.</span><span class=n>Combine</span><span class=p>(</span><span class=n>Application</span><span class=p>.</span><span class=n>persistentDataPath</span><span class=p>,</span> <span class=s>&#34;AssetBundles&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=kt>string</span> <span class=n>mainAbName</span> <span class=p>=</span> <span class=s>&#34;StandaloneWindows64&#34;</span><span class=p>;</span> <span class=c1>// 与打包主包名一致</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>AssetBundle</span> <span class=n>mainBundle</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>AssetBundleManifest</span> <span class=n>manifest</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>void</span> <span class=n>LoadManifest</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=kt>string</span> <span class=n>mainPath</span> <span class=p>=</span> <span class=n>Path</span><span class=p>.</span><span class=n>Combine</span><span class=p>(</span><span class=n>abRoot</span><span class=p>,</span> <span class=n>mainAbName</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>mainBundle</span> <span class=p>=</span> <span class=n>AssetBundle</span><span class=p>.</span><span class=n>LoadFromFile</span><span class=p>(</span><span class=n>mainPath</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>manifest</span> <span class=p>=</span> <span class=n>mainBundle</span><span class=p>.</span><span class=n>LoadAsset</span><span class=p>&lt;</span><span class=n>AssetBundleManifest</span><span class=p>&gt;(</span><span class=s>&#34;AssetBundleManifest&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=kd>public</span> <span class=n>GameObject</span> <span class=n>LoadPrefab</span><span class=p>(</span><span class=kt>string</span> <span class=n>bundleName</span><span class=p>,</span> <span class=kt>string</span> <span class=n>assetName</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=p>(</span><span class=n>manifest</span> <span class=p>==</span> <span class=kc>null</span><span class=p>)</span> <span class=n>LoadManifest</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=c1>// 1. 先加载所有依赖</span>
+</span></span><span class=line><span class=cl>        <span class=kt>string</span><span class=p>[]</span> <span class=n>deps</span> <span class=p>=</span> <span class=n>manifest</span><span class=p>.</span><span class=n>GetAllDependencies</span><span class=p>(</span><span class=n>bundleName</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=k>foreach</span> <span class=p>(</span><span class=kt>var</span> <span class=n>dep</span> <span class=k>in</span> <span class=n>deps</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=kt>string</span> <span class=n>depPath</span> <span class=p>=</span> <span class=n>Path</span><span class=p>.</span><span class=n>Combine</span><span class=p>(</span><span class=n>abRoot</span><span class=p>,</span> <span class=n>dep</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=p>(!</span><span class=n>IsLoaded</span><span class=p>(</span><span class=n>dep</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>                <span class=n>AssetBundle</span><span class=p>.</span><span class=n>LoadFromFile</span><span class=p>(</span><span class=n>depPath</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=c1>// 2. 加载目标包</span>
+</span></span><span class=line><span class=cl>        <span class=kt>string</span> <span class=n>bundlePath</span> <span class=p>=</span> <span class=n>Path</span><span class=p>.</span><span class=n>Combine</span><span class=p>(</span><span class=n>abRoot</span><span class=p>,</span> <span class=n>bundleName</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>AssetBundle</span> <span class=n>bundle</span> <span class=p>=</span> <span class=n>AssetBundle</span><span class=p>.</span><span class=n>LoadFromFile</span><span class=p>(</span><span class=n>bundlePath</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=c1>// 3. 加载资源</span>
+</span></span><span class=line><span class=cl>        <span class=n>GameObject</span> <span class=n>prefab</span> <span class=p>=</span> <span class=n>bundle</span><span class=p>.</span><span class=n>LoadAsset</span><span class=p>&lt;</span><span class=n>GameObject</span><span class=p>&gt;(</span><span class=n>assetName</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>Instantiate</span><span class=p>(</span><span class=n>prefab</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=kt>bool</span> <span class=n>IsLoaded</span><span class=p>(</span><span class=kt>string</span> <span class=n>bundleName</span><span class=p>)</span> <span class=p>{</span> <span class=cm>/* 维护已加载字典 */</span> <span class=k>return</span> <span class=kc>false</span><span class=p>;</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>void</span> <span class=n>OnDestroy</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>mainBundle</span><span class=p>?.</span><span class=n>Unload</span><span class=p>(</span><span class=kc>true</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// 其他 bundle 按引用计数 Unload(false/true)</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=异步加载推荐>异步加载（推荐）</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl><span class=kt>var</span> <span class=n>req</span> <span class=p>=</span> <span class=n>AssetBundle</span><span class=p>.</span><span class=n>LoadFromFileAsync</span><span class=p>(</span><span class=n>path</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=k>yield</span> <span class=k>return</span> <span class=n>req</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=n>AssetBundle</span> <span class=n>bundle</span> <span class=p>=</span> <span class=n>req</span><span class=p>.</span><span class=n>assetBundle</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kt>var</span> <span class=n>assetReq</span> <span class=p>=</span> <span class=n>bundle</span><span class=p>.</span><span class=n>LoadAssetAsync</span><span class=p>&lt;</span><span class=n>GameObject</span><span class=p>&gt;(</span><span class=s>&#34;MyPrefab&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=k>yield</span> <span class=k>return</span> <span class=n>assetReq</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=n>GameObject</span> <span class=n>go</span> <span class=p>=</span> <span class=n>Instantiate</span><span class=p>(</span><span class=n>assetReq</span><span class=p>.</span><span class=n>asset</span> <span class=k>as</span> <span class=n>GameObject</span><span class=p>);</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=unload-注意>Unload 注意</h3><div class=table-wrapper><table><thead><tr><th>调用</th><th>效果</th></tr></thead><tbody><tr><td><code>Unload(false)</code></td><td>卸载 AB 文件，<strong>已实例化对象仍可用</strong>（材质可能丢引用）</td></tr><tr><td><code>Unload(true)</code></td><td>连已加载出的资源一并卸载</td></tr></tbody></table></div><p>有依赖时按<strong>加载逆序</strong>卸载，或使用统一 AB 管理器做引用计数。</p><hr><h2 id=版本与更新流程>版本与更新流程</h2><h3 id=典型热更流程>典型热更流程</h3><ol><li><strong>首包</strong>：内置少量 AB 或 StreamingAssets + 版本号 <code>version.json</code></li><li><strong>启动</strong>：请求 CDN 上 <code>version.json</code> / 资源清单（文件名 + Hash + 大小）</li><li><strong>对比</strong>：本地 Hash vs 远程 Hash，得到需下载列表</li><li><strong>下载</strong>：差量或全量 AB 到 <code>persistentDataPath</code></li><li><strong>加载</strong>：从持久化路径 <code>LoadFromFile</code>，不走 StreamingAssets</li><li><strong>校验</strong>：MD5/CRC 防篡改（可选）</li></ol><h3 id=versionjson-示例>version.json 示例</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;appVersion&#34;</span><span class=p>:</span> <span class=s2>&#34;1.0.0&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;resVersion&#34;</span><span class=p>:</span> <span class=s2>&#34;2026051901&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;bundles&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span> <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;ui_panel.ab&#34;</span><span class=p>,</span> <span class=nt>&#34;hash&#34;</span><span class=p>:</span> <span class=s2>&#34;a1b2c3...&#34;</span><span class=p>,</span> <span class=nt>&#34;size&#34;</span><span class=p>:</span> <span class=mi>1024000</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><div class=table-wrapper><table><thead><tr><th>目录</th><th>用途</th></tr></thead><tbody><tr><td><code>StreamingAssets</code></td><td>首包只读，安装后不可写</td></tr><tr><td><code>persistentDataPath</code></td><td>热更下载目录，可读写</td></tr></tbody></table></div><hr><h2 id=addressables-简述>Addressables 简述</h2><p>在 AssetBundle 之上的<strong>资源管理系统</strong>：</p><div class=table-wrapper><table><thead><tr><th>概念</th><th>说明</th></tr></thead><tbody><tr><td><strong>Group</strong></td><td>资源分组，决定打哪些 AB</td></tr><tr><td><strong>Address</strong></td><td>用地址字符串加载，不必记 AB 名</td></tr><tr><td><strong>Remote / Local</strong></td><td>内置与远程 CDN 路径</td></tr><tr><td><strong>Catalog</strong></td><td>资源目录，类似 Manifest + 版本</td></tr></tbody></table></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl><span class=k>using</span> <span class=nn>UnityEngine</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>using</span> <span class=nn>UnityEngine.AddressableAssets</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>using</span> <span class=nn>UnityEngine.ResourceManagement.AsyncOperations</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>async</span> <span class=k>void</span> <span class=n>Load</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>AsyncOperationHandle</span><span class=p>&lt;</span><span class=n>GameObject</span><span class=p>&gt;</span> <span class=n>handle</span> <span class=p>=</span>
+</span></span><span class=line><span class=cl>        <span class=n>Addressables</span><span class=p>.</span><span class=n>LoadAssetAsync</span><span class=p>&lt;</span><span class=n>GameObject</span><span class=p>&gt;(</span><span class=s>&#34;MyPrefab&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=k>await</span> <span class=n>handle</span><span class=p>.</span><span class=n>Task</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Instantiate</span><span class=p>(</span><span class=n>handle</span><span class=p>.</span><span class=n>Result</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>适合新项目；老项目大量 AB 可逐步迁移。</p><hr><h2 id=常见坑与注意点>常见坑与注意点</h2><div class=table-wrapper><table><thead><tr><th>问题</th><th>原因 / 处理</th></tr></thead><tbody><tr><td>材质变粉</td><td>AB 里 Shader 丢失；Shader 放 Always Included 或进 AB</td></tr><tr><td>重复加载依赖</td><td>未先 <code>GetAllDependencies</code> 或未缓存已加载 AB</td></tr><tr><td>内存涨</td><td>未 <code>Unload</code>；重复 <code>LoadFromFile</code> 同一包</td></tr><tr><td>平台加载失败</td><td>打错 Build Target；路径大小写</td></tr><tr><td>LZMA 卡顿</td><td>首包解压慢；热更资源改 <strong>LZ4</strong></td></tr></tbody></table></div><hr><h2 id=要点速查>要点速查</h2><div class=table-wrapper><table><thead><tr><th>主题</th><th>要点</th></tr></thead><tbody><tr><td>Manifest</td><td>主包、依赖、Hash</td></tr><tr><td>压缩</td><td>LZMA 小但整包解压；LZ4 热更常用</td></tr><tr><td>加载顺序</td><td>主包 → Manifest → 依赖 AB → 目标 AB → LoadAsset</td></tr><tr><td>路径</td><td>热更后用 <code>persistentDataPath</code></td></tr><tr><td>卸载</td><td><code>Unload(false/true)</code> 区别</td></tr><tr><td>代码热更</td><td>HybridCLR / ILRuntime / Lua；与 AB 配合</td></tr></tbody></table></div></section><footer class=article-footer><section class=article-tags><a href=/tags/%E7%83%AD%E6%9B%B4%E6%96%B0/>热更新</a>
+<a href=/tags/assetbundle/>AssetBundle</a>
+<a href=/tags/unity/>Unity</a></section><section class=article-copyright><svg class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>仅用于交流学习，记录学习心得</span></section><section class=article-lastmod><svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<span>最后更新于 Oct 20, 2026 00:36 +0800</span></section></footer></article><nav class=series-nav aria-label=系列导航><div class=series-nav__head><span class=series-nav__label>系列</span>
+<a class=series-nav__series-title href=/series/#unity-network>Unity 多人联网</a><p class=series-nav__desc>Mirror、NGO 与热更新</p><a class=series-nav__index href=/series/#unity-network>在系列索引中查看全部 →</a></div><ol class=series-nav__outline><li><a href=/p/mirror/>Mirror 联网笔记</a></li><li><a href=/p/network-for-gameobjects/>Netcode for GameObjects 笔记</a></li><li><a href=/p/unity-multiplayer-mirror-ngo/>Unity 多人联网：Mirror 与 NGO</a></li><li class=is-current><a href=/p/hot-update/>热更新</a></li></ol><div class=series-nav__pager><a class=series-nav__prev href=/p/unity-multiplayer-mirror-ngo/><span>← 上一篇</span>Unity 多人联网：Mirror 与 NGO</a></div></nav><aside class=related-content--wrapper><h2 class=section-title>相关文章</h2><div class=related-content><div class="flex article-list--tile"><article><a href=/p/unity-a-star/><div class=article-details><h2 class=article-title>Unity A* 寻路算法</h2></div></a></article><article><a href=/p/ui-system/><div class=article-details><h2 class=article-title>UI 系统</h2></div></a></article><article><a href=/p/unity-yaml/><div class=article-details><h2 class=article-title>Unity YAML</h2></div></a></article><article><a href=/p/mirror/><div class=article-details><h2 class=article-title>Mirror 联网笔记</h2></div></a></article><article><a href=/p/network-for-gameobjects/><div class=article-details><h2 class=article-title>Netcode for GameObjects 笔记</h2></div></a></article></div></div></aside><footer class=site-footer><section class=copyright>&copy;
+2024 -
+2026 元某人也</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.c922af694cc257bf1ecc41c0dd7b0430f9114ec280ccf67cd2c6ad55f5316c4e.js defer></script><script type=text/javascript src=/ts/custom.35a00062ea1ed0a833f7d9144cf4eb5b3b889f58d2486b3b50c37a6e98e47606.js defer></script><div class=scroll-progress id=scroll-progress aria-hidden=true></div></body></html>

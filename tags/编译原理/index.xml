@@ -1,20 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>编译原理 on 元某人也</title>
-        <link>https://yuanmourenye.github.io/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/</link>
-        <description>Recent content in 编译原理 on 元某人也</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
-        <copyright>元某人也</copyright>
-        <lastBuildDate>Tue, 20 Oct 2026 00:36:44 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>编译原理</title>
-        <link>https://yuanmourenye.github.io/p/compiler-principles/</link>
-        <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
-        
-        <guid>https://yuanmourenye.github.io/p/compiler-principles/</guid>
-        <description>&lt;h1 id=&#34;编译原理&#34;&gt;编译原理
-&lt;/h1&gt;&lt;h2 id=&#34;第一章导论&#34;&gt;第一章：导论
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>编译原理 on 元某人也</title><link>https://yuanmourenye.github.io/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/</link><description>Recent content in 编译原理 on 元某人也</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>元某人也</copyright><lastBuildDate>Tue, 20 Oct 2026 00:36:44 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/index.xml" rel="self" type="application/rss+xml"/><item><title>编译原理</title><link>https://yuanmourenye.github.io/p/compiler-principles/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/compiler-principles/</guid><description>&lt;h1 id="编译原理"&gt;编译原理
+&lt;/h1&gt;&lt;h2 id="第一章导论"&gt;第一章：导论
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;翻译程序&lt;/strong&gt;：把某种语言的程序转换为另一种语言的程序&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;编译程序&lt;/strong&gt;：把高级语言转换为汇编语言或者机器语言这样的“低级语言”的翻译程序，称为编译程序，编译器&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;解释程序&lt;/strong&gt;： 以该语言写的源程序作为输入，但不产生目标程序，而是边解释边执行源程序本身，解释器&lt;/p&gt;
@@ -25,7 +10,7 @@
 &lt;li&gt;编译程序结果是得到等价的源程序的某种目标机程序，解释程序的结果是得到源程序的执行结果，相当于执行源程序的抽象机&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;高级语言分类及其编译&#34;&gt;高级语言分类及其编译：
+&lt;h3 id="高级语言分类及其编译"&gt;高级语言分类及其编译：
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;ol&gt;
 &lt;li&gt;过程式语言：（特点：面向驱动，面向语言，有系列的语句组成）&lt;/li&gt;
@@ -34,7 +19,7 @@
 &lt;li&gt;对象式语言：（封闭性，继承性，多态性）&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;编译过程概述&#34;&gt;编译过程概述：
+&lt;h3 id="编译过程概述"&gt;编译过程概述：
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;五个基本阶段：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;词法分析&lt;/strong&gt;&lt;/p&gt;
@@ -56,9 +41,4 @@
 &lt;p&gt;优化的任务在对于前端产生的中间代码进行加工，在最后阶段产生更为高效的代码&lt;/p&gt;
 &lt;p&gt;优化所依循的原则是程序的等价交换规则&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;目标代码生成&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-        </item>
-        
-    </channel>
-</rss>
+&lt;/blockquote&gt;</description></item></channel></rss>

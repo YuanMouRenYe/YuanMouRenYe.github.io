@@ -1,944 +1,872 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>操作系统 on 元某人也</title>
-        <link>https://yuanmourenye.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
-        <description>Recent content in 操作系统 on 元某人也</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
-        <copyright>元某人也</copyright>
-        <lastBuildDate>Tue, 20 Oct 2026 00:36:44 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>操作系统</title>
-        <link>https://yuanmourenye.github.io/p/operating-system/</link>
-        <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
-        
-        <guid>https://yuanmourenye.github.io/p/operating-system/</guid>
-        <description>&lt;h1 id=&#34;操作系统&#34;&gt;操作系统
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>操作系统 on 元某人也</title><link>https://yuanmourenye.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link><description>Recent content in 操作系统 on 元某人也</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>元某人也</copyright><lastBuildDate>Tue, 20 Oct 2026 00:36:44 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml"/><item><title>操作系统</title><link>https://yuanmourenye.github.io/p/operating-system/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/operating-system/</guid><description>&lt;h1 id="操作系统"&gt;操作系统
 &lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;考研/期末复习向笔记。重点：进程、调度、死锁、同步、存储管理、磁盘调度。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;目录&#34;&gt;目录
+&lt;h2 id="目录"&gt;目录
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e7%ac%ac%e4%b8%80%e7%ab%a0-%e5%bc%95%e8%ae%ba&#34; &gt;第一章 引论&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e7%ac%ac%e4%ba%8c%e7%ab%a0-%e8%bf%9b%e7%a8%8b%e7%9a%84%e6%8f%8f%e8%bf%b0%e4%b8%8e%e6%8e%a7%e5%88%b6&#34; &gt;第二章 进程的描述与控制&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e7%ac%ac%e4%b8%89%e7%ab%a0-%e5%a4%84%e7%90%86%e6%9c%ba%e8%b0%83%e5%ba%a6%e4%b8%8e%e6%ad%bb%e9%94%81&#34; &gt;第三章 处理机调度与死锁&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e7%ac%ac%e5%9b%9b%e7%ab%a0-%e8%bf%9b%e7%a8%8b%e5%90%8c%e6%ad%a5&#34; &gt;第四章 进程同步&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e7%ac%ac%e4%ba%94%e7%ab%a0-%e5%ad%98%e5%82%a8%e5%99%a8%e7%ae%a1%e7%90%86&#34; &gt;第五章 存储器管理&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e7%ac%ac%e5%85%ad%e7%ab%a0-%e8%99%9a%e6%8b%9f%e5%ad%98%e5%82%a8%e5%99%a8&#34; &gt;第六章 虚拟存储器&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e7%ac%ac%e4%b8%83%e7%ab%a0-%e8%be%93%e5%85%a5%e8%be%93%e5%87%ba%e7%b3%bb%e7%bb%9f&#34; &gt;第七章 输入输出系统&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e8%80%83%e7%82%b9%e9%80%9f%e6%9f%a5&#34; &gt;考点速查&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="#%e7%ac%ac%e4%b8%80%e7%ab%a0-%e5%bc%95%e8%ae%ba" &gt;第一章 引论&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="#%e7%ac%ac%e4%ba%8c%e7%ab%a0-%e8%bf%9b%e7%a8%8b%e7%9a%84%e6%8f%8f%e8%bf%b0%e4%b8%8e%e6%8e%a7%e5%88%b6" &gt;第二章 进程的描述与控制&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="#%e7%ac%ac%e4%b8%89%e7%ab%a0-%e5%a4%84%e7%90%86%e6%9c%ba%e8%b0%83%e5%ba%a6%e4%b8%8e%e6%ad%bb%e9%94%81" &gt;第三章 处理机调度与死锁&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="#%e7%ac%ac%e5%9b%9b%e7%ab%a0-%e8%bf%9b%e7%a8%8b%e5%90%8c%e6%ad%a5" &gt;第四章 进程同步&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="#%e7%ac%ac%e4%ba%94%e7%ab%a0-%e5%ad%98%e5%82%a8%e5%99%a8%e7%ae%a1%e7%90%86" &gt;第五章 存储器管理&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="#%e7%ac%ac%e5%85%ad%e7%ab%a0-%e8%99%9a%e6%8b%9f%e5%ad%98%e5%82%a8%e5%99%a8" &gt;第六章 虚拟存储器&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="#%e7%ac%ac%e4%b8%83%e7%ab%a0-%e8%be%93%e5%85%a5%e8%be%93%e5%87%ba%e7%b3%bb%e7%bb%9f" &gt;第七章 输入输出系统&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="#%e8%80%83%e7%82%b9%e9%80%9f%e6%9f%a5" &gt;考点速查&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;第一章-引论&#34;&gt;第一章 引论
-&lt;/h2&gt;&lt;h3 id=&#34;操作系统的主要功能&#34;&gt;操作系统的主要功能
+&lt;h2 id="第一章-引论"&gt;第一章 引论
+&lt;/h2&gt;&lt;h3 id="操作系统的主要功能"&gt;操作系统的主要功能
 &lt;/h3&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;功能&lt;/th&gt;
-          &lt;th&gt;内容&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;处理机管理&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;进程/线程调度、分配 CPU&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;存储器管理&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;内存分配、虚拟存储、地址映射&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;设备管理&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;I/O 分配、缓冲、驱动&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;文件管理&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;文件存取、目录、权限&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;用户接口&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;命令行、图形界面等（原文「窗口管理」多指用户接口层）&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;功能&lt;/th&gt;
+&lt;th&gt;内容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;处理机管理&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;进程/线程调度、分配 CPU&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;存储器管理&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;内存分配、虚拟存储、地址映射&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;设备管理&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;I/O 分配、缓冲、驱动&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;文件管理&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;文件存取、目录、权限&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;用户接口&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;命令行、图形界面等（原文「窗口管理」多指用户接口层）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;操作系统在计算机系统中处于&lt;strong&gt;硬件与用户/应用程序之间&lt;/strong&gt;，是对硬件资源的抽象与管理者。&lt;/p&gt;
-&lt;h3 id=&#34;操作系统的特征&#34;&gt;操作系统的特征
+&lt;h3 id="操作系统的特征"&gt;操作系统的特征
 &lt;/h3&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;特征&lt;/th&gt;
-          &lt;th&gt;含义&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;并发&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;两个或多个事件在&lt;strong&gt;同一时间间隔&lt;/strong&gt;内发生（宏观同时、微观交替）&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;共享&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;资源可供多个并发进程&lt;strong&gt;共同使用&lt;/strong&gt;（互斥共享 / 同时访问）&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;虚拟&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;把一个物理实体变为&lt;strong&gt;多个&lt;/strong&gt;逻辑对应物（虚拟 CPU、虚拟内存等）&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;异步&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;进程以不可预知的速度推进，需同步机制协调&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;特征&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;并发&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;两个或多个事件在&lt;strong&gt;同一时间间隔&lt;/strong&gt;内发生（宏观同时、微观交替）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;共享&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;资源可供多个并发进程&lt;strong&gt;共同使用&lt;/strong&gt;（互斥共享 / 同时访问）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;虚拟&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;把一个物理实体变为&lt;strong&gt;多个&lt;/strong&gt;逻辑对应物（虚拟 CPU、虚拟内存等）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;异步&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;进程以不可预知的速度推进，需同步机制协调&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;操作系统的基本类型&#34;&gt;操作系统的基本类型
+&lt;h3 id="操作系统的基本类型"&gt;操作系统的基本类型
 &lt;/h3&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;类型&lt;/th&gt;
-          &lt;th&gt;特点&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;批处理&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;多道程序并发，提高资源利用率，少交互&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;分时&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;时间片轮转，用户可交互，响应及时&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;实时&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;优先处理紧急事件，强调&lt;strong&gt;实时性&lt;/strong&gt;与&lt;strong&gt;可靠性&lt;/strong&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;特点&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;批处理&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;多道程序并发，提高资源利用率，少交互&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;分时&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;时间片轮转，用户可交互，响应及时&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;实时&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;优先处理紧急事件，强调&lt;strong&gt;实时性&lt;/strong&gt;与&lt;strong&gt;可靠性&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;第二章-进程的描述与控制&#34;&gt;第二章 进程的描述与控制
-&lt;/h2&gt;&lt;h3 id=&#34;进程的概念&#34;&gt;进程的概念
+&lt;h2 id="第二章-进程的描述与控制"&gt;第二章 进程的描述与控制
+&lt;/h2&gt;&lt;h3 id="进程的概念"&gt;进程的概念
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;定义&lt;/strong&gt;：程序的一次&lt;strong&gt;动态&lt;/strong&gt;执行过程（程序是静态的）。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;组成&lt;/strong&gt;：&lt;strong&gt;PCB&lt;/strong&gt;（进程控制块）+ &lt;strong&gt;程序段&lt;/strong&gt;（代码）+ &lt;strong&gt;数据段&lt;/strong&gt;（运行数据）。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;进程的特征&#34;&gt;进程的特征
+&lt;h3 id="进程的特征"&gt;进程的特征
 &lt;/h3&gt;&lt;p&gt;动态性、并发性、独立性、异步性、结构性（由 PCB 描述）。&lt;/p&gt;
-&lt;h3 id=&#34;三级调度&#34;&gt;三级调度
+&lt;h3 id="三级调度"&gt;三级调度
 &lt;/h3&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;调度&lt;/th&gt;
-          &lt;th&gt;作用&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;高级（作业）调度&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;从&lt;strong&gt;外存&lt;/strong&gt;后备队列选作业进入内存，建立进程，送入就绪队列&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;中级调度&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;strong&gt;挂起/唤醒&lt;/strong&gt;：内存紧张时把暂不运行进程换出；宽松时再换入&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;低级（进程）调度&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;从就绪队列选进程，分配 CPU，进入运行态&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;调度&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;高级（作业）调度&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;从&lt;strong&gt;外存&lt;/strong&gt;后备队列选作业进入内存，建立进程，送入就绪队列&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;中级调度&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;挂起/唤醒&lt;/strong&gt;：内存紧张时把暂不运行进程换出；宽松时再换入&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;低级（进程）调度&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;从就绪队列选进程，分配 CPU，进入运行态&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/operating-system/img/image-20251223170541076.png&#34;
-	width=&#34;1815&#34;
-	height=&#34;780&#34;
-	srcset=&#34;https://yuanmourenye.github.io/p/operating-system/img/image-20251223170541076_hu_e21d26ef9bf37bfc.png 480w, https://yuanmourenye.github.io/p/operating-system/img/image-20251223170541076_hu_c02e83b267b51c88.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;三级调度关系&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;232&#34;
-		data-flex-basis=&#34;558px&#34;
-	
+&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/p/operating-system/img/image-20251223170541076.png"
+width="1815"
+height="780"
+srcset="https://yuanmourenye.github.io/p/operating-system/img/image-20251223170541076_hu_e21d26ef9bf37bfc.png 480w, https://yuanmourenye.github.io/p/operating-system/img/image-20251223170541076_hu_c02e83b267b51c88.png 1024w"
+loading="lazy"
+alt="三级调度关系"
+class="gallery-image"
+data-flex-grow="232"
+data-flex-basis="558px"
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;进程状态转换&#34;&gt;进程状态转换
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/operating-system/img/image-20251219173207367.png&#34;
-	width=&#34;848&#34;
-	height=&#34;248&#34;
-	srcset=&#34;https://yuanmourenye.github.io/p/operating-system/img/image-20251219173207367_hu_adef67b083a48729.png 480w, https://yuanmourenye.github.io/p/operating-system/img/image-20251219173207367_hu_56a5aac4b3f90a2.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;进程状态转换&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;341&#34;
-		data-flex-basis=&#34;820px&#34;
-	
+&lt;h3 id="进程状态转换"&gt;进程状态转换
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/p/operating-system/img/image-20251219173207367.png"
+width="848"
+height="248"
+srcset="https://yuanmourenye.github.io/p/operating-system/img/image-20251219173207367_hu_adef67b083a48729.png 480w, https://yuanmourenye.github.io/p/operating-system/img/image-20251219173207367_hu_56a5aac4b3f90a2.png 1024w"
+loading="lazy"
+alt="进程状态转换"
+class="gallery-image"
+data-flex-grow="341"
+data-flex-basis="820px"
 &gt;&lt;/p&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;转换&lt;/th&gt;
-          &lt;th&gt;典型原因&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;运行 → 就绪&lt;/td&gt;
-          &lt;td&gt;时间片用完；被更高优先级进程&lt;strong&gt;抢占&lt;/strong&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;运行 → 阻塞&lt;/td&gt;
-          &lt;td&gt;等待 I/O、等待资源、等待某事件发生&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;阻塞 → 就绪&lt;/td&gt;
-          &lt;td&gt;等待的事件发生（I/O 完成等）&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;就绪 → 运行&lt;/td&gt;
-          &lt;td&gt;被调度程序选中&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;转换&lt;/th&gt;
+&lt;th&gt;典型原因&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;运行 → 就绪&lt;/td&gt;
+&lt;td&gt;时间片用完；被更高优先级进程&lt;strong&gt;抢占&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;运行 → 阻塞&lt;/td&gt;
+&lt;td&gt;等待 I/O、等待资源、等待某事件发生&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;阻塞 → 就绪&lt;/td&gt;
+&lt;td&gt;等待的事件发生（I/O 完成等）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;就绪 → 运行&lt;/td&gt;
+&lt;td&gt;被调度程序选中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;进程通信ipc&#34;&gt;进程通信（IPC）
+&lt;h3 id="进程通信ipc"&gt;进程通信（IPC）
 &lt;/h3&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;方式&lt;/th&gt;
-          &lt;th&gt;说明&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;共享存储&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;映射同一块内存区域&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;消息传递&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;消息头 + 消息体，send/receive&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;管道&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;半双工/全双工字节流（匿名管道、命名管道）&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;方式&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;共享存储&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;映射同一块内存区域&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;消息传递&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;消息头 + 消息体，send/receive&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;管道&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;半双工/全双工字节流（匿名管道、命名管道）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;线程&#34;&gt;线程
+&lt;h3 id="线程"&gt;线程
 &lt;/h3&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;对比&lt;/th&gt;
-          &lt;th&gt;进程&lt;/th&gt;
-          &lt;th&gt;线程&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;定位&lt;/td&gt;
-          &lt;td&gt;&lt;strong&gt;资源分配&lt;/strong&gt;基本单位&lt;/td&gt;
-          &lt;td&gt;&lt;strong&gt;调度/执行&lt;/strong&gt;基本单位&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;并发&lt;/td&gt;
-          &lt;td&gt;进程间可并发&lt;/td&gt;
-          &lt;td&gt;进程内线程也可并发&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;控制块&lt;/td&gt;
-          &lt;td&gt;PCB&lt;/td&gt;
-          &lt;td&gt;TCB（含线程 ID）&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;状态&lt;/td&gt;
-          &lt;td&gt;就绪、运行、阻塞&lt;/td&gt;
-          &lt;td&gt;同样三种基本状态&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;对比&lt;/th&gt;
+&lt;th&gt;进程&lt;/th&gt;
+&lt;th&gt;线程&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;定位&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;资源分配&lt;/strong&gt;基本单位&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;调度/执行&lt;/strong&gt;基本单位&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;并发&lt;/td&gt;
+&lt;td&gt;进程间可并发&lt;/td&gt;
+&lt;td&gt;进程内线程也可并发&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;控制块&lt;/td&gt;
+&lt;td&gt;PCB&lt;/td&gt;
+&lt;td&gt;TCB（含线程 ID）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;状态&lt;/td&gt;
+&lt;td&gt;就绪、运行、阻塞&lt;/td&gt;
+&lt;td&gt;同样三种基本状态&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;实现级别&lt;/strong&gt;&lt;/p&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;类型&lt;/th&gt;
-          &lt;th&gt;说明&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;用户级线程&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;线程库在用户空间调度，内核无感知&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;内核级线程&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;内核参与调度；常见 &lt;strong&gt;1:1&lt;/strong&gt;（一用户线程对应一内核线程）&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;用户级线程&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;线程库在用户空间调度，内核无感知&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;内核级线程&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;内核参与调度；常见 &lt;strong&gt;1:1&lt;/strong&gt;（一用户线程对应一内核线程）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;第三章-处理机调度与死锁&#34;&gt;第三章 处理机调度与死锁
-&lt;/h2&gt;&lt;h3 id=&#34;调度方式&#34;&gt;调度方式
+&lt;h2 id="第三章-处理机调度与死锁"&gt;第三章 处理机调度与死锁
+&lt;/h2&gt;&lt;h3 id="调度方式"&gt;调度方式
 &lt;/h3&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;方式&lt;/th&gt;
-          &lt;th&gt;说明&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;非抢占&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;进程占用 CPU 直到结束或主动放弃&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;抢占&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;有更重要/更紧迫进程时，剥夺当前 CPU&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;方式&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;非抢占&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;进程占用 CPU 直到结束或主动放弃&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;抢占&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;有更重要/更紧迫进程时，剥夺当前 CPU&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;调度评价指标&#34;&gt;调度评价指标
+&lt;h3 id="调度评价指标"&gt;调度评价指标
 &lt;/h3&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;指标&lt;/th&gt;
-          &lt;th&gt;公式 / 含义&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;周转时间&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;完成时间 − 到达时间&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;带权周转时间&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;周转时间 ÷ 服务时间&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;等待时间&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;周转时间 − 服务时间（或 在就绪队列中等待之和）&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;响应时间&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;提交到首次响应（分时系统重要）&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;响应比&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;（等待时间 + 服务时间）÷ 服务时间&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;CPU 利用率&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;CPU 忙碌时间 ÷ 总时间&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;系统吞吐量&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;完成作业数 ÷ 总时间&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;指标&lt;/th&gt;
+&lt;th&gt;公式 / 含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;周转时间&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;完成时间 − 到达时间&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;带权周转时间&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;周转时间 ÷ 服务时间&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;等待时间&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;周转时间 − 服务时间（或 在就绪队列中等待之和）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;响应时间&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;提交到首次响应（分时系统重要）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;响应比&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;（等待时间 + 服务时间）÷ 服务时间&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;CPU 利用率&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;CPU 忙碌时间 ÷ 总时间&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;系统吞吐量&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;完成作业数 ÷ 总时间&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;调度算法&#34;&gt;调度算法
-&lt;/h3&gt;&lt;h4 id=&#34;1-先来先服务fcfs&#34;&gt;1. 先来先服务（FCFS）
+&lt;h3 id="调度算法"&gt;调度算法
+&lt;/h3&gt;&lt;h4 id="1-先来先服务fcfs"&gt;1. 先来先服务（FCFS）
 &lt;/h4&gt;&lt;p&gt;按到达顺序，非抢占。实现简单，短作业等待长作业时&lt;strong&gt;平均周转时间&lt;/strong&gt;可能较大。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/operating-system/img/image-20251220092733775.png&#34;
-	width=&#34;458&#34;
-	height=&#34;852&#34;
-	srcset=&#34;https://yuanmourenye.github.io/p/operating-system/img/image-20251220092733775_hu_21c2d87d6826fbb2.png 480w, https://yuanmourenye.github.io/p/operating-system/img/image-20251220092733775_hu_df30b7fbf33d407d.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;53&#34;
-		data-flex-basis=&#34;129px&#34;
-	
+&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/p/operating-system/img/image-20251220092733775.png"
+width="458"
+height="852"
+srcset="https://yuanmourenye.github.io/p/operating-system/img/image-20251220092733775_hu_21c2d87d6826fbb2.png 480w, https://yuanmourenye.github.io/p/operating-system/img/image-20251220092733775_hu_df30b7fbf33d407d.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="53"
+data-flex-basis="129px"
 &gt;&lt;/p&gt;
-&lt;h4 id=&#34;2-短作业优先sjf&#34;&gt;2. 短作业优先（SJF）
+&lt;h4 id="2-短作业优先sjf"&gt;2. 短作业优先（SJF）
 &lt;/h4&gt;&lt;p&gt;优先服务时间短的进程。&lt;/p&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;类型&lt;/th&gt;
-          &lt;th&gt;规则&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;非抢占 SJF&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;当前进程运行完，在已到达进程中选服务时间最短&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;抢占 SJF（SRTN）&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;新进程到达时，若其服务时间更短则抢占&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;规则&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;非抢占 SJF&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;当前进程运行完，在已到达进程中选服务时间最短&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;抢占 SJF（SRTN）&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;新进程到达时，若其服务时间更短则抢占&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/operating-system/img/image-20251220094625797.png&#34;
-	width=&#34;391&#34;
-	height=&#34;662&#34;
-	srcset=&#34;https://yuanmourenye.github.io/p/operating-system/img/image-20251220094625797_hu_2aa1f0c9f71feaf2.png 480w, https://yuanmourenye.github.io/p/operating-system/img/image-20251220094625797_hu_30381a5357cabeef.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;SJF 示例&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;59&#34;
-		data-flex-basis=&#34;141px&#34;
-	
+&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/p/operating-system/img/image-20251220094625797.png"
+width="391"
+height="662"
+srcset="https://yuanmourenye.github.io/p/operating-system/img/image-20251220094625797_hu_2aa1f0c9f71feaf2.png 480w, https://yuanmourenye.github.io/p/operating-system/img/image-20251220094625797_hu_30381a5357cabeef.png 1024w"
+loading="lazy"
+alt="SJF 示例"
+class="gallery-image"
+data-flex-grow="59"
+data-flex-basis="141px"
 &gt;&lt;/p&gt;
-&lt;h4 id=&#34;3-优先级调度&#34;&gt;3. 优先级调度
+&lt;h4 id="3-优先级调度"&gt;3. 优先级调度
 &lt;/h4&gt;&lt;p&gt;按优先级高者优先；同优先级可按 FCFS。分抢占 / 非抢占。&lt;/p&gt;
-&lt;h4 id=&#34;4-高响应比优先hrrn&#34;&gt;4. 高响应比优先（HRRN）
+&lt;h4 id="4-高响应比优先hrrn"&gt;4. 高响应比优先（HRRN）
 &lt;/h4&gt;&lt;p&gt;&lt;strong&gt;非抢占&lt;/strong&gt;，每次选择响应比最高的进程。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/operating-system/img/image-20251220095918711.png&#34;
-	width=&#34;776&#34;
-	height=&#34;771&#34;
-	srcset=&#34;https://yuanmourenye.github.io/p/operating-system/img/image-20251220095918711_hu_ca3e12a398b9200e.png 480w, https://yuanmourenye.github.io/p/operating-system/img/image-20251220095918711_hu_a0e57fdf05e7ab0e.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;HRRN 示例&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;100&#34;
-		data-flex-basis=&#34;241px&#34;
-	
+&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/p/operating-system/img/image-20251220095918711.png"
+width="776"
+height="771"
+srcset="https://yuanmourenye.github.io/p/operating-system/img/image-20251220095918711_hu_ca3e12a398b9200e.png 480w, https://yuanmourenye.github.io/p/operating-system/img/image-20251220095918711_hu_a0e57fdf05e7ab0e.png 1024w"
+loading="lazy"
+alt="HRRN 示例"
+class="gallery-image"
+data-flex-grow="100"
+data-flex-basis="241px"
 &gt;&lt;/p&gt;
-&lt;h4 id=&#34;5-时间片轮转rr&#34;&gt;5. 时间片轮转（RR）
+&lt;h4 id="5-时间片轮转rr"&gt;5. 时间片轮转（RR）
 &lt;/h4&gt;&lt;p&gt;就绪队列 FCFS，每进程运行一个&lt;strong&gt;时间片&lt;/strong&gt;，用完排到队尾。&lt;/p&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;优点&lt;/th&gt;
-          &lt;th&gt;缺点&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;公平、响应快，适合分时&lt;/td&gt;
-          &lt;td&gt;时间片难选；不区分紧急程度；上下文切换开销&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;优点&lt;/th&gt;
+&lt;th&gt;缺点&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;公平、响应快，适合分时&lt;/td&gt;
+&lt;td&gt;时间片难选；不区分紧急程度；上下文切换开销&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h4 id=&#34;6-多级反馈队列mlfq&#34;&gt;6. 多级反馈队列（MLFQ）
+&lt;h4 id="6-多级反馈队列mlfq"&gt;6. 多级反馈队列（MLFQ）
 &lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;多级队列，&lt;strong&gt;优先级从高到低，时间片从小到大&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;新进程进入&lt;strong&gt;最高级&lt;/strong&gt;队列，FCFS + RR&lt;/li&gt;
 &lt;li&gt;时间片用完未结束 → 降到&lt;strong&gt;下一级&lt;/strong&gt;队尾&lt;/li&gt;
 &lt;li&gt;已在最低级则仍在最低级队尾轮转&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;死锁&#34;&gt;死锁
+&lt;h3 id="死锁"&gt;死锁
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;各进程互相等待对方持有的资源，导致都无法推进。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&#34;产生必要条件四者同时成立&#34;&gt;产生必要条件（四者同时成立）
+&lt;h4 id="产生必要条件四者同时成立"&gt;产生必要条件（四者同时成立）
 &lt;/h4&gt;&lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;互斥&lt;/strong&gt;：资源只能互斥使用&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;占有并等待&lt;/strong&gt;：持有资源的同时等待其他资源&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;不可剥夺&lt;/strong&gt;：资源只能由持有者主动释放&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;循环等待&lt;/strong&gt;：存在进程资源的环形等待链&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h4 id=&#34;处理策略&#34;&gt;处理策略
+&lt;h4 id="处理策略"&gt;处理策略
 &lt;/h4&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;策略&lt;/th&gt;
-          &lt;th&gt;思路&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;预防&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;破坏四条件之一（如按序分配资源）&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;避免&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;分配前判断是否进入&lt;strong&gt;不安全状态&lt;/strong&gt;（银行家算法）&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;检测&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;允许发生，定期检测并恢复&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;解除&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;剥夺资源、回滚、杀死进程等&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;策略&lt;/th&gt;
+&lt;th&gt;思路&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;预防&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;破坏四条件之一（如按序分配资源）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;避免&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;分配前判断是否进入&lt;strong&gt;不安全状态&lt;/strong&gt;（银行家算法）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;检测&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;允许发生，定期检测并恢复&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;解除&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;剥夺资源、回滚、杀死进程等&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;安全状态&lt;/strong&gt; → 一定不会死锁；&lt;strong&gt;不安全状态&lt;/strong&gt; → 可能死锁。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&#34;银行家算法避免死锁&#34;&gt;银行家算法（避免死锁）
+&lt;h4 id="银行家算法避免死锁"&gt;银行家算法（避免死锁）
 &lt;/h4&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;矩阵&lt;/th&gt;
-          &lt;th&gt;含义&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;Available&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;可用资源向量&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;Max&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;各进程最大需求&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;Allocation&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;已分配&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;Need&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;还需资源，&lt;code&gt;Need = Max − Allocation&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;矩阵&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Available&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;可用资源向量&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Max&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;各进程最大需求&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Allocation&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;已分配&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Need&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;还需资源，&lt;code&gt;Need = Max − Allocation&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;安全序列&lt;/strong&gt;：若存在一种分配顺序使所有进程都能完成，则当前为安全状态。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/operating-system/img/image-20251220160139373.png&#34;
-	width=&#34;810&#34;
-	height=&#34;459&#34;
-	srcset=&#34;https://yuanmourenye.github.io/p/operating-system/img/image-20251220160139373_hu_8362cc754f64a82d.png 480w, https://yuanmourenye.github.io/p/operating-system/img/image-20251220160139373_hu_6fbb2e392a04090e.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;银行家算法步骤 1&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;176&#34;
-		data-flex-basis=&#34;423px&#34;
-	
+&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/p/operating-system/img/image-20251220160139373.png"
+width="810"
+height="459"
+srcset="https://yuanmourenye.github.io/p/operating-system/img/image-20251220160139373_hu_8362cc754f64a82d.png 480w, https://yuanmourenye.github.io/p/operating-system/img/image-20251220160139373_hu_6fbb2e392a04090e.png 1024w"
+loading="lazy"
+alt="银行家算法步骤 1"
+class="gallery-image"
+data-flex-grow="176"
+data-flex-basis="423px"
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/operating-system/img/image-20251220160017119.png&#34;
-	width=&#34;810&#34;
-	height=&#34;632&#34;
-	srcset=&#34;https://yuanmourenye.github.io/p/operating-system/img/image-20251220160017119_hu_5965bb20607a6d3e.png 480w, https://yuanmourenye.github.io/p/operating-system/img/image-20251220160017119_hu_1511aa914a983df6.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;银行家算法步骤 2&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;128&#34;
-		data-flex-basis=&#34;307px&#34;
-	
+&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/p/operating-system/img/image-20251220160017119.png"
+width="810"
+height="632"
+srcset="https://yuanmourenye.github.io/p/operating-system/img/image-20251220160017119_hu_5965bb20607a6d3e.png 480w, https://yuanmourenye.github.io/p/operating-system/img/image-20251220160017119_hu_1511aa914a983df6.png 1024w"
+loading="lazy"
+alt="银行家算法步骤 2"
+class="gallery-image"
+data-flex-grow="128"
+data-flex-basis="307px"
 &gt;&lt;/p&gt;
-&lt;h4 id=&#34;死锁检测资源分配图&#34;&gt;死锁检测（资源分配图）
+&lt;h4 id="死锁检测资源分配图"&gt;死锁检测（资源分配图）
 &lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;方框：资源类；圆：进程&lt;/li&gt;
 &lt;li&gt;资源 → 进程：已分配；进程 → 资源：正在请求&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;资源耗尽 + 循环等待&lt;/strong&gt; 是死锁关键特征&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/operating-system/img/image-20251220161340291.png&#34;
-	width=&#34;453&#34;
-	height=&#34;445&#34;
-	srcset=&#34;https://yuanmourenye.github.io/p/operating-system/img/image-20251220161340291_hu_927c002712529d09.png 480w, https://yuanmourenye.github.io/p/operating-system/img/image-20251220161340291_hu_8d64eb3721dc87dd.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;死锁检测图&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;101&#34;
-		data-flex-basis=&#34;244px&#34;
-	
+&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/p/operating-system/img/image-20251220161340291.png"
+width="453"
+height="445"
+srcset="https://yuanmourenye.github.io/p/operating-system/img/image-20251220161340291_hu_927c002712529d09.png 480w, https://yuanmourenye.github.io/p/operating-system/img/image-20251220161340291_hu_8d64eb3721dc87dd.png 1024w"
+loading="lazy"
+alt="死锁检测图"
+class="gallery-image"
+data-flex-grow="101"
+data-flex-basis="244px"
 &gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;第四章-进程同步&#34;&gt;第四章 进程同步
-&lt;/h2&gt;&lt;h3 id=&#34;基本概念&#34;&gt;基本概念
+&lt;h2 id="第四章-进程同步"&gt;第四章 进程同步
+&lt;/h2&gt;&lt;h3 id="基本概念"&gt;基本概念
 &lt;/h3&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;概念&lt;/th&gt;
-          &lt;th&gt;说明&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;进程同步&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;多进程按一定次序协作，保证可再现性&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;进程互斥&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;访问&lt;strong&gt;临界资源&lt;/strong&gt;时排他，同一时刻仅一进程进入临界区&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;临界资源&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;一次仅允许一个进程使用的资源（打印机、共享变量等）&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;概念&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;进程同步&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;多进程按一定次序协作，保证可再现性&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;进程互斥&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;访问&lt;strong&gt;临界资源&lt;/strong&gt;时排他，同一时刻仅一进程进入临界区&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;临界资源&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;一次仅允许一个进程使用的资源（打印机、共享变量等）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;信号量机制&#34;&gt;信号量机制
+&lt;h3 id="信号量机制"&gt;信号量机制
 &lt;/h3&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;原语&lt;/th&gt;
-          &lt;th&gt;别名&lt;/th&gt;
-          &lt;th&gt;含义&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;wait(S)&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;strong&gt;P&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;申请资源，&lt;code&gt;S--&lt;/code&gt;；若 &lt;code&gt;S&amp;lt;0&lt;/code&gt; 则阻塞&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;signal(S)&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;strong&gt;V&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;释放资源，&lt;code&gt;S++&lt;/code&gt;；若 &lt;code&gt;S≤0&lt;/code&gt; 则唤醒等待者&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;原语&lt;/th&gt;
+&lt;th&gt;别名&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;wait(S)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;P&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;申请资源，&lt;code&gt;S--&lt;/code&gt;；若 &lt;code&gt;S&amp;lt;0&lt;/code&gt; 则阻塞&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;signal(S)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;V&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;释放资源，&lt;code&gt;S++&lt;/code&gt;；若 &lt;code&gt;S≤0&lt;/code&gt; 则唤醒等待者&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;用途&lt;/th&gt;
-          &lt;th&gt;初值&lt;/th&gt;
-          &lt;th&gt;用法&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;互斥&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;S = 1&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;进入临界区 &lt;strong&gt;P&lt;/strong&gt;，离开 &lt;strong&gt;V&lt;/strong&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;同步&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;S = 0&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;前驱操作后 &lt;strong&gt;V&lt;/strong&gt;，后继操作前 &lt;strong&gt;P&lt;/strong&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;用途&lt;/th&gt;
+&lt;th&gt;初值&lt;/th&gt;
+&lt;th&gt;用法&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;互斥&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;S = 1&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;进入临界区 &lt;strong&gt;P&lt;/strong&gt;，离开 &lt;strong&gt;V&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;同步&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;S = 0&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;前驱操作后 &lt;strong&gt;V&lt;/strong&gt;，后继操作前 &lt;strong&gt;P&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;经典问题&#34;&gt;经典问题
-&lt;/h3&gt;&lt;h4 id=&#34;生产者消费者&#34;&gt;生产者—消费者
+&lt;h3 id="经典问题"&gt;经典问题
+&lt;/h3&gt;&lt;h4 id="生产者消费者"&gt;生产者—消费者
 &lt;/h4&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;角色&lt;/th&gt;
-          &lt;th&gt;操作语义&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;生产者&lt;/td&gt;
-          &lt;td&gt;P(空缓冲区)；生产；V(满缓冲区/产品)&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;消费者&lt;/td&gt;
-          &lt;td&gt;P(产品)；消费；V(空缓冲区)&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;角色&lt;/th&gt;
+&lt;th&gt;操作语义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;生产者&lt;/td&gt;
+&lt;td&gt;P(空缓冲区)；生产；V(满缓冲区/产品)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;消费者&lt;/td&gt;
+&lt;td&gt;P(产品)；消费；V(空缓冲区)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;常用信号量：&lt;code&gt;mutex=1&lt;/code&gt;（互斥访问缓冲区）、&lt;code&gt;empty=n&lt;/code&gt;、&lt;code&gt;full=0&lt;/code&gt;。&lt;/p&gt;
-&lt;h4 id=&#34;读者写者&#34;&gt;读者—写者
+&lt;h4 id="读者写者"&gt;读者—写者
 &lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;多个读者&lt;/strong&gt;可同时读&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;写者&lt;/strong&gt;互斥，且读写互斥&lt;/li&gt;
 &lt;li&gt;用 &lt;code&gt;readcount&lt;/code&gt; + &lt;code&gt;mutex&lt;/code&gt; 保护计数；写者用 &lt;code&gt;rw_mutex&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;第五章-存储器管理&#34;&gt;第五章 存储器管理
-&lt;/h2&gt;&lt;h3 id=&#34;目标&#34;&gt;目标
+&lt;h2 id="第五章-存储器管理"&gt;第五章 存储器管理
+&lt;/h2&gt;&lt;h3 id="目标"&gt;目标
 &lt;/h3&gt;&lt;p&gt;解决「程序逻辑地址空间 &amp;gt; 物理内存」：覆盖、交换、分页、分段、段页式。&lt;/p&gt;
-&lt;h3 id=&#34;连续分配&#34;&gt;连续分配
-&lt;/h3&gt;&lt;h4 id=&#34;1-单一连续分配&#34;&gt;1. 单一连续分配
+&lt;h3 id="连续分配"&gt;连续分配
+&lt;/h3&gt;&lt;h4 id="1-单一连续分配"&gt;1. 单一连续分配
 &lt;/h4&gt;&lt;p&gt;系统区（低地址）+ 用户区（用户进程）。简单，无碎片，利用率低。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/operating-system/img/image-20251223131106177.png&#34;
-	width=&#34;253&#34;
-	height=&#34;188&#34;
-	srcset=&#34;https://yuanmourenye.github.io/p/operating-system/img/image-20251223131106177_hu_211e5bec0508210e.png 480w, https://yuanmourenye.github.io/p/operating-system/img/image-20251223131106177_hu_f30aa4d3853fb16e.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;单一连续分配&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;134&#34;
-		data-flex-basis=&#34;322px&#34;
-	
+&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/p/operating-system/img/image-20251223131106177.png"
+width="253"
+height="188"
+srcset="https://yuanmourenye.github.io/p/operating-system/img/image-20251223131106177_hu_211e5bec0508210e.png 480w, https://yuanmourenye.github.io/p/operating-system/img/image-20251223131106177_hu_f30aa4d3853fb16e.png 1024w"
+loading="lazy"
+alt="单一连续分配"
+class="gallery-image"
+data-flex-grow="134"
+data-flex-basis="322px"
 &gt;&lt;/p&gt;
-&lt;h4 id=&#34;2-固定分区&#34;&gt;2. 固定分区
+&lt;h4 id="2-固定分区"&gt;2. 固定分区
 &lt;/h4&gt;&lt;p&gt;内存划分为固定大小分区，每区一道作业。有&lt;strong&gt;内部碎片&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/operating-system/img/image-20251223131815537.png&#34;
-	width=&#34;323&#34;
-	height=&#34;182&#34;
-	srcset=&#34;https://yuanmourenye.github.io/p/operating-system/img/image-20251223131815537_hu_83cc81bd33ab57cf.png 480w, https://yuanmourenye.github.io/p/operating-system/img/image-20251223131815537_hu_5397e057a0cc5919.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;固定分区&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;177&#34;
-		data-flex-basis=&#34;425px&#34;
-	
+&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/p/operating-system/img/image-20251223131815537.png"
+width="323"
+height="182"
+srcset="https://yuanmourenye.github.io/p/operating-system/img/image-20251223131815537_hu_83cc81bd33ab57cf.png 480w, https://yuanmourenye.github.io/p/operating-system/img/image-20251223131815537_hu_5397e057a0cc5919.png 1024w"
+loading="lazy"
+alt="固定分区"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="425px"
 &gt;&lt;/p&gt;
-&lt;h4 id=&#34;3-动态分区&#34;&gt;3. 动态分区
+&lt;h4 id="3-动态分区"&gt;3. 动态分区
 &lt;/h4&gt;&lt;p&gt;按进程需要动态划分，有&lt;strong&gt;外部碎片&lt;/strong&gt;，需紧凑。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/operating-system/img/image-20251223131945309.png&#34;
-	width=&#34;494&#34;
-	height=&#34;330&#34;
-	srcset=&#34;https://yuanmourenye.github.io/p/operating-system/img/image-20251223131945309_hu_6d9392392e2e16ba.png 480w, https://yuanmourenye.github.io/p/operating-system/img/image-20251223131945309_hu_a2b3693c3efee68c.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;动态分区&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;149&#34;
-		data-flex-basis=&#34;359px&#34;
-	
+&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/p/operating-system/img/image-20251223131945309.png"
+width="494"
+height="330"
+srcset="https://yuanmourenye.github.io/p/operating-system/img/image-20251223131945309_hu_6d9392392e2e16ba.png 480w, https://yuanmourenye.github.io/p/operating-system/img/image-20251223131945309_hu_a2b3693c3efee68c.png 1024w"
+loading="lazy"
+alt="动态分区"
+class="gallery-image"
+data-flex-grow="149"
+data-flex-basis="359px"
 &gt;&lt;/p&gt;
-&lt;h4 id=&#34;动态分区分配算法&#34;&gt;动态分区分配算法
+&lt;h4 id="动态分区分配算法"&gt;动态分区分配算法
 &lt;/h4&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;算法&lt;/th&gt;
-          &lt;th&gt;策略&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;首次适应 FF&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;从头找第一个足够大的空闲区&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;最佳适应 BF&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;选&lt;strong&gt;最小&lt;/strong&gt;且够用的空闲区（易留小碎片）&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;最坏适应 WF&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;选&lt;strong&gt;最大&lt;/strong&gt;空闲区&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;邻近适应 NF&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;从上次查找结束位置继续（首次适应的改进）&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;算法&lt;/th&gt;
+&lt;th&gt;策略&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;首次适应 FF&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;从头找第一个足够大的空闲区&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;最佳适应 BF&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;选&lt;strong&gt;最小&lt;/strong&gt;且够用的空闲区（易留小碎片）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;最坏适应 WF&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;选&lt;strong&gt;最大&lt;/strong&gt;空闲区&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;邻近适应 NF&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;从上次查找结束位置继续（首次适应的改进）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;分页存储管理&#34;&gt;分页存储管理
+&lt;h3 id="分页存储管理"&gt;分页存储管理
 &lt;/h3&gt;&lt;p&gt;逻辑地址 → 页号 + 页内偏移；物理地址 → 块号 + 块内偏移。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;页号   = 逻辑地址 / 页面长度（整除）
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;页内偏移 = 逻辑地址 % 页面长度
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;物理地址 = 页表[页号].块号 × 页大小 + 页内偏移
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;页号 = 逻辑地址 / 页面长度（整除）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;页内偏移 = 逻辑地址 % 页面长度
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;物理地址 = 页表[页号].块号 × 页大小 + 页内偏移
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/operating-system/img/image-20251223144715037.png&#34;
-	width=&#34;521&#34;
-	height=&#34;359&#34;
-	srcset=&#34;https://yuanmourenye.github.io/p/operating-system/img/image-20251223144715037_hu_f0f21acb24a1bfd5.png 480w, https://yuanmourenye.github.io/p/operating-system/img/image-20251223144715037_hu_e6dd00b0e252e079.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;分页地址变换&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;145&#34;
-		data-flex-basis=&#34;348px&#34;
-	
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/p/operating-system/img/image-20251223144715037.png"
+width="521"
+height="359"
+srcset="https://yuanmourenye.github.io/p/operating-system/img/image-20251223144715037_hu_f0f21acb24a1bfd5.png 480w, https://yuanmourenye.github.io/p/operating-system/img/image-20251223144715037_hu_e6dd00b0e252e079.png 1024w"
+loading="lazy"
+alt="分页地址变换"
+class="gallery-image"
+data-flex-grow="145"
+data-flex-basis="348px"
 &gt;&lt;/p&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;概念&lt;/th&gt;
-          &lt;th&gt;说明&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;页表&lt;/td&gt;
-          &lt;td&gt;页号 → 块号映射&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;TLB&lt;/td&gt;
-          &lt;td&gt;快表，加速地址变换&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;多级页表&lt;/td&gt;
-          &lt;td&gt;节省页表连续空间&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;概念&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;页表&lt;/td&gt;
+&lt;td&gt;页号 → 块号映射&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;TLB&lt;/td&gt;
+&lt;td&gt;快表，加速地址变换&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;多级页表&lt;/td&gt;
+&lt;td&gt;节省页表连续空间&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;第六章-虚拟存储器&#34;&gt;第六章 虚拟存储器
+&lt;h2 id="第六章-虚拟存储器"&gt;第六章 虚拟存储器
 &lt;/h2&gt;&lt;p&gt;在分页基础上，只把&lt;strong&gt;当前需要的页&lt;/strong&gt;调入内存，其余在辅存；缺页时&lt;strong&gt;页面置换&lt;/strong&gt;。&lt;/p&gt;
-&lt;h3 id=&#34;页面置换算法&#34;&gt;页面置换算法
+&lt;h3 id="页面置换算法"&gt;页面置换算法
 &lt;/h3&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;算法&lt;/th&gt;
-          &lt;th&gt;规则&lt;/th&gt;
-          &lt;th&gt;特点&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;OPT&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;淘汰&lt;strong&gt;未来最久不再访问&lt;/strong&gt;的页&lt;/td&gt;
-          &lt;td&gt;理论最优，无法实现&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;FIFO&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;淘汰&lt;strong&gt;最先进入&lt;/strong&gt;内存的页&lt;/td&gt;
-          &lt;td&gt;简单，可能 Belady 异常&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;LRU&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;淘汰&lt;strong&gt;最近最久未使用&lt;/strong&gt;的页&lt;/td&gt;
-          &lt;td&gt;性能好，实现成本高&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;Clock&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;环形队列 + 访问位&lt;/td&gt;
-          &lt;td&gt;LRU 近似，常用&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;算法&lt;/th&gt;
+&lt;th&gt;规则&lt;/th&gt;
+&lt;th&gt;特点&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;OPT&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;淘汰&lt;strong&gt;未来最久不再访问&lt;/strong&gt;的页&lt;/td&gt;
+&lt;td&gt;理论最优，无法实现&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;FIFO&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;淘汰&lt;strong&gt;最先进入&lt;/strong&gt;内存的页&lt;/td&gt;
+&lt;td&gt;简单，可能 Belady 异常&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;LRU&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;淘汰&lt;strong&gt;最近最久未使用&lt;/strong&gt;的页&lt;/td&gt;
+&lt;td&gt;性能好，实现成本高&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Clock&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;环形队列 + 访问位&lt;/td&gt;
+&lt;td&gt;LRU 近似，常用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;blockquote&gt;
 &lt;p&gt;原文「最近醉酒」为 &lt;strong&gt;LRU（Least Recently Used）&lt;/strong&gt; 之笔误。&lt;br&gt;
 OPT 中「置换次数」= 发生缺页且需换出的次数（内存已满后的换页）。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;工作集与抖动&#34;&gt;工作集与抖动
+&lt;h3 id="工作集与抖动"&gt;工作集与抖动
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;抖动（颠簸）&lt;/strong&gt;：频繁缺页，换页时间 &amp;gt; 执行时间&lt;/li&gt;
 &lt;li&gt;缓解：增加物理块、局部置换、工作集算法&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;第七章-输入输出系统&#34;&gt;第七章 输入输出系统
-&lt;/h2&gt;&lt;h3 id=&#34;磁盘调度减少寻道时间&#34;&gt;磁盘调度（减少寻道时间）
+&lt;h2 id="第七章-输入输出系统"&gt;第七章 输入输出系统
+&lt;/h2&gt;&lt;h3 id="磁盘调度减少寻道时间"&gt;磁盘调度（减少寻道时间）
 &lt;/h3&gt;&lt;p&gt;假设当前磁头位置已知，请求队列给定。&lt;/p&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;算法&lt;/th&gt;
-          &lt;th&gt;规则&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;FCFS&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;按请求到达顺序服务&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;SSTF&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;每次选距磁头&lt;strong&gt;最近&lt;/strong&gt;的柱面（可能饥饿）&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;SCAN（电梯）&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;单向扫描到端点再反向；端点内只朝一个方向服务&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;C-SCAN&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;循环扫描，&lt;strong&gt;只朝一个方向&lt;/strong&gt;处理请求，到端点快速返回起点&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;算法&lt;/th&gt;
+&lt;th&gt;规则&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;FCFS&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;按请求到达顺序服务&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;SSTF&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;每次选距磁头&lt;strong&gt;最近&lt;/strong&gt;的柱面（可能饥饿）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;SCAN（电梯）&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;单向扫描到端点再反向；端点内只朝一个方向服务&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;C-SCAN&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;循环扫描，&lt;strong&gt;只朝一个方向&lt;/strong&gt;处理请求，到端点快速返回起点&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/operating-system/img/image-20251223152404172.png&#34;
-	width=&#34;701&#34;
-	height=&#34;551&#34;
-	srcset=&#34;https://yuanmourenye.github.io/p/operating-system/img/image-20251223152404172_hu_f0b5d8fd2168a10c.png 480w, https://yuanmourenye.github.io/p/operating-system/img/image-20251223152404172_hu_619a40ecfb3524c6.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;磁盘调度 FCFS 示例&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;127&#34;
-		data-flex-basis=&#34;305px&#34;
-	
+&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/p/operating-system/img/image-20251223152404172.png"
+width="701"
+height="551"
+srcset="https://yuanmourenye.github.io/p/operating-system/img/image-20251223152404172_hu_f0b5d8fd2168a10c.png 480w, https://yuanmourenye.github.io/p/operating-system/img/image-20251223152404172_hu_619a40ecfb3524c6.png 1024w"
+loading="lazy"
+alt="磁盘调度 FCFS 示例"
+class="gallery-image"
+data-flex-grow="127"
+data-flex-basis="305px"
 &gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;原文「按照要地址的顺序」多指 &lt;strong&gt;FCFS&lt;/strong&gt;；「莫个方向」为 &lt;strong&gt;某个方向&lt;/strong&gt;（C-SCAN）。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;io-控制方式补充&#34;&gt;I/O 控制方式（补充）
+&lt;h3 id="io-控制方式补充"&gt;I/O 控制方式（补充）
 &lt;/h3&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;方式&lt;/th&gt;
-          &lt;th&gt;说明&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;程序直接控制&lt;/td&gt;
-          &lt;td&gt;CPU 轮询&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;中断驱动&lt;/td&gt;
-          &lt;td&gt;I/O 完成中断通知&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;DMA&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;块设备与内存直接传，少占 CPU&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;通道&lt;/td&gt;
-          &lt;td&gt;专用 I/O 处理器&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;方式&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;程序直接控制&lt;/td&gt;
+&lt;td&gt;CPU 轮询&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;中断驱动&lt;/td&gt;
+&lt;td&gt;I/O 完成中断通知&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;DMA&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;块设备与内存直接传，少占 CPU&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;通道&lt;/td&gt;
+&lt;td&gt;专用 I/O 处理器&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;考点速查&#34;&gt;考点速查
+&lt;h2 id="考点速查"&gt;考点速查
 &lt;/h2&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;章节&lt;/th&gt;
-          &lt;th&gt;必记&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;特征&lt;/td&gt;
-          &lt;td&gt;并发、共享、虚拟、异步&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;调度&lt;/td&gt;
-          &lt;td&gt;FCFS、SJF/SRTN、RR、MLFQ、HRRN&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;指标&lt;/td&gt;
-          &lt;td&gt;周转、带权周转、响应比&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;死锁&lt;/td&gt;
-          &lt;td&gt;四条件；银行家=避免；安全序列&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;同步&lt;/td&gt;
-          &lt;td&gt;P/V；互斥 S=1；同步 S=0&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;存储&lt;/td&gt;
-          &lt;td&gt;FF/BF/WF/NF；页号/偏移公式&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;置换&lt;/td&gt;
-          &lt;td&gt;OPT、FIFO、LRU&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;磁盘&lt;/td&gt;
-          &lt;td&gt;SSTF、SCAN、C-SCAN&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;章节&lt;/th&gt;
+&lt;th&gt;必记&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;特征&lt;/td&gt;
+&lt;td&gt;并发、共享、虚拟、异步&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;调度&lt;/td&gt;
+&lt;td&gt;FCFS、SJF/SRTN、RR、MLFQ、HRRN&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;指标&lt;/td&gt;
+&lt;td&gt;周转、带权周转、响应比&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;死锁&lt;/td&gt;
+&lt;td&gt;四条件；银行家=避免；安全序列&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;同步&lt;/td&gt;
+&lt;td&gt;P/V；互斥 S=1；同步 S=0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;存储&lt;/td&gt;
+&lt;td&gt;FF/BF/WF/NF；页号/偏移公式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;置换&lt;/td&gt;
+&lt;td&gt;OPT、FIFO、LRU&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;磁盘&lt;/td&gt;
+&lt;td&gt;SSTF、SCAN、C-SCAN&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
-&lt;pre class=&#34;mermaid&#34;&gt;
-  flowchart TB
-    subgraph 进程
-        A[就绪] --&amp;gt;|调度| B[运行]
-        B --&amp;gt;|I/O/等待| C[阻塞]
-        C --&amp;gt;|事件完成| A
-        B --&amp;gt;|时间片/抢占| A
-    end
-&lt;/pre&gt;
-
-</description>
-        </item>
-        
-    </channel>
-</rss>
+&lt;pre class="mermaid"&gt;
+flowchart TB
+subgraph 进程
+A[就绪] --&amp;gt;|调度| B[运行]
+B --&amp;gt;|I/O/等待| C[阻塞]
+C --&amp;gt;|事件完成| A
+B --&amp;gt;|时间片/抢占| A
+end
+&lt;/pre&gt;</description></item></channel></rss>

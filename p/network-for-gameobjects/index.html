@@ -1,454 +1,63 @@
-<!DOCTYPE html>
-<html lang="zh-cn" dir="ltr">
-    <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Netcode for GameObjects（NGO）核心组件与开发范式。">
-<title>Netcode for GameObjects 笔记</title>
-
-<link rel='canonical' href='https://yuanmourenye.github.io/p/network-for-gameobjects/'>
-
-<link rel="stylesheet" href="/scss/style.min.032e1461b15b0fe2ac4d61e9446dd007723a39b7208df42d35fb1858c41db04e.css"><meta property='og:title' content="Netcode for GameObjects 笔记">
-<meta property='og:description' content="Netcode for GameObjects（NGO）核心组件与开发范式。">
-<meta property='og:url' content='https://yuanmourenye.github.io/p/network-for-gameobjects/'>
-<meta property='og:site_name' content='元某人也'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='NGO' /><meta property='article:tag' content='联网' /><meta property='article:tag' content='Unity' /><meta property='article:published_time' content='2026-05-19T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-10-20T00:36:44&#43;08:00'/><meta property='og:image' content='https://yuanmourenye.github.io/img/covers/default.png' />
-<meta name="twitter:title" content="Netcode for GameObjects 笔记">
-<meta name="twitter:description" content="Netcode for GameObjects（NGO）核心组件与开发范式。"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://yuanmourenye.github.io/img/covers/default.png' />
-    <link rel="shortcut icon" href="/favicon.ico" />
-<meta name="google" content="notranslate">
-
-    </head>
-    <body class="
-    article-page
-    ">
-    <script>
-        (function() {
-            const colorSchemeKey = 'StackColorScheme';
-            if(!localStorage.getItem(colorSchemeKey)){
-                localStorage.setItem(colorSchemeKey, "auto");
-            }
-        })();
-    </script><script>
-    (function() {
-        const colorSchemeKey = 'StackColorScheme';
-        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
-        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
-
-        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
-            
-
-            document.documentElement.dataset.scheme = 'dark';
-        } else {
-            document.documentElement.dataset.scheme = 'light';
-        }
-    })();
-</script>
-
-        <header class="topnav">
-    <div class="topnav__inner">
-        
-        <a class="topnav__brand topnav__identity" href="/"><img class="topnav__avatar" src="/img/avatar_hu_4da7ae45a10b2932.png" width="32" height="32" alt="元某人也"><span class="topnav__title">元某人也</span>
-        </a>
-
-        <nav class="topnav__links" aria-label="主导航"><a href="/">主页</a><a href="/series/">系列</a><a href="/archives/">归档</a><a href="/projects/">项目</a><a href="/about/">关于</a><a class="topnav__search" href="/search/" aria-label="搜索"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="10" cy="10" r="7" />
-  <line x1="21" y1="21" x2="15" y2="15" />
-</svg>
-
-
-</a>
-        </nav>
-
-        
-        <button id="dark-mode-toggle" class="topnav__theme" type="button" aria-label="切换深浅色">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="8" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="16" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-        </button>
-    </div>
-</header>
-
-
-        <div class="page-wrap">
-            <main class="main">
-    
-<article class="main-article">
-    <header class="article-header">
-
-    <div class="article-details">
-    
-    <header class="article-category">
-        
-            <a href="/categories/unity/" >
-                Unity
-            </a>
-        
-            <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/" >
-                游戏开发
-            </a>
-        
-    </header>
-    
-
-    <div class="article-title-wrapper">
-        <h2 class="article-title">
-            <a href="/p/network-for-gameobjects/">Netcode for GameObjects 笔记</a>
-        </h2>
-    
-        
-        <h3 class="article-subtitle">
-            Netcode for GameObjects（NGO）核心组件与开发范式。
-        </h3>
-        
-    </div>
-
-    
-    
-    
-    
-    <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published" datetime='2026-05-19T00:00:00Z'>2026-05-19</time>
-            </div>
-        
-
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    阅读时长: 9 分钟
-                </time>
-            </div>
-        
-    </footer>
-    
-
-    
-</div>
-
-</header>
-
-<details class="article-toc">
-                <summary class="article-toc__summary">本文目录</summary>
-                <div class="article-toc__body"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#核心原则">核心原则</a>
-      <ul>
-        <li><a href="#一句话记忆">一句话记忆</a></li>
-        <li><a href="#rpc-对照mirror--旧-ngo--新-api">RPC 对照（Mirror / 旧 NGO → 新 API）</a></li>
-      </ul>
-    </li>
-    <li><a href="#启动模式与常用-api">启动模式与常用 API</a>
-      <ul>
-        <li><a href="#networkbehaviour-里判断我是谁">NetworkBehaviour 里判断“我是谁”</a></li>
-        <li><a href="#生命周期常用重写">生命周期（常用重写）</a></li>
-      </ul>
-    </li>
-    <li><a href="#核心组件">核心组件</a></li>
-    <li><a href="#pico-大空间--vr">Pico 大空间 / VR</a>
-      <ul>
-        <li><a href="#vr-玩家移动推荐范式owner-输入--server-权威">VR 玩家移动推荐范式（Owner 输入 → Server 权威）</a></li>
-      </ul>
-    </li>
-    <li><a href="#客户端服务器快速启动">客户端—服务器快速启动</a>
-      <ul>
-        <li><a href="#1-配置-networkmanager">1. 配置 NetworkManager</a></li>
-        <li><a href="#2-networkmanagerui可选">2. NetworkManagerUI（可选）</a></li>
-        <li><a href="#3-player-预制体示例">3. Player 预制体示例</a>
-          <ul>
-            <li><a href="#helloworldplayer--networkvariable-同步位置">HelloWorldPlayer — NetworkVariable 同步位置</a></li>
-            <li><a href="#rpctest--rpc-链式调用">RpcTest — RPC 链式调用</a></li>
-          </ul>
-        </li>
-        <li><a href="#4-networktransform-测试">4. NetworkTransform 测试</a></li>
-      </ul>
-    </li>
-    <li><a href="#同步方案选型">同步方案选型</a></li>
-    <li><a href="#networkvariable-详解">NetworkVariable 详解</a></li>
-    <li><a href="#rpc-详解">RPC 详解</a>
-      <ul>
-        <li><a href="#编写规则">编写规则</a></li>
-        <li><a href="#serverrpc-内改状态--自动同步">ServerRpc 内改状态 → 自动同步</a></li>
-      </ul>
-    </li>
-    <li><a href="#networktransform-与移动">NetworkTransform 与移动</a></li>
-    <li><a href="#生成与销毁">生成与销毁</a></li>
-    <li><a href="#连接与鉴权">连接与鉴权</a>
-      <ul>
-        <li><a href="#networkconfig-常用项">NetworkConfig 常用项</a></li>
-        <li><a href="#connection-approval-示例骨架">Connection Approval 示例骨架</a></li>
-        <li><a href="#unity-relay简表">Unity Relay（简表）</a></li>
-        <li><a href="#命令行启动dedicated-server">命令行启动（Dedicated Server）</a></li>
-      </ul>
-    </li>
-    <li><a href="#场景与预制体">场景与预制体</a></li>
-    <li><a href="#调试与常见坑">调试与常见坑</a></li>
-    <li><a href="#网络概念">网络概念</a></li>
-    <li><a href="#配置">配置</a>
-      <ul>
-        <li><a href="#连接配置">连接配置</a></li>
-        <li><a href="#传输transport">传输（Transport）</a></li>
-        <li><a href="#unity-relay">Unity Relay</a></li>
-        <li><a href="#命令行参数">命令行参数</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav></div>
-            </details><section class="article-content">
-    
-    
-    <h1 id="netcode-for-gameobjects-笔记">Netcode for GameObjects 笔记
-</h1><h2 id="核心原则">核心原则
-</h2><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>原则</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>客户端 → 服务器</td>
-          <td>客户端发 <strong>RPC</strong> 或请求；不要直接在客户端改“全局权威”状态</td>
-      </tr>
-      <tr>
-          <td>服务器 → 客户端</td>
-          <td>服务器（或权威端）改状态后，用 <strong>NetworkVariable / NetworkTransform / ClientRpc</strong> 下发</td>
-      </tr>
-      <tr>
-          <td>单一 NetworkManager</td>
-          <td>全场景仅一个；Inspector 调试可配合 <strong>Multiplayer Tools</strong>（Package Manager）</td>
-      </tr>
-      <tr>
-          <td>预制体必须登记</td>
-          <td>动态 <code>Spawn</code> 的预制体要在 NetworkManager 的 <strong>Network Prefabs</strong> 列表中</td>
-      </tr>
-  </tbody>
-</table></div>
-<h3 id="一句话记忆">一句话记忆
-</h3><blockquote>
-<p><strong>谁权威，谁改 Transform / NetworkVariable；其他人只读或做表现层插值。</strong></p>
-</blockquote>
-<h3 id="rpc-对照mirror--旧-ngo--新-api">RPC 对照（Mirror / 旧 NGO → 新 API）
-</h3><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>旧关键字</th>
-          <th>新版 <code>SendTo</code></th>
-          <th>方向</th>
-          <th>命名习惯（可选）</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>[Command]</code></td>
-          <td><code>SendTo.Server</code></td>
-          <td>客户端 → 服务器</td>
-          <td><code>CmdXxx</code></td>
-      </tr>
-      <tr>
-          <td><code>[ClientRpc]</code></td>
-          <td><code>SendTo.Clients</code></td>
-          <td>服务器 → 所有客户端（不含纯 Server 进程时视版本而定）</td>
-          <td><code>RpcXxx</code></td>
-      </tr>
-      <tr>
-          <td><code>[TargetRpc]</code></td>
-          <td>SendTo 指定客户端</td>
-          <td>服务器 → 单个客户端</td>
-          <td><code>TargetRpcXxx</code></td>
-      </tr>
-      <tr>
-          <td>—</td>
-          <td><code>SendTo.ClientsAndHost</code></td>
-          <td>服务器 → 客户端 + Host 上的本地玩家</td>
-          <td>广播常用</td>
-      </tr>
-      <tr>
-          <td>—</td>
-          <td><code>SendTo.Server</code> + <code>RpcParams</code></td>
-          <td>可指定目标 ClientId</td>
-          <td>私聊、踢人等</td>
-      </tr>
-  </tbody>
-</table></div>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="na">[Rpc(SendTo.Server)]</span>
-</span></span><span class="line"><span class="cl"><span class="k">void</span> <span class="n">CmdFireRpc</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="na">
-</span></span></span><span class="line"><span class="cl"><span class="na">[Rpc(SendTo.ClientsAndHost)]</span>
-</span></span><span class="line"><span class="cl"><span class="k">void</span> <span class="n">RpcOnHitRpc</span><span class="p">(</span><span class="kt">int</span> <span class="n">damage</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><hr>
-<h2 id="启动模式与常用-api">启动模式与常用 API
-</h2><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>模式</th>
-          <th>API</th>
-          <th>谁跑逻辑</th>
-          <th>典型用途</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>Dedicated Server</strong></td>
-          <td><code>StartServer()</code></td>
-          <td>仅服务器有完整模拟；无本地玩家画面（或无头）</td>
-          <td>正式服、多房间</td>
-      </tr>
-      <tr>
-          <td><strong>Host</strong></td>
-          <td><code>StartHost()</code></td>
-          <td>同一进程既是 Server 又是 Client</td>
-          <td>开发调试、房主开房</td>
-      </tr>
-      <tr>
-          <td><strong>Client</strong></td>
-          <td><code>StartClient()</code></td>
-          <td>只接收同步 + 发 RPC</td>
-          <td>加入房间的玩家</td>
-      </tr>
-  </tbody>
-</table></div>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="c1">// 常用入口</span>
-</span></span><span class="line"><span class="cl"><span class="n">NetworkManager</span><span class="p">.</span><span class="n">Singleton</span><span class="p">.</span><span class="n">StartServer</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="n">NetworkManager</span><span class="p">.</span><span class="n">Singleton</span><span class="p">.</span><span class="n">StartHost</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="n">NetworkManager</span><span class="p">.</span><span class="n">Singleton</span><span class="p">.</span><span class="n">StartClient</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="n">NetworkManager</span><span class="p">.</span><span class="n">Singleton</span><span class="p">.</span><span class="n">Shutdown</span><span class="p">();</span> <span class="c1">// 断开并清理网络对象</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="networkbehaviour-里判断我是谁">NetworkBehaviour 里判断“我是谁”
-</h3><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>属性</th>
-          <th>含义</th>
-          <th>典型用法</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>IsServer</code></td>
-          <td>当前实例在服务器逻辑上为真（<strong>Host 也为 true</strong>）</td>
-          <td>扣血、刷怪、判定胜负</td>
-      </tr>
-      <tr>
-          <td><code>IsClient</code></td>
-          <td>当前是客户端（<strong>Host 也为 true</strong>）</td>
-          <td>播本地特效、UI</td>
-      </tr>
-      <tr>
-          <td><code>IsHost</code></td>
-          <td>既是 Server 又是 Client</td>
-          <td>仅 Host 才有的 UI</td>
-      </tr>
-      <tr>
-          <td><code>IsOwner</code></td>
-          <td>本客户端拥有该 <code>NetworkObject</code></td>
-          <td>读输入、发移动 RPC</td>
-      </tr>
-      <tr>
-          <td><code>IsSpawned</code></td>
-          <td>已完成网络生成</td>
-          <td>避免 <code>OnNetworkSpawn</code> 前访问网络 API</td>
-      </tr>
-  </tbody>
-</table></div>
-<blockquote>
-<p><code>IsServer &amp;&amp; !IsClient</code> → 专用服务器；<code>IsServer &amp;&amp; IsClient</code> → Host。</p>
-</blockquote>
-<h3 id="生命周期常用重写">生命周期（常用重写）
-</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">MyNetObj</span> <span class="p">:</span> <span class="n">NetworkBehaviour</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">OnNetworkSpawn</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">// 已 Spawn，可安全用 NetworkVariable / RPC</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">IsOwner</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* 绑定输入 */</span> <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="n">someVar</span><span class="p">.</span><span class="n">OnValueChanged</span> <span class="p">+=</span> <span class="n">OnSomeVarChanged</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">OnNetworkDespawn</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">someVar</span><span class="p">.</span><span class="n">OnValueChanged</span> <span class="p">-=</span> <span class="n">OnSomeVarChanged</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">OnGainedOwnership</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span>   <span class="c1">// 所有权转移给你</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">OnLostOwnership</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span>    <span class="c1">// 失去所有权</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><pre class="mermaid">
+<!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="Netcode for GameObjects（NGO）核心组件与开发范式。"><title>Netcode for GameObjects 笔记</title><link rel=canonical href=https://yuanmourenye.github.io/p/network-for-gameobjects/><link rel=stylesheet href=/scss/style.min.032e1461b15b0fe2ac4d61e9446dd007723a39b7208df42d35fb1858c41db04e.css><meta property='og:title' content="Netcode for GameObjects 笔记"><meta property='og:description' content="Netcode for GameObjects（NGO）核心组件与开发范式。"><meta property='og:url' content='https://yuanmourenye.github.io/p/network-for-gameobjects/'><meta property='og:site_name' content='元某人也'><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='NGO'><meta property='article:tag' content='联网'><meta property='article:tag' content='Unity'><meta property='article:published_time' content='2026-05-19T00:00:00+00:00'><meta property='article:modified_time' content='2026-10-20T00:36:44+08:00'><meta property='og:image' content='https://yuanmourenye.github.io/img/covers/default.png'><meta name=twitter:title content="Netcode for GameObjects 笔记"><meta name=twitter:description content="Netcode for GameObjects（NGO）核心组件与开发范式。"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content='https://yuanmourenye.github.io/img/covers/default.png'><link rel="shortcut icon" href=/favicon.ico><meta name=google content="notranslate"></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><header class=topnav><div class=topnav__inner><a class="topnav__brand topnav__identity" href=/><img class=topnav__avatar src=/img/avatar_hu_4da7ae45a10b2932.png width=32 height=32 alt=元某人也><span class=topnav__title>元某人也</span></a><nav class=topnav__links aria-label=主导航><a href=/>主页</a><a href=/series/>系列</a><a href=/archives/>归档</a><a href=/projects/>项目</a><a href=/about/>关于</a><a class=topnav__search href=/search/ aria-label=搜索><svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg></a></nav><button id=dark-mode-toggle class=topnav__theme type=button aria-label=切换深浅色>
+<svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg></button></div></header><div class=page-wrap><main class=main><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/unity/>Unity
+</a><a href=/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/>游戏开发</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/network-for-gameobjects/>Netcode for GameObjects 笔记</a></h2><h3 class=article-subtitle>Netcode for GameObjects（NGO）核心组件与开发范式。</h3></div><footer class=article-time><div><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published datetime=2026-05-19T00:00:00Z>2026-05-19</time></div><div><svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>阅读时长: 9 分钟</time></div></footer></div></header><details class=article-toc><summary class=article-toc__summary>本文目录</summary><div class=article-toc__body><nav id=TableOfContents><ul><li><a href=#核心原则>核心原则</a><ul><li><a href=#一句话记忆>一句话记忆</a></li><li><a href=#rpc-对照mirror--旧-ngo--新-api>RPC 对照（Mirror / 旧 NGO → 新 API）</a></li></ul></li><li><a href=#启动模式与常用-api>启动模式与常用 API</a><ul><li><a href=#networkbehaviour-里判断我是谁>NetworkBehaviour 里判断“我是谁”</a></li><li><a href=#生命周期常用重写>生命周期（常用重写）</a></li></ul></li><li><a href=#核心组件>核心组件</a></li><li><a href=#pico-大空间--vr>Pico 大空间 / VR</a><ul><li><a href=#vr-玩家移动推荐范式owner-输入--server-权威>VR 玩家移动推荐范式（Owner 输入 → Server 权威）</a></li></ul></li><li><a href=#客户端服务器快速启动>客户端—服务器快速启动</a><ul><li><a href=#1-配置-networkmanager>1. 配置 NetworkManager</a></li><li><a href=#2-networkmanagerui可选>2. NetworkManagerUI（可选）</a></li><li><a href=#3-player-预制体示例>3. Player 预制体示例</a><ul><li><a href=#helloworldplayer--networkvariable-同步位置>HelloWorldPlayer — NetworkVariable 同步位置</a></li><li><a href=#rpctest--rpc-链式调用>RpcTest — RPC 链式调用</a></li></ul></li><li><a href=#4-networktransform-测试>4. NetworkTransform 测试</a></li></ul></li><li><a href=#同步方案选型>同步方案选型</a></li><li><a href=#networkvariable-详解>NetworkVariable 详解</a></li><li><a href=#rpc-详解>RPC 详解</a><ul><li><a href=#编写规则>编写规则</a></li><li><a href=#serverrpc-内改状态--自动同步>ServerRpc 内改状态 → 自动同步</a></li></ul></li><li><a href=#networktransform-与移动>NetworkTransform 与移动</a></li><li><a href=#生成与销毁>生成与销毁</a></li><li><a href=#连接与鉴权>连接与鉴权</a><ul><li><a href=#networkconfig-常用项>NetworkConfig 常用项</a></li><li><a href=#connection-approval-示例骨架>Connection Approval 示例骨架</a></li><li><a href=#unity-relay简表>Unity Relay（简表）</a></li><li><a href=#命令行启动dedicated-server>命令行启动（Dedicated Server）</a></li></ul></li><li><a href=#场景与预制体>场景与预制体</a></li><li><a href=#调试与常见坑>调试与常见坑</a></li><li><a href=#网络概念>网络概念</a></li><li><a href=#配置>配置</a><ul><li><a href=#连接配置>连接配置</a></li><li><a href=#传输transport>传输（Transport）</a></li><li><a href=#unity-relay>Unity Relay</a></li><li><a href=#命令行参数>命令行参数</a></li></ul></li></ul></nav></div></details><section class=article-content><h1 id=netcode-for-gameobjects-笔记>Netcode for GameObjects 笔记</h1><h2 id=核心原则>核心原则</h2><div class=table-wrapper><table><thead><tr><th>原则</th><th>说明</th></tr></thead><tbody><tr><td>客户端 → 服务器</td><td>客户端发 <strong>RPC</strong> 或请求；不要直接在客户端改“全局权威”状态</td></tr><tr><td>服务器 → 客户端</td><td>服务器（或权威端）改状态后，用 <strong>NetworkVariable / NetworkTransform / ClientRpc</strong> 下发</td></tr><tr><td>单一 NetworkManager</td><td>全场景仅一个；Inspector 调试可配合 <strong>Multiplayer Tools</strong>（Package Manager）</td></tr><tr><td>预制体必须登记</td><td>动态 <code>Spawn</code> 的预制体要在 NetworkManager 的 <strong>Network Prefabs</strong> 列表中</td></tr></tbody></table></div><h3 id=一句话记忆>一句话记忆</h3><blockquote><p><strong>谁权威，谁改 Transform / NetworkVariable；其他人只读或做表现层插值。</strong></p></blockquote><h3 id=rpc-对照mirror--旧-ngo--新-api>RPC 对照（Mirror / 旧 NGO → 新 API）</h3><div class=table-wrapper><table><thead><tr><th>旧关键字</th><th>新版 <code>SendTo</code></th><th>方向</th><th>命名习惯（可选）</th></tr></thead><tbody><tr><td><code>[Command]</code></td><td><code>SendTo.Server</code></td><td>客户端 → 服务器</td><td><code>CmdXxx</code></td></tr><tr><td><code>[ClientRpc]</code></td><td><code>SendTo.Clients</code></td><td>服务器 → 所有客户端（不含纯 Server 进程时视版本而定）</td><td><code>RpcXxx</code></td></tr><tr><td><code>[TargetRpc]</code></td><td>SendTo 指定客户端</td><td>服务器 → 单个客户端</td><td><code>TargetRpcXxx</code></td></tr><tr><td>—</td><td><code>SendTo.ClientsAndHost</code></td><td>服务器 → 客户端 + Host 上的本地玩家</td><td>广播常用</td></tr><tr><td>—</td><td><code>SendTo.Server</code> + <code>RpcParams</code></td><td>可指定目标 ClientId</td><td>私聊、踢人等</td></tr></tbody></table></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl><span class=na>[Rpc(SendTo.Server)]</span>
+</span></span><span class=line><span class=cl><span class=k>void</span> <span class=n>CmdFireRpc</span><span class=p>()</span> <span class=p>{</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=na>
+</span></span></span><span class=line><span class=cl><span class=na>[Rpc(SendTo.ClientsAndHost)]</span>
+</span></span><span class=line><span class=cl><span class=k>void</span> <span class=n>RpcOnHitRpc</span><span class=p>(</span><span class=kt>int</span> <span class=n>damage</span><span class=p>)</span> <span class=p>{</span> <span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><hr><h2 id=启动模式与常用-api>启动模式与常用 API</h2><div class=table-wrapper><table><thead><tr><th>模式</th><th>API</th><th>谁跑逻辑</th><th>典型用途</th></tr></thead><tbody><tr><td><strong>Dedicated Server</strong></td><td><code>StartServer()</code></td><td>仅服务器有完整模拟；无本地玩家画面（或无头）</td><td>正式服、多房间</td></tr><tr><td><strong>Host</strong></td><td><code>StartHost()</code></td><td>同一进程既是 Server 又是 Client</td><td>开发调试、房主开房</td></tr><tr><td><strong>Client</strong></td><td><code>StartClient()</code></td><td>只接收同步 + 发 RPC</td><td>加入房间的玩家</td></tr></tbody></table></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl><span class=c1>// 常用入口</span>
+</span></span><span class=line><span class=cl><span class=n>NetworkManager</span><span class=p>.</span><span class=n>Singleton</span><span class=p>.</span><span class=n>StartServer</span><span class=p>();</span>
+</span></span><span class=line><span class=cl><span class=n>NetworkManager</span><span class=p>.</span><span class=n>Singleton</span><span class=p>.</span><span class=n>StartHost</span><span class=p>();</span>
+</span></span><span class=line><span class=cl><span class=n>NetworkManager</span><span class=p>.</span><span class=n>Singleton</span><span class=p>.</span><span class=n>StartClient</span><span class=p>();</span>
+</span></span><span class=line><span class=cl><span class=n>NetworkManager</span><span class=p>.</span><span class=n>Singleton</span><span class=p>.</span><span class=n>Shutdown</span><span class=p>();</span> <span class=c1>// 断开并清理网络对象</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=networkbehaviour-里判断我是谁>NetworkBehaviour 里判断“我是谁”</h3><div class=table-wrapper><table><thead><tr><th>属性</th><th>含义</th><th>典型用法</th></tr></thead><tbody><tr><td><code>IsServer</code></td><td>当前实例在服务器逻辑上为真（<strong>Host 也为 true</strong>）</td><td>扣血、刷怪、判定胜负</td></tr><tr><td><code>IsClient</code></td><td>当前是客户端（<strong>Host 也为 true</strong>）</td><td>播本地特效、UI</td></tr><tr><td><code>IsHost</code></td><td>既是 Server 又是 Client</td><td>仅 Host 才有的 UI</td></tr><tr><td><code>IsOwner</code></td><td>本客户端拥有该 <code>NetworkObject</code></td><td>读输入、发移动 RPC</td></tr><tr><td><code>IsSpawned</code></td><td>已完成网络生成</td><td>避免 <code>OnNetworkSpawn</code> 前访问网络 API</td></tr></tbody></table></div><blockquote><p><code>IsServer && !IsClient</code> → 专用服务器；<code>IsServer && IsClient</code> → Host。</p></blockquote><h3 id=生命周期常用重写>生命周期（常用重写）</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl><span class=kd>public</span> <span class=k>class</span> <span class=nc>MyNetObj</span> <span class=p>:</span> <span class=n>NetworkBehaviour</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kd>public</span> <span class=kd>override</span> <span class=k>void</span> <span class=n>OnNetworkSpawn</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// 已 Spawn，可安全用 NetworkVariable / RPC</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=p>(</span><span class=n>IsOwner</span><span class=p>)</span> <span class=p>{</span> <span class=cm>/* 绑定输入 */</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=n>someVar</span><span class=p>.</span><span class=n>OnValueChanged</span> <span class=p>+=</span> <span class=n>OnSomeVarChanged</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=kd>public</span> <span class=kd>override</span> <span class=k>void</span> <span class=n>OnNetworkDespawn</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>someVar</span><span class=p>.</span><span class=n>OnValueChanged</span> <span class=p>-=</span> <span class=n>OnSomeVarChanged</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=kd>public</span> <span class=kd>override</span> <span class=k>void</span> <span class=n>OnGainedOwnership</span><span class=p>()</span> <span class=p>{</span> <span class=p>}</span>   <span class=c1>// 所有权转移给你</span>
+</span></span><span class=line><span class=cl>    <span class=kd>public</span> <span class=kd>override</span> <span class=k>void</span> <span class=n>OnLostOwnership</span><span class=p>()</span> <span class=p>{</span> <span class=p>}</span>    <span class=c1>// 失去所有权</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><pre class=mermaid>
   flowchart TB
     subgraph 权威
         S[Server / 权威端]
@@ -460,1158 +69,393 @@
     C1 --&gt;|SendTo.Server RPC| S
     S --&gt;|NetworkVariable / NetworkTransform| C1
     S --&gt;|同步| C2
-</pre>
-
-<hr>
-<h2 id="核心组件">核心组件
-</h2><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>组件</th>
-          <th>作用</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>NetworkManager</strong></td>
-          <td>连接、Spawn Player、Prefabs 列表、NetworkConfig</td>
-      </tr>
-      <tr>
-          <td><strong>NetworkObject</strong></td>
-          <td>可被复制到各端的实体；有 <code>NetworkObjectId</code></td>
-      </tr>
-      <tr>
-          <td><strong>NetworkBehaviour</strong></td>
-          <td>挂在带 NetworkObject 的对象上；提供 RPC、NetworkVariable</td>
-      </tr>
-      <tr>
-          <td><strong>NetworkTransform</strong></td>
-          <td>同步 position / rotation / scale（含插值）</td>
-      </tr>
-      <tr>
-          <td><strong>Unity Transport</strong></td>
-          <td>底层 UDP（UTP），配置 IP、端口</td>
-      </tr>
-  </tbody>
-</table></div>
-<p><strong>层级要求</strong>：<code>NetworkBehaviour</code> 必须与 <code>NetworkObject</code> 在<strong>同一 GameObject</strong>，或在其子物体上（子物体上的脚本仍属该 NetworkObject）。</p>
-<hr>
-<h2 id="pico-大空间--vr">Pico 大空间 / VR
-</h2><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>点</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>地图原点 / 正方向</td>
-          <td>Pico 录制时标定的原点、朝向 → 映射到 Unity 场景原点与前进方向（常与 <strong>+Z</strong> 对齐，以项目文档为准）</td>
-      </tr>
-      <tr>
-          <td>VR Rig</td>
-          <td>头显、手柄父节点只驱动<strong>本地相机</strong>；<strong>不要</strong>把 Rig 根节点当网络 Player 直接同步</td>
-      </tr>
-      <tr>
-          <td>推荐结构</td>
-          <td>网络 Player（<code>NetworkObject</code> + <code>NetworkTransform</code>）← 子节点 Local XR Rig（仅 Owner 启用）</td>
-      </tr>
-      <tr>
-          <td>坐标系</td>
-          <td>大空间定位 SDK 给出的位姿需转换到 Unity 世界空间后再写入权威 Transform</td>
-      </tr>
-  </tbody>
-</table></div>
-<h3 id="vr-玩家移动推荐范式owner-输入--server-权威">VR 玩家移动推荐范式（Owner 输入 → Server 权威）
-</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">NetworkedVRPlayer</span> <span class="p">:</span> <span class="n">NetworkBehaviour</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="na">    [SerializeField]</span> <span class="n">Transform</span> <span class="n">xrCamera</span><span class="p">;</span> <span class="c1">// 仅 Owner 本地引用</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">void</span> <span class="n">Update</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(!</span><span class="n">IsOwner</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">// 采集本帧目标（例：摇杆 / 传送点）</span>
-</span></span><span class="line"><span class="cl">        <span class="n">Vector3</span> <span class="n">target</span> <span class="p">=</span> <span class="n">ComputeTargetFromInput</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">        <span class="n">SubmitMoveRpc</span><span class="p">(</span><span class="n">target</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="na">
-</span></span></span><span class="line"><span class="cl"><span class="na">    [Rpc(SendTo.Server)]</span>
-</span></span><span class="line"><span class="cl">    <span class="k">void</span> <span class="n">SubmitMoveRpc</span><span class="p">(</span><span class="n">Vector3</span> <span class="n">worldPosition</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">// 服务器校验（距离、冷却、是否在 NavMesh 上）</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(!</span><span class="n">ValidateMove</span><span class="p">(</span><span class="n">worldPosition</span><span class="p">))</span> <span class="k">return</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="n">transform</span><span class="p">.</span><span class="n">position</span> <span class="p">=</span> <span class="n">worldPosition</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">// 若挂了 NetworkTransform，由组件自动同步；否则写 NetworkVariable</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kt">bool</span> <span class="n">ValidateMove</span><span class="p">(</span><span class="n">Vector3</span> <span class="n">pos</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">Vector3</span><span class="p">.</span><span class="n">Distance</span><span class="p">(</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">,</span> <span class="n">pos</span><span class="p">)</span> <span class="p">&lt;</span> <span class="m">5f</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><hr>
-<h2 id="客户端服务器快速启动">客户端—服务器快速启动
-</h2><h3 id="1-配置-networkmanager">1. 配置 NetworkManager
-</h3><ol>
-<li>添加 <code>NetworkManager</code>（全场景仅一个）<br>
-<img src="/p/network-for-gameobjects/img/image-20260408210526625.png"
-	width="706"
-	height="1027"
-	srcset="/p/network-for-gameobjects/img/image-20260408210526625_hu_49adc33414edff37.png 480w, /p/network-for-gameobjects/img/image-20260408210526625_hu_50812c587480195e.png 1024w"
-	loading="lazy"
-	
-		alt="image-20260408210526625"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="68"
-		data-flex-basis="164px"
-	
-></li>
-<li>Transport 选 <strong>Unity Transport</strong><br>
-<img src="/p/network-for-gameobjects/img/image-20260408210601297.png"
-	width="674"
-	height="477"
-	srcset="/p/network-for-gameobjects/img/image-20260408210601297_hu_e0bf58212a604a38.png 480w, /p/network-for-gameobjects/img/image-20260408210601297_hu_3cae8d464491b007.png 1024w"
-	loading="lazy"
-	
-		alt="image-20260408210601297"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="141"
-		data-flex-basis="339px"
-	
-></li>
-<li><strong>Network Config</strong> 中指定 <strong>Player Prefab</strong>（带 <code>NetworkObject</code>）</li>
-<li>Inspector 点 <strong>Start Host</strong> 做本机联调<br>
-<img src="/p/network-for-gameobjects/img/image-20260408211025268.png"
-	width="674"
-	height="219"
-	srcset="/p/network-for-gameobjects/img/image-20260408211025268_hu_fc35afc7b7421a06.png 480w, /p/network-for-gameobjects/img/image-20260408211025268_hu_bee8b71614c72ac7.png 1024w"
-	loading="lazy"
-	
-		alt="image-20260408211025268"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="307"
-		data-flex-basis="738px"
-	
-></li>
-</ol>
-<p><strong>检查清单</strong></p>
-<ul>
-<li><input disabled="" type="checkbox"> Player Prefab 已加入 <strong>Network Prefabs</strong>（若用默认列表）</li>
-<li><input disabled="" type="checkbox"> 场景中无重复 NetworkManager</li>
-<li><input disabled="" type="checkbox"> 防火墙放行 UDP 端口（默认见 Transport）</li>
-</ul>
-<h3 id="2-networkmanagerui可选">2. NetworkManagerUI（可选）
-</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Unity.Netcode</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">UnityEngine</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">UnityEngine.UI</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">NetworkManagerUI</span> <span class="p">:</span> <span class="n">MonoBehaviour</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="na">    [SerializeField]</span> <span class="kd">private</span> <span class="n">Button</span> <span class="n">ServerButton</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="na">    [SerializeField]</span> <span class="kd">private</span> <span class="n">Button</span> <span class="n">HostButton</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="na">    [SerializeField]</span> <span class="kd">private</span> <span class="n">Button</span> <span class="n">ClientButton</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">void</span> <span class="n">Awake</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">ServerButton</span><span class="p">.</span><span class="n">onClick</span><span class="p">.</span><span class="n">AddListener</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="n">NetworkManager</span><span class="p">.</span><span class="n">Singleton</span><span class="p">.</span><span class="n">StartServer</span><span class="p">());</span>
-</span></span><span class="line"><span class="cl">        <span class="n">HostButton</span><span class="p">.</span><span class="n">onClick</span><span class="p">.</span><span class="n">AddListener</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="n">NetworkManager</span><span class="p">.</span><span class="n">Singleton</span><span class="p">.</span><span class="n">StartHost</span><span class="p">());</span>
-</span></span><span class="line"><span class="cl">        <span class="n">ClientButton</span><span class="p">.</span><span class="n">onClick</span><span class="p">.</span><span class="n">AddListener</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="n">NetworkManager</span><span class="p">.</span><span class="n">Singleton</span><span class="p">.</span><span class="n">StartClient</span><span class="p">());</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="3-player-预制体示例">3. Player 预制体示例
-</h3><p>预制体必须有 <strong><code>NetworkObject</code></strong>。示例：<code>HelloWorldPlayer</code>、<code>RpcTest</code>。</p>
-<h4 id="helloworldplayer--networkvariable-同步位置">HelloWorldPlayer — NetworkVariable 同步位置
-</h4><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Unity.Netcode</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">UnityEngine</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">namespace</span> <span class="nn">HelloWorld</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="k">class</span> <span class="nc">HelloWorldPlayer</span> <span class="p">:</span> <span class="n">NetworkBehaviour</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">// 默认：Server 写，所有人读</span>
-</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="n">NetworkVariable</span><span class="p">&lt;</span><span class="n">Vector3</span><span class="p">&gt;</span> <span class="n">Position</span> <span class="p">=</span> <span class="k">new</span> <span class="n">NetworkVariable</span><span class="p">&lt;</span><span class="n">Vector3</span><span class="p">&gt;(</span>
-</span></span><span class="line"><span class="cl">            <span class="n">Vector3</span><span class="p">.</span><span class="n">zero</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="n">NetworkVariableReadPermission</span><span class="p">.</span><span class="n">Everyone</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="n">NetworkVariableWritePermission</span><span class="p">.</span><span class="n">Server</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">OnNetworkSpawn</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="n">Position</span><span class="p">.</span><span class="n">OnValueChanged</span> <span class="p">+=</span> <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">newVal</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">transform</span><span class="p">.</span><span class="n">position</span> <span class="p">=</span> <span class="n">newVal</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">IsOwner</span><span class="p">)</span> <span class="n">Move</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">OnNetworkDespawn</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="n">Position</span><span class="p">.</span><span class="n">OnValueChanged</span> <span class="p">-=</span> <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">newVal</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">transform</span><span class="p">.</span><span class="n">position</span> <span class="p">=</span> <span class="n">newVal</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="k">void</span> <span class="n">Move</span><span class="p">()</span> <span class="p">=&gt;</span> <span class="n">SubmitPositionRequestRpc</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="na">
-</span></span></span><span class="line"><span class="cl"><span class="na">        [Rpc(SendTo.Server)]</span>
-</span></span><span class="line"><span class="cl">        <span class="kd">private</span> <span class="k">void</span> <span class="n">SubmitPositionRequestRpc</span><span class="p">(</span><span class="n">RpcParams</span> <span class="n">rpcParams</span> <span class="p">=</span> <span class="k">default</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="kt">var</span> <span class="n">randomPosition</span> <span class="p">=</span> <span class="n">GetRandomPositionOnPlane</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">            <span class="n">transform</span><span class="p">.</span><span class="n">position</span> <span class="p">=</span> <span class="n">randomPosition</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="n">Position</span><span class="p">.</span><span class="n">Value</span> <span class="p">=</span> <span class="n">randomPosition</span><span class="p">;</span> <span class="c1">// 仅 Server 可写</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="kd">static</span> <span class="n">Vector3</span> <span class="n">GetRandomPositionOnPlane</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="k">new</span> <span class="n">Vector3</span><span class="p">(</span><span class="n">Random</span><span class="p">.</span><span class="n">Range</span><span class="p">(-</span><span class="m">3f</span><span class="p">,</span> <span class="m">3f</span><span class="p">),</span> <span class="m">1f</span><span class="p">,</span> <span class="n">Random</span><span class="p">.</span><span class="n">Range</span><span class="p">(-</span><span class="m">3f</span><span class="p">,</span> <span class="m">3f</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><blockquote>
-<p>生产环境更推荐用 <code>OnValueChanged</code> 更新 Transform，而不是每帧在 <code>Update</code> 里赋值（减少无谓逻辑）。</p>
-</blockquote>
-<h4 id="rpctest--rpc-链式调用">RpcTest — RPC 链式调用
-</h4><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Unity.Netcode</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">UnityEngine</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">RpcTest</span> <span class="p">:</span> <span class="n">NetworkBehaviour</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">OnNetworkSpawn</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(!</span><span class="n">IsServer</span> <span class="p">&amp;&amp;</span> <span class="n">IsOwner</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">            <span class="n">ServerOnlyRpc</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="n">NetworkObjectId</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="na">
-</span></span></span><span class="line"><span class="cl"><span class="na">    [Rpc(SendTo.ClientsAndHost)]</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="k">void</span> <span class="n">ClientAndHostRpc</span><span class="p">(</span><span class="kt">int</span> <span class="k">value</span><span class="p">,</span> <span class="kt">ulong</span> <span class="n">sourceNetworkObjectId</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">$&#34;Client Received RPC #{value} on #{sourceNetworkObjectId}&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">IsOwner</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">            <span class="n">ServerOnlyRpc</span><span class="p">(</span><span class="k">value</span> <span class="p">+</span> <span class="m">1</span><span class="p">,</span> <span class="n">sourceNetworkObjectId</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="na">
-</span></span></span><span class="line"><span class="cl"><span class="na">    [Rpc(SendTo.Server)]</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="k">void</span> <span class="n">ServerOnlyRpc</span><span class="p">(</span><span class="kt">int</span> <span class="k">value</span><span class="p">,</span> <span class="kt">ulong</span> <span class="n">sourceNetworkObjectId</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">$&#34;Server Received RPC #{value} on #{sourceNetworkObjectId}&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="n">ClientAndHostRpc</span><span class="p">(</span><span class="k">value</span><span class="p">,</span> <span class="n">sourceNetworkObjectId</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="4-networktransform-测试">4. NetworkTransform 测试
-</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Unity.Netcode</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">UnityEngine</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">NetworkTransformTest</span> <span class="p">:</span> <span class="n">NetworkBehaviour</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="k">void</span> <span class="n">Update</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(!</span><span class="n">IsServer</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">float</span> <span class="n">theta</span> <span class="p">=</span> <span class="n">Time</span><span class="p">.</span><span class="n">frameCount</span> <span class="p">/</span> <span class="m">10.0f</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="n">transform</span><span class="p">.</span><span class="n">position</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Vector3</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">            <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">theta</span><span class="p">),</span> <span class="m">0f</span><span class="p">,</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">Math</span><span class="p">.</span><span class="n">Sin</span><span class="p">(</span><span class="n">theta</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><hr>
-<h2 id="同步方案选型">同步方案选型
-</h2><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>方式</th>
-          <th>优点</th>
-          <th>缺点</th>
-          <th>适用</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>NetworkTransform</strong></td>
-          <td>自动插值、省代码</td>
-          <td>带宽随物体数量增</td>
-          <td>角色、可拾取物、大部分动态物体</td>
-      </tr>
-      <tr>
-          <td><strong>NetworkVariable</strong></td>
-          <td>精确、可订阅变化</td>
-          <td>需自己处理表现</td>
-          <td>血量、弹药、枚举状态、回合数</td>
-      </tr>
-      <tr>
-          <td><strong>RPC</strong></td>
-          <td>瞬时事件、无需持久状态</td>
-          <td>不保证顺序、不能当存档</td>
-          <td>开枪音效、一次性技能、聊天</td>
-      </tr>
-      <tr>
-          <td><strong>手动 RPC + Transform</strong></td>
-          <td>完全自定义</td>
-          <td>易出 desync、要写插值</td>
-          <td>特殊同步规则</td>
-      </tr>
-  </tbody>
-</table></div>
-<pre class="mermaid">
+</pre><hr><h2 id=核心组件>核心组件</h2><div class=table-wrapper><table><thead><tr><th>组件</th><th>作用</th></tr></thead><tbody><tr><td><strong>NetworkManager</strong></td><td>连接、Spawn Player、Prefabs 列表、NetworkConfig</td></tr><tr><td><strong>NetworkObject</strong></td><td>可被复制到各端的实体；有 <code>NetworkObjectId</code></td></tr><tr><td><strong>NetworkBehaviour</strong></td><td>挂在带 NetworkObject 的对象上；提供 RPC、NetworkVariable</td></tr><tr><td><strong>NetworkTransform</strong></td><td>同步 position / rotation / scale（含插值）</td></tr><tr><td><strong>Unity Transport</strong></td><td>底层 UDP（UTP），配置 IP、端口</td></tr></tbody></table></div><p><strong>层级要求</strong>：<code>NetworkBehaviour</code> 必须与 <code>NetworkObject</code> 在<strong>同一 GameObject</strong>，或在其子物体上（子物体上的脚本仍属该 NetworkObject）。</p><hr><h2 id=pico-大空间--vr>Pico 大空间 / VR</h2><div class=table-wrapper><table><thead><tr><th>点</th><th>说明</th></tr></thead><tbody><tr><td>地图原点 / 正方向</td><td>Pico 录制时标定的原点、朝向 → 映射到 Unity 场景原点与前进方向（常与 <strong>+Z</strong> 对齐，以项目文档为准）</td></tr><tr><td>VR Rig</td><td>头显、手柄父节点只驱动<strong>本地相机</strong>；<strong>不要</strong>把 Rig 根节点当网络 Player 直接同步</td></tr><tr><td>推荐结构</td><td>网络 Player（<code>NetworkObject</code> + <code>NetworkTransform</code>）← 子节点 Local XR Rig（仅 Owner 启用）</td></tr><tr><td>坐标系</td><td>大空间定位 SDK 给出的位姿需转换到 Unity 世界空间后再写入权威 Transform</td></tr></tbody></table></div><h3 id=vr-玩家移动推荐范式owner-输入--server-权威>VR 玩家移动推荐范式（Owner 输入 → Server 权威）</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl><span class=kd>public</span> <span class=k>class</span> <span class=nc>NetworkedVRPlayer</span> <span class=p>:</span> <span class=n>NetworkBehaviour</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl><span class=na>    [SerializeField]</span> <span class=n>Transform</span> <span class=n>xrCamera</span><span class=p>;</span> <span class=c1>// 仅 Owner 本地引用</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>void</span> <span class=n>Update</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=p>(!</span><span class=n>IsOwner</span><span class=p>)</span> <span class=k>return</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// 采集本帧目标（例：摇杆 / 传送点）</span>
+</span></span><span class=line><span class=cl>        <span class=n>Vector3</span> <span class=n>target</span> <span class=p>=</span> <span class=n>ComputeTargetFromInput</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>        <span class=n>SubmitMoveRpc</span><span class=p>(</span><span class=n>target</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=na>
+</span></span></span><span class=line><span class=cl><span class=na>    [Rpc(SendTo.Server)]</span>
+</span></span><span class=line><span class=cl>    <span class=k>void</span> <span class=n>SubmitMoveRpc</span><span class=p>(</span><span class=n>Vector3</span> <span class=n>worldPosition</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// 服务器校验（距离、冷却、是否在 NavMesh 上）</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=p>(!</span><span class=n>ValidateMove</span><span class=p>(</span><span class=n>worldPosition</span><span class=p>))</span> <span class=k>return</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>transform</span><span class=p>.</span><span class=n>position</span> <span class=p>=</span> <span class=n>worldPosition</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// 若挂了 NetworkTransform，由组件自动同步；否则写 NetworkVariable</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=kt>bool</span> <span class=n>ValidateMove</span><span class=p>(</span><span class=n>Vector3</span> <span class=n>pos</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=n>Vector3</span><span class=p>.</span><span class=n>Distance</span><span class=p>(</span><span class=n>transform</span><span class=p>.</span><span class=n>position</span><span class=p>,</span> <span class=n>pos</span><span class=p>)</span> <span class=p>&lt;</span> <span class=m>5f</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><hr><h2 id=客户端服务器快速启动>客户端—服务器快速启动</h2><h3 id=1-配置-networkmanager>1. 配置 NetworkManager</h3><ol><li>添加 <code>NetworkManager</code>（全场景仅一个）<br><img src=/p/network-for-gameobjects/img/image-20260408210526625.png width=706 height=1027 srcset="/p/network-for-gameobjects/img/image-20260408210526625_hu_49adc33414edff37.png 480w, /p/network-for-gameobjects/img/image-20260408210526625_hu_50812c587480195e.png 1024w" loading=lazy alt=image-20260408210526625 class=gallery-image data-flex-grow=68 data-flex-basis=164px></li><li>Transport 选 <strong>Unity Transport</strong><br><img src=/p/network-for-gameobjects/img/image-20260408210601297.png width=674 height=477 srcset="/p/network-for-gameobjects/img/image-20260408210601297_hu_e0bf58212a604a38.png 480w, /p/network-for-gameobjects/img/image-20260408210601297_hu_3cae8d464491b007.png 1024w" loading=lazy alt=image-20260408210601297 class=gallery-image data-flex-grow=141 data-flex-basis=339px></li><li><strong>Network Config</strong> 中指定 <strong>Player Prefab</strong>（带 <code>NetworkObject</code>）</li><li>Inspector 点 <strong>Start Host</strong> 做本机联调<br><img src=/p/network-for-gameobjects/img/image-20260408211025268.png width=674 height=219 srcset="/p/network-for-gameobjects/img/image-20260408211025268_hu_fc35afc7b7421a06.png 480w, /p/network-for-gameobjects/img/image-20260408211025268_hu_bee8b71614c72ac7.png 1024w" loading=lazy alt=image-20260408211025268 class=gallery-image data-flex-grow=307 data-flex-basis=738px></li></ol><p><strong>检查清单</strong></p><ul><li><input disabled type=checkbox> Player Prefab 已加入 <strong>Network Prefabs</strong>（若用默认列表）</li><li><input disabled type=checkbox> 场景中无重复 NetworkManager</li><li><input disabled type=checkbox> 防火墙放行 UDP 端口（默认见 Transport）</li></ul><h3 id=2-networkmanagerui可选>2. NetworkManagerUI（可选）</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl><span class=k>using</span> <span class=nn>Unity.Netcode</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>using</span> <span class=nn>UnityEngine</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>using</span> <span class=nn>UnityEngine.UI</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>public</span> <span class=k>class</span> <span class=nc>NetworkManagerUI</span> <span class=p>:</span> <span class=n>MonoBehaviour</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl><span class=na>    [SerializeField]</span> <span class=kd>private</span> <span class=n>Button</span> <span class=n>ServerButton</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=na>    [SerializeField]</span> <span class=kd>private</span> <span class=n>Button</span> <span class=n>HostButton</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=na>    [SerializeField]</span> <span class=kd>private</span> <span class=n>Button</span> <span class=n>ClientButton</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>void</span> <span class=n>Awake</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>ServerButton</span><span class=p>.</span><span class=n>onClick</span><span class=p>.</span><span class=n>AddListener</span><span class=p>(()</span> <span class=p>=&gt;</span> <span class=n>NetworkManager</span><span class=p>.</span><span class=n>Singleton</span><span class=p>.</span><span class=n>StartServer</span><span class=p>());</span>
+</span></span><span class=line><span class=cl>        <span class=n>HostButton</span><span class=p>.</span><span class=n>onClick</span><span class=p>.</span><span class=n>AddListener</span><span class=p>(()</span> <span class=p>=&gt;</span> <span class=n>NetworkManager</span><span class=p>.</span><span class=n>Singleton</span><span class=p>.</span><span class=n>StartHost</span><span class=p>());</span>
+</span></span><span class=line><span class=cl>        <span class=n>ClientButton</span><span class=p>.</span><span class=n>onClick</span><span class=p>.</span><span class=n>AddListener</span><span class=p>(()</span> <span class=p>=&gt;</span> <span class=n>NetworkManager</span><span class=p>.</span><span class=n>Singleton</span><span class=p>.</span><span class=n>StartClient</span><span class=p>());</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=3-player-预制体示例>3. Player 预制体示例</h3><p>预制体必须有 <strong><code>NetworkObject</code></strong>。示例：<code>HelloWorldPlayer</code>、<code>RpcTest</code>。</p><h4 id=helloworldplayer--networkvariable-同步位置>HelloWorldPlayer — NetworkVariable 同步位置</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl><span class=k>using</span> <span class=nn>Unity.Netcode</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>using</span> <span class=nn>UnityEngine</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>namespace</span> <span class=nn>HelloWorld</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kd>public</span> <span class=k>class</span> <span class=nc>HelloWorldPlayer</span> <span class=p>:</span> <span class=n>NetworkBehaviour</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// 默认：Server 写，所有人读</span>
+</span></span><span class=line><span class=cl>        <span class=kd>public</span> <span class=n>NetworkVariable</span><span class=p>&lt;</span><span class=n>Vector3</span><span class=p>&gt;</span> <span class=n>Position</span> <span class=p>=</span> <span class=k>new</span> <span class=n>NetworkVariable</span><span class=p>&lt;</span><span class=n>Vector3</span><span class=p>&gt;(</span>
+</span></span><span class=line><span class=cl>            <span class=n>Vector3</span><span class=p>.</span><span class=n>zero</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=n>NetworkVariableReadPermission</span><span class=p>.</span><span class=n>Everyone</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=n>NetworkVariableWritePermission</span><span class=p>.</span><span class=n>Server</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=kd>public</span> <span class=kd>override</span> <span class=k>void</span> <span class=n>OnNetworkSpawn</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>Position</span><span class=p>.</span><span class=n>OnValueChanged</span> <span class=p>+=</span> <span class=p>(</span><span class=n>_</span><span class=p>,</span> <span class=n>newVal</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=n>transform</span><span class=p>.</span><span class=n>position</span> <span class=p>=</span> <span class=n>newVal</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=p>(</span><span class=n>IsOwner</span><span class=p>)</span> <span class=n>Move</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=kd>public</span> <span class=kd>override</span> <span class=k>void</span> <span class=n>OnNetworkDespawn</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>Position</span><span class=p>.</span><span class=n>OnValueChanged</span> <span class=p>-=</span> <span class=p>(</span><span class=n>_</span><span class=p>,</span> <span class=n>newVal</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=n>transform</span><span class=p>.</span><span class=n>position</span> <span class=p>=</span> <span class=n>newVal</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=kd>public</span> <span class=k>void</span> <span class=n>Move</span><span class=p>()</span> <span class=p>=&gt;</span> <span class=n>SubmitPositionRequestRpc</span><span class=p>();</span>
+</span></span><span class=line><span class=cl><span class=na>
+</span></span></span><span class=line><span class=cl><span class=na>        [Rpc(SendTo.Server)]</span>
+</span></span><span class=line><span class=cl>        <span class=kd>private</span> <span class=k>void</span> <span class=n>SubmitPositionRequestRpc</span><span class=p>(</span><span class=n>RpcParams</span> <span class=n>rpcParams</span> <span class=p>=</span> <span class=k>default</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=kt>var</span> <span class=n>randomPosition</span> <span class=p>=</span> <span class=n>GetRandomPositionOnPlane</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>            <span class=n>transform</span><span class=p>.</span><span class=n>position</span> <span class=p>=</span> <span class=n>randomPosition</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=n>Position</span><span class=p>.</span><span class=n>Value</span> <span class=p>=</span> <span class=n>randomPosition</span><span class=p>;</span> <span class=c1>// 仅 Server 可写</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=kd>static</span> <span class=n>Vector3</span> <span class=n>GetRandomPositionOnPlane</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=k>new</span> <span class=n>Vector3</span><span class=p>(</span><span class=n>Random</span><span class=p>.</span><span class=n>Range</span><span class=p>(-</span><span class=m>3f</span><span class=p>,</span> <span class=m>3f</span><span class=p>),</span> <span class=m>1f</span><span class=p>,</span> <span class=n>Random</span><span class=p>.</span><span class=n>Range</span><span class=p>(-</span><span class=m>3f</span><span class=p>,</span> <span class=m>3f</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><blockquote><p>生产环境更推荐用 <code>OnValueChanged</code> 更新 Transform，而不是每帧在 <code>Update</code> 里赋值（减少无谓逻辑）。</p></blockquote><h4 id=rpctest--rpc-链式调用>RpcTest — RPC 链式调用</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl><span class=k>using</span> <span class=nn>Unity.Netcode</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>using</span> <span class=nn>UnityEngine</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>public</span> <span class=k>class</span> <span class=nc>RpcTest</span> <span class=p>:</span> <span class=n>NetworkBehaviour</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kd>public</span> <span class=kd>override</span> <span class=k>void</span> <span class=n>OnNetworkSpawn</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=p>(!</span><span class=n>IsServer</span> <span class=p>&amp;&amp;</span> <span class=n>IsOwner</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=n>ServerOnlyRpc</span><span class=p>(</span><span class=m>0</span><span class=p>,</span> <span class=n>NetworkObjectId</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=na>
+</span></span></span><span class=line><span class=cl><span class=na>    [Rpc(SendTo.ClientsAndHost)]</span>
+</span></span><span class=line><span class=cl>    <span class=kd>private</span> <span class=k>void</span> <span class=n>ClientAndHostRpc</span><span class=p>(</span><span class=kt>int</span> <span class=k>value</span><span class=p>,</span> <span class=kt>ulong</span> <span class=n>sourceNetworkObjectId</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>Debug</span><span class=p>.</span><span class=n>Log</span><span class=p>(</span><span class=s>$&#34;Client Received RPC #{value} on #{sourceNetworkObjectId}&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=p>(</span><span class=n>IsOwner</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=n>ServerOnlyRpc</span><span class=p>(</span><span class=k>value</span> <span class=p>+</span> <span class=m>1</span><span class=p>,</span> <span class=n>sourceNetworkObjectId</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=na>
+</span></span></span><span class=line><span class=cl><span class=na>    [Rpc(SendTo.Server)]</span>
+</span></span><span class=line><span class=cl>    <span class=kd>private</span> <span class=k>void</span> <span class=n>ServerOnlyRpc</span><span class=p>(</span><span class=kt>int</span> <span class=k>value</span><span class=p>,</span> <span class=kt>ulong</span> <span class=n>sourceNetworkObjectId</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>Debug</span><span class=p>.</span><span class=n>Log</span><span class=p>(</span><span class=s>$&#34;Server Received RPC #{value} on #{sourceNetworkObjectId}&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>ClientAndHostRpc</span><span class=p>(</span><span class=k>value</span><span class=p>,</span> <span class=n>sourceNetworkObjectId</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=4-networktransform-测试>4. NetworkTransform 测试</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl><span class=k>using</span> <span class=nn>System</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>using</span> <span class=nn>Unity.Netcode</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>using</span> <span class=nn>UnityEngine</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>public</span> <span class=k>class</span> <span class=nc>NetworkTransformTest</span> <span class=p>:</span> <span class=n>NetworkBehaviour</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kd>private</span> <span class=k>void</span> <span class=n>Update</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=p>(!</span><span class=n>IsServer</span><span class=p>)</span> <span class=k>return</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=kt>float</span> <span class=n>theta</span> <span class=p>=</span> <span class=n>Time</span><span class=p>.</span><span class=n>frameCount</span> <span class=p>/</span> <span class=m>10.0f</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>transform</span><span class=p>.</span><span class=n>position</span> <span class=p>=</span> <span class=k>new</span> <span class=n>Vector3</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>            <span class=p>(</span><span class=kt>float</span><span class=p>)</span><span class=n>Math</span><span class=p>.</span><span class=n>Cos</span><span class=p>(</span><span class=n>theta</span><span class=p>),</span> <span class=m>0f</span><span class=p>,</span> <span class=p>(</span><span class=kt>float</span><span class=p>)</span><span class=n>Math</span><span class=p>.</span><span class=n>Sin</span><span class=p>(</span><span class=n>theta</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><hr><h2 id=同步方案选型>同步方案选型</h2><div class=table-wrapper><table><thead><tr><th>方式</th><th>优点</th><th>缺点</th><th>适用</th></tr></thead><tbody><tr><td><strong>NetworkTransform</strong></td><td>自动插值、省代码</td><td>带宽随物体数量增</td><td>角色、可拾取物、大部分动态物体</td></tr><tr><td><strong>NetworkVariable</strong></td><td>精确、可订阅变化</td><td>需自己处理表现</td><td>血量、弹药、枚举状态、回合数</td></tr><tr><td><strong>RPC</strong></td><td>瞬时事件、无需持久状态</td><td>不保证顺序、不能当存档</td><td>开枪音效、一次性技能、聊天</td></tr><tr><td><strong>手动 RPC + Transform</strong></td><td>完全自定义</td><td>易出 desync、要写插值</td><td>特殊同步规则</td></tr></tbody></table></div><pre class=mermaid>
   flowchart TD
     A[需要同步什么?] --&gt; B{持续 Transform?}
     B --&gt;|是| C[NetworkTransform]
     B --&gt;|否| D{离散状态?}
     D --&gt;|是| E[NetworkVariable]
     D --&gt;|否| F[一次性事件 → RPC]
-</pre>
-
-<hr>
-<h2 id="networkvariable-详解">NetworkVariable 详解
-</h2><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">public</span> <span class="n">NetworkVariable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">Health</span> <span class="p">=</span> <span class="k">new</span> <span class="n">NetworkVariable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;(</span>
-</span></span><span class="line"><span class="cl">    <span class="m">100</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">NetworkVariableReadPermission</span><span class="p">.</span><span class="n">Everyone</span><span class="p">,</span>      <span class="c1">// 谁可读</span>
-</span></span><span class="line"><span class="cl">    <span class="n">NetworkVariableWritePermission</span><span class="p">.</span><span class="n">Server</span><span class="p">);</span>      <span class="c1">// 谁可写（常用 Server）</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="n">NetworkVariable</span><span class="p">&lt;</span><span class="kt">float</span><span class="p">&gt;</span> <span class="n">Charge</span> <span class="p">=</span> <span class="k">new</span> <span class="n">NetworkVariable</span><span class="p">&lt;</span><span class="kt">float</span><span class="p">&gt;(</span>
-</span></span><span class="line"><span class="cl">    <span class="m">0f</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">NetworkVariableReadPermission</span><span class="p">.</span><span class="n">Everyone</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">NetworkVariableWritePermission</span><span class="p">.</span><span class="n">Owner</span><span class="p">);</span>       <span class="c1">// 仅 Owner 可写（仍经服务器转发）</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>写权限</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>Server</code></td>
-          <td>只有服务器改 <code>.Value</code>（推荐：玩法真相在服）</td>
-      </tr>
-      <tr>
-          <td><code>Owner</code></td>
-          <td>拥有者客户端可发起写，实际仍由 NGO 同步规则处理</td>
-      </tr>
-  </tbody>
-</table></div>
-<p><strong>订阅变化</strong>（UI、动画触发）：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="n">Health</span><span class="p">.</span><span class="n">OnValueChanged</span> <span class="p">+=</span> <span class="p">(</span><span class="n">oldVal</span><span class="p">,</span> <span class="n">newVal</span><span class="p">)</span> <span class="p">=&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">$&#34;HP {oldVal} -&gt; {newVal}&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><strong>支持类型</strong>：基础值、<code>Vector3</code>、<code>Quaternion</code>、实现 <code>INetworkSerializable</code> 的自定义结构体等（见官方列表）。</p>
-<p><strong>注意</strong></p>
-<ul>
-<li>不要在 <code>OnNetworkSpawn</code> 之前读写 <code>.Value</code></li>
-<li>高频数据（每帧坐标）优先 <code>NetworkTransform</code>，不要滥用 <code>NetworkVariable&lt;Vector3&gt;</code></li>
-<li>客户端<strong>不要</strong>用 <code>NetworkVariable</code> 做“仅本地”数据，用普通字段即可</li>
-</ul>
-<hr>
-<h2 id="rpc-详解">RPC 详解
-</h2><h3 id="编写规则">编写规则
-</h3><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>规则</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>声明位置</td>
-          <td>必须在 <code>NetworkBehaviour</code> 子类中</td>
-      </tr>
-      <tr>
-          <td>方法签名</td>
-          <td>通常 <code>void</code>，参数需为 NGO 支持的序列化类型</td>
-      </tr>
-      <tr>
-          <td>调用时机</td>
-          <td>仅在 <code>IsSpawned == true</code> 之后</td>
-      </tr>
-      <tr>
-          <td>谁可发起</td>
-          <td><code>SendTo.Server</code> 一般由 <strong>Client/Owner</strong> 调；<code>SendTo.Clients*</code> 必须由 <strong>Server</strong> 调</td>
-      </tr>
-      <tr>
-          <td>安全</td>
-          <td><strong>所有玩法判定在 Server RPC 内做</strong>，不要相信客户端传来的伤害、坐标</td>
-      </tr>
-  </tbody>
-</table></div>
-<h3 id="serverrpc-内改状态--自动同步">ServerRpc 内改状态 → 自动同步
-</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="na">[Rpc(SendTo.Server)]</span>
-</span></span><span class="line"><span class="cl"><span class="k">void</span> <span class="n">CmdTakeDamageRpc</span><span class="p">(</span><span class="kt">int</span> <span class="n">damage</span><span class="p">,</span> <span class="n">RpcParams</span> <span class="n">p</span> <span class="p">=</span> <span class="k">default</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(!</span><span class="n">IsServer</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">hp</span> <span class="p">=</span> <span class="n">Mathf</span><span class="p">.</span><span class="n">Max</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="n">Health</span><span class="p">.</span><span class="n">Value</span> <span class="p">-</span> <span class="n">damage</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">Health</span><span class="p">.</span><span class="n">Value</span> <span class="p">=</span> <span class="n">hp</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">hp</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span> <span class="n">RpcPlayDeathFxRpc</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="na">
-</span></span></span><span class="line"><span class="cl"><span class="na">[Rpc(SendTo.ClientsAndHost)]</span>
-</span></span><span class="line"><span class="cl"><span class="k">void</span> <span class="n">RpcPlayDeathFxRpc</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="c1">// 各端播死亡特效（不含玩法判定）</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><hr>
-<h2 id="networktransform-与移动">NetworkTransform 与移动
-</h2><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>设置（概念）</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>Server Authority</strong></td>
-          <td>只有服务器改 Transform 会同步（NPC、物理球）</td>
-      </tr>
-      <tr>
-          <td><strong>Owner Authority</strong></td>
-          <td>Owner 客户端驱动，适合第一人称 / VR 本地移动（仍需 Server 校验时用 RPC 改服）</td>
-      </tr>
-      <tr>
-          <td>插值</td>
-          <td>远端客户端平滑；本地 Owner 可关闭或减小插值避免“拖泥带水”</td>
-      </tr>
-  </tbody>
-</table></div>
-<p><strong>第一人称 / VR</strong>：常见组合 = <code>Owner</code> 读输入 + <code>SendTo.Server</code> 移动 RPC + <code>NetworkTransform</code>（Server 权威）或 Owner 权威 + 服务端校验。</p>
-<hr>
-<h2 id="生成与销毁">生成与销毁
-</h2><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="c1">// 仅服务器（或 Host 的服务器侧）可 Spawn</span>
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">IsServer</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">var</span> <span class="n">go</span> <span class="p">=</span> <span class="n">Instantiate</span><span class="p">(</span><span class="n">prefab</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">rot</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">var</span> <span class="n">netObj</span> <span class="p">=</span> <span class="n">go</span><span class="p">.</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">NetworkObject</span><span class="p">&gt;();</span>
-</span></span><span class="line"><span class="cl">    <span class="n">netObj</span><span class="p">.</span><span class="n">Spawn</span><span class="p">();</span> <span class="c1">// 默认把 Player 的 connection 作为 owner 时可 SpawnWithOwnership</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// netObj.SpawnWithOwnership(clientId);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// 销毁</span>
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">IsServer</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">netObj</span><span class="p">.</span><span class="n">Despawn</span><span class="p">();</span> <span class="c1">// 推荐：走网络销毁</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// Destroy(go) 需知会网络层，否则易留幽灵对象</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>API</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>Spawn()</code></td>
-          <td>创建网络实例，分配 <code>NetworkObjectId</code></td>
-      </tr>
-      <tr>
-          <td><code>Despawn()</code></td>
-          <td>网络层销毁，各端 <code>OnNetworkDespawn</code></td>
-      </tr>
-      <tr>
-          <td><code>ChangeOwnership(clientId)</code></td>
-          <td>转移 Owner（载具上下车、观战切换）</td>
-      </tr>
-      <tr>
-          <td><code>TrySetParent(parentNetObj)</code></td>
-          <td>网络父子关系（武器挂点等）</td>
-      </tr>
-  </tbody>
-</table></div>
-<hr>
-<h2 id="连接与鉴权">连接与鉴权
-</h2><h3 id="networkconfig-常用项">NetworkConfig 常用项
-</h3><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>项</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>ConnectionData</code> / Address</td>
-          <td>IP、端口</td>
-      </tr>
-      <tr>
-          <td><code>PlayerPrefab</code></td>
-          <td>玩家自动 Spawn 的预制体</td>
-      </tr>
-      <tr>
-          <td><code>ConnectionApproval</code></td>
-          <td>是否启用连接审批回调</td>
-      </tr>
-      <tr>
-          <td><code>MaxConnections</code></td>
-          <td>最大连接数</td>
-      </tr>
-      <tr>
-          <td><code>TickRate</code></td>
-          <td>模拟 tick（影响同步频率）</td>
-      </tr>
-  </tbody>
-</table></div>
-<h3 id="connection-approval-示例骨架">Connection Approval 示例骨架
-</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="c1">// NetworkManager 上挂脚本，或在自定义 Manager 里订阅</span>
-</span></span><span class="line"><span class="cl"><span class="k">void</span> <span class="n">Start</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="n">NetworkManager</span><span class="p">.</span><span class="n">Singleton</span><span class="p">.</span><span class="n">ConnectionApprovalCallback</span> <span class="p">=</span> <span class="n">ApprovalCheck</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">NetworkManager</span><span class="p">.</span><span class="n">Singleton</span><span class="p">.</span><span class="n">NetworkConfig</span><span class="p">.</span><span class="n">ConnectionApproval</span> <span class="p">=</span> <span class="kc">true</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">void</span> <span class="n">ApprovalCheck</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">NetworkManager</span><span class="p">.</span><span class="n">ConnectionApprovalRequest</span> <span class="n">request</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">NetworkManager</span><span class="p">.</span><span class="n">ConnectionApprovalResponse</span> <span class="n">response</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">string</span> <span class="n">payload</span> <span class="p">=</span> <span class="n">System</span><span class="p">.</span><span class="n">Text</span><span class="p">.</span><span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="n">GetString</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">Payload</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">bool</span> <span class="n">approved</span> <span class="p">=</span> <span class="n">payload</span> <span class="p">==</span> <span class="s">&#34;expected_token&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">response</span><span class="p">.</span><span class="n">Approved</span> <span class="p">=</span> <span class="n">approved</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">response</span><span class="p">.</span><span class="n">CreatePlayerObject</span> <span class="p">=</span> <span class="n">approved</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">response</span><span class="p">.</span><span class="n">Pending</span> <span class="p">=</span> <span class="kc">false</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>客户端连接时可通过 <code>NetworkManager.Singleton.NetworkConfig.ConnectionData</code> 传入自定义字节（版本号、房间密码等）。</p>
-<h3 id="unity-relay简表">Unity Relay（简表）
-</h3><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>步骤</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>安装</td>
-          <td><code>com.unity.services.relay</code>、<code>com.unity.services.authentication</code></td>
-      </tr>
-      <tr>
-          <td>流程</td>
-          <td>登录 → 创建/加入 Allocation → 把 Relay 数据写入 Transport → <code>StartHost</code> / <code>StartClient</code></td>
-      </tr>
-      <tr>
-          <td>用途</td>
-          <td>无公网 IP 联机、Pico / 移动端房间</td>
-      </tr>
-  </tbody>
-</table></div>
-<h3 id="命令行启动dedicated-server">命令行启动（Dedicated Server）
-</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">void</span> <span class="n">Start</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">var</span> <span class="n">args</span> <span class="p">=</span> <span class="n">System</span><span class="p">.</span><span class="n">Environment</span><span class="p">.</span><span class="n">GetCommandLineArgs</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="n">Array</span><span class="p">.</span><span class="n">IndexOf</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&#34;-server&#34;</span><span class="p">)</span> <span class="p">&gt;=</span> <span class="m">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">NetworkManager</span><span class="p">.</span><span class="n">Singleton</span><span class="p">.</span><span class="n">StartServer</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="n">Array</span><span class="p">.</span><span class="n">IndexOf</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&#34;-client&#34;</span><span class="p">)</span> <span class="p">&gt;=</span> <span class="m">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">NetworkManager</span><span class="p">.</span><span class="n">Singleton</span><span class="p">.</span><span class="n">StartClient</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>构建 Dedicated Server 时选 <strong>Server Build</strong>，无头运行加 <code>-batchmode -nographics</code>（平台相关）。</p>
-<hr>
-<h2 id="场景与预制体">场景与预制体
-</h2><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>主题</th>
-          <th>说明</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>Network Prefabs List</strong></td>
-          <td>所有会被 <code>Spawn</code> 的预制体必须注册，否则客户端缺资源</td>
-      </tr>
-      <tr>
-          <td><strong>场景内 NetworkObject</strong></td>
-          <td>场景中预先放的 NetworkObject 需在加载时由服务器同步生成（使用 NGO 场景管理或手动 Spawn）</td>
-      </tr>
-      <tr>
-          <td><strong>DontDestroyOnLoad</strong></td>
-          <td>NetworkManager 常放启动场景并 <code>DontDestroyOnLoad</code></td>
-      </tr>
-      <tr>
-          <td><strong>Additive 场景</strong></td>
-          <td>使用 <code>NetworkSceneManager</code> 做网络化场景加载（大空间分块可选）</td>
-      </tr>
-  </tbody>
-</table></div>
-<hr>
-<h2 id="调试与常见坑">调试与常见坑
-</h2><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>现象</th>
-          <th>可能原因</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>RPC 不执行</td>
-          <td>未 Spawn、方法不是 <code>NetworkBehaviour</code>、Server RPC 在纯 Client 调</td>
-      </tr>
-      <tr>
-          <td>客户端看不到物体</td>
-          <td>预制体未进 Network Prefabs、Server 未 Spawn</td>
-      </tr>
-      <tr>
-          <td>位置抖动 / 回弹</td>
-          <td>Client 与 Server 同时改 Transform；应只权威端写</td>
-      </tr>
-      <tr>
-          <td>Host 正常、专服异常</td>
-          <td>用了仅 Client 的逻辑，未用 <code>IsServer</code> 区分</td>
-      </tr>
-      <tr>
-          <td>VR 身体与头分离</td>
-          <td>Rig 与 Network Player 根节点混用；应用子节点分离</td>
-      </tr>
-      <tr>
-          <td>变量不同步</td>
-          <td>写权限不是 Server 却在客户端改 <code>.Value</code></td>
-      </tr>
-  </tbody>
-</table></div>
-<p><strong>调试工具</strong></p>
-<ul>
-<li><strong>Multiplayer Play Mode</strong>：编辑器内多实例</li>
-<li><strong>Network Profiler / Stats</strong>：Package Manager → Multiplayer Tools</li>
-<li>日志：<code>NetworkLog.LogInfo</code>、连接事件 <code>OnClientConnectedCallback</code></li>
-</ul>
-<hr>
-<h2 id="网络概念">网络概念
-</h2><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>主题</th>
-          <th>描述</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>权威（Authority）</strong></td>
-          <td>谁负责该对象的“真相”状态；状态同步由权威端产生</td>
-      </tr>
-      <tr>
-          <td><strong>所有权（Ownership）</strong></td>
-          <td>哪个 <code>ClientId</code> 是该 <code>NetworkObject</code> 的 Owner；影响谁可发部分 RPC、Owner 写变量</td>
-      </tr>
-      <tr>
-          <td><strong>网络拓扑</strong></td>
-          <td>Dedicated Server、Listen Server（Host）、纯 P2P（NGO 以服为中心）</td>
-      </tr>
-  </tbody>
-</table></div>
-<hr>
-<h2 id="配置">配置
-</h2><h3 id="连接配置">连接配置
-</h3><ul>
-<li><strong>NetworkManager → Network Config</strong>：地址、端口、Player Prefab、Tick、连接数。</li>
-<li><strong>Connection Approval</strong>：<code>ConnectionApproval = true</code> 时必须实现 <code>ConnectionApprovalCallback</code>，否则连接会被拒。</li>
-</ul>
-<h3 id="传输transport">传输（Transport）
-</h3><ul>
-<li><strong>Unity Transport（UTP）</strong>：UDP；可配 <code>ConnectionData</code> 的 <code>Address</code>、<code>Port</code>。</li>
-<li>局域网：<code>127.0.0.1</code> + 同一端口；真机需本机局域网 IP。</li>
-</ul>
-<h3 id="unity-relay">Unity Relay
-</h3><ul>
-<li>NGO + Relay：房间码 / Join Code 交换 Allocation 数据，客户端无需知道主机真实 IP。</li>
-</ul>
-<h3 id="命令行参数">命令行参数
-</h3><ul>
-<li><code>-server</code>、<code>-client</code>、<code>-ip</code>、<code>-port</code> 等由启动脚本解析并写入 <code>UnityTransport</code>。</li>
-</ul>
-
-</section>
-
-
-    <footer class="article-footer">
-    
-    <section class="article-tags">
-        
-            <a href="/tags/ngo/">NGO</a>
-        
-            <a href="/tags/%E8%81%94%E7%BD%91/">联网</a>
-        
-            <a href="/tags/unity/">Unity</a>
-        
-    </section>
-
-
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>仅用于交流学习，记录学习心得</span>
-    </section>
-    <section class="article-lastmod">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-        <span>
-            最后更新于 Oct 20, 2026 00:36 &#43;0800
-        </span>
-    </section></footer>
-
-
-    
-</article>
-
-
-    <nav class="series-nav" aria-label="系列导航">
-      <div class="series-nav__head">
-        <span class="series-nav__label">系列</span>
-        <a class="series-nav__series-title" href="/series/#unity-network">Unity 多人联网</a><p class="series-nav__desc">Mirror、NGO 与热更新</p><a class="series-nav__index" href="/series/#unity-network">在系列索引中查看全部 →</a>
-      </div>
-      <ol class="series-nav__outline"><li class="">
-              <a href="/p/mirror/">Mirror 联网笔记</a>
-            </li><li class="is-current">
-              <a href="/p/network-for-gameobjects/">Netcode for GameObjects 笔记</a>
-            </li><li class="">
-              <a href="/p/unity-multiplayer-mirror-ngo/">Unity 多人联网：Mirror 与 NGO</a>
-            </li><li class="">
-              <a href="/p/hot-update/">热更新</a>
-            </li></ol><div class="series-nav__pager"><a class="series-nav__prev" href="/p/mirror/"><span>← 上一篇</span>Mirror 联网笔记</a><a class="series-nav__next" href="/p/unity-multiplayer-mirror-ngo/"><span>下一篇 →</span>Unity 多人联网：Mirror 与 NGO</a></div></nav>
-
-    
-
-    
-
-<aside class="related-content--wrapper">
-    <h2 class="section-title">相关文章</h2>
-    <div class="related-content">
-        <div class="flex article-list--tile">
-            
-                
-<article class="">
-    <a href="/p/mirror/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Mirror 联网笔记</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/unity-multiplayer-mirror-ngo/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Unity 多人联网：Mirror 与 NGO</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/unity-a-star/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Unity A* 寻路算法</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/ui-system/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">UI 系统</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/unity-yaml/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Unity YAML</h2>
-        </div>
-    </a>
-</article>
-
-            
-        </div>
-    </div>
-</aside>
-
-     
-    
-        
-    
-
-    
-<footer class="site-footer">
-    <section class="copyright">
-        &copy;
-            2024 -
-        2026 元某人也
-    </section>
-</footer>
-
-
-    
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    
-    <div class="pswp__bg"></div>
-
-    
-    <div class="pswp__scroll-wrap">
-
-        
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                
-                
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div><script 
-                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
-                defer
-                >
-            </script><script 
-                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
-                defer
-                >
-            </script><link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
-            ><link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
-            >
-    
-
-            </main>
-        </div>
-
-        <script 
-                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
-                
-                >
-            </script><script type="text/javascript" src="/ts/main.c922af694cc257bf1ecc41c0dd7b0430f9114ec280ccf67cd2c6ad55f5316c4e.js" defer></script><script type="text/javascript" src="/ts/custom.35a00062ea1ed0a833f7d9144cf4eb5b3b889f58d2486b3b50c37a6e98e47606.js" defer></script>
-
-
-<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
-
-
-
-
-
-    </body>
-</html>
+</pre><hr><h2 id=networkvariable-详解>NetworkVariable 详解</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl><span class=kd>public</span> <span class=n>NetworkVariable</span><span class=p>&lt;</span><span class=kt>int</span><span class=p>&gt;</span> <span class=n>Health</span> <span class=p>=</span> <span class=k>new</span> <span class=n>NetworkVariable</span><span class=p>&lt;</span><span class=kt>int</span><span class=p>&gt;(</span>
+</span></span><span class=line><span class=cl>    <span class=m>100</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=n>NetworkVariableReadPermission</span><span class=p>.</span><span class=n>Everyone</span><span class=p>,</span>      <span class=c1>// 谁可读</span>
+</span></span><span class=line><span class=cl>    <span class=n>NetworkVariableWritePermission</span><span class=p>.</span><span class=n>Server</span><span class=p>);</span>      <span class=c1>// 谁可写（常用 Server）</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>public</span> <span class=n>NetworkVariable</span><span class=p>&lt;</span><span class=kt>float</span><span class=p>&gt;</span> <span class=n>Charge</span> <span class=p>=</span> <span class=k>new</span> <span class=n>NetworkVariable</span><span class=p>&lt;</span><span class=kt>float</span><span class=p>&gt;(</span>
+</span></span><span class=line><span class=cl>    <span class=m>0f</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=n>NetworkVariableReadPermission</span><span class=p>.</span><span class=n>Everyone</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=n>NetworkVariableWritePermission</span><span class=p>.</span><span class=n>Owner</span><span class=p>);</span>       <span class=c1>// 仅 Owner 可写（仍经服务器转发）</span>
+</span></span></code></pre></td></tr></table></div></div><div class=table-wrapper><table><thead><tr><th>写权限</th><th>说明</th></tr></thead><tbody><tr><td><code>Server</code></td><td>只有服务器改 <code>.Value</code>（推荐：玩法真相在服）</td></tr><tr><td><code>Owner</code></td><td>拥有者客户端可发起写，实际仍由 NGO 同步规则处理</td></tr></tbody></table></div><p><strong>订阅变化</strong>（UI、动画触发）：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl><span class=n>Health</span><span class=p>.</span><span class=n>OnValueChanged</span> <span class=p>+=</span> <span class=p>(</span><span class=n>oldVal</span><span class=p>,</span> <span class=n>newVal</span><span class=p>)</span> <span class=p>=&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>Debug</span><span class=p>.</span><span class=n>Log</span><span class=p>(</span><span class=s>$&#34;HP {oldVal} -&gt; {newVal}&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span></code></pre></td></tr></table></div></div><p><strong>支持类型</strong>：基础值、<code>Vector3</code>、<code>Quaternion</code>、实现 <code>INetworkSerializable</code> 的自定义结构体等（见官方列表）。</p><p><strong>注意</strong></p><ul><li>不要在 <code>OnNetworkSpawn</code> 之前读写 <code>.Value</code></li><li>高频数据（每帧坐标）优先 <code>NetworkTransform</code>，不要滥用 <code>NetworkVariable&lt;Vector3></code></li><li>客户端<strong>不要</strong>用 <code>NetworkVariable</code> 做“仅本地”数据，用普通字段即可</li></ul><hr><h2 id=rpc-详解>RPC 详解</h2><h3 id=编写规则>编写规则</h3><div class=table-wrapper><table><thead><tr><th>规则</th><th>说明</th></tr></thead><tbody><tr><td>声明位置</td><td>必须在 <code>NetworkBehaviour</code> 子类中</td></tr><tr><td>方法签名</td><td>通常 <code>void</code>，参数需为 NGO 支持的序列化类型</td></tr><tr><td>调用时机</td><td>仅在 <code>IsSpawned == true</code> 之后</td></tr><tr><td>谁可发起</td><td><code>SendTo.Server</code> 一般由 <strong>Client/Owner</strong> 调；<code>SendTo.Clients*</code> 必须由 <strong>Server</strong> 调</td></tr><tr><td>安全</td><td><strong>所有玩法判定在 Server RPC 内做</strong>，不要相信客户端传来的伤害、坐标</td></tr></tbody></table></div><h3 id=serverrpc-内改状态--自动同步>ServerRpc 内改状态 → 自动同步</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl><span class=na>[Rpc(SendTo.Server)]</span>
+</span></span><span class=line><span class=cl><span class=k>void</span> <span class=n>CmdTakeDamageRpc</span><span class=p>(</span><span class=kt>int</span> <span class=n>damage</span><span class=p>,</span> <span class=n>RpcParams</span> <span class=n>p</span> <span class=p>=</span> <span class=k>default</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(!</span><span class=n>IsServer</span><span class=p>)</span> <span class=k>return</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>hp</span> <span class=p>=</span> <span class=n>Mathf</span><span class=p>.</span><span class=n>Max</span><span class=p>(</span><span class=m>0</span><span class=p>,</span> <span class=n>Health</span><span class=p>.</span><span class=n>Value</span> <span class=p>-</span> <span class=n>damage</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>Health</span><span class=p>.</span><span class=n>Value</span> <span class=p>=</span> <span class=n>hp</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=n>hp</span> <span class=p>==</span> <span class=m>0</span><span class=p>)</span> <span class=n>RpcPlayDeathFxRpc</span><span class=p>();</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=na>
+</span></span></span><span class=line><span class=cl><span class=na>[Rpc(SendTo.ClientsAndHost)]</span>
+</span></span><span class=line><span class=cl><span class=k>void</span> <span class=n>RpcPlayDeathFxRpc</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// 各端播死亡特效（不含玩法判定）</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><hr><h2 id=networktransform-与移动>NetworkTransform 与移动</h2><div class=table-wrapper><table><thead><tr><th>设置（概念）</th><th>说明</th></tr></thead><tbody><tr><td><strong>Server Authority</strong></td><td>只有服务器改 Transform 会同步（NPC、物理球）</td></tr><tr><td><strong>Owner Authority</strong></td><td>Owner 客户端驱动，适合第一人称 / VR 本地移动（仍需 Server 校验时用 RPC 改服）</td></tr><tr><td>插值</td><td>远端客户端平滑；本地 Owner 可关闭或减小插值避免“拖泥带水”</td></tr></tbody></table></div><p><strong>第一人称 / VR</strong>：常见组合 = <code>Owner</code> 读输入 + <code>SendTo.Server</code> 移动 RPC + <code>NetworkTransform</code>（Server 权威）或 Owner 权威 + 服务端校验。</p><hr><h2 id=生成与销毁>生成与销毁</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl><span class=c1>// 仅服务器（或 Host 的服务器侧）可 Spawn</span>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=p>(</span><span class=n>IsServer</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kt>var</span> <span class=n>go</span> <span class=p>=</span> <span class=n>Instantiate</span><span class=p>(</span><span class=n>prefab</span><span class=p>,</span> <span class=n>pos</span><span class=p>,</span> <span class=n>rot</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=kt>var</span> <span class=n>netObj</span> <span class=p>=</span> <span class=n>go</span><span class=p>.</span><span class=n>GetComponent</span><span class=p>&lt;</span><span class=n>NetworkObject</span><span class=p>&gt;();</span>
+</span></span><span class=line><span class=cl>    <span class=n>netObj</span><span class=p>.</span><span class=n>Spawn</span><span class=p>();</span> <span class=c1>// 默认把 Player 的 connection 作为 owner 时可 SpawnWithOwnership</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// netObj.SpawnWithOwnership(clientId);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 销毁</span>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=p>(</span><span class=n>IsServer</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>netObj</span><span class=p>.</span><span class=n>Despawn</span><span class=p>();</span> <span class=c1>// 推荐：走网络销毁</span>
+</span></span><span class=line><span class=cl><span class=c1>// Destroy(go) 需知会网络层，否则易留幽灵对象</span>
+</span></span></code></pre></td></tr></table></div></div><div class=table-wrapper><table><thead><tr><th>API</th><th>说明</th></tr></thead><tbody><tr><td><code>Spawn()</code></td><td>创建网络实例，分配 <code>NetworkObjectId</code></td></tr><tr><td><code>Despawn()</code></td><td>网络层销毁，各端 <code>OnNetworkDespawn</code></td></tr><tr><td><code>ChangeOwnership(clientId)</code></td><td>转移 Owner（载具上下车、观战切换）</td></tr><tr><td><code>TrySetParent(parentNetObj)</code></td><td>网络父子关系（武器挂点等）</td></tr></tbody></table></div><hr><h2 id=连接与鉴权>连接与鉴权</h2><h3 id=networkconfig-常用项>NetworkConfig 常用项</h3><div class=table-wrapper><table><thead><tr><th>项</th><th>说明</th></tr></thead><tbody><tr><td><code>ConnectionData</code> / Address</td><td>IP、端口</td></tr><tr><td><code>PlayerPrefab</code></td><td>玩家自动 Spawn 的预制体</td></tr><tr><td><code>ConnectionApproval</code></td><td>是否启用连接审批回调</td></tr><tr><td><code>MaxConnections</code></td><td>最大连接数</td></tr><tr><td><code>TickRate</code></td><td>模拟 tick（影响同步频率）</td></tr></tbody></table></div><h3 id=connection-approval-示例骨架>Connection Approval 示例骨架</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl><span class=c1>// NetworkManager 上挂脚本，或在自定义 Manager 里订阅</span>
+</span></span><span class=line><span class=cl><span class=k>void</span> <span class=n>Start</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>NetworkManager</span><span class=p>.</span><span class=n>Singleton</span><span class=p>.</span><span class=n>ConnectionApprovalCallback</span> <span class=p>=</span> <span class=n>ApprovalCheck</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>NetworkManager</span><span class=p>.</span><span class=n>Singleton</span><span class=p>.</span><span class=n>NetworkConfig</span><span class=p>.</span><span class=n>ConnectionApproval</span> <span class=p>=</span> <span class=kc>true</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>void</span> <span class=n>ApprovalCheck</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>    <span class=n>NetworkManager</span><span class=p>.</span><span class=n>ConnectionApprovalRequest</span> <span class=n>request</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=n>NetworkManager</span><span class=p>.</span><span class=n>ConnectionApprovalResponse</span> <span class=n>response</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kt>string</span> <span class=n>payload</span> <span class=p>=</span> <span class=n>System</span><span class=p>.</span><span class=n>Text</span><span class=p>.</span><span class=n>Encoding</span><span class=p>.</span><span class=n>UTF8</span><span class=p>.</span><span class=n>GetString</span><span class=p>(</span><span class=n>request</span><span class=p>.</span><span class=n>Payload</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=kt>bool</span> <span class=n>approved</span> <span class=p>=</span> <span class=n>payload</span> <span class=p>==</span> <span class=s>&#34;expected_token&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>response</span><span class=p>.</span><span class=n>Approved</span> <span class=p>=</span> <span class=n>approved</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>response</span><span class=p>.</span><span class=n>CreatePlayerObject</span> <span class=p>=</span> <span class=n>approved</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>response</span><span class=p>.</span><span class=n>Pending</span> <span class=p>=</span> <span class=kc>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>客户端连接时可通过 <code>NetworkManager.Singleton.NetworkConfig.ConnectionData</code> 传入自定义字节（版本号、房间密码等）。</p><h3 id=unity-relay简表>Unity Relay（简表）</h3><div class=table-wrapper><table><thead><tr><th>步骤</th><th>说明</th></tr></thead><tbody><tr><td>安装</td><td><code>com.unity.services.relay</code>、<code>com.unity.services.authentication</code></td></tr><tr><td>流程</td><td>登录 → 创建/加入 Allocation → 把 Relay 数据写入 Transport → <code>StartHost</code> / <code>StartClient</code></td></tr><tr><td>用途</td><td>无公网 IP 联机、Pico / 移动端房间</td></tr></tbody></table></div><h3 id=命令行启动dedicated-server>命令行启动（Dedicated Server）</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl><span class=k>void</span> <span class=n>Start</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kt>var</span> <span class=n>args</span> <span class=p>=</span> <span class=n>System</span><span class=p>.</span><span class=n>Environment</span><span class=p>.</span><span class=n>GetCommandLineArgs</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=n>System</span><span class=p>.</span><span class=n>Array</span><span class=p>.</span><span class=n>IndexOf</span><span class=p>(</span><span class=n>args</span><span class=p>,</span> <span class=s>&#34;-server&#34;</span><span class=p>)</span> <span class=p>&gt;=</span> <span class=m>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>NetworkManager</span><span class=p>.</span><span class=n>Singleton</span><span class=p>.</span><span class=n>StartServer</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=k>else</span> <span class=k>if</span> <span class=p>(</span><span class=n>System</span><span class=p>.</span><span class=n>Array</span><span class=p>.</span><span class=n>IndexOf</span><span class=p>(</span><span class=n>args</span><span class=p>,</span> <span class=s>&#34;-client&#34;</span><span class=p>)</span> <span class=p>&gt;=</span> <span class=m>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>NetworkManager</span><span class=p>.</span><span class=n>Singleton</span><span class=p>.</span><span class=n>StartClient</span><span class=p>();</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>构建 Dedicated Server 时选 <strong>Server Build</strong>，无头运行加 <code>-batchmode -nographics</code>（平台相关）。</p><hr><h2 id=场景与预制体>场景与预制体</h2><div class=table-wrapper><table><thead><tr><th>主题</th><th>说明</th></tr></thead><tbody><tr><td><strong>Network Prefabs List</strong></td><td>所有会被 <code>Spawn</code> 的预制体必须注册，否则客户端缺资源</td></tr><tr><td><strong>场景内 NetworkObject</strong></td><td>场景中预先放的 NetworkObject 需在加载时由服务器同步生成（使用 NGO 场景管理或手动 Spawn）</td></tr><tr><td><strong>DontDestroyOnLoad</strong></td><td>NetworkManager 常放启动场景并 <code>DontDestroyOnLoad</code></td></tr><tr><td><strong>Additive 场景</strong></td><td>使用 <code>NetworkSceneManager</code> 做网络化场景加载（大空间分块可选）</td></tr></tbody></table></div><hr><h2 id=调试与常见坑>调试与常见坑</h2><div class=table-wrapper><table><thead><tr><th>现象</th><th>可能原因</th></tr></thead><tbody><tr><td>RPC 不执行</td><td>未 Spawn、方法不是 <code>NetworkBehaviour</code>、Server RPC 在纯 Client 调</td></tr><tr><td>客户端看不到物体</td><td>预制体未进 Network Prefabs、Server 未 Spawn</td></tr><tr><td>位置抖动 / 回弹</td><td>Client 与 Server 同时改 Transform；应只权威端写</td></tr><tr><td>Host 正常、专服异常</td><td>用了仅 Client 的逻辑，未用 <code>IsServer</code> 区分</td></tr><tr><td>VR 身体与头分离</td><td>Rig 与 Network Player 根节点混用；应用子节点分离</td></tr><tr><td>变量不同步</td><td>写权限不是 Server 却在客户端改 <code>.Value</code></td></tr></tbody></table></div><p><strong>调试工具</strong></p><ul><li><strong>Multiplayer Play Mode</strong>：编辑器内多实例</li><li><strong>Network Profiler / Stats</strong>：Package Manager → Multiplayer Tools</li><li>日志：<code>NetworkLog.LogInfo</code>、连接事件 <code>OnClientConnectedCallback</code></li></ul><hr><h2 id=网络概念>网络概念</h2><div class=table-wrapper><table><thead><tr><th>主题</th><th>描述</th></tr></thead><tbody><tr><td><strong>权威（Authority）</strong></td><td>谁负责该对象的“真相”状态；状态同步由权威端产生</td></tr><tr><td><strong>所有权（Ownership）</strong></td><td>哪个 <code>ClientId</code> 是该 <code>NetworkObject</code> 的 Owner；影响谁可发部分 RPC、Owner 写变量</td></tr><tr><td><strong>网络拓扑</strong></td><td>Dedicated Server、Listen Server（Host）、纯 P2P（NGO 以服为中心）</td></tr></tbody></table></div><hr><h2 id=配置>配置</h2><h3 id=连接配置>连接配置</h3><ul><li><strong>NetworkManager → Network Config</strong>：地址、端口、Player Prefab、Tick、连接数。</li><li><strong>Connection Approval</strong>：<code>ConnectionApproval = true</code> 时必须实现 <code>ConnectionApprovalCallback</code>，否则连接会被拒。</li></ul><h3 id=传输transport>传输（Transport）</h3><ul><li><strong>Unity Transport（UTP）</strong>：UDP；可配 <code>ConnectionData</code> 的 <code>Address</code>、<code>Port</code>。</li><li>局域网：<code>127.0.0.1</code> + 同一端口；真机需本机局域网 IP。</li></ul><h3 id=unity-relay>Unity Relay</h3><ul><li>NGO + Relay：房间码 / Join Code 交换 Allocation 数据，客户端无需知道主机真实 IP。</li></ul><h3 id=命令行参数>命令行参数</h3><ul><li><code>-server</code>、<code>-client</code>、<code>-ip</code>、<code>-port</code> 等由启动脚本解析并写入 <code>UnityTransport</code>。</li></ul></section><footer class=article-footer><section class=article-tags><a href=/tags/ngo/>NGO</a>
+<a href=/tags/%E8%81%94%E7%BD%91/>联网</a>
+<a href=/tags/unity/>Unity</a></section><section class=article-copyright><svg class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>仅用于交流学习，记录学习心得</span></section><section class=article-lastmod><svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<span>最后更新于 Oct 20, 2026 00:36 +0800</span></section></footer></article><nav class=series-nav aria-label=系列导航><div class=series-nav__head><span class=series-nav__label>系列</span>
+<a class=series-nav__series-title href=/series/#unity-network>Unity 多人联网</a><p class=series-nav__desc>Mirror、NGO 与热更新</p><a class=series-nav__index href=/series/#unity-network>在系列索引中查看全部 →</a></div><ol class=series-nav__outline><li><a href=/p/mirror/>Mirror 联网笔记</a></li><li class=is-current><a href=/p/network-for-gameobjects/>Netcode for GameObjects 笔记</a></li><li><a href=/p/unity-multiplayer-mirror-ngo/>Unity 多人联网：Mirror 与 NGO</a></li><li><a href=/p/hot-update/>热更新</a></li></ol><div class=series-nav__pager><a class=series-nav__prev href=/p/mirror/><span>← 上一篇</span>Mirror 联网笔记</a><a class=series-nav__next href=/p/unity-multiplayer-mirror-ngo/><span>下一篇 →</span>Unity 多人联网：Mirror 与 NGO</a></div></nav><aside class=related-content--wrapper><h2 class=section-title>相关文章</h2><div class=related-content><div class="flex article-list--tile"><article><a href=/p/mirror/><div class=article-details><h2 class=article-title>Mirror 联网笔记</h2></div></a></article><article><a href=/p/unity-multiplayer-mirror-ngo/><div class=article-details><h2 class=article-title>Unity 多人联网：Mirror 与 NGO</h2></div></a></article><article><a href=/p/unity-a-star/><div class=article-details><h2 class=article-title>Unity A* 寻路算法</h2></div></a></article><article><a href=/p/ui-system/><div class=article-details><h2 class=article-title>UI 系统</h2></div></a></article><article><a href=/p/unity-yaml/><div class=article-details><h2 class=article-title>Unity YAML</h2></div></a></article></div></div></aside><footer class=site-footer><section class=copyright>&copy;
+2024 -
+2026 元某人也</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.c922af694cc257bf1ecc41c0dd7b0430f9114ec280ccf67cd2c6ad55f5316c4e.js defer></script><script type=text/javascript src=/ts/custom.35a00062ea1ed0a833f7d9144cf4eb5b3b889f58d2486b3b50c37a6e98e47606.js defer></script><div class=scroll-progress id=scroll-progress aria-hidden=true></div></body></html>

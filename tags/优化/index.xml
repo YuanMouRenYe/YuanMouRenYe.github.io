@@ -1,23 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>优化 on 元某人也</title>
-        <link>https://yuanmourenye.github.io/tags/%E4%BC%98%E5%8C%96/</link>
-        <description>Recent content in 优化 on 元某人也</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
-        <copyright>元某人也</copyright>
-        <lastBuildDate>Tue, 20 Oct 2026 00:36:44 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/%E4%BC%98%E5%8C%96/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Unity GUI 优化</title>
-        <link>https://yuanmourenye.github.io/p/unity-gui-optimization/</link>
-        <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
-        
-        <guid>https://yuanmourenye.github.io/p/unity-gui-optimization/</guid>
-        <description>&lt;h1 id=&#34;unity-gui-优化&#34;&gt;Unity GUI 优化
-&lt;/h1&gt;&lt;h2 id=&#34;1概念&#34;&gt;1.概念
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>优化 on 元某人也</title><link>https://yuanmourenye.github.io/tags/%E4%BC%98%E5%8C%96/</link><description>Recent content in 优化 on 元某人也</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>元某人也</copyright><lastBuildDate>Tue, 20 Oct 2026 00:36:44 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/%E4%BC%98%E5%8C%96/index.xml" rel="self" type="application/rss+xml"/><item><title>Unity GUI 优化</title><link>https://yuanmourenye.github.io/p/unity-gui-optimization/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-gui-optimization/</guid><description>&lt;h1 id="unity-gui-优化"&gt;Unity GUI 优化
+&lt;/h1&gt;&lt;h2 id="1概念"&gt;1.概念
 &lt;/h2&gt;&lt;p&gt;同一 &lt;strong&gt;Canvas&lt;/strong&gt; 下，满足合批规则的多个 UI 元素的网格数据合并到一个顶点缓冲区，仅用一个 &lt;strong&gt;DrawCall&lt;/strong&gt; 提交 GPU 渲染。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;2-合批条件&#34;&gt;2. 合批条件
+&lt;h2 id="2-合批条件"&gt;2. 合批条件
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;处在同一 Canvas 下&lt;/li&gt;
 &lt;li&gt;共享同一个图集（或相同贴图）以及&lt;strong&gt;相同的材质实例&lt;/strong&gt;&lt;/li&gt;
@@ -29,7 +14,7 @@
 &lt;li&gt;&lt;strong&gt;VisibleList&lt;/strong&gt; 中元素&lt;strong&gt;相邻&lt;/strong&gt;（连续）且 &lt;strong&gt;Depth&lt;/strong&gt; 相同（不被穿插）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;3-合批流程&#34;&gt;3. 合批流程
+&lt;h2 id="3-合批流程"&gt;3. 合批流程
 &lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;按照 Hierarchy 窗口的层级做&lt;strong&gt;深度优先搜索&lt;/strong&gt;，确定基础的渲染顺序（层级越靠上，越优先渲染）。&lt;/li&gt;
 &lt;li&gt;计算各元素的 &lt;strong&gt;Depth&lt;/strong&gt;。&lt;/li&gt;
@@ -47,17 +32,17 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;ol start=&#34;3&#34;&gt;
+&lt;ol start="3"&gt;
 &lt;li&gt;按照 &lt;strong&gt;Depth → Mat ID → Texture ID → Renderer Order&lt;/strong&gt;（Inspector 面板的顺序）从小到大排序，得到 &lt;strong&gt;VisibleList&lt;/strong&gt;。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;注&lt;/strong&gt;：计算 Depth 时已在考虑材质与纹理；此处的比较是在 Depth &lt;strong&gt;相同&lt;/strong&gt;的情况下进行。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;ol start=&#34;4&#34;&gt;
+&lt;ol start="4"&gt;
 &lt;li&gt;依次检查 VisibleList 的&lt;strong&gt;相邻元素&lt;/strong&gt;是否满足合批条件。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;4-优化方案&#34;&gt;4. 优化方案
+&lt;h2 id="4-优化方案"&gt;4. 优化方案
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;动静分离&lt;/strong&gt;（动态与静态 UI 使用不同 Canvas）
 &lt;ul&gt;
@@ -76,50 +61,45 @@
 &lt;li&gt;使用&lt;strong&gt;图集&lt;/strong&gt;。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;5-重建&#34;&gt;5. 重建
-&lt;/h2&gt;&lt;h3 id=&#34;概念&#34;&gt;概念
+&lt;h2 id="5-重建"&gt;5. 重建
+&lt;/h2&gt;&lt;h3 id="概念"&gt;概念
 &lt;/h3&gt;&lt;p&gt;CPU 计算网格；UI 元素的 &lt;strong&gt;RectTransform&lt;/strong&gt; 尺寸与锚点变化、视觉元素的改变，都会使得&lt;strong&gt;同一 Canvas 下&lt;/strong&gt;的所有元素发生&lt;strong&gt;网格重建&lt;/strong&gt;。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;注&lt;/strong&gt;：Unity 将网格重建放在&lt;strong&gt;子线程&lt;/strong&gt;上执行，以降低重建消耗；因此 Unity 官方并不强制要求使用多个 Canvas 来规避重建。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;要点速查&#34;&gt;要点速查
+&lt;h2 id="要点速查"&gt;要点速查
 &lt;/h2&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;主题&lt;/th&gt;
-          &lt;th&gt;要点&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;合批本质&lt;/td&gt;
-          &lt;td&gt;同 Canvas + 同材质实例 + 同图集/贴图 + VisibleList 相邻且 Depth 相同&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Depth&lt;/td&gt;
-          &lt;td&gt;重叠且材质/图集不同 → Depth +1，打断合批&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;多 Canvas&lt;/td&gt;
-          &lt;td&gt;打断合批，但利于动静分离、减少重建范围&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Text / Image&lt;/td&gt;
-          &lt;td&gt;分 Canvas，避免穿插&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Mask&lt;/td&gt;
-          &lt;td&gt;慎用，+2 DrawCall&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;重建&lt;/td&gt;
-          &lt;td&gt;同 Canvas 内 RectTransform / 视觉变化会触发全 Canvas 重建&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-        </item>
-        
-    </channel>
-</rss>
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;主题&lt;/th&gt;
+&lt;th&gt;要点&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;合批本质&lt;/td&gt;
+&lt;td&gt;同 Canvas + 同材质实例 + 同图集/贴图 + VisibleList 相邻且 Depth 相同&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Depth&lt;/td&gt;
+&lt;td&gt;重叠且材质/图集不同 → Depth +1，打断合批&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;多 Canvas&lt;/td&gt;
+&lt;td&gt;打断合批，但利于动静分离、减少重建范围&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Text / Image&lt;/td&gt;
+&lt;td&gt;分 Canvas，避免穿插&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Mask&lt;/td&gt;
+&lt;td&gt;慎用，+2 DrawCall&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;重建&lt;/td&gt;
+&lt;td&gt;同 Canvas 内 RectTransform / 视觉变化会触发全 Canvas 重建&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description></item></channel></rss>

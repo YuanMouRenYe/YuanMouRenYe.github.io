@@ -1,357 +1,309 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>序列化 on 元某人也</title>
-        <link>https://yuanmourenye.github.io/tags/%E5%BA%8F%E5%88%97%E5%8C%96/</link>
-        <description>Recent content in 序列化 on 元某人也</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
-        <copyright>元某人也</copyright>
-        <lastBuildDate>Tue, 20 Oct 2026 00:36:44 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/%E5%BA%8F%E5%88%97%E5%8C%96/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Unity YAML</title>
-        <link>https://yuanmourenye.github.io/p/unity-yaml/</link>
-        <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
-        
-        <guid>https://yuanmourenye.github.io/p/unity-yaml/</guid>
-        <description>&lt;h1 id=&#34;unity-yaml&#34;&gt;Unity YAML
-&lt;/h1&gt;&lt;h2 id=&#34;1-yaml-文件结构&#34;&gt;1. YAML 文件结构
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/unity-yaml/img/csdn-129da38f81204a77890ac5f6bc23fbf9.png&#34;
-	width=&#34;239&#34;
-	height=&#34;43&#34;
-	srcset=&#34;https://yuanmourenye.github.io/p/unity-yaml/img/csdn-129da38f81204a77890ac5f6bc23fbf9_hu_9289304cf104a473.png 480w, https://yuanmourenye.github.io/p/unity-yaml/img/csdn-129da38f81204a77890ac5f6bc23fbf9_hu_f88a60961cb4e2a0.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;YAML 文件整体结构&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;555&#34;
-		data-flex-basis=&#34;1333px&#34;
-	
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>序列化 on 元某人也</title><link>https://yuanmourenye.github.io/tags/%E5%BA%8F%E5%88%97%E5%8C%96/</link><description>Recent content in 序列化 on 元某人也</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>元某人也</copyright><lastBuildDate>Tue, 20 Oct 2026 00:36:44 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/%E5%BA%8F%E5%88%97%E5%8C%96/index.xml" rel="self" type="application/rss+xml"/><item><title>Unity YAML</title><link>https://yuanmourenye.github.io/p/unity-yaml/</link><pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-yaml/</guid><description>&lt;h1 id="unity-yaml"&gt;Unity YAML
+&lt;/h1&gt;&lt;h2 id="1-yaml-文件结构"&gt;1. YAML 文件结构
+&lt;/h2&gt;&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/p/unity-yaml/img/csdn-129da38f81204a77890ac5f6bc23fbf9.png"
+width="239"
+height="43"
+srcset="https://yuanmourenye.github.io/p/unity-yaml/img/csdn-129da38f81204a77890ac5f6bc23fbf9_hu_9289304cf104a473.png 480w, https://yuanmourenye.github.io/p/unity-yaml/img/csdn-129da38f81204a77890ac5f6bc23fbf9_hu_f88a60961cb4e2a0.png 1024w"
+loading="lazy"
+alt="YAML 文件整体结构"
+class="gallery-image"
+data-flex-grow="555"
+data-flex-basis="1333px"
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;11-文件头&#34;&gt;1.1 文件头
+&lt;h3 id="11-文件头"&gt;1.1 文件头
 &lt;/h3&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;行&lt;/th&gt;
-          &lt;th&gt;内容&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;第一行&lt;/td&gt;
-          &lt;td&gt;YAML 版本号&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;第二行&lt;/td&gt;
-          &lt;td&gt;定义 &lt;code&gt;!u!&lt;/code&gt; 的宏（Unity 专用标签前缀）&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;行&lt;/th&gt;
+&lt;th&gt;内容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;第一行&lt;/td&gt;
+&lt;td&gt;YAML 版本号&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;第二行&lt;/td&gt;
+&lt;td&gt;定义 &lt;code&gt;!u!&lt;/code&gt; 的宏（Unity 专用标签前缀）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;典型文件头示例：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;l&#34;&gt;%YAML 1.1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;%TAG !u! tag:unity3d.com,2011&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="l"&gt;%YAML 1.1&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;%TAG !u! tag:unity3d.com,2011&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;12-对象定义块&#34;&gt;1.2 对象定义块
-&lt;/h3&gt;&lt;h4 id=&#34;1标头格式&#34;&gt;（1）标头格式
-&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/unity-yaml/img/csdn-cf8ae99a6b7d4778b8dc2b8dc09f3193.png&#34;
-	width=&#34;255&#34;
-	height=&#34;21&#34;
-	srcset=&#34;https://yuanmourenye.github.io/p/unity-yaml/img/csdn-cf8ae99a6b7d4778b8dc2b8dc09f3193_hu_3a15dc65e55665c6.png 480w, https://yuanmourenye.github.io/p/unity-yaml/img/csdn-cf8ae99a6b7d4778b8dc2b8dc09f3193_hu_ba49a484eb97de04.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;对象标头格式&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;1214&#34;
-		data-flex-basis=&#34;2914px&#34;
-	
+&lt;/div&gt;&lt;h3 id="12-对象定义块"&gt;1.2 对象定义块
+&lt;/h3&gt;&lt;h4 id="1标头格式"&gt;（1）标头格式
+&lt;/h4&gt;&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/p/unity-yaml/img/csdn-cf8ae99a6b7d4778b8dc2b8dc09f3193.png"
+width="255"
+height="21"
+srcset="https://yuanmourenye.github.io/p/unity-yaml/img/csdn-cf8ae99a6b7d4778b8dc2b8dc09f3193_hu_3a15dc65e55665c6.png 480w, https://yuanmourenye.github.io/p/unity-yaml/img/csdn-cf8ae99a6b7d4778b8dc2b8dc09f3193_hu_ba49a484eb97de04.png 1024w"
+loading="lazy"
+alt="对象标头格式"
+class="gallery-image"
+data-flex-grow="1214"
+data-flex-basis="2914px"
 &gt;&lt;/p&gt;
 &lt;p&gt;格式示意：&lt;code&gt;--- !u!&amp;lt;ClassID&amp;gt; &amp;amp;&amp;lt;FILE ID&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;字段&lt;/th&gt;
-          &lt;th&gt;说明&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;Class ID&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;Unity 内部类的唯一编号（如 &lt;code&gt;1&lt;/code&gt; 对应 &lt;code&gt;GameObject&lt;/code&gt;），表示对象类型&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;FILE ID&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;该对象在&lt;strong&gt;当前 YAML 文件内&lt;/strong&gt;的唯一 ID，用于文件内对象互相引用&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字段&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Class ID&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Unity 内部类的唯一编号（如 &lt;code&gt;1&lt;/code&gt; 对应 &lt;code&gt;GameObject&lt;/code&gt;），表示对象类型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;FILE ID&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;该对象在&lt;strong&gt;当前 YAML 文件内&lt;/strong&gt;的唯一 ID，用于文件内对象互相引用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Class ID 完整列表见官方：&lt;a class=&#34;link&#34; href=&#34;https://docs.unity3d.com/Manual/ClassIDReference.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Class ID Reference&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Class ID 完整列表见官方：&lt;a class="link" href="https://docs.unity3d.com/Manual/ClassIDReference.html" target="_blank" rel="noopener"
+&gt;Class ID Reference&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;示例：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nn&#34;&gt;---&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;!&lt;span class=&#34;l&#34;&gt;u!1 &amp;amp;8410423576689524921&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nn"&gt;---&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;!&lt;span class="l"&gt;u!1 &amp;amp;8410423576689524921&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;2标头下方&#34;&gt;（2）标头下方
+&lt;/div&gt;&lt;h4 id="2标头下方"&gt;（2）标头下方
 &lt;/h4&gt;&lt;p&gt;&lt;strong&gt;对象类型名称 + 全量序列化属性&lt;/strong&gt;（字段名以 &lt;code&gt;m_&lt;/code&gt; 开头居多）。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/unity-yaml/img/csdn-ba539039311c43b69b81855cc23de624.png&#34;
-	width=&#34;356&#34;
-	height=&#34;341&#34;
-	srcset=&#34;https://yuanmourenye.github.io/p/unity-yaml/img/csdn-ba539039311c43b69b81855cc23de624_hu_45b98dfc6f79c9e5.png 480w, https://yuanmourenye.github.io/p/unity-yaml/img/csdn-ba539039311c43b69b81855cc23de624_hu_98a95fcae548d718.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;GameObject 序列化示例&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;104&#34;
-		data-flex-basis=&#34;250px&#34;
-	
+&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/p/unity-yaml/img/csdn-ba539039311c43b69b81855cc23de624.png"
+width="356"
+height="341"
+srcset="https://yuanmourenye.github.io/p/unity-yaml/img/csdn-ba539039311c43b69b81855cc23de624_hu_45b98dfc6f79c9e5.png 480w, https://yuanmourenye.github.io/p/unity-yaml/img/csdn-ba539039311c43b69b81855cc23de624_hu_98a95fcae548d718.png 1024w"
+loading="lazy"
+alt="GameObject 序列化示例"
+class="gallery-image"
+data-flex-grow="104"
+data-flex-basis="250px"
 &gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;2-同一-yaml-文件内引用&#34;&gt;2. 同一 YAML 文件内引用
+&lt;h2 id="2-同一-yaml-文件内引用"&gt;2. 同一 YAML 文件内引用
 &lt;/h2&gt;&lt;p&gt;通过 &lt;code&gt;{fileID: &amp;lt;FILE ID&amp;gt;}&lt;/code&gt; 格式实现。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/unity-yaml/img/csdn-d6463b211cba467c8afef6af1c01761b.png&#34;
-	width=&#34;351&#34;
-	height=&#34;359&#34;
-	srcset=&#34;https://yuanmourenye.github.io/p/unity-yaml/img/csdn-d6463b211cba467c8afef6af1c01761b_hu_d0ab6ab207cb3559.png 480w, https://yuanmourenye.github.io/p/unity-yaml/img/csdn-d6463b211cba467c8afef6af1c01761b_hu_370257890ae03b92.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;同文件引用示例 1&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;97&#34;
-		data-flex-basis=&#34;234px&#34;
-	
+&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/p/unity-yaml/img/csdn-d6463b211cba467c8afef6af1c01761b.png"
+width="351"
+height="359"
+srcset="https://yuanmourenye.github.io/p/unity-yaml/img/csdn-d6463b211cba467c8afef6af1c01761b_hu_d0ab6ab207cb3559.png 480w, https://yuanmourenye.github.io/p/unity-yaml/img/csdn-d6463b211cba467c8afef6af1c01761b_hu_370257890ae03b92.png 1024w"
+loading="lazy"
+alt="同文件引用示例 1"
+class="gallery-image"
+data-flex-grow="97"
+data-flex-basis="234px"
 &gt;
-&lt;img src=&#34;https://yuanmourenye.github.io/p/unity-yaml/img/csdn-ec442480bc6e44a3819f6747082baf71.png&#34;
-	width=&#34;368&#34;
-	height=&#34;303&#34;
-	srcset=&#34;https://yuanmourenye.github.io/p/unity-yaml/img/csdn-ec442480bc6e44a3819f6747082baf71_hu_abb76227e42072c9.png 480w, https://yuanmourenye.github.io/p/unity-yaml/img/csdn-ec442480bc6e44a3819f6747082baf71_hu_b79db0d7297b25cd.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;同文件引用示例 2&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;121&#34;
-		data-flex-basis=&#34;291px&#34;
-	
+&lt;img src="https://yuanmourenye.github.io/p/unity-yaml/img/csdn-ec442480bc6e44a3819f6747082baf71.png"
+width="368"
+height="303"
+srcset="https://yuanmourenye.github.io/p/unity-yaml/img/csdn-ec442480bc6e44a3819f6747082baf71_hu_abb76227e42072c9.png 480w, https://yuanmourenye.github.io/p/unity-yaml/img/csdn-ec442480bc6e44a3819f6747082baf71_hu_b79db0d7297b25cd.png 1024w"
+loading="lazy"
+alt="同文件引用示例 2"
+class="gallery-image"
+data-flex-grow="121"
+data-flex-basis="291px"
 &gt;&lt;/p&gt;
 &lt;p&gt;示例：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;m_GameObject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;{&lt;span class=&#34;nt&#34;&gt;fileID&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8410423576689524921&lt;/span&gt;}&lt;span class=&#34;w&#34;&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;m_GameObject&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;{&lt;span class="nt"&gt;fileID&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;8410423576689524921&lt;/span&gt;}&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;注&lt;/strong&gt;：在同一 YAML 文件中，&lt;code&gt;Transform&lt;/code&gt; 组件通过 &lt;code&gt;m_GameObject&lt;/code&gt; 引用所属 &lt;code&gt;GameObject&lt;/code&gt; 的 &lt;strong&gt;File ID&lt;/strong&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;3-跨-yaml-文件引用&#34;&gt;3. 跨 YAML 文件引用
-&lt;/h2&gt;&lt;h3 id=&#34;31-guid&#34;&gt;3.1 GUID
+&lt;h2 id="3-跨-yaml-文件引用"&gt;3. 跨 YAML 文件引用
+&lt;/h2&gt;&lt;h3 id="31-guid"&gt;3.1 GUID
 &lt;/h3&gt;&lt;p&gt;整个&lt;strong&gt;资产文件&lt;/strong&gt;的全局唯一 ID，保存在与资产&lt;strong&gt;同路径、同名&lt;/strong&gt;的 &lt;code&gt;.meta&lt;/code&gt; 文件中。&lt;/p&gt;
-&lt;h3 id=&#34;32-meta-文件&#34;&gt;3.2 &lt;code&gt;.meta&lt;/code&gt; 文件
+&lt;h3 id="32-meta-文件"&gt;3.2 &lt;code&gt;.meta&lt;/code&gt; 文件
 &lt;/h3&gt;&lt;p&gt;存储 &lt;strong&gt;GUID&lt;/strong&gt;、资产导入设置、Asset Bundle 配置等核心元数据。&lt;/p&gt;
-&lt;h3 id=&#34;33-yaml-中的-type-字段&#34;&gt;3.3 YAML 中的 &lt;code&gt;type&lt;/code&gt; 字段
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/unity-yaml/img/csdn-9b413ca92bb241609208ec260c25a6ad.png&#34;
-	width=&#34;555&#34;
-	height=&#34;43&#34;
-	srcset=&#34;https://yuanmourenye.github.io/p/unity-yaml/img/csdn-9b413ca92bb241609208ec260c25a6ad_hu_f49455397edb119d.png 480w, https://yuanmourenye.github.io/p/unity-yaml/img/csdn-9b413ca92bb241609208ec260c25a6ad_hu_fb516d4849c82a38.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;type 字段示例&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;1290&#34;
-		data-flex-basis=&#34;3097px&#34;
-	
+&lt;h3 id="33-yaml-中的-type-字段"&gt;3.3 YAML 中的 &lt;code&gt;type&lt;/code&gt; 字段
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/p/unity-yaml/img/csdn-9b413ca92bb241609208ec260c25a6ad.png"
+width="555"
+height="43"
+srcset="https://yuanmourenye.github.io/p/unity-yaml/img/csdn-9b413ca92bb241609208ec260c25a6ad_hu_f49455397edb119d.png 480w, https://yuanmourenye.github.io/p/unity-yaml/img/csdn-9b413ca92bb241609208ec260c25a6ad_hu_fb516d4849c82a38.png 1024w"
+loading="lazy"
+alt="type 字段示例"
+class="gallery-image"
+data-flex-grow="1290"
+data-flex-basis="3097px"
 &gt;&lt;/p&gt;
 &lt;p&gt;跨文件引用常见写法：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;m_Script&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;{&lt;span class=&#34;nt&#34;&gt;fileID: 11500000, guid: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;}&lt;span class=&#34;w&#34;&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;m_Script&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;{&lt;span class="nt"&gt;fileID: 11500000, guid: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, type&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;}&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;&lt;code&gt;type&lt;/code&gt; 值&lt;/th&gt;
-          &lt;th&gt;含义&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;2&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;从 &lt;strong&gt;Assets&lt;/strong&gt; 文件夹加载资源&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;3&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;资源经导入写入 &lt;strong&gt;Library&lt;/strong&gt;，由编辑器从 Library 加载&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;code&gt;type&lt;/code&gt; 值&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;2&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;从 &lt;strong&gt;Assets&lt;/strong&gt; 文件夹加载资源&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;3&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;资源经导入写入 &lt;strong&gt;Library&lt;/strong&gt;，由编辑器从 Library 加载&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;34-脚本序列化&#34;&gt;3.4 脚本序列化
+&lt;h3 id="34-脚本序列化"&gt;3.4 脚本序列化
 &lt;/h3&gt;&lt;p&gt;所有&lt;strong&gt;自定义脚本&lt;/strong&gt;在 YAML 中均序列化为 &lt;strong&gt;&lt;code&gt;MonoBehaviour&lt;/code&gt;&lt;/strong&gt; 类型；通过 &lt;code&gt;m_Script&lt;/code&gt; &lt;strong&gt;引用脚本对应 &lt;code&gt;.meta&lt;/code&gt; 的 GUID&lt;/strong&gt; 关联到具体 C# 文件。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;MonoBehaviour&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;m_Script&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;{&lt;span class=&#34;nt&#34;&gt;fileID: 11500000, guid: abcd1234..., type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;}&lt;span class=&#34;w&#34;&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;MonoBehaviour&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;m_Script&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;{&lt;span class="nt"&gt;fileID: 11500000, guid: abcd1234..., type&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;}&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;C# 源文件本身不是 YAML；脚本的 &lt;code&gt;.meta&lt;/code&gt; GUID 是 &lt;code&gt;MonoBehaviour&lt;/code&gt; 与代码文件之间的&lt;strong&gt;唯一桥梁&lt;/strong&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;4-yaml-文件与-meta-文件&#34;&gt;4. YAML 文件与 &lt;code&gt;.meta&lt;/code&gt; 文件
-&lt;/h2&gt;&lt;h3 id=&#34;41-yaml-文件资产本体&#34;&gt;4.1 YAML 文件（资产本体）
+&lt;h2 id="4-yaml-文件与-meta-文件"&gt;4. YAML 文件与 &lt;code&gt;.meta&lt;/code&gt; 文件
+&lt;/h2&gt;&lt;h3 id="41-yaml-文件资产本体"&gt;4.1 YAML 文件（资产本体）
 &lt;/h3&gt;&lt;p&gt;底层序列化存储格式，是资产的&lt;strong&gt;实际内容&lt;/strong&gt;。&lt;/p&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;资产类型&lt;/th&gt;
-          &lt;th&gt;扩展名&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;预制体&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;.prefab&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;场景&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;.unity&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;材质&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;.mat&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;动画片段&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;.anim&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;ScriptableObject&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;.asset&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;资产类型&lt;/th&gt;
+&lt;th&gt;扩展名&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;预制体&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;.prefab&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;场景&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;.unity&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;材质&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;.mat&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;动画片段&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;.anim&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ScriptableObject&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;.asset&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;注&lt;/strong&gt;：PNG / FBX / MP3 等源文件为&lt;strong&gt;二进制&lt;/strong&gt;，引擎侧配置主要在 &lt;code&gt;.meta&lt;/code&gt; 中；&lt;strong&gt;C# 脚本不是 YAML&lt;/strong&gt;，仅通过 &lt;code&gt;.meta&lt;/code&gt; 的 GUID 与 &lt;code&gt;MonoBehaviour&lt;/code&gt; 关联。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;42-meta-文件元数据&#34;&gt;4.2 &lt;code&gt;.meta&lt;/code&gt; 文件（元数据）
+&lt;h3 id="42-meta-文件元数据"&gt;4.2 &lt;code&gt;.meta&lt;/code&gt; 文件（元数据）
 &lt;/h3&gt;&lt;p&gt;自动生成的元数据，与资产&lt;strong&gt;同目录、同名&lt;/strong&gt;（如 &lt;code&gt;Player.prefab&lt;/code&gt; → &lt;code&gt;Player.prefab.meta&lt;/code&gt;），是资产的&lt;strong&gt;全局标识与配置&lt;/strong&gt;。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;Assets&lt;/code&gt; 下所有内容均有对应 &lt;code&gt;.meta&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;版本管理时 &lt;strong&gt;必须一并提交&lt;/strong&gt; &lt;code&gt;.meta&lt;/code&gt;，否则 GUID 变化会导致引用丢失&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;关系速查&#34;&gt;关系速查
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://yuanmourenye.github.io/p/unity-yaml/img/image-20260520092814044.png&#34;
-	width=&#34;1367&#34;
-	height=&#34;329&#34;
-	srcset=&#34;https://yuanmourenye.github.io/p/unity-yaml/img/image-20260520092814044_hu_58ae0fb591e9a0c5.png 480w, https://yuanmourenye.github.io/p/unity-yaml/img/image-20260520092814044_hu_d3d663662c5582b9.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;image-20260520092814044&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;415&#34;
-		data-flex-basis=&#34;997px&#34;
-	
+&lt;h2 id="关系速查"&gt;关系速查
+&lt;/h2&gt;&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/p/unity-yaml/img/image-20260520092814044.png"
+width="1367"
+height="329"
+srcset="https://yuanmourenye.github.io/p/unity-yaml/img/image-20260520092814044_hu_58ae0fb591e9a0c5.png 480w, https://yuanmourenye.github.io/p/unity-yaml/img/image-20260520092814044_hu_d3d663662c5582b9.png 1024w"
+loading="lazy"
+alt="image-20260520092814044"
+class="gallery-image"
+data-flex-grow="415"
+data-flex-basis="997px"
 &gt;&lt;/p&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;概念&lt;/th&gt;
-          &lt;th&gt;作用域&lt;/th&gt;
-          &lt;th&gt;存放位置&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;FILE ID&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;单个 YAML 文件内&lt;/td&gt;
-          &lt;td&gt;对象标头 &lt;code&gt;&amp;amp;数字&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;GUID&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;整个项目全局&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;.meta&lt;/code&gt; 文件&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;Class ID&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;Unity 类型系统&lt;/td&gt;
-          &lt;td&gt;对象标头 &lt;code&gt;!u!数字&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;概念&lt;/th&gt;
+&lt;th&gt;作用域&lt;/th&gt;
+&lt;th&gt;存放位置&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;FILE ID&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;单个 YAML 文件内&lt;/td&gt;
+&lt;td&gt;对象标头 &lt;code&gt;&amp;amp;数字&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;GUID&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;整个项目全局&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;.meta&lt;/code&gt; 文件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Class ID&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Unity 类型系统&lt;/td&gt;
+&lt;td&gt;对象标头 &lt;code&gt;!u!数字&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;要点速查&#34;&gt;要点速查
+&lt;h2 id="要点速查"&gt;要点速查
 &lt;/h2&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;主题&lt;/th&gt;
-          &lt;th&gt;要点&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;文件头&lt;/td&gt;
-          &lt;td&gt;YAML 版本 + &lt;code&gt;!u!&lt;/code&gt; 宏&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;对象块&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;Class ID&lt;/code&gt; 表类型，&lt;code&gt;FILE ID&lt;/code&gt; 表文件内引用&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;文件内引用&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;{fileID: ...}&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;跨文件引用&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;{fileID, guid, type}&lt;/code&gt;，&lt;code&gt;type&lt;/code&gt; 2=Assets，3=Library&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;自定义脚本&lt;/td&gt;
-          &lt;td&gt;序列化为 &lt;code&gt;MonoBehaviour&lt;/code&gt;，靠脚本 &lt;code&gt;.meta&lt;/code&gt; 的 GUID&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;.meta&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;GUID + 导入设置；与资产成对存在&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-        </item>
-        
-    </channel>
-</rss>
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;主题&lt;/th&gt;
+&lt;th&gt;要点&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;文件头&lt;/td&gt;
+&lt;td&gt;YAML 版本 + &lt;code&gt;!u!&lt;/code&gt; 宏&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;对象块&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;Class ID&lt;/code&gt; 表类型，&lt;code&gt;FILE ID&lt;/code&gt; 表文件内引用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;文件内引用&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;{fileID: ...}&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;跨文件引用&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;{fileID, guid, type}&lt;/code&gt;，&lt;code&gt;type&lt;/code&gt; 2=Assets，3=Library&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自定义脚本&lt;/td&gt;
+&lt;td&gt;序列化为 &lt;code&gt;MonoBehaviour&lt;/code&gt;，靠脚本 &lt;code&gt;.meta&lt;/code&gt; 的 GUID&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;.meta&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;GUID + 导入设置；与资产成对存在&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description></item></channel></rss>
