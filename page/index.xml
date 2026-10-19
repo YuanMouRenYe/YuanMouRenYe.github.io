@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on 元某人也</title><link>https://yuanmourenye.github.io/page/</link><description>Recent content in Pages on 元某人也</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>元某人也</copyright><lastBuildDate>Tue, 20 Oct 2026 00:36:44 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/page/index.xml" rel="self" type="application/rss+xml"/><item><title>归档</title><link>https://yuanmourenye.github.io/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/archives/</guid><description/></item><item><title>分类 &amp; 标签</title><link>https://yuanmourenye.github.io/categories-tags/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/categories-tags/</guid><description>&lt;p&gt;按主题浏览文章：&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on 元某人也</title><link>https://yuanmourenye.github.io/page/</link><description>Recent content in Pages on 元某人也</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>元某人也</copyright><lastBuildDate>Tue, 20 Oct 2026 01:22:27 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/page/index.xml" rel="self" type="application/rss+xml"/><item><title>归档</title><link>https://yuanmourenye.github.io/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/archives/</guid><description/></item><item><title>分类 &amp; 标签</title><link>https://yuanmourenye.github.io/categories-tags/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/categories-tags/</guid><description>&lt;p&gt;按主题浏览文章：&lt;/p&gt;
 &lt;a href="https://yuanmourenye.github.io/series/" class="icon-nav-link"&gt;
 &lt;span class="icon-nav-link__icon"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;
 &lt;path stroke="none" d="M0 0h24v24H0z"/&gt;
@@ -28,13 +28,14 @@
 &lt;/span&gt;
 &lt;span class="icon-nav-link__text"&gt;全部标签&lt;/span&gt;
 &lt;/a&gt;</description></item><item><title>关于</title><link>https://yuanmourenye.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/about/</guid><description>&lt;p&gt;你好，我是 &lt;strong&gt;元某人也&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;游戏客户端方向的学习者，主要记录 &lt;strong&gt;Unity / C#&lt;/strong&gt; 与计算机基础的学习笔记，偶尔写一些工具链和站点维护的心得。&lt;/p&gt;
+&lt;p&gt;游戏客户端方向的学习者，主要记录 &lt;strong&gt;Unity / C#&lt;/strong&gt; 与计算机基础的学习笔记，也会写工程自动化、AI 辅助开发这类「把重复劳动交给工具」的实践。&lt;/p&gt;
 &lt;h2 id="关注方向"&gt;关注方向
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;Unity 多人联网（Mirror / Netcode for GameObjects）&lt;/li&gt;
 &lt;li&gt;UGUI 与运行时性能优化&lt;/li&gt;
 &lt;li&gt;操作系统、数据库、编译原理&lt;/li&gt;
-&lt;li&gt;用 Hugo 维护这个站点，并把它写成一个可检索的资料库&lt;/li&gt;
+&lt;li&gt;工程自动化：把跨系统的通知、集成、部署串成一条能跑的链路&lt;/li&gt;
+&lt;li&gt;AI 辅助开发：怎么给上下文、怎么审输出、什么时候不该用它&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="这个站"&gt;这个站
 &lt;/h2&gt;&lt;ul&gt;
