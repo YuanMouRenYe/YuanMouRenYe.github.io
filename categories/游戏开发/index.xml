@@ -7,8 +7,8 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>元某人也</copyright>
-        <lastBuildDate>Tue, 16 Jun 2026 13:38:23 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>【Unity】Unity A* 寻路算法</title>
+        <lastBuildDate>Tue, 20 Oct 2026 00:36:44 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Unity A* 寻路算法</title>
         <link>https://yuanmourenye.github.io/p/unity-a-star/</link>
         <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
         
@@ -485,7 +485,7 @@
 </description>
         </item>
         <item>
-        <title>【Unity】UI 系统</title>
+        <title>UI 系统</title>
         <link>https://yuanmourenye.github.io/p/ui-system/</link>
         <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
         
@@ -789,7 +789,7 @@
 </description>
         </item>
         <item>
-        <title>【Unity】Unity YAML</title>
+        <title>Unity YAML</title>
         <link>https://yuanmourenye.github.io/p/unity-yaml/</link>
         <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
         
@@ -1134,7 +1134,7 @@
 </description>
         </item>
         <item>
-        <title>【Unity】Mirror 联网笔记</title>
+        <title>Mirror 联网笔记</title>
         <link>https://yuanmourenye.github.io/p/mirror/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
@@ -1813,7 +1813,7 @@
 </description>
         </item>
         <item>
-        <title>【Unity】Netcode for GameObjects 笔记</title>
+        <title>Netcode for GameObjects 笔记</title>
         <link>https://yuanmourenye.github.io/p/network-for-gameobjects/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
@@ -2955,7 +2955,7 @@
 </description>
         </item>
         <item>
-        <title>【Unity】Unity GUI 优化</title>
+        <title>Unity GUI 优化</title>
         <link>https://yuanmourenye.github.io/p/unity-gui-optimization/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
@@ -3068,7 +3068,7 @@
 </description>
         </item>
         <item>
-        <title>【Unity】Unity 程序基础小框架</title>
+        <title>Unity 程序基础小框架</title>
         <link>https://yuanmourenye.github.io/p/unity-framework/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
@@ -4143,7 +4143,7 @@
 </description>
         </item>
         <item>
-        <title>【Unity】Unity 多人联网：Mirror 与 NGO</title>
+        <title>Unity 多人联网：Mirror 与 NGO</title>
         <link>https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
@@ -5017,7 +5017,7 @@ UI 只是本机表现；要让所有人看到名字/颜色，必须 &lt;strong&g
 </description>
         </item>
         <item>
-        <title>【Unity】热更新</title>
+        <title>热更新</title>
         <link>https://yuanmourenye.github.io/p/hot-update/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         

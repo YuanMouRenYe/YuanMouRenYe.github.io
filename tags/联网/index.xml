@@ -7,8 +7,8 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>元某人也</copyright>
-        <lastBuildDate>Wed, 10 Jun 2026 15:04:11 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/%E8%81%94%E7%BD%91/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>【Unity】Mirror 联网笔记</title>
+        <lastBuildDate>Tue, 20 Oct 2026 00:36:44 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/%E8%81%94%E7%BD%91/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Mirror 联网笔记</title>
         <link>https://yuanmourenye.github.io/p/mirror/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
@@ -687,7 +687,7 @@
 </description>
         </item>
         <item>
-        <title>【Unity】Netcode for GameObjects 笔记</title>
+        <title>Netcode for GameObjects 笔记</title>
         <link>https://yuanmourenye.github.io/p/network-for-gameobjects/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
@@ -1829,7 +1829,7 @@
 </description>
         </item>
         <item>
-        <title>【Unity】Unity 多人联网：Mirror 与 NGO</title>
+        <title>Unity 多人联网：Mirror 与 NGO</title>
         <link>https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/</link>
         <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
         
