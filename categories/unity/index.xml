@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Unity on 元某人也</title><link>https://yuanmourenye.github.io/categories/unity/</link><description>Recent content in Unity on 元某人也</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>元某人也</copyright><lastBuildDate>Tue, 20 Oct 2026 17:06:01 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/categories/unity/index.xml" rel="self" type="application/rss+xml"/><item><title>DoTween 学习笔记</title><link>https://yuanmourenye.github.io/p/unity-dotween/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-dotween/</guid><description>&lt;h2 id="一简介"&gt;一、简介
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Unity on 元某人也</title><link>https://yuanmourenye.github.io/categories/unity/</link><description>Recent content in Unity on 元某人也</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>元某人也</copyright><lastBuildDate>Tue, 20 Oct 2026 17:45:43 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/categories/unity/index.xml" rel="self" type="application/rss+xml"/><item><title>DoTween 学习笔记</title><link>https://yuanmourenye.github.io/p/unity-dotween/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-dotween/</guid><description>&lt;h2 id="一简介"&gt;一、简介
 &lt;/h2&gt;&lt;p&gt;DOTween 是一个高效且功能强大的 Unity 动画和&lt;a class="link" href="https://blog.csdn.net/xks18232047575/article/details/143219657#" target="_blank" rel="noopener"
 &gt;&lt;u&gt;时间&lt;/u&gt;&lt;/a&gt;控制库，广泛用于游戏开发中。主要定位可以是Lerp插值的上位替代&lt;/p&gt;
 &lt;p&gt;主要用于简化和优化在unity中创建和管理动画的过程，几个特点：&lt;/p&gt;
@@ -1130,136 +1130,14 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;loopTween&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;InsertCallback&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;float&lt;/span&gt; &lt;span class="n"&gt;atPosition&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;TweenCallback&lt;/span&gt; &lt;span class="n"&gt;callback&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;关于返回值的问题，所有的函数的返回值本质上都是Tween、多序列的就Sequece，链式设计统一返回父类 &lt;code&gt;Tween&lt;/code&gt;，保证连续调用不会断链&lt;/p&gt;</description></item><item><title>Unity 基础：生命周期、ScriptableObject 与 MVC</title><link>https://yuanmourenye.github.io/p/unity-lifecycle-so-mvc/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-lifecycle-so-mvc/</guid><description>&lt;p&gt;Unity 入门最容易背串的三件事：生命周期函数的执行顺序、ScriptableObject 到底解决什么问题、以及为什么小项目也该有个轻量的 MVC。&lt;/p&gt;
-&lt;h2 id="1-unity生命周期函数"&gt;1. Unity生命周期函数
-&lt;/h2&gt;&lt;h5 id="1-初始化阶段仅执行一次"&gt;1. 初始化阶段（仅执行一次）
-&lt;/h5&gt;&lt;h6 id="awake"&gt;Awake
-&lt;/h6&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：物体被实例化 / 场景加载时立即调用，只要物体处于激活状态，&lt;strong&gt;无论脚本是否启用&lt;/strong&gt;都会执行。若物体创建时是未激活状态，Awake 会延迟到物体第一次激活时调用。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;执行次数&lt;/strong&gt;：整个生命周期仅 1 次&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;核心用途&lt;/strong&gt;：获取自身组件、初始化内部数据、单例赋值、注册内部事件&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;面试关键点&lt;/strong&gt;：场景中所有物体的 Awake 会全部执行完毕，才会开始执行所有物体的 Start，因此 Awake 中获取其他物体的组件是安全的。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id="onenable"&gt;OnEnable
-&lt;/h6&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：脚本组件从禁用→启用、GameObject 从非激活→激活时调用，可多次触发。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;执行次数&lt;/strong&gt;：每次激活 / 启用都会调用一次&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;核心用途&lt;/strong&gt;：注册全局事件、订阅消息、对象池取出时重置状态、启动协程&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;对应你的项目&lt;/strong&gt;：对象池取出物体 SetActive (true) 会触发，子弹、状态的生命周期重置逻辑放在这里最合适。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id="start"&gt;Start
-&lt;/h6&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：脚本启用且物体激活的前提下，&lt;strong&gt;第一次 Update 执行之前&lt;/strong&gt;调用，仅执行 1 次。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;执行次数&lt;/strong&gt;：整个生命周期仅 1 次&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;核心用途&lt;/strong&gt;：初始化外部依赖、获取其他物体引用、配置初始参数&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;面试关键点&lt;/strong&gt;：Start 一定在 Awake 之后、Update 之前执行，适合写依赖其他物体的初始化逻辑。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h5 id="2-物理阶段固定频率执行"&gt;2. 物理阶段（固定频率执行）
-&lt;/h5&gt;&lt;h6 id="fixedupdate"&gt;FixedUpdate
-&lt;/h6&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：以固定时间间隔（默认 0.02 秒，可在 Project Settings 中修改）重复调用，和游戏帧率无关，帧率低时一帧会调用多次，帧率高时多帧调用一次。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;执行频率&lt;/strong&gt;：固定时间步长，和物理引擎同步&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;核心用途&lt;/strong&gt;：所有 Rigidbody 物理运算、力的施加、移动同步、碰撞检测逻辑&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;对应你的项目&lt;/strong&gt;：角色带位移的移动、怪物 AI 的物理判定、带刚体的子弹运动，必须放在这里保证不同设备上物理表现一致。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id="碰撞--触发回调"&gt;碰撞 / 触发回调
-&lt;/h6&gt;&lt;p&gt;&lt;code&gt;OnTriggerEnter/Stay/Exit&lt;/code&gt;、&lt;code&gt;OnCollisionEnter/Stay/Exit&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：物理引擎计算完成后、FixedUpdate 结束前调用，属于物理阶段的收尾。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;核心用途&lt;/strong&gt;：处理伤害判定、拾取、碰撞反应&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;对应你的项目&lt;/strong&gt;：武器碰撞盒的打击判定、技能范围触发，都在这个阶段执行。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h5 id="3-游戏逻辑阶段每帧执行"&gt;3. 游戏逻辑阶段（每帧执行）
-&lt;/h5&gt;&lt;h6 id="update"&gt;Update
-&lt;/h6&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：每帧执行一次，执行间隔随帧率波动，是最核心的逻辑更新入口。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;执行频率&lt;/strong&gt;：和帧率完全绑定，一帧一次&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;核心用途&lt;/strong&gt;：玩家输入处理、状态机逻辑更新、非物理类移动、计时器、UI 更新&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;对应你的项目&lt;/strong&gt;：玩家输入检测、状态机枚举更新、普通逻辑帧更新，全部放在这一层。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h5 id="4-动画与后置更新阶段"&gt;4. 动画与后置更新阶段
-&lt;/h5&gt;&lt;h6 id="lateupdate"&gt;LateUpdate
-&lt;/h6&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：所有物体的 Update 全部执行完毕后，统一执行所有 LateUpdate，一帧一次。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;核心用途&lt;/strong&gt;：相机跟随、动画矫正、后置位置修正（保证目标位置已更新完成）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;面试关键点&lt;/strong&gt;：它的核心价值是「所有前置逻辑都跑完了再执行」，避免相机跟随出现抖动、位置不同步。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h5 id="5-渲染与-gui-阶段"&gt;5. 渲染与 GUI 阶段
-&lt;/h5&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;OnWillRenderObject&lt;/code&gt;：物体即将被渲染前调用&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;OnRenderImage&lt;/code&gt;：屏幕后处理特效专用&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;OnGUI&lt;/code&gt;：IMGUI 绘制，每帧调用多次（事件驱动），项目开发极少使用&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;WaitForEndOfFrame&lt;/code&gt;：协程专用，所有渲染、GUI 完成后恢复，用于截图等帧末操作&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h5 id="6-销毁与卸载阶段"&gt;6. 销毁与卸载阶段
-&lt;/h5&gt;&lt;h6 id="ondisable"&gt;OnDisable
-&lt;/h6&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：脚本被禁用、GameObject 被设为未激活、物体销毁前都会调用，可多次触发。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;执行次数&lt;/strong&gt;：每次禁用 / 失活都会调用一次&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;核心用途&lt;/strong&gt;：取消事件订阅、停止协程、清空计时器、对象池回收时清理状态&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;面试关键点&lt;/strong&gt;：事件解绑必须放在 OnDisable 而非 OnDestroy，否则物体禁用时不会解绑，会造成内存泄漏和空引用。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id="ondestroy"&gt;OnDestroy
-&lt;/h6&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：物体被销毁（Destroy）、场景卸载时调用，整个生命周期仅 1 次。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;执行次数&lt;/strong&gt;：仅 1 次&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;核心用途&lt;/strong&gt;：释放持久资源、移除全局注册、清理非托管数据&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id="onapplicationquit"&gt;OnApplicationQuit
-&lt;/h6&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：应用程序退出时调用，所有物体销毁前执行&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;核心用途&lt;/strong&gt;：存档、释放全局资源、断开网络连接&lt;/li&gt;
-&lt;/ul&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;对比项&lt;/th&gt;
-&lt;th&gt;Update&lt;/th&gt;
-&lt;th&gt;FixedUpdate&lt;/th&gt;
-&lt;th&gt;LateUpdate&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;执行频率&lt;/td&gt;
-&lt;td&gt;随帧率波动，一帧一次&lt;/td&gt;
-&lt;td&gt;固定时间步长，与帧率无关&lt;/td&gt;
-&lt;td&gt;一帧一次，所有 Update 之后&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;时间尺度&lt;/td&gt;
-&lt;td&gt;Time.deltaTime&lt;/td&gt;
-&lt;td&gt;Time.fixedDeltaTime&lt;/td&gt;
-&lt;td&gt;Time.deltaTime&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;核心用途&lt;/td&gt;
-&lt;td&gt;输入、逻辑、状态机、UI&lt;/td&gt;
-&lt;td&gt;物理运算、刚体移动、碰撞判定&lt;/td&gt;
-&lt;td&gt;相机跟随、动画后置修正&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;对应项目&lt;/td&gt;
-&lt;td&gt;状态机逻辑更新、输入检测&lt;/td&gt;
-&lt;td&gt;角色物理移动、子弹飞行&lt;/td&gt;
-&lt;td&gt;相机跟随、动画位置矫正&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id="2-script-ableobject"&gt;2. Script ableObject
-&lt;/h2&gt;&lt;h4 id="so"&gt;SO
-&lt;/h4&gt;&lt;p&gt;Script ableObject，继承自&lt;code&gt;UnityEngine.ScriptableObject&lt;/code&gt; 的资源，可以像预制体和材质一样，保存在项目的Assets文件夹中，成为一个文件&lt;/p&gt;
-&lt;h5 id="核心作用"&gt;核心作用：
-&lt;/h5&gt;&lt;p&gt;把“数据”从逻辑代码中抽离出来，编程可以独立的可配置资源&lt;/p&gt;
-&lt;h5 id="作用"&gt;作用
-&lt;/h5&gt;&lt;p&gt;常用于配置游戏数据，技能Buff设计，事件通道&lt;/p&gt;
-&lt;h5 id="优点"&gt;优点
-&lt;/h5&gt;&lt;p&gt;1.内存优化，节省冗余：多个敌人使用同一份数据（比如“哥布林属性”），内存中只存在一份 SO 实例，而不是每个敌人身上挂一个重复脚本和一堆字段。&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;关于返回值的问题，所有的函数的返回值本质上都是Tween、多序列的就Sequece，链式设计统一返回父类 &lt;code&gt;Tween&lt;/code&gt;，保证连续调用不会断链&lt;/p&gt;</description></item><item><title>ScriptableObject：数据、事件与配置</title><link>https://yuanmourenye.github.io/p/unity-scriptableobject/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-scriptableobject/</guid><description>&lt;h2 id="so"&gt;SO
+&lt;/h2&gt;&lt;p&gt;Script ableObject，继承自&lt;code&gt;UnityEngine.ScriptableObject&lt;/code&gt; 的资源，可以像预制体和材质一样，保存在项目的Assets文件夹中，成为一个文件&lt;/p&gt;
+&lt;h3 id="核心作用"&gt;核心作用：
+&lt;/h3&gt;&lt;p&gt;把“数据”从逻辑代码中抽离出来，编程可以独立的可配置资源&lt;/p&gt;
+&lt;h4 id="作用"&gt;作用
+&lt;/h4&gt;&lt;p&gt;常用于配置游戏数据，技能Buff设计，事件通道&lt;/p&gt;
+&lt;h4 id="优点"&gt;优点
+&lt;/h4&gt;&lt;p&gt;1.内存优化，节省冗余：多个敌人使用同一份数据（比如“哥布林属性”），内存中只存在一份 SO 实例，而不是每个敌人身上挂一个重复脚本和一堆字段。&lt;/p&gt;
 &lt;ol start="2"&gt;
 &lt;li&gt;
 &lt;p&gt;脱离场景，独立管理：SO 是项目资产，不依赖任何场景。即使场景被删除，数据依然保留，可以跨场景调用，也方便版本控制。&lt;/p&gt;
@@ -1271,8 +1149,8 @@
 &lt;p&gt;引用强类型，不易出错：技能 SO 可以直接引用音效 SO、图标 Sprite 等。拖动引用比写字符串路径更安全。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h5 id="缺点"&gt;缺点
-&lt;/h5&gt;&lt;ol&gt;
+&lt;h4 id="缺点"&gt;缺点
+&lt;/h4&gt;&lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;SO 不是 GameObject，无法像 MonoBehaviour 那样拥有 Transform、Collider 等组件，所以不能直接在物体上挂载组件。&lt;/p&gt;
 &lt;/li&gt;
@@ -1292,10 +1170,10 @@
 &lt;p&gt;不适合频繁更改的动态数据：例如角色实时血量、当前位置等运行时状态，用普通变量就好，用 SO 反而不合适。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h5 id="当so充当事件通道"&gt;当SO充当事件通道
-&lt;/h5&gt;&lt;p&gt;这就是事件通道：一个 ScriptableObject 作为管道，发者只管发，收者只管收，双方完全解耦。&lt;/p&gt;
-&lt;h6 id="so文件充当的是中间的人的身份"&gt;SO文件充当的是中间的人的身份
-&lt;/h6&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;h4 id="当so充当事件通道"&gt;当SO充当事件通道
+&lt;/h4&gt;&lt;p&gt;这就是事件通道：一个 ScriptableObject 作为管道，发者只管发，收者只管收，双方完全解耦。&lt;/p&gt;
+&lt;h5 id="so文件充当的是中间的人的身份"&gt;SO文件充当的是中间的人的身份
+&lt;/h5&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
 &lt;/span&gt;&lt;span class="lnt"&gt; 2
@@ -1337,8 +1215,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h6 id="玩家脚本在需要触发时把自身传出去"&gt;玩家脚本在需要触发时，把自身传出去
-&lt;/h6&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;/div&gt;&lt;h5 id="玩家脚本在需要触发时把自身传出去"&gt;玩家脚本在需要触发时，把自身传出去
+&lt;/h5&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
 &lt;/span&gt;&lt;span class="lnt"&gt; 2
@@ -1394,8 +1272,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h6 id="监听事件"&gt;监听事件
-&lt;/h6&gt;&lt;p&gt;可以传入多个系统，进行订阅&lt;/p&gt;
+&lt;/div&gt;&lt;h5 id="监听事件"&gt;监听事件
+&lt;/h5&gt;&lt;p&gt;可以传入多个系统，进行订阅&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
@@ -1448,9 +1326,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;SO事件相对于传统的事件系统，不需要手动的取消订阅事件，直接写在OnEnable()和 OnDisable()方法中能够在挂载物体销毁时，引用转为空&lt;/p&gt;
-&lt;h2 id="3-mvc架构"&gt;3. MVC架构
-&lt;/h2&gt;&lt;p&gt;核心是通过明确的职责划分，解决代码混乱，维护困难的问题&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;SO事件相对于传统的事件系统，不需要手动的取消订阅事件，直接写在OnEnable()和 OnDisable()方法中能够在挂载物体销毁时，引用转为空&lt;/p&gt;</description></item><item><title>Unity 里的轻量 MVC</title><link>https://yuanmourenye.github.io/p/unity-mvc/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-mvc/</guid><description>&lt;p&gt;核心是通过明确的职责划分，解决代码混乱，维护困难的问题&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;数据模型Model：负责存储数据和处理数据逻辑&lt;/li&gt;
 &lt;li&gt;视图View：负责接收用户操作和展示数据&lt;/li&gt;
@@ -1688,7 +1564,125 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;本文由 3 篇笔记合并整理。&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Unity 渲染管线：内置、URP 与 HDRP</title><link>https://yuanmourenye.github.io/p/unity-render-pipeline/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-render-pipeline/</guid><description>&lt;h3 id="内置渲染管线-built-in"&gt;内置渲染管线 (Built-in)
+&lt;p&gt;&lt;em&gt;本文由 3 篇笔记合并整理。&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Unity 生命周期函数</title><link>https://yuanmourenye.github.io/p/unity-lifecycle/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-lifecycle/</guid><description>&lt;h2 id="1-初始化阶段仅执行一次"&gt;1. 初始化阶段（仅执行一次）
+&lt;/h2&gt;&lt;h3 id="awake"&gt;Awake
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：物体被实例化 / 场景加载时立即调用，只要物体处于激活状态，&lt;strong&gt;无论脚本是否启用&lt;/strong&gt;都会执行。若物体创建时是未激活状态，Awake 会延迟到物体第一次激活时调用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;执行次数&lt;/strong&gt;：整个生命周期仅 1 次&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;核心用途&lt;/strong&gt;：获取自身组件、初始化内部数据、单例赋值、注册内部事件&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;面试关键点&lt;/strong&gt;：场景中所有物体的 Awake 会全部执行完毕，才会开始执行所有物体的 Start，因此 Awake 中获取其他物体的组件是安全的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="onenable"&gt;OnEnable
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：脚本组件从禁用→启用、GameObject 从非激活→激活时调用，可多次触发。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;执行次数&lt;/strong&gt;：每次激活 / 启用都会调用一次&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;核心用途&lt;/strong&gt;：注册全局事件、订阅消息、对象池取出时重置状态、启动协程&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;对应你的项目&lt;/strong&gt;：对象池取出物体 SetActive (true) 会触发，子弹、状态的生命周期重置逻辑放在这里最合适。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="start"&gt;Start
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：脚本启用且物体激活的前提下，&lt;strong&gt;第一次 Update 执行之前&lt;/strong&gt;调用，仅执行 1 次。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;执行次数&lt;/strong&gt;：整个生命周期仅 1 次&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;核心用途&lt;/strong&gt;：初始化外部依赖、获取其他物体引用、配置初始参数&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;面试关键点&lt;/strong&gt;：Start 一定在 Awake 之后、Update 之前执行，适合写依赖其他物体的初始化逻辑。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h4 id="2-物理阶段固定频率执行"&gt;2. 物理阶段（固定频率执行）
+&lt;/h4&gt;&lt;h5 id="fixedupdate"&gt;FixedUpdate
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：以固定时间间隔（默认 0.02 秒，可在 Project Settings 中修改）重复调用，和游戏帧率无关，帧率低时一帧会调用多次，帧率高时多帧调用一次。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;执行频率&lt;/strong&gt;：固定时间步长，和物理引擎同步&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;核心用途&lt;/strong&gt;：所有 Rigidbody 物理运算、力的施加、移动同步、碰撞检测逻辑&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;对应你的项目&lt;/strong&gt;：角色带位移的移动、怪物 AI 的物理判定、带刚体的子弹运动，必须放在这里保证不同设备上物理表现一致。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="碰撞--触发回调"&gt;碰撞 / 触发回调
+&lt;/h5&gt;&lt;p&gt;&lt;code&gt;OnTriggerEnter/Stay/Exit&lt;/code&gt;、&lt;code&gt;OnCollisionEnter/Stay/Exit&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：物理引擎计算完成后、FixedUpdate 结束前调用，属于物理阶段的收尾。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;核心用途&lt;/strong&gt;：处理伤害判定、拾取、碰撞反应&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;对应你的项目&lt;/strong&gt;：武器碰撞盒的打击判定、技能范围触发，都在这个阶段执行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h4 id="3-游戏逻辑阶段每帧执行"&gt;3. 游戏逻辑阶段（每帧执行）
+&lt;/h4&gt;&lt;h5 id="update"&gt;Update
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：每帧执行一次，执行间隔随帧率波动，是最核心的逻辑更新入口。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;执行频率&lt;/strong&gt;：和帧率完全绑定，一帧一次&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;核心用途&lt;/strong&gt;：玩家输入处理、状态机逻辑更新、非物理类移动、计时器、UI 更新&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;对应你的项目&lt;/strong&gt;：玩家输入检测、状态机枚举更新、普通逻辑帧更新，全部放在这一层。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h4 id="4-动画与后置更新阶段"&gt;4. 动画与后置更新阶段
+&lt;/h4&gt;&lt;h5 id="lateupdate"&gt;LateUpdate
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：所有物体的 Update 全部执行完毕后，统一执行所有 LateUpdate，一帧一次。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;核心用途&lt;/strong&gt;：相机跟随、动画矫正、后置位置修正（保证目标位置已更新完成）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;面试关键点&lt;/strong&gt;：它的核心价值是「所有前置逻辑都跑完了再执行」，避免相机跟随出现抖动、位置不同步。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h4 id="5-渲染与-gui-阶段"&gt;5. 渲染与 GUI 阶段
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;OnWillRenderObject&lt;/code&gt;：物体即将被渲染前调用&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;OnRenderImage&lt;/code&gt;：屏幕后处理特效专用&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;OnGUI&lt;/code&gt;：IMGUI 绘制，每帧调用多次（事件驱动），项目开发极少使用&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;WaitForEndOfFrame&lt;/code&gt;：协程专用，所有渲染、GUI 完成后恢复，用于截图等帧末操作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h4 id="6-销毁与卸载阶段"&gt;6. 销毁与卸载阶段
+&lt;/h4&gt;&lt;h5 id="ondisable"&gt;OnDisable
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：脚本被禁用、GameObject 被设为未激活、物体销毁前都会调用，可多次触发。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;执行次数&lt;/strong&gt;：每次禁用 / 失活都会调用一次&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;核心用途&lt;/strong&gt;：取消事件订阅、停止协程、清空计时器、对象池回收时清理状态&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;面试关键点&lt;/strong&gt;：事件解绑必须放在 OnDisable 而非 OnDestroy，否则物体禁用时不会解绑，会造成内存泄漏和空引用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="ondestroy"&gt;OnDestroy
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：物体被销毁（Destroy）、场景卸载时调用，整个生命周期仅 1 次。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;执行次数&lt;/strong&gt;：仅 1 次&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;核心用途&lt;/strong&gt;：释放持久资源、移除全局注册、清理非托管数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="onapplicationquit"&gt;OnApplicationQuit
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：应用程序退出时调用，所有物体销毁前执行&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;核心用途&lt;/strong&gt;：存档、释放全局资源、断开网络连接&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;对比项&lt;/th&gt;
+&lt;th&gt;Update&lt;/th&gt;
+&lt;th&gt;FixedUpdate&lt;/th&gt;
+&lt;th&gt;LateUpdate&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;执行频率&lt;/td&gt;
+&lt;td&gt;随帧率波动，一帧一次&lt;/td&gt;
+&lt;td&gt;固定时间步长，与帧率无关&lt;/td&gt;
+&lt;td&gt;一帧一次，所有 Update 之后&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;时间尺度&lt;/td&gt;
+&lt;td&gt;Time.deltaTime&lt;/td&gt;
+&lt;td&gt;Time.fixedDeltaTime&lt;/td&gt;
+&lt;td&gt;Time.deltaTime&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;核心用途&lt;/td&gt;
+&lt;td&gt;输入、逻辑、状态机、UI&lt;/td&gt;
+&lt;td&gt;物理运算、刚体移动、碰撞判定&lt;/td&gt;
+&lt;td&gt;相机跟随、动画后置修正&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;对应项目&lt;/td&gt;
+&lt;td&gt;状态机逻辑更新、输入检测&lt;/td&gt;
+&lt;td&gt;角色物理移动、子弹飞行&lt;/td&gt;
+&lt;td&gt;相机跟随、动画位置矫正&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description></item><item><title>Unity 渲染管线：内置、URP 与 HDRP</title><link>https://yuanmourenye.github.io/p/unity-render-pipeline/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-render-pipeline/</guid><description>&lt;h3 id="内置渲染管线-built-in"&gt;内置渲染管线 (Built-in)
 &lt;/h3&gt;&lt;p&gt;&lt;strong&gt;固定功能管线&lt;/strong&gt;： 它的渲染流程是Unity官方预先编写、编译好的一套固定流程。就像一个黑盒，你只能通过一些开关（勾选选项）来调整它，但无法改变它的核心运作方式。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&amp;ldquo;一个管线应对所有场景&amp;rdquo;&lt;/strong&gt;： 它试图用一套逻辑兼顾从手机到PC的所有平台和画质需求。这导致它在任何特定场景下都不是最优的——为了兼容性而显得臃肿，为了功能全面而效率不高。&lt;/p&gt;
 &lt;h3 id="可编程渲染管线-srp-urp--hdrp"&gt;可编程渲染管线 (SRP: URP &amp;amp; HDRP)
