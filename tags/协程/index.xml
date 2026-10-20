@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>协程 on 元某人也</title><link>https://yuanmourenye.github.io/tags/%E5%8D%8F%E7%A8%8B/</link><description>Recent content in 协程 on 元某人也</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>元某人也</copyright><lastBuildDate>Tue, 20 Oct 2026 17:06:01 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/%E5%8D%8F%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>C# 异步、协程与多线程</title><link>https://yuanmourenye.github.io/p/csharp-async-coroutine/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/csharp-async-coroutine/</guid><description>&lt;p&gt;Unity 里“等一会儿再执行”有三种完全不同的手段：协程、async/await、原生线程。选错了不会报错，只会在某一帧卡住或者数据错乱。这篇把三者的边界讲清楚。&lt;/p&gt;
+&lt;h2 id="1-关于c原生多线程和异步加载"&gt;1. 关于C#原生多线程和异步加载
+&lt;/h2&gt;&lt;h4 id="场景的异步加载"&gt;场景的异步加载
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;SceneManager.LoadSceneAsync&lt;/code&gt;: 这是异步加载场景的核心入口。
+&lt;ul&gt;
+&lt;li&gt;参数: 可以通过场景名称（&lt;code&gt;string sceneName&lt;/code&gt;）或其在Build Settings中的索引（&lt;code&gt;int sceneBuildIndex&lt;/code&gt;）来指定要加载的场景。&lt;/li&gt;
+&lt;li&gt;模式: &lt;code&gt;LoadSceneMode.Single&lt;/code&gt;（加载新场景并卸载当前所有场景）或 &lt;code&gt;LoadSceneMode.Additive&lt;/code&gt;（在保留当前场景的基础上，附加加载新场景）。&lt;/li&gt;
+&lt;li&gt;返回值: 该方法返回一个&lt;code&gt;AsyncOperation&lt;/code&gt;对象，你可以通过它来跟踪加载进度（&lt;code&gt;progress&lt;/code&gt;）并控制加载流程（如&lt;code&gt;allowSceneActivation&lt;/code&gt;）。用于制作进度条&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;后台加载线程 (&lt;code&gt;Application.backgroundLoadingPriority&lt;/code&gt;): 这是控制后台加载线程行为的关键属性。
+&lt;ul&gt;
+&lt;li&gt;Unity会在一个独立的后台线程中执行&lt;code&gt;LoadSceneAsync&lt;/code&gt;等异步加载操作的数据读取部分。&lt;/li&gt;
+&lt;li&gt;你可以通过设置&lt;code&gt;Application.backgroundLoadingPriority&lt;/code&gt;来调整该线程的优先级，从而在加载速度和游戏性能之间取得平衡：
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ThreadPriority.High&lt;/code&gt;：主线程每帧最多花费50ms处理加载数据，加载最快，但可能导致帧率下降。适合在显示加载进度条时使用。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ThreadPriority.Normal&lt;/code&gt;：主线程每帧最多花费10ms。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ThreadPriority.Low&lt;/code&gt;：主线程每帧最多花费2ms，对游戏性能影响最小，但加载最慢。适合在游戏进行中后台加载。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5 id="注意"&gt;注意
+&lt;/h5&gt;&lt;p&gt;SceneManager.LoadSceneAsync会卡90%，原因：&lt;/p&gt;
+&lt;p&gt;unity将进度明确分为两个明确阶段：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;阶段一（0 ~ 0.9）：资源反序列化与预加载。后台线程把所有资源（纹理、网格、预制体）从存储介质载入内存，并完成所有依赖项的解析。这一步结束后，场景的所有原始数据已经“待命”在内存中。也就是场景完成了加载，只是在等待入场&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;allowSceneActivation&lt;/code&gt; 是 &lt;code&gt;AsyncOperation&lt;/code&gt; 类上的一个 bool 类型属性。实现流程控制的核心思路是：将它当作一道“手动闸门”，默认关闭（&lt;code&gt;false&lt;/code&gt;），待满足特定条件（如倒计时结束、玩家点击按钮、动画播放完毕）后，再将其打开（&lt;code&gt;true&lt;/code&gt;）。把&lt;code&gt;allowSceneActivation&lt;/code&gt;设为&lt;code&gt;true&lt;/code&gt;的那一帧，主线程会立刻开始挤占大量CPU时间来完成阶段二&lt;/li&gt;
+&lt;li&gt;阶段二（0.9 ~ 1.0，即最后的10%）：场景对象实例化与初始化。这就是“激活”阶段，完全在主线程单帧内完成。（最消耗性能的部分）具体包括：
+&lt;ol&gt;
+&lt;li&gt;根据内存中的场景数据，在主线程逐帧创建所有&lt;code&gt;GameObject&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;构建父子层级（&lt;code&gt;Transform&lt;/code&gt;父子关系）。&lt;/li&gt;
+&lt;li&gt;唤醒所有&lt;code&gt;MonoBehaviour&lt;/code&gt;，并按顺序执行&lt;code&gt;Awake()&lt;/code&gt;和&lt;code&gt;OnEnable()&lt;/code&gt;回调。&lt;/li&gt;
+&lt;li&gt;执行&lt;code&gt;Start()&lt;/code&gt;（仅在下一帧Update之前）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="最佳时机"&gt;最佳时机
+&lt;/h5&gt;&lt;p&gt;卡在0.9后，先播放一个转场遮罩动画（Fade Out），等屏幕完全变黑（大约0.5秒后），再把&lt;code&gt;allowSceneActivation&lt;/code&gt;设为&lt;code&gt;true&lt;/code&gt;。这样即使主线程卡顿，玩家看到的也是黑屏，视觉上非常平滑。&lt;/p&gt;
+&lt;h4 id="unityapi是非线程安全的"&gt;UnityAPI是非线程安全的
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;不能再C#Thread中调用Unity API，其根本原因在于，unity的底层架构（C++引擎核心）和上层脚本（C#托管层）的内存管理机制。&lt;/li&gt;
+&lt;li&gt;对象引用是“伪句柄”：你在C#中拿到的&lt;code&gt;GameObject&lt;/code&gt;、&lt;code&gt;Transform&lt;/code&gt;引用，，实际上是只想C++非托管内存中真实对象的句柄。如果子线程去修改这个对象，而主线程同时 也在做渲染提出或者物理运算，会导致C++侧的内存访问冲突（野指针），直接引发崩溃&lt;/li&gt;
+&lt;li&gt;unity的引擎内核是C++非托管代码 （引擎本体、GameObject、Transform、Mesh、渲染、物理全都存在 C++ 堆内存）； 游戏逻辑是 C# 托管代码（Mono/.NET），两者内存完全隔离，不能直接指针互访，&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="关联"&gt;关联
+&lt;/h5&gt;&lt;p&gt;Unity 伪句柄：存 ID，中间多一层查表，本来是用来规避裸指针风险；&lt;/p&gt;
+&lt;p&gt;但多线程同时查表操作底层 C++ 对象时，查表后拿到的临时 C++ 裸指针依然会产生野指针问题&lt;/p&gt;
+&lt;p&gt;Wrapper 只隔离了 C# 层，管不住 C++ 层多线程竞争。&lt;/p&gt;
+&lt;h5 id="伪句柄"&gt;伪句柄
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;当我们在Unity中去控制GameObject时，会得到一个伪句柄，并不是得到的真实的物体，只是一个轻量化的包装类，会提供在C++堆内存中的ID编号，&lt;/li&gt;
+&lt;li&gt;并不是直接指针，C#想要操作物体时，引擎内部 会拿着这个ID去查表，找到在C++堆里面 真正的 &lt;code&gt;GameObjectInternal&lt;/code&gt;、&lt;code&gt;TransformInternal&lt;/code&gt; C++ 对象&lt;/li&gt;
+&lt;li&gt;一旦底层 C++ 物体被销毁（&lt;code&gt;Destroy(go)&lt;/code&gt;、场景卸载），这个 ID 对应的底层内存就释放了，但你 C# 层的 &lt;code&gt;go&lt;/code&gt; 变量不会立刻变成 &lt;code&gt;null&lt;/code&gt;，只会变成无效伪句柄&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="野指针"&gt;野指针
+&lt;/h5&gt;&lt;p&gt;Unity 所有引擎底层逻辑（渲染剔除、物理更新、骨骼计算、物体销毁）强制主线程执行，C++ 内部没有多线程安全锁。&lt;/p&gt;
+&lt;p&gt;场景：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;主线程：正在执行渲染剔除，遍历所有 Transform，拿着 ID 查表获取 C++ 对象指针 &lt;code&gt;0x123456&lt;/code&gt;，准备读取坐标；&lt;/li&gt;
+&lt;li&gt;子线程：同时通过同一个伪句柄 ID，查表拿到同一个 C++ 指针，直接修改 &lt;code&gt;0x123456&lt;/code&gt; 里的位置；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h6 id="竞争问题两种致命情况"&gt;竞争问题两种致命情况
+&lt;/h6&gt;&lt;ol&gt;
+&lt;li&gt;内存撕裂 + 指针失效 主线程刚拿到 C++ 对象指针，子线程中途把物体 &lt;code&gt;Destroy&lt;/code&gt; 掉，C++ 执行 &lt;code&gt;delete&lt;/code&gt; 释放 &lt;code&gt;0x123456&lt;/code&gt; 这块内存。 此时主线程手里的指针还保留 &lt;code&gt;0x123456&lt;/code&gt;，但这块内存已经归还系统，变成野指针。主线程继续读写 → 直接 Crash。&lt;/li&gt;
+&lt;li&gt;多线程无锁并发读写同一 C++ 对象 主线程读 Transform 矩阵用于渲染，子线程同时写 position 修改矩阵，C++ 结构体半写半读，内存数据错乱，出现穿模、物体瞬移、骨骼乱飞，甚至内存布局破坏衍生野指针。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="c的原生多线程"&gt;C#的原生多线程
+&lt;/h4&gt;&lt;h5 id="应用场景"&gt;应用场景
+&lt;/h5&gt;&lt;p&gt;如果需要并行计算（如AI寻路、大量数值运算），可以使用C#的&lt;code&gt;Task&lt;/code&gt;或&lt;code&gt;Thread&lt;/code&gt;，但运算完毕后，必须通过主线程的&lt;code&gt;UnityMainThreadDispatcher&lt;/code&gt;或&lt;code&gt;StartCoroutine&lt;/code&gt;将结果赋给GameObject。&lt;/p&gt;
+&lt;h5 id="异步加载队列的串行阻塞机制与避坑"&gt;异步加载队列的“串行阻塞”机制与避坑
+&lt;/h5&gt;&lt;p&gt;Unity的&lt;code&gt;AsyncOperation&lt;/code&gt;底层维护着一个全局的后台请求队列（LoadQueue）。这个队列遵循严格的FIFO（先进先出） 顺序，并且是&lt;strong&gt;单线程&lt;/strong&gt;串行处理（即一次只处理一个请求的解包阶段）。&lt;/p&gt;
+&lt;h6 id="为什么挂起会阻塞后续"&gt;为什么挂起会阻塞后续？
+&lt;/h6&gt;&lt;p&gt;假设你有以下加载顺序：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;请求加载“大型场景A”（&lt;code&gt;allowSceneActivation = false&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;请求加载“小型UI预制体B”（&lt;code&gt;allowSceneActivation = true&lt;/code&gt;）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;实际执行流程：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第1个请求进入队列，后台线程开始全速解包“场景A”。当“场景A”解包到0.9后，后台线程闲置（等待主线程允许激活）。&lt;/li&gt;
+&lt;li&gt;此时，虽然第2个请求已经在队列里排队了，但因为第1个请求还没结束（没有执行完毕，isDone=false），队列指针被卡在第1个请求上，第2个请求的后台解包工作根本不会被启动。&lt;/li&gt;
+&lt;li&gt;直到你将“场景A”的&lt;code&gt;allowSceneActivation&lt;/code&gt;设为&lt;code&gt;true&lt;/code&gt;，（isDone=true）让它的整个生命周期结束，第2个请求才开始进行硬盘IO读取。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id="实战中的隐形死锁"&gt;实战中的“隐形死锁”
+&lt;/h6&gt;&lt;p&gt;很多开发者会在加载界面同时做两件事：加载场景 + 加载配套的UI图集。如果先把场景设为不激活，再去请求UI，UI会一直加载不出来，导致界面空白，玩家误以为游戏卡死。&lt;/p&gt;
+&lt;p&gt;推荐的应对策略：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;场景需求&lt;/th&gt;
+&lt;th&gt;最佳做法&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;需要提前加载资源供后台使用&lt;/td&gt;
+&lt;td&gt;不要使用&lt;code&gt;LoadSceneAsync&lt;/code&gt; 挂起。应改用 &lt;code&gt;Resources.LoadAsync&lt;/code&gt; 或 &lt;code&gt;Addressables.LoadAssetAsync&lt;/code&gt; 。这些资源加载API与场景加载API共享同一个底层队列，但资源加载通常较小，建议先加载完所有必须的资源，再发起场景异步加载。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;必须挂起场景加载&lt;/td&gt;
+&lt;td&gt;在挂起场景加载（&lt;code&gt;allowSceneActivation=false&lt;/code&gt; ）期间，务必不要发起任何新的、重要的异步加载请求（如角色模型、UI图集），因为新请求会被饿死。所有预加载资源的工作，必须在调用&lt;code&gt;LoadSceneAsync&lt;/code&gt; 之前完成。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;需要在加载时显示动画&lt;/td&gt;
+&lt;td&gt;由于后续请求被阻塞，加载界面的进度条动画不能依赖新的异步资源加载请求来驱动。应该使用纯CPU计算的旋转Loading图标、纯TextMeshPro的帧率变化，或者在启动&lt;code&gt;LoadSceneAsync&lt;/code&gt; 之前就预先加载好Loading界面的所有素材。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id="c原生多线程和unity协程对比"&gt;C#原生多线程和Unity协程对比
+&lt;/h4&gt;&lt;p&gt;是两种完全不同的一部处理机制，最主要的区别在于：协程运行在主线程上，原生多线程是真正的并行的&lt;/p&gt;
+&lt;h5 id="c原生多线程重计算或者io操作首选"&gt;C#原生多线程（重计算或者I/O操作首选）
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;向操作系统申请一个独立的执行流，与Unity主线程并行运行。&lt;/li&gt;
+&lt;li&gt;真正的并行，设备有多核CPU，这些线程可以被分配到不同核心上真正地同时工作&lt;/li&gt;
+&lt;li&gt;由于unity的API大部分不支持线程安全，所以和UnityAPI交互时必须铜通过Unity主线程调用&lt;/li&gt;
+&lt;li&gt;主要用来处理CPU密集型耗时任务，不阻塞主线程，AI计算，网络通信，文件读写，路径寻优，创建和销毁线程本身是开销较大的操作&lt;/li&gt;
+&lt;li&gt;在子线程中完成纯C#的数据计算，然后将结果缓存起来。再通过主线程的&lt;code&gt;Update&lt;/code&gt;或协程，去读取这个结果并应用到游戏对象上&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="unity协程等待或者分帧逻辑首选"&gt;Unity协程（等待或者分帧逻辑首选）
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;并发在Unity的主线程上&lt;/li&gt;
+&lt;li&gt;在同一个时间点只有一个协程在执行，无法真正利用多核加速计算&lt;/li&gt;
+&lt;li&gt;编写安全，可以直接访问GameObject&lt;/li&gt;
+&lt;li&gt;主要时编写简单，安全，适合帧率驱动的任务如，动画序列，延时操作，分帧处理逻辑&lt;/li&gt;
+&lt;li&gt;如果在协程中执行一个耗时计算（如大循环），在它&lt;code&gt;yield&lt;/code&gt;返回之前，整个游戏依然会卡住&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="2-协程详解"&gt;2. 协程详解
+&lt;/h2&gt;&lt;p&gt;协程是Unity中常见的异步编程手段之一，核心是在主线程上实现代码的分段暂停与恢复执行，本质是基于C#迭代器的协作式多任务，并非真正的多线程，只有当协程部分主动让出来即yield return时才能够出协程，回到主线程，入欧哦协程执行的需要计算较多则可能产生卡死，详见&lt;/p&gt;
+&lt;h4 id="一基础概念与本质"&gt;一、基础概念与本质
+&lt;/h4&gt;&lt;p&gt;协程是一种可以主动暂停执行，并在指定时机自动恢复执行的函数，。运行在unity主线程上，通过yield return声明暂停点，由Unity引擎每帧调度去顶，适合处理需要分步执行。带等待逻辑的流程&lt;/p&gt;
+&lt;p&gt;常见误区：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;协程全程运行在主线程，所有代码执行都在主线程的帧更新流程中；&lt;/li&gt;
+&lt;li&gt;如果协程内写了大量 CPU 密集计算，依然会卡住主线程；&lt;/li&gt;
+&lt;li&gt;它的 “异步” 是逻辑上的分段执行，而非线程层面的并行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="二底层实现c迭代器unity调度器"&gt;二、底层实现：C#迭代器＋Unity调度器
+&lt;/h4&gt;&lt;p&gt;协程的实现分为两层：C#语言成面的迭代器状态机，以及Unity引擎层面的帧调度器&lt;/p&gt;
+&lt;h4 id="c迭代器"&gt;C#迭代器
+&lt;/h4&gt;&lt;p&gt;unity协程的返回值固定为IEnumerator，他是C#的迭代器接口，包含三个核心成员：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Current：当前迭代返回对象（即yield return后面的返回的值）&lt;/li&gt;
+&lt;li&gt;MoveNext（）：推进到下一个迭代位置，返回bool表示是否还会有后续的逻辑&lt;/li&gt;
+&lt;li&gt;Rest（）：重置迭代器（几乎不用）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当在方法中写yield return时，C#编译器会自动生成一个状态机类&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;把方法内的diamagnetic按照yield return拆分成多个片段：&lt;/li&gt;
+&lt;li&gt;用状态号记录当前执行到哪个片段：&lt;/li&gt;
+&lt;li&gt;每次调用MoveNext（）就从上次暂停的位置继续执行，直到遇到下一个yiled return 或者方法结束。&lt;/li&gt;
+&lt;li&gt;关键特性：调用协程方法时，方法体不会立刻执行，只会生成迭代器对象；第一次调用&lt;code&gt;MoveNext()&lt;/code&gt;才会真正开始执行代码，直到第一个&lt;code&gt;yield return&lt;/code&gt;暂停。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;span class="lnt"&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-csharp" data-lang="csharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="k"&gt;interface&lt;/span&gt; &lt;span class="nc"&gt;IEnumerator&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// 前进到下一个元素/下一段协程逻辑，返回true代表还有后续代码要执行&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="n"&gt;MoveNext&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// 当前yield返回的等待对象（Unity专用：WaitForSeconds、null等）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kt"&gt;object&lt;/span&gt; &lt;span class="n"&gt;Current&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="k"&gt;get&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// 重置状态（编译器生成的状态机基本不会用）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="n"&gt;Reset&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;状态机伪代码展示&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;span class="lnt"&gt;23
+&lt;/span&gt;&lt;span class="lnt"&gt;24
+&lt;/span&gt;&lt;span class="lnt"&gt;25
+&lt;/span&gt;&lt;span class="lnt"&gt;26
+&lt;/span&gt;&lt;span class="lnt"&gt;27
+&lt;/span&gt;&lt;span class="lnt"&gt;28
+&lt;/span&gt;&lt;span class="lnt"&gt;29
+&lt;/span&gt;&lt;span class="lnt"&gt;30
+&lt;/span&gt;&lt;span class="lnt"&gt;31
+&lt;/span&gt;&lt;span class="lnt"&gt;32
+&lt;/span&gt;&lt;span class="lnt"&gt;33
+&lt;/span&gt;&lt;span class="lnt"&gt;34
+&lt;/span&gt;&lt;span class="lnt"&gt;35
+&lt;/span&gt;&lt;span class="lnt"&gt;36
+&lt;/span&gt;&lt;span class="lnt"&gt;37
+&lt;/span&gt;&lt;span class="lnt"&gt;38
+&lt;/span&gt;&lt;span class="lnt"&gt;39
+&lt;/span&gt;&lt;span class="lnt"&gt;40
+&lt;/span&gt;&lt;span class="lnt"&gt;41
+&lt;/span&gt;&lt;span class="lnt"&gt;42
+&lt;/span&gt;&lt;span class="lnt"&gt;43
+&lt;/span&gt;&lt;span class="lnt"&gt;44
+&lt;/span&gt;&lt;span class="lnt"&gt;45
+&lt;/span&gt;&lt;span class="lnt"&gt;46
+&lt;/span&gt;&lt;span class="lnt"&gt;47
+&lt;/span&gt;&lt;span class="lnt"&gt;48
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-csharp" data-lang="csharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kd"&gt;sealed&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Test&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;d__0&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;IEnumerator&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&amp;gt;&lt;/span&gt;&lt;span class="m"&gt;1__&lt;/span&gt;&lt;span class="n"&gt;state&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;//状态码，用于精准跳转，-1为未开始第一次执行，正数为执行的步数，-2表示结束了&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;object&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&amp;gt;&lt;/span&gt;&lt;span class="m"&gt;2__&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;//yield return要进行的操作&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="n"&gt;MonoBehaviour&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&amp;gt;&lt;/span&gt;&lt;span class="m"&gt;4__&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;//保存外部脚本引用&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// 局部变量提升为堆字段&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="n"&gt;MoveNext&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;switch&lt;/span&gt; &lt;span class="p"&gt;(&amp;lt;&amp;gt;&lt;/span&gt;&lt;span class="m"&gt;1__&lt;/span&gt;&lt;span class="n"&gt;state&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// 初始状态：第一次执行&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&amp;gt;&lt;/span&gt;&lt;span class="m"&gt;1__&lt;/span&gt;&lt;span class="n"&gt;state&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// 第一个yield&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&amp;gt;&lt;/span&gt;&lt;span class="m"&gt;2__&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;//返回值时true表示还有下文&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// 第一个yield恢复后，走到第二个yield&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&amp;gt;&lt;/span&gt;&lt;span class="m"&gt;1__&lt;/span&gt;&lt;span class="n"&gt;state&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;++;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&amp;gt;&lt;/span&gt;&lt;span class="m"&gt;2__&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;WaitForSeconds&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// 第二个yield恢复后，走到第三个yield&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&amp;gt;&lt;/span&gt;&lt;span class="m"&gt;1__&lt;/span&gt;&lt;span class="n"&gt;state&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;*=&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&amp;gt;&lt;/span&gt;&lt;span class="m"&gt;2__&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// 第三个yield恢复后，执行收尾，协程结束&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;&amp;lt;&amp;gt;&lt;/span&gt;&lt;span class="m"&gt;1__&lt;/span&gt;&lt;span class="n"&gt;state&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;Debug&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="c1"&gt;//返回值时false表示没有下文了&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;default&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;object&lt;/span&gt; &lt;span class="n"&gt;Current&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&amp;gt;&lt;/span&gt;&lt;span class="m"&gt;2__&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="n"&gt;Reset&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id="unity协程调度引擎"&gt;Unity协程调度引擎
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;unity引擎在主线程的每帧更新流程中，维护了所有的活跃写成的队列：&lt;/li&gt;
+&lt;li&gt;每帧到对应的时机（Update后、物理帧之后），unity遍历对应队列的协程，调用MoveNext（）；&lt;/li&gt;
+&lt;li&gt;执行后读取Current值，判断下一次恢复的时机：
+&lt;ul&gt;
+&lt;li&gt;如果是&lt;code&gt;null&lt;/code&gt;，则加入 “下一帧 Update 后恢复” 的队列；&lt;/li&gt;
+&lt;li&gt;如果是&lt;code&gt;WaitForSeconds&lt;/code&gt;，则加入计时队列，时间到了再放回可执行队列；&lt;/li&gt;
+&lt;li&gt;如果是另一个&lt;code&gt;Coroutine&lt;/code&gt;，则等待子协程执行完毕再恢复；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="三协程的生命周期与执行时机"&gt;三、协程的生命周期与执行时机
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;WaitForFixedUpdate&lt;/code&gt;： 所有 FixedUpdate 执行完毕后恢复&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;yield return null&lt;/code&gt; ：任意非指令对象Update 执行完后，立刻恢复协程&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;WaitForEndOfFrame&lt;/code&gt;：所有渲染、GUI 处理完成后，帧结束前恢复&lt;/p&gt;
+&lt;h4 id="四常用-yield-指令大全"&gt;四、常用 Yield 指令大全
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;yield return&lt;/code&gt;后接不同对象，代表不同的暂停恢复规则，是协程的核心语法。&lt;/p&gt;
+&lt;h5 id="1-基础帧等待"&gt;1. 基础帧等待
+&lt;/h5&gt;&lt;p&gt;&lt;code&gt;yield return null;&lt;/code&gt;等待一帧之后执行&lt;/p&gt;
+&lt;h5 id="2时间等待"&gt;2.时间等待
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;yield return new WaitForSeconds(float seconds);&lt;/code&gt;等待指定游戏时间（秒），受&lt;code&gt;Time.timeScale&lt;/code&gt;影响，游戏暂停（timeScale=0）时计时停止。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;yield return new WaitForSecondsRealtime(float seconds);&lt;/code&gt;等待真实时间，不受&lt;code&gt;timeScale&lt;/code&gt;影响，适合暂停界面的倒计时等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="3条件等待"&gt;3.条件等待
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;yield return new WaitUntil(Func&amp;lt;bool&amp;gt; predicate);&lt;/code&gt;一直等待，直到委托返回&lt;code&gt;true&lt;/code&gt;才继续执行。``&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;yield return new WaitWhile(Func&amp;lt;bool&amp;gt; predicate);&lt;/code&gt;一直等待，直到委托返回&lt;code&gt;false&lt;/code&gt;才继续执行，和 WaitUntil 逻辑相反。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="4-嵌套协程等待"&gt;4. 嵌套协程等待
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;yield return StartCoroutine(OtherCoroutine());&lt;/code&gt;等待另一个协程完全执行完毕后，再恢复当前协程，用于拆分复杂流程。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="5-异步操作等待"&gt;5. 异步操作等待
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;yield return asyncOperation;&lt;/code&gt;等待 Unity 异步操作完成，常见场景：
+&lt;ul&gt;
+&lt;li&gt;资源加载：&lt;code&gt;Resources.LoadAsync()&lt;/code&gt;、&lt;code&gt;AssetBundle.LoadAssetAsync()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;场景加载：&lt;code&gt;SceneManager.LoadSceneAsync()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;网络请求：&lt;code&gt;UnityWebRequest.SendWebRequest()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="6-终止协程"&gt;6. 终止协程
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;yield break;&lt;/code&gt;手动终止协程，相当于普通函数的&lt;code&gt;return&lt;/code&gt;，执行后协程直接结束，&lt;code&gt;MoveNext()&lt;/code&gt;返回&lt;code&gt;false&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="五协程的控制启动与停止"&gt;五、协程的控制：启动与停止
+&lt;/h4&gt;&lt;h5 id="1-启动协程"&gt;1. 启动协程
+&lt;/h5&gt;&lt;p&gt;&lt;code&gt;StartCoroutine&lt;/code&gt;是&lt;code&gt;MonoBehaviour&lt;/code&gt;的成员方法，只能在继承 MonoBehaviour 的类中调用，有两种重载：&lt;/p&gt;
+&lt;h6 id="推荐写法传入迭代器对象"&gt;推荐写法：传入迭代器对象
+&lt;/h6&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-csharp" data-lang="csharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;Coroutine&lt;/span&gt; &lt;span class="n"&gt;coroutine&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;StartCoroutine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;MyCoroutine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;param1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;param2&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;优点：类型安全、编译检查、支持多参数、性能更好；&lt;/li&gt;
+&lt;li&gt;返回值&lt;code&gt;Coroutine&lt;/code&gt;对象可用于后续精准停止协程。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="2-停止协程"&gt;2. 停止协程
+&lt;/h4&gt;&lt;h5 id="1精准停止单个协程推荐"&gt;（1）精准停止单个协程（推荐）
+&lt;/h5&gt;&lt;p&gt;保存&lt;code&gt;StartCoroutine&lt;/code&gt;返回的&lt;code&gt;Coroutine&lt;/code&gt;对象，停止时传入：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-csharp" data-lang="csharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="n"&gt;Coroutine&lt;/span&gt; &lt;span class="n"&gt;_myCoroutine&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="n"&gt;Start&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;_myCoroutine&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;StartCoroutine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;MyCoroutine&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="n"&gt;Stop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;_myCoroutine&lt;/span&gt; &lt;span class="p"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;StopCoroutine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;_myCoroutine&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;_myCoroutine&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h5 id="2停止所有协程"&gt;（2）停止所有协程
+&lt;/h5&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-csharp" data-lang="csharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;StopAllCoroutines&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;停止当前 MonoBehaviour 上所有正在运行的协程。&lt;/p&gt;
+&lt;h6 id="3常见停止误区"&gt;（3）常见停止误区
+&lt;/h6&gt;&lt;ul&gt;
+&lt;li&gt;直接传入迭代器方法停止：&lt;code&gt;StopCoroutine(MyCoroutine())&lt;/code&gt;无效，因为每次调用方法都会生成新的迭代器对象，和运行中的不是同一个。&lt;/li&gt;
+&lt;li&gt;需要用Coroutine来记录开始时的写成才能够随时终止相关协程&lt;/li&gt;
+&lt;li&gt;依赖 MonoBehaviour 禁用停止：&lt;code&gt;enabled = false&lt;/code&gt;不会停止协程，协程会继续运行。&lt;/li&gt;
+&lt;li&gt;以下情况协程会自动停止：
+&lt;ul&gt;
+&lt;li&gt;挂载脚本的 GameObject 被设置为&lt;code&gt;SetActive(false)&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;MonoBehaviour 或 GameObject 被销毁（Destroy；&lt;/li&gt;
+&lt;li&gt;协程执行完毕或遇到&lt;code&gt;yield break&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;注意事项：物体销毁后协程会报空&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;协程不会因为引用的对象销毁而自动停止，恢复执行时访问已销毁对象会报空引用异常。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;解决方案：在协程内每次访问前判空，或在对象销毁前手动停止协程。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="协程的上下文记录机制"&gt;协程的上下文记录机制
+&lt;/h4&gt;&lt;h5 id="核心本质编译器吧写成函数翻译成了ienumerator的状态机"&gt;核心本质：编译器吧写成函数翻译成了IEnumerator的状态机
+&lt;/h5&gt;&lt;p&gt;编译器不会直接编译协程方法，而是会自动生成一个嵌套状态机类，所有的上下文全部都会存到这个类的字段中（内存开辟在堆内存中）&lt;/p&gt;
+&lt;h6 id="状态机详细机制"&gt;状态机详细机制：
+&lt;/h6&gt;&lt;h6 id="1state"&gt;（1）State
+&lt;/h6&gt;&lt;p&gt;1.每一个yield return都会分配唯一的设置状态码state&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;初始调用前：state=-1&lt;/li&gt;
+&lt;li&gt;执行完第一个yield暂停：state=0；&lt;/li&gt;
+&lt;li&gt;执行完第二个yield暂停；state=1；&lt;/li&gt;
+&lt;li&gt;以此类推&lt;/li&gt;
+&lt;li&gt;全部执行完成之后：state=-2；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2.每次调用MoveNext（），内部用switch（state）直接跳转到上次暂停的代码&lt;/p&gt;
+&lt;p&gt;3.执行到下一个yield时更新state，MoveNext返回false函数逻辑临时中断，&lt;strong&gt;详见上文状态机伪代码关系&lt;/strong&gt;&lt;/p&gt;
+&lt;h6 id="2协程字段"&gt;（2）协程字段
+&lt;/h6&gt;&lt;p&gt;原方法的参数、局部变量、甚至循环迭代变量，全部被 “提升” 为状态机类的成员字段，存储在堆内存中。&lt;/p&gt;
+&lt;p&gt;普通方法：栈帧销毁， 变量消失。协程：状态机对象在堆上，只要对象不被 GC，变量值就一直存在&lt;/p&gt;
+&lt;h6 id="3外部引用"&gt;（3）外部引用
+&lt;/h6&gt;&lt;p&gt;状态机里有一个 &lt;code&gt;__this&lt;/code&gt; 字段，保存了原 MonoBehaviour 实例的引用。所以协程里可以直接访问类的字段、调用其他方法&lt;/p&gt;
+&lt;h5 id=""&gt;
+&lt;/h5&gt;&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;本文由 2 篇笔记合并整理。&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>
