@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>基础 on 元某人也</title><link>https://yuanmourenye.github.io/tags/%E5%9F%BA%E7%A1%80/</link><description>Recent content in 基础 on 元某人也</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>元某人也</copyright><lastBuildDate>Tue, 20 Oct 2026 00:36:44 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml"/><item><title>C# 知识点概要</title><link>https://yuanmourenye.github.io/p/csharp-overview/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/csharp-overview/</guid><description>&lt;h1 id="c-知识点概要"&gt;C# 知识点概要
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>基础 on 元某人也</title><link>https://yuanmourenye.github.io/tags/%E5%9F%BA%E7%A1%80/</link><description>Recent content in 基础 on 元某人也</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>元某人也</copyright><lastBuildDate>Tue, 19 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml"/><item><title>C# 知识点概要</title><link>https://yuanmourenye.github.io/p/csharp-overview/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/csharp-overview/</guid><description>&lt;h1 id="c-知识点概要"&gt;C# 知识点概要
 &lt;/h1&gt;&lt;hr&gt;
 &lt;h2 id="1-方法重载和重写"&gt;1. 方法重载和重写
 &lt;/h2&gt;&lt;table&gt;
@@ -881,4 +881,115 @@ D --&amp;gt; E[本地机器码]
 &lt;td&gt;IL → IL2CPP → 本地码&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</description></item></channel></rss>
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="补充类与结构体foreach"&gt;补充：类与结构体、foreach
+&lt;/h2&gt;&lt;p&gt;两个容易被“会用”掩盖的问题：值类型和引用类型到底差在哪，foreach 编译后成了什么。&lt;/p&gt;
+&lt;h3 id="1-类和结构体的区别以及具体的使用场景"&gt;1. 类和结构体的区别以及具体的使用场景
+&lt;/h3&gt;&lt;h4 id="类class"&gt;类（Class）
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;类属于引用类型，&lt;/li&gt;
+&lt;li&gt;内存分配在堆上，传递方式时直接去传递引用地址，会产生GC垃圾&lt;/li&gt;
+&lt;li&gt;支持继承和多态&lt;/li&gt;
+&lt;li&gt;数据结构较大时：如果一个数据结构包含大量字段，每次传递都复制整个对象（结构体的行为）会带来巨大的性能开销。此时，传递一个引用（类的行为）会高效得多。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="结构体struct"&gt;结构体（struct）
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;结构体属于值类型&lt;/li&gt;
+&lt;li&gt;内存分配在栈或者堆上，传递值的副本，不会产生GC垃圾&lt;/li&gt;
+&lt;li&gt;不支持继承但可以实现接口&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="结构体经典的应用场景"&gt;结构体经典的应用场景
+&lt;/h5&gt;&lt;p&gt;Unity内置范例：&lt;code&gt;Vector2&lt;/code&gt;、&lt;code&gt;Vector3&lt;/code&gt;、&lt;code&gt;Quaternion&lt;/code&gt;、&lt;code&gt;Color&lt;/code&gt;、&lt;code&gt;RaycastHit&lt;/code&gt;等都是结构体。它们都是小型、不可变的数据集合。&lt;/p&gt;
+&lt;p&gt;小型、纯数据聚合体：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当你的数据结构非常小（官方建议小于16字节），&lt;/li&gt;
+&lt;li&gt;主要用来组合几个简单数据，&lt;/li&gt;
+&lt;li&gt;不会被频繁地作为参数传递&lt;/li&gt;
+&lt;li&gt;它不会被频繁地装箱&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="堆栈内存本质"&gt;堆栈内存本质：
+&lt;/h4&gt;&lt;h5 id="栈-1"&gt;栈：
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;每个线程独立拥有，是一个后进先出（LIFO）的弹夹，只在栈顶操作&lt;/li&gt;
+&lt;li&gt;访问速度极快，分配内存是栈顶指针移动操作，相当于CPU一个指令周期&lt;/li&gt;
+&lt;li&gt;大小固定一般默认只有1到4MB不能分配过大的值类型，否则会引发栈溢出&lt;/li&gt;
+&lt;li&gt;内存自动分配与释放，当一个变量超出作用域时，系统会立即确定性的将其从栈顶弹出并释放你存无GC开销，执行效率高，&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="堆-1"&gt;堆：
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;进程共享，大小动态增长，&lt;/li&gt;
+&lt;li&gt;访问速度相对较慢，分配时需要遍历堆中空闲的内存块，找到最够大的空间，并维护复杂的内存表，频繁分配会产生内存碎片，进一步降低速度&lt;/li&gt;
+&lt;li&gt;大小比较大，所有需要占用大内存的对象都必须放在堆上。&lt;/li&gt;
+&lt;li&gt;需要手动管理或者Mono Gc管理，释放闲置内存时时会产生GC停顿，内存碎片化严重，需要GC进行压缩整理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id="值类型可能存在于堆上"&gt;值类型可能存在于堆上：
+&lt;/h6&gt;&lt;p&gt;当值类型作为引用类型的字段、被装箱、或在迭代器 / 异步方法中捕获时，会被分配到堆上&lt;/p&gt;
+&lt;p&gt;局部变量中的类实例（引用类型）→ 实例的实际数据存放在堆，而指向该数据的引用指针（IntPtr）存放在栈。&lt;/p&gt;
+&lt;h3 id="2-foreach"&gt;2. Foreach
+&lt;/h3&gt;&lt;h4 id="一foreach的底层编译展开"&gt;一、foreach的底层编译展开
+&lt;/h4&gt;&lt;h5 id="原foreeach代码"&gt;原foreeach代码
+&lt;/h5&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-csharp" data-lang="csharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt; &lt;span class="p"&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;foreach&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;var&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h5 id="编译器翻译成的等价代码"&gt;编译器翻译成的等价代码
+&lt;/h5&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-csharp" data-lang="csharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;IEnumerator&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;enumerator&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GetEnumerator&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="c1"&gt;//调用集合 GetEnumerator() 获取迭代器对象；&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;try&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;//循环调用 MoveNext()，返回 true 就取出 Current；MoveNext() 返回 false 代表遍历结束，退出循环。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;enumerator&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;MoveNext&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;enumerator&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Current&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;finally&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// 释放迭代器（IDisposable）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;enumerator&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Dispose&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;一轮遍历走完就销毁迭代器，不会跨帧保留；&lt;/p&gt;
+&lt;h4 id="二和for的区别"&gt;二、和for的区别
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;for循环是基于索引直接访问集合，通过维护局部变量，改变下表直接寻址取值，全程不产生额外的堆对象&lt;/li&gt;
+&lt;li&gt;foreach循环是基于迭代器模式的会创建迭代器对象，产生额外的迭代器状态机对象产生GC，靠MoveNext（）/Current诸葛获取元素；&lt;/li&gt;
+&lt;li&gt;for循环只支持有索引结构的数据结构：Array，List等，支持通过下标修改元素，可在循环内安全增删合集&lt;/li&gt;
+&lt;li&gt;foreach只要实现IEnumerable就能用，不用关心内部存储结构，不能修改集合长度，item是拷贝，修改item不影响原容器，只能从头到尾顺序遍历，无法自定义步长，无法倒序遍历，必须现反转合集&lt;/li&gt;
+&lt;li&gt;foreach 会创建迭代器，带来微小 GC 开销，一帧内连续不停的调用MoveNext一次性遍历完。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;本文由 2 篇笔记合并整理。&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>

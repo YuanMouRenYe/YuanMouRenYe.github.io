@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>NGO on 元某人也</title><link>https://yuanmourenye.github.io/tags/ngo/</link><description>Recent content in NGO on 元某人也</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>元某人也</copyright><lastBuildDate>Tue, 20 Oct 2026 01:33:55 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/ngo/index.xml" rel="self" type="application/rss+xml"/><item><title>Unity 多人联网：Mirror 与 NGO</title><link>https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/</guid><description>&lt;h1 id="unity-多人联网mirror-与-netcode-for-gameobjectsngo"&gt;Unity 多人联网：Mirror 与 Netcode for GameObjects（NGO）
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>NGO on 元某人也</title><link>https://yuanmourenye.github.io/tags/ngo/</link><description>Recent content in NGO on 元某人也</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>元某人也</copyright><lastBuildDate>Tue, 19 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/ngo/index.xml" rel="self" type="application/rss+xml"/><item><title>Unity 多人联网：Mirror 与 NGO</title><link>https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/</guid><description>&lt;h1 id="unity-多人联网mirror-与-netcode-for-gameobjectsngo"&gt;Unity 多人联网：Mirror 与 Netcode for GameObjects（NGO）
 &lt;/h1&gt;&lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;核心模型相同&lt;/strong&gt;：服务器权威 + 状态同步，客户端发请求、服务器改真相再下发。&lt;/li&gt;
@@ -162,15 +162,9 @@ end
 &lt;hr&gt;
 &lt;h2 id="连接是如何建立的"&gt;连接是如何建立的
 &lt;/h2&gt;&lt;h3 id="通用流程二者逻辑一致"&gt;通用流程（二者逻辑一致）
-&lt;/h3&gt;&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092635825.png"
-width="932"
-height="538"
-srcset="https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092635825_hu_8eff0fbffe979e6c.png 480w, https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092635825_hu_cf72c74aaa38b98a.png 1024w"
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/img/unity-multiplayer-mirror-ngo/image-20260520092635825.png"
 loading="lazy"
 alt="image-20260520092635825"
-class="gallery-image"
-data-flex-grow="173"
-data-flex-basis="415px"
 &gt;&lt;/p&gt;
 &lt;h3 id="mirror传输与握手你的笔记要点"&gt;Mirror：传输与握手（你的笔记要点）
 &lt;/h3&gt;&lt;ol&gt;
@@ -412,15 +406,9 @@ data-flex-basis="415px"
 &lt;p&gt;&lt;strong&gt;为什么本地直接改 UI 不会同步给别人？&lt;/strong&gt;&lt;br&gt;
 UI 只是本机表现；要让所有人看到名字/颜色，必须 &lt;strong&gt;Command/RPC → 服务器改 SyncVar/NetworkVariable → 自动同步到所有客户端 → hook/OnValueChanged 更新 UI&lt;/strong&gt;。&lt;/p&gt;
 &lt;h3 id="名字与颜色同步通用流程"&gt;名字与颜色同步（通用流程）
-&lt;/h3&gt;&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092652946.png"
-width="1125"
-height="511"
-srcset="https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092652946_hu_a57e8b8e6ea9f7ba.png 480w, https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260520092652946_hu_9cd4dc66db84d1e8.png 1024w"
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/img/unity-multiplayer-mirror-ngo/image-20260520092652946.png"
 loading="lazy"
 alt="image-20260520092652946"
-class="gallery-image"
-data-flex-grow="220"
-data-flex-basis="528px"
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Mirror 示例&lt;/strong&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
@@ -685,38 +673,20 @@ data-flex-basis="528px"
 &lt;/h2&gt;&lt;h3 id="1-配置-networkmanager"&gt;1. 配置 NetworkManager
 &lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;添加 &lt;code&gt;NetworkManager&lt;/code&gt;（全场景仅一个）&lt;br&gt;
-&lt;img src="https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210526625.png"
-width="706"
-height="1027"
-srcset="https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210526625_hu_49adc33414edff37.png 480w, https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210526625_hu_50812c587480195e.png 1024w"
+&lt;img src="https://yuanmourenye.github.io/img/unity-multiplayer-mirror-ngo/image-20260408210526625.png"
 loading="lazy"
 alt="image-20260408210526625"
-class="gallery-image"
-data-flex-grow="68"
-data-flex-basis="164px"
 &gt;&lt;/li&gt;
 &lt;li&gt;Transport：&lt;strong&gt;Unity Transport&lt;/strong&gt;&lt;br&gt;
-&lt;img src="https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210601297.png"
-width="674"
-height="477"
-srcset="https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210601297_hu_e0bf58212a604a38.png 480w, https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210601297_hu_3cae8d464491b007.png 1024w"
+&lt;img src="https://yuanmourenye.github.io/img/unity-multiplayer-mirror-ngo/image-20260408210601297.png"
 loading="lazy"
 alt="image-20260408210601297"
-class="gallery-image"
-data-flex-grow="141"
-data-flex-basis="339px"
 &gt;&lt;/li&gt;
 &lt;li&gt;指定 &lt;strong&gt;Player Prefab&lt;/strong&gt;（含 &lt;code&gt;NetworkObject&lt;/code&gt;）&lt;/li&gt;
 &lt;li&gt;Inspector &lt;strong&gt;Start Host&lt;/strong&gt; 本机调试&lt;br&gt;
-&lt;img src="https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408211025268.png"
-width="674"
-height="219"
-srcset="https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408211025268_hu_fc35afc7b7421a06.png 480w, https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408211025268_hu_bee8b71614c72ac7.png 1024w"
+&lt;img src="https://yuanmourenye.github.io/img/unity-multiplayer-mirror-ngo/image-20260408211025268.png"
 loading="lazy"
 alt="image-20260408211025268"
-class="gallery-image"
-data-flex-grow="307"
-data-flex-basis="738px"
 &gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id="2-networkmanagerui"&gt;2. NetworkManagerUI
@@ -1841,38 +1811,20 @@ S --&amp;gt;|同步| C2
 &lt;/h3&gt;&lt;h4 id="1-配置-networkmanager-1"&gt;1. 配置 NetworkManager
 &lt;/h4&gt;&lt;ol&gt;
 &lt;li&gt;添加 &lt;code&gt;NetworkManager&lt;/code&gt;（全场景仅一个）&lt;br&gt;
-&lt;img src="https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210526625.png"
-width="706"
-height="1027"
-srcset="https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210526625_hu_49adc33414edff37.png 480w, https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210526625_hu_50812c587480195e.png 1024w"
+&lt;img src="https://yuanmourenye.github.io/img/unity-multiplayer-mirror-ngo/image-20260408210526625.png"
 loading="lazy"
 alt="image-20260408210526625"
-class="gallery-image"
-data-flex-grow="68"
-data-flex-basis="164px"
 &gt;&lt;/li&gt;
 &lt;li&gt;Transport 选 &lt;strong&gt;Unity Transport&lt;/strong&gt;&lt;br&gt;
-&lt;img src="https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210601297.png"
-width="674"
-height="477"
-srcset="https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210601297_hu_e0bf58212a604a38.png 480w, https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408210601297_hu_3cae8d464491b007.png 1024w"
+&lt;img src="https://yuanmourenye.github.io/img/unity-multiplayer-mirror-ngo/image-20260408210601297.png"
 loading="lazy"
 alt="image-20260408210601297"
-class="gallery-image"
-data-flex-grow="141"
-data-flex-basis="339px"
 &gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Network Config&lt;/strong&gt; 中指定 &lt;strong&gt;Player Prefab&lt;/strong&gt;（带 &lt;code&gt;NetworkObject&lt;/code&gt;）&lt;/li&gt;
 &lt;li&gt;Inspector 点 &lt;strong&gt;Start Host&lt;/strong&gt; 做本机联调&lt;br&gt;
-&lt;img src="https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408211025268.png"
-width="674"
-height="219"
-srcset="https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408211025268_hu_fc35afc7b7421a06.png 480w, https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/img/image-20260408211025268_hu_bee8b71614c72ac7.png 1024w"
+&lt;img src="https://yuanmourenye.github.io/img/unity-multiplayer-mirror-ngo/image-20260408211025268.png"
 loading="lazy"
 alt="image-20260408211025268"
-class="gallery-image"
-data-flex-grow="307"
-data-flex-basis="738px"
 &gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;检查清单&lt;/strong&gt;&lt;/p&gt;

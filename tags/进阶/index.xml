@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>进阶 on 元某人也</title><link>https://yuanmourenye.github.io/tags/%E8%BF%9B%E9%98%B6/</link><description>Recent content in 进阶 on 元某人也</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>元某人也</copyright><lastBuildDate>Tue, 20 Oct 2026 00:36:44 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/%E8%BF%9B%E9%98%B6/index.xml" rel="self" type="application/rss+xml"/><item><title>C# 进阶</title><link>https://yuanmourenye.github.io/p/csharp-advanced/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/csharp-advanced/</guid><description>&lt;h2 id="委托"&gt;委托
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>进阶 on 元某人也</title><link>https://yuanmourenye.github.io/tags/%E8%BF%9B%E9%98%B6/</link><description>Recent content in 进阶 on 元某人也</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>元某人也</copyright><lastBuildDate>Tue, 19 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/%E8%BF%9B%E9%98%B6/index.xml" rel="self" type="application/rss+xml"/><item><title>C# 进阶</title><link>https://yuanmourenye.github.io/p/csharp-advanced/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/csharp-advanced/</guid><description>&lt;h2 id="委托"&gt;委托
 &lt;/h2&gt;&lt;h3 id="知识点一委托是什么"&gt;知识点一、委托是什么
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;委托是函数的容器。可以理解为表达函数的变量类型，用来存储，传递函数方法，不同的函数必须对应和各自“格式一致的委托&lt;/p&gt;
@@ -1221,4 +1221,259 @@
 &lt;li&gt;当循环和判断只有一句代码的话可以省略大括号&lt;/li&gt;
 &lt;li&gt;函数和属性中直接用get=&amp;gt;，直接返回指向的值，不需要写return&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/blockquote&gt;</description></item></channel></rss>
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="补充集合与-gc"&gt;补充：集合与 GC
+&lt;/h2&gt;&lt;p&gt;面试问到集合，真正想听的不是 API，而是“底层是什么、什么时候分配、什么时候回收”。这篇从数据结构讲到 GC，最后对比 Lua 的回收策略。&lt;/p&gt;
+&lt;h3 id="1-c常见数据结构"&gt;1. C#常见数据结构
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;数据结构&lt;/th&gt;
+&lt;th&gt;类别&lt;/th&gt;
+&lt;th&gt;存储方式&lt;/th&gt;
+&lt;th&gt;有序性&lt;/th&gt;
+&lt;th&gt;允许重复&lt;/th&gt;
+&lt;th&gt;适用场景&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;**Array**&lt;/code&gt; (数组)&lt;/td&gt;
+&lt;td&gt;基础&lt;/td&gt;
+&lt;td&gt;连续内存&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;存储数量固定、频繁随机访问的同类数据。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;**List&amp;lt;T&amp;gt;**&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;泛型集合&lt;/td&gt;
+&lt;td&gt;连续内存&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;最常用&lt;/strong&gt;的动态列表，需要频繁按索引访问和末尾增删。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;**LinkedList&amp;lt;T&amp;gt;**&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;泛型集合&lt;/td&gt;
+&lt;td&gt;不连续节点&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;需要频繁在任意位置插入或删除，且很少按索引访问。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;**Dictionary&amp;lt;TKey, TValue&amp;gt;**&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;泛型集合&lt;/td&gt;
+&lt;td&gt;哈希表&lt;/td&gt;
+&lt;td&gt;否&lt;/td&gt;
+&lt;td&gt;键唯一&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;极速查找&lt;/strong&gt;，通过唯一键快速取值，如用户ID查用户信息。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;**HashSet&amp;lt;T&amp;gt;**&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;泛型集合&lt;/td&gt;
+&lt;td&gt;哈希表&lt;/td&gt;
+&lt;td&gt;否&lt;/td&gt;
+&lt;td&gt;元素唯一&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;去重&lt;/strong&gt;和&lt;strong&gt;快速判断存在性&lt;/strong&gt;，如过滤重复关键词。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;**SortedList/SortedDictionary**&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;泛型集合&lt;/td&gt;
+&lt;td&gt;有序树/表&lt;/td&gt;
+&lt;td&gt;是（按键排序）&lt;/td&gt;
+&lt;td&gt;键唯一&lt;/td&gt;
+&lt;td&gt;需要始终按&lt;strong&gt;键排序&lt;/strong&gt;存储，并能快速按范围查找。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;**Stack&amp;lt;T&amp;gt;**&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;泛型集合&lt;/td&gt;
+&lt;td&gt;连续内存&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;后进先出（LIFO）&lt;/strong&gt; 场景，如函数调用、撤销操作。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;**Queue&amp;lt;T&amp;gt;**&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;泛型集合&lt;/td&gt;
+&lt;td&gt;连续内存&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;先进先出（FIFO）&lt;/strong&gt; 场景，如消息队列、任务排队。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;**ArrayList**&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;非泛型&lt;/td&gt;
+&lt;td&gt;连续内存&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;旧代码兼容，存储&lt;code&gt;object&lt;/code&gt; 类型，有装箱开销，&lt;strong&gt;新代码避免使用&lt;/strong&gt;。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id="数组和list"&gt;数组和List
+&lt;/h4&gt;&lt;p&gt;List本质上是动态数组，具有总容量和存储的实际元素个数，连续存储，自动扩容，扩容机制是当前容量*2，整个过程中旧数组会被丢弃等待GC回收，&lt;/p&gt;
+&lt;p&gt;优点：可以用索引查找，cpu缓存友好。适用于按索引随机访问的，需要频繁按索引访问和末尾增删，&lt;/p&gt;
+&lt;p&gt;需要排序的&lt;/p&gt;
+&lt;h4 id="linkedlist双向链表"&gt;LinkedList&lt;T&gt;（双向链表）
+&lt;/h4&gt;&lt;p&gt;内部是一个&lt;strong&gt;双向链表&lt;/strong&gt;，每一个元素都被包装成一个节点，只能直接访问链表的首尾，没有索引器只能从头或尾开始遍历，内存分布比较分散&lt;/p&gt;
+&lt;p&gt;适用于频繁的在头部插入或者删除元素，需要频繁在任意位置插入或删除（知道中间值的索引的情况下），且很少按索引访问。&lt;/p&gt;
+&lt;h4 id="dictionarytkey-tvalue"&gt;Dictionary&amp;lt;TKey, TValue&amp;gt;
+&lt;/h4&gt;&lt;p&gt;本质上是哈希表，不支持线程安全&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;计算哈希值：当你插入一个键值对时，&lt;code&gt;Dictionary&lt;/code&gt; 会调用 &lt;code&gt;key.GetHashCode()&lt;/code&gt; 获取一个整数哈希值。&lt;/li&gt;
+&lt;li&gt;映射到桶（Bucket）：哈希值会通过一个算法映射到内部数组的某个索引位置（称为“桶”）。&lt;/li&gt;
+&lt;li&gt;存储 Entry：键值对会存储在这个桶里。&lt;/li&gt;
+&lt;li&gt;查找：查找时，再次计算 Key 的哈希值，直接定位到对应的桶，然后在该桶内比较 Key 是否相等（通过 &lt;code&gt;Equals&lt;/code&gt; 方法），找到后返回 Value。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;哈希冲突：多个key的Hash值计算的值指向了同一个桶中造成了哈希冲突&lt;/p&gt;
+&lt;p&gt;解决办法：拉链法，用链表把同一个地址的元素串起来，一般采用头插法&lt;/p&gt;
+&lt;p&gt;核心思想：一个桶中可能调进来多个元素那就再桶里面挂一条“链”通常是链表，吧所有哈希到同一个同的元素串起来&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;工作原理：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;插入时：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;计算 Key 的哈希值，定位到对应的桶（Bucket）。&lt;/li&gt;
+&lt;li&gt;如果桶是空的，直接把新元素放进去。&lt;/li&gt;
+&lt;li&gt;如果桶里已经有元素了（发生冲突），就把新元素添加到这个桶的链表末尾（或头部）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;查找时：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;计算 Key 的哈希值，定位到桶。&lt;/li&gt;
+&lt;li&gt;遍历这个桶里的链表，用 &lt;code&gt;Equals&lt;/code&gt; 方法逐个比较 Key，找到匹配的就返回 Value。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;删除时：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;定位到桶。&lt;/li&gt;
+&lt;li&gt;遍历链表，找到匹配的 Key，从链表中移除该节点。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5 id="解决哈希冲突的其他方法对比"&gt;解决哈希冲突的其他方法对比
+&lt;/h5&gt;&lt;h6 id="开放寻址法"&gt;开放寻址法
+&lt;/h6&gt;&lt;p&gt;线性探测：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;冲突了就往后挪+i，直到找到空位置，有点CPU缓存极其友好，连续地址，&lt;/li&gt;
+&lt;li&gt;问题：整个区域聚集的元素堆积，查找效率急剧下降&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;二次探测：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;冲突了就往后挪+i*2二次方，跳跃式地寻找空位，&lt;/li&gt;
+&lt;li&gt;能有效缓解线性探测的“主聚集”问题，但会产生相对较轻的二次聚集&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;双重哈希：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当发生冲突时，使用第二个哈希函数来计算探测步长：step = hash2(key)，然后依次探测 index + step，index + 2_step，index + 3_step&lt;/li&gt;
+&lt;li&gt;即使初始哈希位置相同，只要第二个哈希函数设计得好，它们的探测步长就不同，从而完全避免聚集现象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="hashset"&gt;HashSet&lt;T&gt;
+&lt;/h4&gt;&lt;p&gt;HashSet是专门存储唯一元素的集合，本质是只有一个Key、没有Value的字典&lt;/p&gt;
+&lt;p&gt;Dictionary主要是“通过Key快速查找Value”HashSet主要是“判断某个元素是否存在”，重复的值不会添加，会返回false&lt;/p&gt;
+&lt;p&gt;本质上是哈希表&lt;/p&gt;
+&lt;p&gt;数据结构格式内部结构简化&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-csharp" data-lang="csharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 简化版的 HashSet 内部结构（和 Dictionary 类似）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;_buckets&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 桶数组&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="n"&gt;Slot&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;_slots&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 存储元素和哈希值的数组&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;_count&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 元素个数&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="nc"&gt;Slot&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;hashCode&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 缓存哈希值&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;next&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 指向下一个 Slot 的索引（拉链法）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="k"&gt;value&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 存储的元素本身&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;先调用GetHashCode计算出来桶的位置，定位到桶，如果为空则直接放入，&lt;/p&gt;
+&lt;h4 id="hashtable"&gt;HashTable
+&lt;/h4&gt;&lt;p&gt;非泛型会产生装箱拆箱，&lt;/p&gt;
+&lt;p&gt;支持多线程读取通过一个方法，多个线程同时调用单个方法时，内部数据结构不会损坏&lt;/p&gt;
+&lt;h5 id="hash函数的妙用"&gt;Hash函数的妙用
+&lt;/h5&gt;&lt;p&gt;核心思想是：不在按照顺序找，而是根据哈希公式算出桶数组的容器，让索引值当作标签来减小查找的范围，使得查找的时间复杂度无限接近On（1）&lt;/p&gt;
+&lt;h3 id="2-c的gc和lua的gc机制"&gt;2. C#的GC和Lua的GC机制
+&lt;/h3&gt;&lt;h4 id="c的gc回收机制"&gt;C#的GC回收机制
+&lt;/h4&gt;&lt;p&gt;C#的GC垃圾回收主要是为为大规模、高性能应用设计的&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;核心算法是：分代回收，基于一个统计规律：大多数对象生命周期都很短，为此，将托管堆分成三代&lt;/li&gt;
+&lt;li&gt;一个对象的代数，等于它已经成功存活的垃圾回收次数
+&lt;ul&gt;
+&lt;li&gt;第 0 代 (Gen 0)：存放新对象，回收最频繁。&lt;/li&gt;
+&lt;li&gt;第 1 代 (Gen 1)：存放存活过一次GC的对象。&lt;/li&gt;
+&lt;li&gt;第 2 代 (Gen 2)：存放长期存活的对象，回收最少。&lt;br&gt;
+这种设计让GC能集中精力高效清理“短命”对象，大幅提升整体内存管理效率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;回收过程&lt;br&gt;
+一次完整的GC通常包含三个阶段：
+&lt;ol&gt;
+&lt;li&gt;标记 (Mark)：从根对象（如全局变量、局部变量）出发，标记所有可达对象。&lt;/li&gt;
+&lt;li&gt;清除 (Sweep)：回收未被标记的对象内存。&lt;/li&gt;
+&lt;li&gt;压缩 (Compact)：整理堆内存，消除碎片，为后续分配提供连续空间。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在GC过程中导致的卡顿是不是因为整理堆内存时，要把其他内存拷贝到新的位置上导致的&lt;/p&gt;
+&lt;h4 id="lua的gc回收机制"&gt;Lua的GC回收机制
+&lt;/h4&gt;&lt;p&gt;lua的GC机制是一个轻量级的工具，Lua 的 GC 设计目标是在保证自动内存管理的同时，将对程序执行的干扰降到最低。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;核心算法是：三色增量标记-清除，为了避免一次性GC造成的长时间停顿，它将GC工作拆分为多个小的步骤，分散在程序中运行&lt;/li&gt;
+&lt;li&gt;三色标记法过程：在增量过程中，通过三种颜色来追踪对象状态：
+&lt;ul&gt;
+&lt;li&gt;白色 (White)：未被标记，若扫描结束仍为白色则被回收。（需要被回收的）&lt;/li&gt;
+&lt;li&gt;灰色 (Gray)：已标记，但其引用的对象尚未被扫描。（没有查完，的待办事项）&lt;/li&gt;
+&lt;li&gt;黑色 (Black)：已标记，且其所有引用对象也已被扫描（已经确保有被引用不需要被回收）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Lua 5.4 引入了分代GC（和C#类似）：&lt;br&gt;
+将对象分为年轻对象（刚创建的）和老年对象（活过好几次GC的）。&lt;br&gt;
+GC会只盯着年轻对象猛查，因为它们大概率会很快死掉（比如子弹、伤害数字）。对于老年对象（比如全局单例），GC减少扫描数量，极大减少了扫描工作量。&lt;/p&gt;
+&lt;p&gt;减少装箱GC的办法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;优先使用泛型，List&amp;lt;&amp;gt;替代ArrayList，用Func&lt;T&gt;代替非泛型委托&lt;/li&gt;
+&lt;li&gt;用StringBulider处理字符串的加减&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Gc的触发条件，Mono垃圾回收优化手段：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;运行过程中内存不足的情况&lt;/li&gt;
+&lt;li&gt;手动调用：调用GC.Collect()（不推荐频繁调用），GC回收过程中会产生卡顿&lt;/li&gt;
+&lt;li&gt;应用程序退出&lt;/li&gt;
+&lt;li&gt;每帧结束后检查，达到阈值触发GC&lt;/li&gt;
+&lt;li&gt;系统物理内存不足：强制触发GC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;（1）减少对象创建（最核心）&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;对象池&lt;/strong&gt;：复用频繁创建销毁的对象（如子弹、敌人、UI 元素）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;值类型替代引用类型&lt;/strong&gt;：对于&lt;strong&gt;小数据&lt;/strong&gt;，使用 struct 替代 class，避免堆分配&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;复用数组和集合&lt;/strong&gt;：提前分配足够大的数组，重复使用，避免频繁创建&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;避免字符串拼接&lt;/strong&gt;：用&lt;code&gt;StringBuilder&lt;/code&gt;或字符串插值替代&lt;code&gt;+&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;避免装箱拆箱&lt;/strong&gt;：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5 id="2减少-gc-扫描开销"&gt;（2）减少 GC 扫描开销
+&lt;/h5&gt;&lt;ol start="6"&gt;
+&lt;li&gt;&lt;strong&gt;及时释放引用&lt;/strong&gt;：将不再使用的对象引用设为&lt;code&gt;null&lt;/code&gt;，让 GC 尽早回收&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;禁用未使用的组件和 GameObject&lt;/strong&gt;：避免不必要的对象存活&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;减少静态变量引用&lt;/strong&gt;：静态变量是 GC 根对象，引用的对象永远不会被回收&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h6 id="3控制-gc-触发时机"&gt;（3）控制 GC 触发时机
+&lt;/h6&gt;&lt;ol start="9"&gt;
+&lt;li&gt;&lt;strong&gt;手动控制 GC&lt;/strong&gt;：在加载界面、关卡切换等不影响用户体验的时机手动调用&lt;code&gt;GC.Collect()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;设置 GC 阈值&lt;/strong&gt;：通过&lt;code&gt;GC.TryStartNoGCRegion()&lt;/code&gt;和&lt;code&gt;GC.EndNoGCRegion()&lt;/code&gt;在关键帧禁止 GC&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;需要注意闭包问题&lt;/p&gt;
+&lt;p&gt;闭包：事件+Lambda表达式＋匿名函数时，会把外部变量的引用释放不了，需要取消订阅才可以释放&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;本文由 2 篇笔记合并整理。&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>

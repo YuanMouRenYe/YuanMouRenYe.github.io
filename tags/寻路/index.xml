@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>寻路 on 元某人也</title><link>https://yuanmourenye.github.io/tags/%E5%AF%BB%E8%B7%AF/</link><description>Recent content in 寻路 on 元某人也</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>元某人也</copyright><lastBuildDate>Tue, 20 Oct 2026 00:36:44 +0800</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/%E5%AF%BB%E8%B7%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>Unity A* 寻路算法</title><link>https://yuanmourenye.github.io/p/unity-a-star/</link><pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-a-star/</guid><description>&lt;h1 id="unity-a星-寻路算法"&gt;Unity A星 寻路算法
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>寻路 on 元某人也</title><link>https://yuanmourenye.github.io/tags/%E5%AF%BB%E8%B7%AF/</link><description>Recent content in 寻路 on 元某人也</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>元某人也</copyright><lastBuildDate>Tue, 16 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://yuanmourenye.github.io/tags/%E5%AF%BB%E8%B7%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>Unity A* 寻路算法</title><link>https://yuanmourenye.github.io/p/unity-a-star/</link><pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-a-star/</guid><description>&lt;h1 id="unity-a星-寻路算法"&gt;Unity A星 寻路算法
 &lt;/h1&gt;&lt;h1 id="一概念"&gt;一、概念
 &lt;/h1&gt;&lt;h2 id="1解决什么问题"&gt;1、解决什么问题
 &lt;/h2&gt;&lt;p&gt;A * 是&lt;strong&gt;通用网格最短路径算法&lt;/strong&gt;，不限于 2D，3D 导航网格、瓦片地图、塔防、RPG 角色移动都能用；核心：在存在障碍物的网格中，找出&lt;strong&gt;代价最低的最优路径&lt;/strong&gt;。&lt;/p&gt;
@@ -421,15 +421,9 @@
 &lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id="流程速查"&gt;流程速查
-&lt;/h2&gt;&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/p/unity-a-star/img/image-20260520094242121.png"
-width="1637"
-height="539"
-srcset="https://yuanmourenye.github.io/p/unity-a-star/img/image-20260520094242121_hu_85458bb86da4b1c1.png 480w, https://yuanmourenye.github.io/p/unity-a-star/img/image-20260520094242121_hu_c4609fec264d25d1.png 1024w"
+&lt;/h2&gt;&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/img/unity-a-star/image-20260520094242121.png"
 loading="lazy"
 alt="image-20260520094242121"
-class="gallery-image"
-data-flex-grow="303"
-data-flex-basis="728px"
 &gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="要点速查"&gt;要点速查
