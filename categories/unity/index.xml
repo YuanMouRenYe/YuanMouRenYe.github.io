@@ -2187,7 +2187,7 @@ loading="lazy"
 &lt;li&gt;&lt;strong&gt;GPU Instancing&lt;/strong&gt;: GPU实例化允许将相同的模型实例化多次，在一次渲染调用中同时绘制多个实例。这样可以减少渲染调用的数量，降低CPU和GPU之间的通信开销，提高渲染效率。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;屏幕空间技术&lt;/strong&gt;: 屏幕空间技术(如SSAO、SSR)在屏幕空间中进行采样和计算，减少对整个场景的计算需求。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Shader指令数优化&lt;/strong&gt;: 通过对着色器进行优化，如减少不必要的计算和采样操作、使用更高效的算法和数据结构，可以降低渲染的开销，提高渲染性能。&lt;/li&gt;
-&lt;/ol&gt;</description></item><item><title>Unity A* 寻路算法</title><link>https://yuanmourenye.github.io/p/unity-a-star/</link><pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-a-star/</guid><description>&lt;h1 id="unity-a星-寻路算法"&gt;Unity A星 寻路算法
+&lt;/ol&gt;</description></item><item><title>Unity A星 寻路算法</title><link>https://yuanmourenye.github.io/p/unity-a-star/</link><pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-a-star/</guid><description>&lt;h1 id="unity-a星-寻路算法"&gt;Unity A星 寻路算法
 &lt;/h1&gt;&lt;h1 id="一概念"&gt;一、概念
 &lt;/h1&gt;&lt;h2 id="1解决什么问题"&gt;1、解决什么问题
 &lt;/h2&gt;&lt;p&gt;A * 是&lt;strong&gt;通用网格最短路径算法&lt;/strong&gt;，不限于 2D，3D 导航网格、瓦片地图、塔防、RPG 角色移动都能用；核心：在存在障碍物的网格中，找出&lt;strong&gt;代价最低的最优路径&lt;/strong&gt;。&lt;/p&gt;
