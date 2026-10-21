@@ -160,9 +160,9 @@
 &lt;h2 id="八相关文章"&gt;八、相关文章
 &lt;/h2&gt;&lt;p&gt;这个框架的每个模块都对应一篇笔记，按顺序读能看清演进过程：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://yuanmourenye.github.io/p/unity-framework/" &gt;【Unity】Unity 程序基础小框架&lt;/a&gt;：模块总览与代码片段&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://yuanmourenye.github.io/p/unity-cheng-xu-ji-chu-xiao-kuang-jia/" &gt;【Unity】Unity 程序基础小框架&lt;/a&gt;：模块总览与代码片段&lt;/li&gt;
 &lt;li&gt;&lt;a class="link" href="https://yuanmourenye.github.io/p/unity-yaml/" &gt;【Unity】Unity YAML&lt;/a&gt;：场景与 Prefab 的序列化格式，排查资源问题时用得上&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://yuanmourenye.github.io/p/unity-gui-optimization/" &gt;【Unity】UGUI 优化&lt;/a&gt;：UI 侧的同类取舍&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://yuanmourenye.github.io/p/unity-gui-you-hua/" &gt;【Unity】UGUI 优化&lt;/a&gt;：UI 侧的同类取舍&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;也可以从 &lt;a class="link" href="https://yuanmourenye.github.io/series/" &gt;Unity 基础与工具系列&lt;/a&gt; 顺着读下去。&lt;/p&gt;</description></item><item><title>胡闹厨房：四人合作烹饪联机游戏</title><link>https://yuanmourenye.github.io/projects/hunaochufang/</link><pubDate>Tue, 20 Oct 2026 10:00:00 +0800</pubDate><guid>https://yuanmourenye.github.io/projects/hunaochufang/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;这是 v0.1.0：主体玩法能完整跑完一局，但&lt;strong&gt;出生点重叠的 bug 还没修&lt;/strong&gt;（第六节写了原因和修复方向）。
@@ -483,11 +483,9 @@
 &lt;/ul&gt;
 &lt;h2 id="八相关文章"&gt;八、相关文章
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/" &gt;Unity 多人联网：Mirror 与 NGO&lt;/a&gt;：两款框架的对比，NGO 的 &lt;code&gt;NetworkObject&lt;/code&gt; / Rpc 概念在这里展开过&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://yuanmourenye.github.io/p/unity-duo-ren-lian-wang-mirror-yu-ngo/" &gt;Unity 多人联网：Mirror 与 NGO&lt;/a&gt;：两款框架的对比，NGO 的 &lt;code&gt;NetworkObject&lt;/code&gt; / Rpc 概念在这里展开过&lt;/li&gt;
 &lt;li&gt;&lt;a class="link" href="https://yuanmourenye.github.io/projects/unity-client-framework/" &gt;Unity 客户端基础小框架&lt;/a&gt;：单机侧的同款取舍——哪些能力该收进骨架&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>LeetcodeHot100</title><link>https://yuanmourenye.github.io/p/leetcodehot100/</link><pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/leetcodehot100/</guid><description>&lt;!-- 正文从 ## 开始；图片放 static/img/&lt;slug&gt;/，写 /img/&lt;slug&gt;/文件名.png --&gt;
-&lt;!-- 想让 URL 固定，可在上面加一行 slug: xxx；不写则由标题自动生成 --&gt;
-&lt;h2 id="背景"&gt;背景
+&lt;/ul&gt;</description></item><item><title>LeetcodeHot100</title><link>https://yuanmourenye.github.io/p/leetcodehot100/</link><pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/leetcodehot100/</guid><description>&lt;h2 id="背景"&gt;背景
 &lt;/h2&gt;&lt;h2 id="正文"&gt;正文
 &lt;/h2&gt;&lt;h1 id="题70爬楼梯"&gt;题70、爬楼梯
 &lt;/h1&gt;&lt;h2 id="题目"&gt;题目
@@ -920,7 +918,7 @@ loading="lazy"
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="复盘"&gt;复盘
-&lt;/h2&gt;</description></item><item><title>Agent 与 RAG：核心概念与高频问题</title><link>https://yuanmourenye.github.io/p/agent-rag/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/agent-rag/</guid><description>&lt;p&gt;Agent 面试的题目翻来覆去就那几个：和工作流的区别、ReAct 怎么跑、Function Call 底层做什么、RAG 检索不到怎么办。这篇把它们按问题组织，而不是按名词。&lt;/p&gt;
+&lt;/h2&gt;</description></item><item><title>Agent 与 RAG：核心概念与高频问题</title><link>https://yuanmourenye.github.io/p/agent-yu-rag-he-xin-gai-nian-yu-gao-pin-wen-ti/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/agent-yu-rag-he-xin-gai-nian-yu-gao-pin-wen-ti/</guid><description>&lt;p&gt;Agent 面试的题目翻来覆去就那几个：和工作流的区别、ReAct 怎么跑、Function Call 底层做什么、RAG 检索不到怎么办。这篇把它们按问题组织，而不是按名词。&lt;/p&gt;
 &lt;h2 id="1-agent开发核心概念与技术栈"&gt;1. Agent开发核心概念与技术栈
 &lt;/h2&gt;&lt;h4 id="概念"&gt;概念
 &lt;/h4&gt;&lt;blockquote&gt;
@@ -1645,7 +1643,7 @@ loading="lazy"
 &lt;h6 id="重排cross-encoder适合做精挑细选成本高准确率高"&gt;重排（cross-encoder适合做精挑细选）成本高，准确率高
 &lt;/h6&gt;&lt;h6 id="生成"&gt;生成
 &lt;/h6&gt;&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;本文由 3 篇笔记合并整理。&lt;/em&gt;&lt;/p&gt;</description></item><item><title>C# 异步、协程与多线程</title><link>https://yuanmourenye.github.io/p/csharp-async-coroutine/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/csharp-async-coroutine/</guid><description>&lt;p&gt;Unity 里“等一会儿再执行”有三种完全不同的手段：协程、async/await、原生线程。选错了不会报错，只会在某一帧卡住或者数据错乱。这篇把三者的边界讲清楚。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;本文由 3 篇笔记合并整理。&lt;/em&gt;&lt;/p&gt;</description></item><item><title>C# 异步、协程与多线程</title><link>https://yuanmourenye.github.io/p/csharp-yi-bu-xie-cheng-yu-duo-xian-cheng/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/csharp-yi-bu-xie-cheng-yu-duo-xian-cheng/</guid><description>&lt;p&gt;Unity 里“等一会儿再执行”有三种完全不同的手段：协程、async/await、原生线程。选错了不会报错，只会在某一帧卡住或者数据错乱。这篇把三者的边界讲清楚。&lt;/p&gt;
 &lt;h2 id="1-关于c原生多线程和异步加载"&gt;1. 关于C#原生多线程和异步加载
 &lt;/h2&gt;&lt;h4 id="场景的异步加载"&gt;场景的异步加载
 &lt;/h4&gt;&lt;ol&gt;
@@ -2080,7 +2078,7 @@ loading="lazy"
 &lt;/h6&gt;&lt;p&gt;状态机里有一个 &lt;code&gt;__this&lt;/code&gt; 字段，保存了原 MonoBehaviour 实例的引用。所以协程里可以直接访问类的字段、调用其他方法&lt;/p&gt;
 &lt;h5 id=""&gt;
 &lt;/h5&gt;&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;本文由 2 篇笔记合并整理。&lt;/em&gt;&lt;/p&gt;</description></item><item><title>C++ 面试笔记：智能指针、内存与多态</title><link>https://yuanmourenye.github.io/p/cpp-interview/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/cpp-interview/</guid><description>&lt;h2 id="c的四种智能指针"&gt;C++的四种智能指针
+&lt;p&gt;&lt;em&gt;本文由 2 篇笔记合并整理。&lt;/em&gt;&lt;/p&gt;</description></item><item><title>C++ 面试笔记：智能指针、内存与多态</title><link>https://yuanmourenye.github.io/p/cpp-mian-shi-bi-ji-zhi-neng-zhi-zhen-nei-cun-yu-duo-tai/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/cpp-mian-shi-bi-ji-zhi-neng-zhi-zhen-nei-cun-yu-duo-tai/</guid><description>&lt;h2 id="c的四种智能指针"&gt;C++的四种智能指针
 &lt;/h2&gt;&lt;h3 id="为什么要使用智能指针"&gt;为什么要使用智能指针？
 &lt;/h3&gt;&lt;p&gt;智能指针的作用是管理一个指针，避免程序员申请的空间在函数结束时忘记释放，造成内存泄露这种情况的发生使用智能指针可以很大程度的避免这个问题，因为智能指针就是一个类，当超出了类的作用域时，类会自动调用析构函数，析构函数会自动释放资源，所以智能指针的作用原理就是在函数结束时自动释放内存空间，不需要手动释放内存空间&lt;/p&gt;
 &lt;h3 id="四种智能指针"&gt;四种智能指针：
@@ -2920,7 +2918,7 @@ loading="lazy"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; v.reserve(100); // 提前分配100个元素的容量
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;• &lt;strong&gt;移动语义&lt;/strong&gt;：为元素实现移动构造函数，减少拷贝开销。&lt;/p&gt;</description></item><item><title>DoTween 学习笔记</title><link>https://yuanmourenye.github.io/p/unity-dotween/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-dotween/</guid><description>&lt;h2 id="一简介"&gt;一、简介
+&lt;/div&gt;&lt;p&gt;• &lt;strong&gt;移动语义&lt;/strong&gt;：为元素实现移动构造函数，减少拷贝开销。&lt;/p&gt;</description></item><item><title>DoTween 学习笔记</title><link>https://yuanmourenye.github.io/p/dotween-xue-xi-bi-ji/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/dotween-xue-xi-bi-ji/</guid><description>&lt;h2 id="一简介"&gt;一、简介
 &lt;/h2&gt;&lt;p&gt;DOTween 是一个高效且功能强大的 Unity 动画和&lt;a class="link" href="https://blog.csdn.net/xks18232047575/article/details/143219657#" target="_blank" rel="noopener"
 &gt;&lt;u&gt;时间&lt;/u&gt;&lt;/a&gt;控制库，广泛用于游戏开发中。主要定位可以是Lerp插值的上位替代&lt;/p&gt;
 &lt;p&gt;主要用于简化和优化在unity中创建和管理动画的过程，几个特点：&lt;/p&gt;
@@ -4052,7 +4050,7 @@ loading="lazy"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;loopTween&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;InsertCallback&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;float&lt;/span&gt; &lt;span class="n"&gt;atPosition&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;TweenCallback&lt;/span&gt; &lt;span class="n"&gt;callback&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;关于返回值的问题，所有的函数的返回值本质上都是Tween、多序列的就Sequece，链式设计统一返回父类 &lt;code&gt;Tween&lt;/code&gt;，保证连续调用不会断链&lt;/p&gt;</description></item><item><title>ScriptableObject：数据、事件与配置</title><link>https://yuanmourenye.github.io/p/unity-scriptableobject/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-scriptableobject/</guid><description>&lt;h2 id="so"&gt;SO
+&lt;/div&gt;&lt;p&gt;关于返回值的问题，所有的函数的返回值本质上都是Tween、多序列的就Sequece，链式设计统一返回父类 &lt;code&gt;Tween&lt;/code&gt;，保证连续调用不会断链&lt;/p&gt;</description></item><item><title>ScriptableObject：数据、事件与配置</title><link>https://yuanmourenye.github.io/p/scriptableobject-shu-ju-shi-jian-yu-pei-zhi/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/scriptableobject-shu-ju-shi-jian-yu-pei-zhi/</guid><description>&lt;h2 id="so"&gt;SO
 &lt;/h2&gt;&lt;p&gt;Script ableObject，继承自&lt;code&gt;UnityEngine.ScriptableObject&lt;/code&gt; 的资源，可以像预制体和材质一样，保存在项目的Assets文件夹中，成为一个文件&lt;/p&gt;
 &lt;h3 id="核心作用"&gt;核心作用：
 &lt;/h3&gt;&lt;p&gt;把“数据”从逻辑代码中抽离出来，编程可以独立的可配置资源&lt;/p&gt;
@@ -4248,7 +4246,7 @@ loading="lazy"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;SO事件相对于传统的事件系统，不需要手动的取消订阅事件，直接写在OnEnable()和 OnDisable()方法中能够在挂载物体销毁时，引用转为空&lt;/p&gt;</description></item><item><title>Unity 里的轻量 MVC</title><link>https://yuanmourenye.github.io/p/unity-mvc/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-mvc/</guid><description>&lt;p&gt;核心是通过明确的职责划分，解决代码混乱，维护困难的问题&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;SO事件相对于传统的事件系统，不需要手动的取消订阅事件，直接写在OnEnable()和 OnDisable()方法中能够在挂载物体销毁时，引用转为空&lt;/p&gt;</description></item><item><title>Unity 里的轻量 MVC</title><link>https://yuanmourenye.github.io/p/unity-li-de-qing-liang-mvc/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-li-de-qing-liang-mvc/</guid><description>&lt;p&gt;核心是通过明确的职责划分，解决代码混乱，维护困难的问题&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;数据模型Model：负责存储数据和处理数据逻辑&lt;/li&gt;
 &lt;li&gt;视图View：负责接收用户操作和展示数据&lt;/li&gt;
@@ -4486,7 +4484,7 @@ loading="lazy"
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;本文由 3 篇笔记合并整理。&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Unity 生命周期函数</title><link>https://yuanmourenye.github.io/p/unity-lifecycle/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-lifecycle/</guid><description>&lt;h2 id="1-初始化阶段仅执行一次"&gt;1. 初始化阶段（仅执行一次）
+&lt;p&gt;&lt;em&gt;本文由 3 篇笔记合并整理。&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Unity 生命周期函数</title><link>https://yuanmourenye.github.io/p/unity-sheng-ming-zhou-qi-han-shu/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-sheng-ming-zhou-qi-han-shu/</guid><description>&lt;h2 id="1-初始化阶段仅执行一次"&gt;1. 初始化阶段（仅执行一次）
 &lt;/h2&gt;&lt;h3 id="awake"&gt;Awake
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：物体被实例化 / 场景加载时立即调用，只要物体处于激活状态，&lt;strong&gt;无论脚本是否启用&lt;/strong&gt;都会执行。若物体创建时是未激活状态，Awake 会延迟到物体第一次激活时调用。&lt;/li&gt;
@@ -4604,7 +4602,7 @@ loading="lazy"
 &lt;td&gt;相机跟随、动画位置矫正&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</description></item><item><title>Unity 渲染管线：内置、URP 与 HDRP</title><link>https://yuanmourenye.github.io/p/unity-render-pipeline/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-render-pipeline/</guid><description>&lt;h3 id="内置渲染管线-built-in"&gt;内置渲染管线 (Built-in)
+&lt;/table&gt;</description></item><item><title>Unity 渲染管线：内置、URP 与 HDRP</title><link>https://yuanmourenye.github.io/p/unity-xuan-ran-guan-xian-nei-zhi-urp-yu-hdrp/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-xuan-ran-guan-xian-nei-zhi-urp-yu-hdrp/</guid><description>&lt;h3 id="内置渲染管线-built-in"&gt;内置渲染管线 (Built-in)
 &lt;/h3&gt;&lt;p&gt;&lt;strong&gt;固定功能管线&lt;/strong&gt;： 它的渲染流程是Unity官方预先编写、编译好的一套固定流程。就像一个黑盒，你只能通过一些开关（勾选选项）来调整它，但无法改变它的核心运作方式。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&amp;ldquo;一个管线应对所有场景&amp;rdquo;&lt;/strong&gt;： 它试图用一套逻辑兼顾从手机到PC的所有平台和画质需求。这导致它在任何特定场景下都不是最优的——为了兼容性而显得臃肿，为了功能全面而效率不高。&lt;/p&gt;
 &lt;h3 id="可编程渲染管线-srp-urp--hdrp"&gt;可编程渲染管线 (SRP: URP &amp;amp; HDRP)
@@ -5109,7 +5107,7 @@ loading="lazy"
 &lt;li&gt;&lt;strong&gt;GPU Instancing&lt;/strong&gt;: GPU实例化允许将相同的模型实例化多次，在一次渲染调用中同时绘制多个实例。这样可以减少渲染调用的数量，降低CPU和GPU之间的通信开销，提高渲染效率。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;屏幕空间技术&lt;/strong&gt;: 屏幕空间技术(如SSAO、SSR)在屏幕空间中进行采样和计算，减少对整个场景的计算需求。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Shader指令数优化&lt;/strong&gt;: 通过对着色器进行优化，如减少不必要的计算和采样操作、使用更高效的算法和数据结构，可以降低渲染的开销，提高渲染性能。&lt;/li&gt;
-&lt;/ol&gt;</description></item><item><title>大模型应用：Claude Code 拆解与面试题</title><link>https://yuanmourenye.github.io/p/llm-claude-code-notes/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/llm-claude-code-notes/</guid><description>&lt;p&gt;一边是 Claude Code 的实现细节（工具、上下文压缩、安全检查），一边是大模型岗位的面试题。前者告诉你它怎么工作，后者告诉你别人怎么考。&lt;/p&gt;
+&lt;/ol&gt;</description></item><item><title>大模型应用：Claude Code 拆解与面试题</title><link>https://yuanmourenye.github.io/p/da-mo-xing-ying-yong-claude-code-chai-jie-yu-mian-shi-ti/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/da-mo-xing-ying-yong-claude-code-chai-jie-yu-mian-shi-ti/</guid><description>&lt;p&gt;一边是 Claude Code 的实现细节（工具、上下文压缩、安全检查），一边是大模型岗位的面试题。前者告诉你它怎么工作，后者告诉你别人怎么考。&lt;/p&gt;
 &lt;h2 id="1-claudecode源码学习经验"&gt;1. ClaudeCode源码学习经验
 &lt;/h2&gt;&lt;p&gt;Anthropic的工程师在发布时忘记排除source map文件。Source map是编译后的代码到源码的映射文件，有了它就能完整还原TypeScript源码。&lt;/p&gt;
 &lt;p&gt;学习的内容包括：&lt;/p&gt;
@@ -5812,7 +5810,7 @@ loading="lazy"
 &lt;li&gt;已经有精确模板、复制粘贴比生成更快的情况&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;em&gt;本文由 2 篇笔记合并整理。&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Unity A星 寻路算法</title><link>https://yuanmourenye.github.io/p/unity-a-star/</link><pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-a-star/</guid><description>&lt;h1 id="unity-a星-寻路算法"&gt;Unity A星 寻路算法
+&lt;p&gt;&lt;em&gt;本文由 2 篇笔记合并整理。&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Unity A星 寻路算法</title><link>https://yuanmourenye.github.io/p/unity-a-xing-xun-lu-suan-fa/</link><pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-a-xing-xun-lu-suan-fa/</guid><description>&lt;h1 id="unity-a星-寻路算法"&gt;Unity A星 寻路算法
 &lt;/h1&gt;&lt;h1 id="一概念"&gt;一、概念
 &lt;/h1&gt;&lt;h2 id="1解决什么问题"&gt;1、解决什么问题
 &lt;/h2&gt;&lt;p&gt;A * 是&lt;strong&gt;通用网格最短路径算法&lt;/strong&gt;，不限于 2D，3D 导航网格、瓦片地图、塔防、RPG 角色移动都能用；核心：在存在障碍物的网格中，找出&lt;strong&gt;代价最低的最优路径&lt;/strong&gt;。&lt;/p&gt;
@@ -6270,7 +6268,7 @@ alt="image-20260520094242121"
 &lt;td&gt;优先队列提速；同终点可反向 Dijkstra 预处理&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</description></item><item><title>UI 系统</title><link>https://yuanmourenye.github.io/p/ui-system/</link><pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/ui-system/</guid><description>&lt;h1 id="ugui"&gt;UGUI
+&lt;/table&gt;</description></item><item><title>UI 系统</title><link>https://yuanmourenye.github.io/p/ui-xi-tong/</link><pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/ui-xi-tong/</guid><description>&lt;h1 id="ugui"&gt;UGUI
 &lt;/h1&gt;&lt;hr&gt;
 &lt;h2 id="一什么是-ui"&gt;一、什么是 UI
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;UI&lt;/strong&gt; 是 &lt;strong&gt;User Interface（用户界面）&lt;/strong&gt; 的简称。&lt;/p&gt;
@@ -6831,7 +6829,7 @@ alt="image-20260520092814044"
 &lt;td&gt;GUID + 导入设置；与资产成对存在&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</description></item><item><title>C# 进阶</title><link>https://yuanmourenye.github.io/p/csharp-advanced/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/csharp-advanced/</guid><description>&lt;h2 id="委托"&gt;委托
+&lt;/table&gt;</description></item><item><title>C# 进阶</title><link>https://yuanmourenye.github.io/p/csharp-jin-jie/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/csharp-jin-jie/</guid><description>&lt;h2 id="委托"&gt;委托
 &lt;/h2&gt;&lt;h3 id="知识点一委托是什么"&gt;知识点一、委托是什么
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;委托是函数的容器。可以理解为表达函数的变量类型，用来存储，传递函数方法，不同的函数必须对应和各自“格式一致的委托&lt;/p&gt;
@@ -8309,7 +8307,7 @@ GC会只盯着年轻对象猛查，因为它们大概率会很快死掉（比如
 &lt;p&gt;需要注意闭包问题&lt;/p&gt;
 &lt;p&gt;闭包：事件+Lambda表达式＋匿名函数时，会把外部变量的引用释放不了，需要取消订阅才可以释放&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;em&gt;本文由 2 篇笔记合并整理。&lt;/em&gt;&lt;/p&gt;</description></item><item><title>C# 知识点概要</title><link>https://yuanmourenye.github.io/p/csharp-overview/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/csharp-overview/</guid><description>&lt;h1 id="c-知识点概要"&gt;C# 知识点概要
+&lt;p&gt;&lt;em&gt;本文由 2 篇笔记合并整理。&lt;/em&gt;&lt;/p&gt;</description></item><item><title>C# 知识点概要</title><link>https://yuanmourenye.github.io/p/csharp-zhi-shi-dian-gai-yao/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/csharp-zhi-shi-dian-gai-yao/</guid><description>&lt;h1 id="c-知识点概要"&gt;C# 知识点概要
 &lt;/h1&gt;&lt;hr&gt;
 &lt;h2 id="1-方法重载和重写"&gt;1. 方法重载和重写
 &lt;/h2&gt;&lt;table&gt;
@@ -9303,7 +9301,7 @@ D --&amp;gt; E[本地机器码]
 &lt;li&gt;foreach 会创建迭代器，带来微小 GC 开销，一帧内连续不停的调用MoveNext一次性遍历完。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;em&gt;本文由 2 篇笔记合并整理。&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Unity GUI 优化</title><link>https://yuanmourenye.github.io/p/unity-gui-optimization/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-gui-optimization/</guid><description>&lt;h1 id="unity-gui-优化"&gt;Unity GUI 优化
+&lt;p&gt;&lt;em&gt;本文由 2 篇笔记合并整理。&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Unity GUI 优化</title><link>https://yuanmourenye.github.io/p/unity-gui-you-hua/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-gui-you-hua/</guid><description>&lt;h1 id="unity-gui-优化"&gt;Unity GUI 优化
 &lt;/h1&gt;&lt;h2 id="1概念"&gt;1.概念
 &lt;/h2&gt;&lt;p&gt;同一 &lt;strong&gt;Canvas&lt;/strong&gt; 下，满足合批规则的多个 UI 元素的网格数据合并到一个顶点缓冲区，仅用一个 &lt;strong&gt;DrawCall&lt;/strong&gt; 提交 GPU 渲染。&lt;/p&gt;
 &lt;hr&gt;
@@ -9407,7 +9405,7 @@ D --&amp;gt; E[本地机器码]
 &lt;td&gt;同 Canvas 内 RectTransform / 视觉变化会触发全 Canvas 重建&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</description></item><item><title>Unity 程序基础小框架</title><link>https://yuanmourenye.github.io/p/unity-framework/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-framework/</guid><description>&lt;h1 id="unity-程序基础小框架"&gt;Unity 程序基础小框架
+&lt;/table&gt;</description></item><item><title>Unity 程序基础小框架</title><link>https://yuanmourenye.github.io/p/unity-cheng-xu-ji-chu-xiao-kuang-jia/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-cheng-xu-ji-chu-xiao-kuang-jia/</guid><description>&lt;h1 id="unity-程序基础小框架"&gt;Unity 程序基础小框架
 &lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;常用教学向模块化架构：&lt;strong&gt;单例 → 缓存池 / 事件中心 / Mono 桥接 / 资源加载&lt;/strong&gt;。&lt;br&gt;
 目标：降低耦合、复用对象、减少 GC、让非 &lt;code&gt;MonoBehaviour&lt;/code&gt; 类也能用 Update / 协程。&lt;/p&gt;
@@ -10453,7 +10451,7 @@ alt="事件中心结构"
 &lt;td&gt;JSON / PlayerPrefs，与事件中心解耦 UI&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</description></item><item><title>Unity 多人联网：Mirror 与 NGO</title><link>https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/</guid><description>&lt;h1 id="unity-多人联网mirror-与-netcode-for-gameobjectsngo"&gt;Unity 多人联网：Mirror 与 Netcode for GameObjects（NGO）
+&lt;/table&gt;</description></item><item><title>Unity 多人联网：Mirror 与 NGO</title><link>https://yuanmourenye.github.io/p/unity-duo-ren-lian-wang-mirror-yu-ngo/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-duo-ren-lian-wang-mirror-yu-ngo/</guid><description>&lt;h1 id="unity-多人联网mirror-与-netcode-for-gameobjectsngo"&gt;Unity 多人联网：Mirror 与 Netcode for GameObjects（NGO）
 &lt;/h1&gt;&lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;核心模型相同&lt;/strong&gt;：服务器权威 + 状态同步，客户端发请求、服务器改真相再下发。&lt;/li&gt;
@@ -12986,7 +12984,7 @@ D --&amp;gt;|否| F[一次性事件 → RPC]
 &lt;h4 id="命令行参数"&gt;命令行参数
 &lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;-server&lt;/code&gt;、&lt;code&gt;-client&lt;/code&gt;、&lt;code&gt;-ip&lt;/code&gt;、&lt;code&gt;-port&lt;/code&gt; 等由启动脚本解析并写入 &lt;code&gt;UnityTransport&lt;/code&gt;。&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>编译原理</title><link>https://yuanmourenye.github.io/p/compiler-principles/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/compiler-principles/</guid><description>&lt;h1 id="编译原理"&gt;编译原理
+&lt;/ul&gt;</description></item><item><title>编译原理</title><link>https://yuanmourenye.github.io/p/bian-yi-yuan-li/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/bian-yi-yuan-li/</guid><description>&lt;h1 id="编译原理"&gt;编译原理
 &lt;/h1&gt;&lt;h2 id="第一章导论"&gt;第一章：导论
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;翻译程序&lt;/strong&gt;：把某种语言的程序转换为另一种语言的程序&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;编译程序&lt;/strong&gt;：把高级语言转换为汇编语言或者机器语言这样的“低级语言”的翻译程序，称为编译程序，编译器&lt;/p&gt;
@@ -13029,22 +13027,10 @@ D --&amp;gt;|否| F[一次性事件 → RPC]
 &lt;p&gt;优化的任务在对于前端产生的中间代码进行加工，在最后阶段产生更为高效的代码&lt;/p&gt;
 &lt;p&gt;优化所依循的原则是程序的等价交换规则&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;目标代码生成&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</description></item><item><title>操作系统</title><link>https://yuanmourenye.github.io/p/operating-system/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/operating-system/</guid><description>&lt;h1 id="操作系统"&gt;操作系统
+&lt;/blockquote&gt;</description></item><item><title>操作系统</title><link>https://yuanmourenye.github.io/p/cao-zuo-xi-tong/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/cao-zuo-xi-tong/</guid><description>&lt;h1 id="操作系统"&gt;操作系统
 &lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;考研/期末复习向笔记。重点：进程、调度、死锁、同步、存储管理、磁盘调度。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id="目录"&gt;目录
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="#%e7%ac%ac%e4%b8%80%e7%ab%a0-%e5%bc%95%e8%ae%ba" &gt;第一章 引论&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="#%e7%ac%ac%e4%ba%8c%e7%ab%a0-%e8%bf%9b%e7%a8%8b%e7%9a%84%e6%8f%8f%e8%bf%b0%e4%b8%8e%e6%8e%a7%e5%88%b6" &gt;第二章 进程的描述与控制&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="#%e7%ac%ac%e4%b8%89%e7%ab%a0-%e5%a4%84%e7%90%86%e6%9c%ba%e8%b0%83%e5%ba%a6%e4%b8%8e%e6%ad%bb%e9%94%81" &gt;第三章 处理机调度与死锁&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="#%e7%ac%ac%e5%9b%9b%e7%ab%a0-%e8%bf%9b%e7%a8%8b%e5%90%8c%e6%ad%a5" &gt;第四章 进程同步&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="#%e7%ac%ac%e4%ba%94%e7%ab%a0-%e5%ad%98%e5%82%a8%e5%99%a8%e7%ae%a1%e7%90%86" &gt;第五章 存储器管理&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="#%e7%ac%ac%e5%85%ad%e7%ab%a0-%e8%99%9a%e6%8b%9f%e5%ad%98%e5%82%a8%e5%99%a8" &gt;第六章 虚拟存储器&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="#%e7%ac%ac%e4%b8%83%e7%ab%a0-%e8%be%93%e5%85%a5%e8%be%93%e5%87%ba%e7%b3%bb%e7%bb%9f" &gt;第七章 输入输出系统&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="#%e8%80%83%e7%82%b9%e9%80%9f%e6%9f%a5" &gt;考点速查&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
 &lt;h2 id="第一章-引论"&gt;第一章 引论
 &lt;/h2&gt;&lt;h3 id="操作系统的主要功能"&gt;操作系统的主要功能
 &lt;/h3&gt;&lt;table&gt;
@@ -14014,7 +14000,7 @@ loading="lazy"
 &lt;li&gt;从磁盘加载目标页到物理页帧5，更新页表映射。&lt;/li&gt;
 &lt;li&gt;MMU重新翻译地址，检查权限（如该页是否可读）。&lt;/li&gt;
 &lt;li&gt;进程最终从物理地址&lt;code&gt;0x5034&lt;/code&gt;读取数据，全程无需感知物理内存的分配细节。&lt;/li&gt;
-&lt;/ol&gt;</description></item><item><title>热更新</title><link>https://yuanmourenye.github.io/p/hot-update/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/hot-update/</guid><description>&lt;h1 id="热更新"&gt;热更新
+&lt;/ol&gt;</description></item><item><title>热更新</title><link>https://yuanmourenye.github.io/p/re-geng-xin/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/re-geng-xin/</guid><description>&lt;h1 id="热更新"&gt;热更新
 &lt;/h1&gt;&lt;hr&gt;
 &lt;h2 id="热更新是什么"&gt;热更新是什么
 &lt;/h2&gt;&lt;table&gt;
@@ -14587,7 +14573,7 @@ App-&amp;gt;&amp;gt;App: Instantiate / 使用资源
 &lt;td&gt;HybridCLR / ILRuntime / Lua；与 AB 配合&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</description></item><item><title>数据库原理及其应用</title><link>https://yuanmourenye.github.io/p/database-principles/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/database-principles/</guid><description>&lt;h1 id="数据库原理及其应用"&gt;数据库原理及其应用
+&lt;/table&gt;</description></item><item><title>数据库原理及其应用</title><link>https://yuanmourenye.github.io/p/shu-ju-ku-yuan-li-ji-qi-ying-yong/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/shu-ju-ku-yuan-li-ji-qi-ying-yong/</guid><description>&lt;h1 id="数据库原理及其应用"&gt;数据库原理及其应用
 &lt;/h1&gt;&lt;h1 id="一数据库系统概述"&gt;一、数据库系统概述
 &lt;/h1&gt;&lt;h2 id="考点一数据库基本概念"&gt;考点一：数据库基本概念
 &lt;/h2&gt;&lt;h3 id="数据库概念"&gt;数据库概念：
@@ -15661,7 +15647,7 @@ D --&amp;gt; E[实施与维护]
 &lt;td&gt;脏读、不可重复读、幻读；隔离级别&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</description></item><item><title>算法</title><link>https://yuanmourenye.github.io/p/%E7%AE%97%E6%B3%95/</link><pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/%E7%AE%97%E6%B3%95/</guid><description>&lt;h2 id="字符串"&gt;字符串
+&lt;/table&gt;</description></item><item><title>算法</title><link>https://yuanmourenye.github.io/p/suan-fa/</link><pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/suan-fa/</guid><description>&lt;h2 id="字符串"&gt;字符串
 &lt;/h2&gt;&lt;h3 id="4kmp算法理论篇"&gt;4、KMP算法（理论篇）
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;主要解决在一个&lt;strong&gt;文本串&lt;/strong&gt;中是否出现过一个&lt;strong&gt;模式串&lt;/strong&gt;的问题&lt;/p&gt;
@@ -16978,7 +16964,7 @@ D --&amp;gt; E[实施与维护]
 &lt;h3 id="7前k个高频元素"&gt;7、前K个高频元素
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;给定一个数组，让你去求在这个数组中出现高频的前K个元素&lt;/p&gt;
-&lt;/blockquote&gt;</description></item><item><title>Markdown 语法详解</title><link>https://yuanmourenye.github.io/p/markdown-syntax/</link><pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/markdown-syntax/</guid><description>&lt;h1 id="markdown语法详解"&gt;Markdown语法详解
+&lt;/blockquote&gt;</description></item><item><title>Markdown 语法详解</title><link>https://yuanmourenye.github.io/p/markdown-yu-fa-xiang-jie/</link><pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/markdown-yu-fa-xiang-jie/</guid><description>&lt;h1 id="markdown语法详解"&gt;Markdown语法详解
 &lt;/h1&gt;&lt;p&gt;一小时快速上手，程序员必备的Markdown语法，轻松编写规范文档。&lt;/p&gt;
 &lt;h2 id="什么是markdown"&gt;什么是Markdown？
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Markdown 致力于使阅读和创作文档变得容易。&lt;/strong&gt;&lt;/p&gt;

@@ -160,9 +160,9 @@
 &lt;h2 id="八相关文章"&gt;八、相关文章
 &lt;/h2&gt;&lt;p&gt;这个框架的每个模块都对应一篇笔记，按顺序读能看清演进过程：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://yuanmourenye.github.io/p/unity-framework/" &gt;【Unity】Unity 程序基础小框架&lt;/a&gt;：模块总览与代码片段&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://yuanmourenye.github.io/p/unity-cheng-xu-ji-chu-xiao-kuang-jia/" &gt;【Unity】Unity 程序基础小框架&lt;/a&gt;：模块总览与代码片段&lt;/li&gt;
 &lt;li&gt;&lt;a class="link" href="https://yuanmourenye.github.io/p/unity-yaml/" &gt;【Unity】Unity YAML&lt;/a&gt;：场景与 Prefab 的序列化格式，排查资源问题时用得上&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://yuanmourenye.github.io/p/unity-gui-optimization/" &gt;【Unity】UGUI 优化&lt;/a&gt;：UI 侧的同类取舍&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://yuanmourenye.github.io/p/unity-gui-you-hua/" &gt;【Unity】UGUI 优化&lt;/a&gt;：UI 侧的同类取舍&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;也可以从 &lt;a class="link" href="https://yuanmourenye.github.io/series/" &gt;Unity 基础与工具系列&lt;/a&gt; 顺着读下去。&lt;/p&gt;</description></item><item><title>胡闹厨房：四人合作烹饪联机游戏</title><link>https://yuanmourenye.github.io/projects/hunaochufang/</link><pubDate>Tue, 20 Oct 2026 10:00:00 +0800</pubDate><guid>https://yuanmourenye.github.io/projects/hunaochufang/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;这是 v0.1.0：主体玩法能完整跑完一局，但&lt;strong&gt;出生点重叠的 bug 还没修&lt;/strong&gt;（第六节写了原因和修复方向）。
@@ -483,6 +483,6 @@
 &lt;/ul&gt;
 &lt;h2 id="八相关文章"&gt;八、相关文章
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class="link" href="https://yuanmourenye.github.io/p/unity-multiplayer-mirror-ngo/" &gt;Unity 多人联网：Mirror 与 NGO&lt;/a&gt;：两款框架的对比，NGO 的 &lt;code&gt;NetworkObject&lt;/code&gt; / Rpc 概念在这里展开过&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://yuanmourenye.github.io/p/unity-duo-ren-lian-wang-mirror-yu-ngo/" &gt;Unity 多人联网：Mirror 与 NGO&lt;/a&gt;：两款框架的对比，NGO 的 &lt;code&gt;NetworkObject&lt;/code&gt; / Rpc 概念在这里展开过&lt;/li&gt;
 &lt;li&gt;&lt;a class="link" href="https://yuanmourenye.github.io/projects/unity-client-framework/" &gt;Unity 客户端基础小框架&lt;/a&gt;：单机侧的同款取舍——哪些能力该收进骨架&lt;/li&gt;
 &lt;/ul&gt;</description></item></channel></rss>
