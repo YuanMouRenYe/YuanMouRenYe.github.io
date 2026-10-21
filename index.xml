@@ -13027,11 +13027,7 @@ D --&amp;gt;|否| F[一次性事件 → RPC]
 &lt;p&gt;优化的任务在对于前端产生的中间代码进行加工，在最后阶段产生更为高效的代码&lt;/p&gt;
 &lt;p&gt;优化所依循的原则是程序的等价交换规则&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;目标代码生成&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</description></item><item><title>操作系统</title><link>https://yuanmourenye.github.io/p/cao-zuo-xi-tong/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/cao-zuo-xi-tong/</guid><description>&lt;h1 id="操作系统"&gt;操作系统
-&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;考研/期末复习向笔记。重点：进程、调度、死锁、同步、存储管理、磁盘调度。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id="第一章-引论"&gt;第一章 引论
+&lt;/blockquote&gt;</description></item><item><title>操作系统</title><link>https://yuanmourenye.github.io/p/cao-zuo-xi-tong/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/cao-zuo-xi-tong/</guid><description>&lt;h2 id="第一章-引论"&gt;第一章 引论
 &lt;/h2&gt;&lt;h3 id="操作系统的主要功能"&gt;操作系统的主要功能
 &lt;/h3&gt;&lt;table&gt;
 &lt;thead&gt;
