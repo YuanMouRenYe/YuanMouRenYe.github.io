@@ -17216,7 +17216,8 @@ $$&lt;h3 id="分数"&gt;分数
 &lt;p&gt;我是角注&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</description></item><item><title>归档</title><link>https://yuanmourenye.github.io/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/archives/</guid><description/></item><item><title>标签</title><link>https://yuanmourenye.github.io/tags/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/tags/</guid><description>&lt;p&gt;按标签挑文章。标签字号随文章数量变大——出现得越多的标签，字号越大。&lt;/p&gt;</description></item><item><title>关于</title><link>https://yuanmourenye.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/about/</guid><description>&lt;p&gt;你好，我是 &lt;strong&gt;元某人也&lt;/strong&gt;。&lt;/p&gt;
+&lt;/div&gt;</description></item><item><title>归档</title><link>https://yuanmourenye.github.io/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/archives/</guid><description/></item><item><title>标签</title><link>https://yuanmourenye.github.io/tags/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/tags/</guid><description>&lt;!-- 标签页不渲染正文：标题区已去掉，页面上只有气泡标签云 + 文章列表。
+见 layouts/page/tags.html。 --&gt;</description></item><item><title>关于</title><link>https://yuanmourenye.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/about/</guid><description>&lt;p&gt;你好，我是 &lt;strong&gt;元某人也&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;游戏客户端方向的学习者，主要记录 &lt;strong&gt;Unity / C#&lt;/strong&gt; 与计算机基础的学习笔记，也会写工程自动化、AI 辅助开发这类「把重复劳动交给工具」的实践。&lt;/p&gt;
 &lt;h2 id="关注方向"&gt;关注方向
 &lt;/h2&gt;&lt;ul&gt;
