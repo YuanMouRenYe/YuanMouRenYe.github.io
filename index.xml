@@ -34,52 +34,12 @@ loading="lazy"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;时间复杂度为O（2^n）,由于每一个值都要进行计算，会产生多余的计算&lt;/p&gt;</description></item><item><title>Agent 与 RAG：核心概念与高频问题</title><link>https://yuanmourenye.github.io/p/agent-yu-rag-he-xin-gai-nian-yu-gao-pin-wen-ti/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/agent-yu-rag-he-xin-gai-nian-yu-gao-pin-wen-ti/</guid><description>&lt;p&gt;Agent 面试的题目翻来覆去就那几个：和工作流的区别、ReAct 怎么跑、Function Call 底层做什么、RAG 检索不到怎么办。这篇把它们按问题组织，而不是按名词。&lt;/p&gt;</description></item><item><title>C# 异步、协程与多线程</title><link>https://yuanmourenye.github.io/p/csharp-yi-bu-xie-cheng-yu-duo-xian-cheng/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/csharp-yi-bu-xie-cheng-yu-duo-xian-cheng/</guid><description>&lt;p&gt;Unity 里“等一会儿再执行”有三种完全不同的手段：协程、async/await、原生线程。选错了不会报错，只会在某一帧卡住或者数据错乱。这篇把三者的边界讲清楚。&lt;/p&gt;</description></item><item><title>C++ 面试笔记：智能指针、内存与多态</title><link>https://yuanmourenye.github.io/p/cpp-mian-shi-bi-ji-zhi-neng-zhi-zhen-nei-cun-yu-duo-tai/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/cpp-mian-shi-bi-ji-zhi-neng-zhi-zhen-nei-cun-yu-duo-tai/</guid><description>&lt;h1 id="c的四种智能指针"&gt;C++的四种智能指针
+&lt;/div&gt;&lt;p&gt;时间复杂度为O（2^n）,由于每一个值都要进行计算，会产生多余的计算&lt;/p&gt;</description></item><item><title>C++ 面试笔记：智能指针、内存与多态</title><link>https://yuanmourenye.github.io/p/cpp-mian-shi-bi-ji-zhi-neng-zhi-zhen-nei-cun-yu-duo-tai/</link><pubDate>Sun, 02 Aug 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/cpp-mian-shi-bi-ji-zhi-neng-zhi-zhen-nei-cun-yu-duo-tai/</guid><description>&lt;h1 id="c的四种智能指针"&gt;C++的四种智能指针
 &lt;/h1&gt;&lt;h3 id="为什么要使用智能指针"&gt;为什么要使用智能指针？
-&lt;/h3&gt;&lt;p&gt;智能指针的作用是管理一个指针，避免程序员申请的空间在函数结束时忘记释放，造成内存泄露这种情况的发生使用智能指针可以很大程度的避免这个问题，因为智能指针就是一个类，当超出了类的作用域时，类会自动调用析构函数，析构函数会自动释放资源，所以智能指针的作用原理就是在函数结束时自动释放内存空间，不需要手动释放内存空间&lt;/p&gt;</description></item><item><title>DoTween 学习笔记</title><link>https://yuanmourenye.github.io/p/dotween-xue-xi-bi-ji/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/dotween-xue-xi-bi-ji/</guid><description>&lt;h2 id="一简介"&gt;一、简介
+&lt;/h3&gt;&lt;p&gt;智能指针的作用是管理一个指针，避免程序员申请的空间在函数结束时忘记释放，造成内存泄露这种情况的发生使用智能指针可以很大程度的避免这个问题，因为智能指针就是一个类，当超出了类的作用域时，类会自动调用析构函数，析构函数会自动释放资源，所以智能指针的作用原理就是在函数结束时自动释放内存空间，不需要手动释放内存空间&lt;/p&gt;</description></item><item><title>Agent 与 RAG：核心概念与高频问题</title><link>https://yuanmourenye.github.io/p/agent-yu-rag-he-xin-gai-nian-yu-gao-pin-wen-ti/</link><pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/agent-yu-rag-he-xin-gai-nian-yu-gao-pin-wen-ti/</guid><description>&lt;p&gt;Agent 面试的题目翻来覆去就那几个：和工作流的区别、ReAct 怎么跑、Function Call 底层做什么、RAG 检索不到怎么办。这篇把它们按问题组织，而不是按名词。&lt;/p&gt;</description></item><item><title>C# 异步、协程与多线程</title><link>https://yuanmourenye.github.io/p/csharp-yi-bu-xie-cheng-yu-duo-xian-cheng/</link><pubDate>Thu, 23 Jul 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/csharp-yi-bu-xie-cheng-yu-duo-xian-cheng/</guid><description>&lt;p&gt;Unity 里“等一会儿再执行”有三种完全不同的手段：协程、async/await、原生线程。选错了不会报错，只会在某一帧卡住或者数据错乱。这篇把三者的边界讲清楚。&lt;/p&gt;</description></item><item><title>DoTween 学习笔记</title><link>https://yuanmourenye.github.io/p/dotween-xue-xi-bi-ji/</link><pubDate>Sun, 19 Jul 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/dotween-xue-xi-bi-ji/</guid><description>&lt;h2 id="一简介"&gt;一、简介
 &lt;/h2&gt;&lt;p&gt;DOTween 是一个高效且功能强大的 Unity 动画和&lt;a class="link" href="https://blog.csdn.net/xks18232047575/article/details/143219657#" target="_blank" rel="noopener"
 &gt;&lt;u&gt;时间&lt;/u&gt;&lt;/a&gt;控制库，广泛用于游戏开发中。主要定位可以是Lerp插值的上位替代&lt;/p&gt;
-&lt;p&gt;主要用于简化和优化在unity中创建和管理动画的过程，几个特点：&lt;/p&gt;</description></item><item><title>ScriptableObject：数据、事件与配置</title><link>https://yuanmourenye.github.io/p/scriptableobject-shu-ju-shi-jian-yu-pei-zhi/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/scriptableobject-shu-ju-shi-jian-yu-pei-zhi/</guid><description>&lt;h2 id="so"&gt;SO
-&lt;/h2&gt;&lt;p&gt;Script ableObject，继承自&lt;code&gt;UnityEngine.ScriptableObject&lt;/code&gt; 的资源，可以像预制体和材质一样，保存在项目的Assets文件夹中，成为一个文件&lt;/p&gt;</description></item><item><title>Unity 里的轻量 MVC</title><link>https://yuanmourenye.github.io/p/unity-li-de-qing-liang-mvc/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-li-de-qing-liang-mvc/</guid><description>&lt;p&gt;核心是通过明确的职责划分，解决代码混乱，维护困难的问题&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;数据模型Model：负责存储数据和处理数据逻辑&lt;/li&gt;
-&lt;li&gt;视图View：负责接收用户操作和展示数据&lt;/li&gt;
-&lt;li&gt;控制器Controller;链接Model和View，当View收到用户操作，Controller就转发指令给Model修改数据，当Model发生改变Controller就通知View更新界面&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;MVC示例：将一个计数器的diamagnetic转换为MVC的架构形式&lt;/p&gt;</description></item><item><title>Unity 生命周期函数</title><link>https://yuanmourenye.github.io/p/unity-sheng-ming-zhou-qi-han-shu/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-sheng-ming-zhou-qi-han-shu/</guid><description>&lt;h2 id="1-初始化阶段仅执行一次"&gt;1. 初始化阶段（仅执行一次）
-&lt;/h2&gt;&lt;h3 id="awake"&gt;Awake
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：物体被实例化 / 场景加载时立即调用，只要物体处于激活状态，&lt;strong&gt;无论脚本是否启用&lt;/strong&gt;都会执行。若物体创建时是未激活状态，Awake 会延迟到物体第一次激活时调用。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;执行次数&lt;/strong&gt;：整个生命周期仅 1 次&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;核心用途&lt;/strong&gt;：获取自身组件、初始化内部数据、单例赋值、注册内部事件&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;面试关键点&lt;/strong&gt;：场景中所有物体的 Awake 会全部执行完毕，才会开始执行所有物体的 Start，因此 Awake 中获取其他物体的组件是安全的。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id="onenable"&gt;OnEnable
-&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：脚本组件从禁用→启用、GameObject 从非激活→激活时调用，可多次触发。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;执行次数&lt;/strong&gt;：每次激活 / 启用都会调用一次&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;核心用途&lt;/strong&gt;：注册全局事件、订阅消息、对象池取出时重置状态、启动协程&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;对应你的项目&lt;/strong&gt;：对象池取出物体 SetActive (true) 会触发，子弹、状态的生命周期重置逻辑放在这里最合适。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h5 id="start"&gt;Start
-&lt;/h5&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：脚本启用且物体激活的前提下，&lt;strong&gt;第一次 Update 执行之前&lt;/strong&gt;调用，仅执行 1 次。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;执行次数&lt;/strong&gt;：整个生命周期仅 1 次&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;核心用途&lt;/strong&gt;：初始化外部依赖、获取其他物体引用、配置初始参数&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;面试关键点&lt;/strong&gt;：Start 一定在 Awake 之后、Update 之前执行，适合写依赖其他物体的初始化逻辑。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h4 id="2-物理阶段固定频率执行"&gt;2. 物理阶段（固定频率执行）
-&lt;/h4&gt;&lt;h5 id="fixedupdate"&gt;FixedUpdate
-&lt;/h5&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：以固定时间间隔（默认 0.02 秒，可在 Project Settings 中修改）重复调用，和游戏帧率无关，帧率低时一帧会调用多次，帧率高时多帧调用一次。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;执行频率&lt;/strong&gt;：固定时间步长，和物理引擎同步&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;核心用途&lt;/strong&gt;：所有 Rigidbody 物理运算、力的施加、移动同步、碰撞检测逻辑&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;对应你的项目&lt;/strong&gt;：角色带位移的移动、怪物 AI 的物理判定、带刚体的子弹运动，必须放在这里保证不同设备上物理表现一致。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h5 id="碰撞--触发回调"&gt;碰撞 / 触发回调
-&lt;/h5&gt;&lt;p&gt;&lt;code&gt;OnTriggerEnter/Stay/Exit&lt;/code&gt;、&lt;code&gt;OnCollisionEnter/Stay/Exit&lt;/code&gt;&lt;/p&gt;</description></item><item><title>Unity 渲染管线：内置、URP 与 HDRP</title><link>https://yuanmourenye.github.io/p/unity-xuan-ran-guan-xian-nei-zhi-urp-yu-hdrp/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-xuan-ran-guan-xian-nei-zhi-urp-yu-hdrp/</guid><description>&lt;h3 id="内置渲染管线-built-in"&gt;内置渲染管线 (Built-in)
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;固定功能管线&lt;/strong&gt;： 它的渲染流程是Unity官方预先编写、编译好的一套固定流程。就像一个黑盒，你只能通过一些开关（勾选选项）来调整它，但无法改变它的核心运作方式。&lt;/p&gt;</description></item><item><title>大模型应用：Claude Code 拆解与面试题</title><link>https://yuanmourenye.github.io/p/da-mo-xing-ying-yong-claude-code-chai-jie-yu-mian-shi-ti/</link><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/da-mo-xing-ying-yong-claude-code-chai-jie-yu-mian-shi-ti/</guid><description>&lt;p&gt;一边是 Claude Code 的实现细节（工具、上下文压缩、安全检查），一边是大模型岗位的面试题。前者告诉你它怎么工作，后者告诉你别人怎么考。&lt;/p&gt;
+&lt;p&gt;主要用于简化和优化在unity中创建和管理动画的过程，几个特点：&lt;/p&gt;</description></item><item><title>大模型应用：Claude Code 拆解与面试题</title><link>https://yuanmourenye.github.io/p/da-mo-xing-ying-yong-claude-code-chai-jie-yu-mian-shi-ti/</link><pubDate>Sun, 19 Jul 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/da-mo-xing-ying-yong-claude-code-chai-jie-yu-mian-shi-ti/</guid><description>&lt;p&gt;一边是 Claude Code 的实现细节（工具、上下文压缩、安全检查），一边是大模型岗位的面试题。前者告诉你它怎么工作，后者告诉你别人怎么考。&lt;/p&gt;
 &lt;h2 id="1-claudecode源码学习经验"&gt;1. ClaudeCode源码学习经验
 &lt;/h2&gt;&lt;p&gt;Anthropic的工程师在发布时忘记排除source map文件。Source map是编译后的代码到源码的映射文件，有了它就能完整还原TypeScript源码。&lt;/p&gt;</description></item><item><title>Unity A星 寻路算法</title><link>https://yuanmourenye.github.io/p/unity-a-xing-xun-lu-suan-fa/</link><pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-a-xing-xun-lu-suan-fa/</guid><description>&lt;h1 id="unity-a星-寻路算法"&gt;Unity A星 寻路算法
 &lt;/h1&gt;&lt;h1 id="一概念"&gt;一、概念
@@ -343,11 +303,51 @@ alt="对象标头格式"
 &lt;/h1&gt;&lt;h2 id="考点一数据库基本概念"&gt;考点一：数据库基本概念
 &lt;/h2&gt;&lt;h3 id="数据库概念"&gt;数据库概念：
 &lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;数据库是长期存储在计算机内，有组织，可共享的大量数据的集合。数据库中的数据按照一定的数据模型组织，描述和存储，具有较小的冗余的和较高的数据独立性和易扩展性，并可为各种用户共享。&lt;/p&gt;</description></item><item><title>算法</title><link>https://yuanmourenye.github.io/p/suan-fa/</link><pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/suan-fa/</guid><description>&lt;h2 id="字符串"&gt;字符串
+&lt;p&gt;数据库是长期存储在计算机内，有组织，可共享的大量数据的集合。数据库中的数据按照一定的数据模型组织，描述和存储，具有较小的冗余的和较高的数据独立性和易扩展性，并可为各种用户共享。&lt;/p&gt;</description></item><item><title>Unity 生命周期函数</title><link>https://yuanmourenye.github.io/p/unity-sheng-ming-zhou-qi-han-shu/</link><pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-sheng-ming-zhou-qi-han-shu/</guid><description>&lt;h2 id="1-初始化阶段仅执行一次"&gt;1. 初始化阶段（仅执行一次）
+&lt;/h2&gt;&lt;h3 id="awake"&gt;Awake
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：物体被实例化 / 场景加载时立即调用，只要物体处于激活状态，&lt;strong&gt;无论脚本是否启用&lt;/strong&gt;都会执行。若物体创建时是未激活状态，Awake 会延迟到物体第一次激活时调用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;执行次数&lt;/strong&gt;：整个生命周期仅 1 次&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;核心用途&lt;/strong&gt;：获取自身组件、初始化内部数据、单例赋值、注册内部事件&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;面试关键点&lt;/strong&gt;：场景中所有物体的 Awake 会全部执行完毕，才会开始执行所有物体的 Start，因此 Awake 中获取其他物体的组件是安全的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="onenable"&gt;OnEnable
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：脚本组件从禁用→启用、GameObject 从非激活→激活时调用，可多次触发。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;执行次数&lt;/strong&gt;：每次激活 / 启用都会调用一次&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;核心用途&lt;/strong&gt;：注册全局事件、订阅消息、对象池取出时重置状态、启动协程&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;对应你的项目&lt;/strong&gt;：对象池取出物体 SetActive (true) 会触发，子弹、状态的生命周期重置逻辑放在这里最合适。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="start"&gt;Start
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：脚本启用且物体激活的前提下，&lt;strong&gt;第一次 Update 执行之前&lt;/strong&gt;调用，仅执行 1 次。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;执行次数&lt;/strong&gt;：整个生命周期仅 1 次&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;核心用途&lt;/strong&gt;：初始化外部依赖、获取其他物体引用、配置初始参数&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;面试关键点&lt;/strong&gt;：Start 一定在 Awake 之后、Update 之前执行，适合写依赖其他物体的初始化逻辑。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h4 id="2-物理阶段固定频率执行"&gt;2. 物理阶段（固定频率执行）
+&lt;/h4&gt;&lt;h5 id="fixedupdate"&gt;FixedUpdate
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;调用时机&lt;/strong&gt;：以固定时间间隔（默认 0.02 秒，可在 Project Settings 中修改）重复调用，和游戏帧率无关，帧率低时一帧会调用多次，帧率高时多帧调用一次。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;执行频率&lt;/strong&gt;：固定时间步长，和物理引擎同步&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;核心用途&lt;/strong&gt;：所有 Rigidbody 物理运算、力的施加、移动同步、碰撞检测逻辑&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;对应你的项目&lt;/strong&gt;：角色带位移的移动、怪物 AI 的物理判定、带刚体的子弹运动，必须放在这里保证不同设备上物理表现一致。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="碰撞--触发回调"&gt;碰撞 / 触发回调
+&lt;/h5&gt;&lt;p&gt;&lt;code&gt;OnTriggerEnter/Stay/Exit&lt;/code&gt;、&lt;code&gt;OnCollisionEnter/Stay/Exit&lt;/code&gt;&lt;/p&gt;</description></item><item><title>Unity 里的轻量 MVC</title><link>https://yuanmourenye.github.io/p/unity-li-de-qing-liang-mvc/</link><pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-li-de-qing-liang-mvc/</guid><description>&lt;p&gt;核心是通过明确的职责划分，解决代码混乱，维护困难的问题&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;数据模型Model：负责存储数据和处理数据逻辑&lt;/li&gt;
+&lt;li&gt;视图View：负责接收用户操作和展示数据&lt;/li&gt;
+&lt;li&gt;控制器Controller;链接Model和View，当View收到用户操作，Controller就转发指令给Model修改数据，当Model发生改变Controller就通知View更新界面&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;MVC示例：将一个计数器的diamagnetic转换为MVC的架构形式&lt;/p&gt;</description></item><item><title>ScriptableObject：数据、事件与配置</title><link>https://yuanmourenye.github.io/p/scriptableobject-shu-ju-shi-jian-yu-pei-zhi/</link><pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/scriptableobject-shu-ju-shi-jian-yu-pei-zhi/</guid><description>&lt;h2 id="so"&gt;SO
+&lt;/h2&gt;&lt;p&gt;Script ableObject，继承自&lt;code&gt;UnityEngine.ScriptableObject&lt;/code&gt; 的资源，可以像预制体和材质一样，保存在项目的Assets文件夹中，成为一个文件&lt;/p&gt;</description></item><item><title>算法</title><link>https://yuanmourenye.github.io/p/suan-fa/</link><pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/suan-fa/</guid><description>&lt;h2 id="字符串"&gt;字符串
 &lt;/h2&gt;&lt;h3 id="4kmp算法理论篇"&gt;4、KMP算法（理论篇）
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;主要解决在一个&lt;strong&gt;文本串&lt;/strong&gt;中是否出现过一个&lt;strong&gt;模式串&lt;/strong&gt;的问题&lt;/p&gt;
-&lt;p&gt;（暴力解法思路：两个for循环遍历文本串和模式串，匹配不到就把匹配的位数向后移动一位直到匹配上为止，&lt;/p&gt;</description></item><item><title>Markdown 语法详解</title><link>https://yuanmourenye.github.io/p/markdown-yu-fa-xiang-jie/</link><pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/markdown-yu-fa-xiang-jie/</guid><description>&lt;h1 id="markdown语法详解"&gt;Markdown语法详解
+&lt;p&gt;（暴力解法思路：两个for循环遍历文本串和模式串，匹配不到就把匹配的位数向后移动一位直到匹配上为止，&lt;/p&gt;</description></item><item><title>Unity 渲染管线：内置、URP 与 HDRP</title><link>https://yuanmourenye.github.io/p/unity-xuan-ran-guan-xian-nei-zhi-urp-yu-hdrp/</link><pubDate>Sat, 07 Mar 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-xuan-ran-guan-xian-nei-zhi-urp-yu-hdrp/</guid><description>&lt;h3 id="内置渲染管线-built-in"&gt;内置渲染管线 (Built-in)
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;固定功能管线&lt;/strong&gt;： 它的渲染流程是Unity官方预先编写、编译好的一套固定流程。就像一个黑盒，你只能通过一些开关（勾选选项）来调整它，但无法改变它的核心运作方式。&lt;/p&gt;</description></item><item><title>Markdown 语法详解</title><link>https://yuanmourenye.github.io/p/markdown-yu-fa-xiang-jie/</link><pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/markdown-yu-fa-xiang-jie/</guid><description>&lt;h1 id="markdown语法详解"&gt;Markdown语法详解
 &lt;/h1&gt;&lt;p&gt;一小时快速上手，程序员必备的Markdown语法，轻松编写规范文档。&lt;/p&gt;
 &lt;h2 id="什么是markdown"&gt;什么是Markdown？
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Markdown 致力于使阅读和创作文档变得容易。&lt;/strong&gt;&lt;/p&gt;
