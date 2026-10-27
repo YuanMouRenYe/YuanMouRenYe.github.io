@@ -4,7 +4,7 @@
 <span class=topnav__drop-count>1 篇</span>
 </a><a class=topnav__drop-item href=/series/#unity-%e8%bf%9b%e9%98%b6><span class=topnav__drop-name>Unity 进阶</span>
 <span class=topnav__drop-count>2 篇</span>
-</a><a class=topnav__drop-item href=/series/#csharp><span class=topnav__drop-name>C#</span>
+</a><a class=topnav__drop-item href=/series/#csharp><span class=topnav__drop-name>CSharp</span>
 <span class=topnav__drop-count>3 篇</span>
 </a><a class=topnav__drop-item href=/series/#%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%9f%ba%e7%a1%80><span class=topnav__drop-name>计算机基础</span>
 <span class=topnav__drop-count>4 篇</span>
@@ -268,7 +268,7 @@
 </span></span><span class=line><span class=cl>    <span class=n>enumerator</span><span class=p>.</span><span class=n>Dispose</span><span class=p>();</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></td></tr></table></div></div><p>一轮遍历走完就销毁迭代器，不会跨帧保留；</p><h5 id=二和for的区别>二、和for的区别</h5><ul><li>for循环是基于索引直接访问集合，通过维护局部变量，改变下表直接寻址取值，全程不产生额外的堆对象</li><li>foreach循环是基于迭代器模式的会创建迭代器对象，产生额外的迭代器状态机对象产生GC，靠MoveNext（）/Current诸葛获取元素；</li><li>for循环只支持有索引结构的数据结构：Array，List等，支持通过下标修改元素，可在循环内安全增删合集</li><li>foreach只要实现IEnumerable就能用，不用关心内部存储结构，不能修改集合长度，item是拷贝，修改item不影响原容器，只能从头到尾顺序遍历，无法自定义步长，无法倒序遍历，必须现反转合集</li><li>foreach 会创建迭代器，带来微小 GC 开销，一帧内连续不停的调用MoveNext一次性遍历完。</li></ul><hr><p><em>本文由 2 篇笔记合并整理。</em></p></section><footer class=article-footer><section class=article-tags></section><section class=article-copyright><svg class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
-<span>仅用于交流学习，记录学习心得</span></section></footer></article><nav class=series-nav aria-label=所属系列><p class=series-nav__eyebrow>系列</p><div class=series-nav__head><a class=series-nav__title href=/series/#csharp>C#</a>
+<span>仅用于交流学习，记录学习心得</span></section></footer></article><nav class=series-nav aria-label=所属系列><p class=series-nav__eyebrow>系列</p><div class=series-nav__head><a class=series-nav__title href=/series/#csharp>CSharp</a>
 <a class=series-nav__index href=/series/#csharp>查看全部 →</a></div><p class=series-nav__desc>语法概要到进阶特性</p><ol class=series-nav__outline><li class=is-current><a href=/p/csharp-zhi-shi-dian-gai-yao/>C# 知识点概要</a></li><li><a href=/p/csharp-jin-jie/>C# 进阶</a></li><li><a href=/p/csharp-yi-bu-xie-cheng-yu-duo-xian-cheng/>C# 异步、协程与多线程</a></li></ol><div class=series-nav__pager><a class="series-nav__pager-item is-next" href=/p/csharp-jin-jie/><span class=series-nav__pager-label>下一篇 →</span>
 <span class=series-nav__pager-title>C# 进阶</span></a></div></nav><footer class=site-footer><section class=copyright>&copy;
 2024 -
