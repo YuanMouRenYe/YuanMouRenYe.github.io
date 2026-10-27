@@ -82,9 +82,15 @@ loading="lazy"
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;补充说明：&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Unity YAML</title><link>https://yuanmourenye.github.io/p/unity-yaml/</link><pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/unity-yaml/</guid><description>&lt;h2 id="unity-yaml"&gt;Unity YAML
 &lt;/h2&gt;&lt;h3 id="1-yaml-文件结构"&gt;1. YAML 文件结构
-&lt;/h3&gt;&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/img/unity-yaml/csdn-129da38f81204a77890ac5f6bc23fbf9.png"
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/p/unity-yaml/img/csdn-129da38f81204a77890ac5f6bc23fbf9.png"
+width="239"
+height="43"
+srcset="https://yuanmourenye.github.io/p/unity-yaml/img/csdn-129da38f81204a77890ac5f6bc23fbf9_hu_9289304cf104a473.png 480w, https://yuanmourenye.github.io/p/unity-yaml/img/csdn-129da38f81204a77890ac5f6bc23fbf9_hu_f88a60961cb4e2a0.png 1024w"
 loading="lazy"
 alt="YAML 文件整体结构"
+class="gallery-image"
+data-flex-grow="555"
+data-flex-basis="1333px"
 &gt;&lt;/p&gt;
 &lt;h4 id="11-文件头"&gt;1.1 文件头
 &lt;/h4&gt;&lt;table&gt;
@@ -118,9 +124,15 @@ alt="YAML 文件整体结构"
 &lt;/div&gt;
 &lt;/div&gt;&lt;h4 id="12-对象定义块"&gt;1.2 对象定义块
 &lt;/h4&gt;&lt;h5 id="1标头格式"&gt;（1）标头格式
-&lt;/h5&gt;&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/img/unity-yaml/csdn-cf8ae99a6b7d4778b8dc2b8dc09f3193.png"
+&lt;/h5&gt;&lt;p&gt;&lt;img src="https://yuanmourenye.github.io/p/unity-yaml/img/csdn-cf8ae99a6b7d4778b8dc2b8dc09f3193.png"
+width="255"
+height="21"
+srcset="https://yuanmourenye.github.io/p/unity-yaml/img/csdn-cf8ae99a6b7d4778b8dc2b8dc09f3193_hu_3a15dc65e55665c6.png 480w, https://yuanmourenye.github.io/p/unity-yaml/img/csdn-cf8ae99a6b7d4778b8dc2b8dc09f3193_hu_ba49a484eb97de04.png 1024w"
 loading="lazy"
 alt="对象标头格式"
+class="gallery-image"
+data-flex-grow="1214"
+data-flex-basis="2914px"
 &gt;&lt;/p&gt;</description></item><item><title>C# 进阶</title><link>https://yuanmourenye.github.io/p/csharp-jin-jie/</link><pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate><guid>https://yuanmourenye.github.io/p/csharp-jin-jie/</guid><description>&lt;h2 id="委托"&gt;委托
 &lt;/h2&gt;&lt;h3 id="知识点一委托是什么"&gt;知识点一、委托是什么
 &lt;/h3&gt;&lt;blockquote&gt;
