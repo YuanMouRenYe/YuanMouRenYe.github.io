@@ -1,7 +1,0 @@
-User-agent: *
-# 站内搜索是前端实现，索引页面没有收录价值
-Disallow: /search/
-# 分页页是列表的重复内容，从第 2 页起不参与抓取
-Disallow: /page/
-
-Sitemap: https://yuanblog.top/sitemap.xml
